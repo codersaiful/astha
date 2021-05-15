@@ -10,51 +10,27 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="site-content" class="site-main container mt-5">
+    <div id="primary" class="content-area">
+        <section class="error-404 not-found text-center">
+            <header class="page-header mt-6">
+                <h1 class="error-msg"><?php esc_html_e( '404', 'astha' ); ?></h1>
+                <h3 class="page-title mt-3 mb-3">
+				<?php esc_html_e( 'Oops! There’s not much left here for you', 'astha' ); ?>
+                </h3>
+            </header><!-- .page-header -->
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'astha' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'astha' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'astha' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$astha_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'astha' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$astha_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
-
-<?php
-get_footer();
+            <div class="page-content row">
+                <div class="col-md-6 offset-3">
+                    <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'astha' ); ?>
+                    </p>
+                    <?php
+						get_search_form();
+						?>
+                    <a class="btn btn-default"
+                        href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Back to Home', 'astha' ); ?></a>
+                </div>
+            </div><!-- .page-content -->
+        </section><!-- .error-404 -->
+    </div><!-- #primary -->
+</main><!-- #main -->
