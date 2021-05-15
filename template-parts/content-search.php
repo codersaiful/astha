@@ -18,15 +18,21 @@
 		
 		?>
 	</div><!-- .entry-header -->
-	<div class="search entry-content m-0">
-		<div class="search-thumb">
-			<?php the_post_thumbnail('astha-search-thumbnail'); ?>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="search entry-content m-0">
+				<div class="search-thumb">
+					<?php the_post_thumbnail('astha-blog-thumbnail'); ?>
+				</div>
+			</div>
 		</div>
-		<div class="search-content">
-			<?php
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-			echo astha_get_excerpt(200);
-			?>
+		<div class="col-md-6">
+			<div class="search-content">
+				<?php
+				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+				echo astha_get_excerpt(250);
+				?>
+			</div>
 		</div>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

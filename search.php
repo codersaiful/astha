@@ -10,14 +10,14 @@
 get_header();
 ?>
 
-	<main id="site-content" class="site-main mt-5">
+<main id="site-content" class="site-main mt-5">
     <!--breadcumb-->
     <section class="container-fluid breadcumbs">
         <div class="container mb-5">
             <div class="row">
                 <div class="col-md-12">
                     <?php
-				 printf( __( '<h3>Search Results for: %s', 'buzzpress' ), '<span>' . get_search_query() . '</span></h3>' );
+				 printf( __( '<h3>Search Results for: %s', 'astha' ), '<span>' . get_search_query() . '</span></h3>' );
 				 ?>
                 </div>
             </div>
