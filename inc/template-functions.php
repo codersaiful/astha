@@ -64,10 +64,8 @@ function astha_get_excerpt( $count ) {
 			get_permalink(),
 			__( 'Continue reading', 'astha' )
 		);
-	if(is_home() || is_front_page()){
-	$excerpt = '<p>'.$excerpt.'... '.$read_more_btn.'</p>';
+		$excerpt = '<p>'.$excerpt.'... '.$read_more_btn.'</p>';
 		return $excerpt;
-	}
 }
 
 

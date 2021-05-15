@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<main id="site-content" class="site-main container mt-5">
+<main id="site-content" class="site-main container mt-4">
     <div id="primary" class="content-area">
         <section class="error-404 not-found text-center">
             <header class="page-header mt-6">

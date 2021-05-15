@@ -15,14 +15,14 @@
 			<?php if ( 'post' === get_post_type() ) :?>
 			<?php if(has_post_thumbnail()):?>
 			<?php 
-			astha_post_thumbnail('astha-blog-thumbnail'); 
+			astha_post_thumbnail('astha-blog-thumbnail');
 			else:?>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/no-thumb.png">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/no-thumb.png">
 			<?php 
 			endif;
 			?>
 			<?php endif; ?>
-
+			<?php astha_posted_on();?>
 		</header><!-- .entry-header -->
 	</div>
 	<div class="content-wrap">
@@ -36,12 +36,12 @@
 			<?php
 			astha_posted_by();
 			astha_get_category();
-			astha_posted_on();
 			?>
 		</div>
 		<div class="entry-content">
-			<?php echo astha_get_excerpt(125);?>
+			<?php echo astha_get_excerpt(75);?>
 		</div><!-- .entry-content -->
 	</div>
 </article>
+
 

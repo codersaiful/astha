@@ -264,3 +264,39 @@ form.search-form button{
     position: relative;
     display: inline-block;
 }
+ .error-404 h3.page-title {
+    font-size: 36px;
+    color: #021429;
+}
+/*Navbar style */
+.nav li a {
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+}
+main#primary {
+    margin-top: 50px;
+}
+.nav-header{
+	box-shadow: 4px 0px 16px 0px rgb(234 234 234 / 75%)
+}
+.archive .entry-header{
+	position:relative
+}
+.archive span.posted-on a{
+	color:#fff
+}
+.archive span.posted-on {
+    position: absolute;
+    bottom: -18px;
+    left: 30px;
+    background: #0FC392;
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+}
+.archive span.posted-on i{
+	margin-right:5px
+}
