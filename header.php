@@ -26,9 +26,9 @@
 ?>
 <?php
 /**
- * Hook - buzzpress_header
+ * Hook - astha_header
  *
- * @hooked buzzpress_header - 10
+ * @hooked astha_header - 10
  */
 	do_action( 'astha_header' );
 ?>

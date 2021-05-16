@@ -39,7 +39,7 @@
 			?>
 		</div>
 		<div class="entry-content">
-			<?php echo astha_get_excerpt(75);?>
+			<?php the_content();?>
 		</div><!-- .entry-content -->
 	</div>
 </article>

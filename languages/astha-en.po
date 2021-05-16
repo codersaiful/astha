@@ -121,35 +121,35 @@ msgstr ""
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/widget/class-buzzpress-latest-post.php:11
+#: inc/widget/class-astha-latest-post.php:11
 msgid "Your site&#8217;s most recent Posts."
 msgstr ""
 
-#: inc/widget/class-buzzpress-latest-post.php:14
-msgid "BuzzPress Recent Posts"
+#: inc/widget/class-astha-latest-post.php:14
+msgid "Astha Recent Posts"
 msgstr ""
 
-#: inc/widget/class-buzzpress-latest-post.php:30
+#: inc/widget/class-astha-latest-post.php:30
 msgid "Recent Posts"
 msgstr ""
 
-#: inc/widget/class-buzzpress-latest-post.php:78
+#: inc/widget/class-astha-latest-post.php:78
 msgid "(no title)"
 msgstr ""
 
-#: inc/widget/class-buzzpress-latest-post.php:151
+#: inc/widget/class-astha-latest-post.php:151
 msgid "Title:"
 msgstr ""
 
-#: inc/widget/class-buzzpress-latest-post.php:154
+#: inc/widget/class-astha-latest-post.php:154
 msgid "Number of posts to show:"
 msgstr ""
 
-#: inc/widget/class-buzzpress-latest-post.php:159
+#: inc/widget/class-astha-latest-post.php:159
 msgid "Display post date?"
 msgstr ""
 
-#: inc/widget/class-buzzpress-latest-post.php:161
+#: inc/widget/class-astha-latest-post.php:161
 msgid "Display commnet?"
 msgstr ""
 

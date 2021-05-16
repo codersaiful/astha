@@ -8,7 +8,9 @@ h2 {
     font-size: 34px;
     text-transform: none;
 }
-
+a:hover, a:visited{
+	color:#333
+}
 .entry-title a {
     font-size: 36px;
     color: #021429;
@@ -25,7 +27,7 @@ h2 {
     margin-right: 5px;
     color: #0fc392;
 }
-a:hover {
+a:hover, .sidebar section.widget ul li a:hover {
     color: #0fc392;
     text-decoration: none;
 }
@@ -63,12 +65,15 @@ a:hover {
     -webkit-transition: 0.3s;
     position: relative;
 }
+.sidebar .widget.widget_recent_entries ul li a{
+	padding-left:0
+}
 .sidebar section.widget ul li{
 	margin-bottom:5px
 }
 .sidebar .widget.widget_categories li a:before, 
 .sidebar .widget.widget_meta li a:before, 
- aside .widget.widget_archive li a:before, #recentcomments li:before{
+ aside .widget.widget_archive li a:before, #recentcomments li:before, .widget_recent_entries ul li:before{
     position: absolute;
     left: 0;
     content: "\f101";
@@ -77,7 +82,7 @@ a:hover {
 }
 aside.sidebar .widget_categories ul, 
 aside.sidebar .widget_meta ul,
-aside .widget.widget_archive ul, #recentcomments{
+aside .widget.widget_archive ul, #recentcomments, .widget_recent_entries ul{
 	margin:0;
 	padding:0;
 	list-style:none
@@ -369,4 +374,66 @@ li.comment {
 .comment-content {
   font-size: 14px;
   margin-top: 15px;
+}
+/*Pagination*/
+.single-post .pagination {
+  display: block;
+  overflow: hidden;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 10px;
+  padding-top: 27px;
+}
+
+.single-post .pagination a {
+  color: #555555;
+  display: inline-block;
+  float: left;
+}
+
+.single-post .pagination a i {
+  vertical-align: middle;
+  padding-right: 13px;
+}
+
+.single-post .pagination a + a {
+  float: right;
+}
+
+.single-post .pagination a + a i {
+  padding-right: 0px;
+  padding-left: 13px;
+}
+
+.single-post .pagination a:hover {
+  color: #0fc392;
+}
+nav.navigation.post-navigation a { font-size:16px; font-weight:bold}
+.page-numbers {
+	display: inline-block;
+	padding: 15px;
+	margin: 0 2px 0 0;
+	border: 1px solid #0fc392;
+	line-height: 1;
+	text-decoration: none;
+	border-radius: 2px;
+	font-weight: 600;
+	color: #333;
+}
+ a.page-numbers:visited {
+	color:#333
+}
+a.page-numbers:hover {
+	background: #0fc392;
+	color:#fff
+}
+span.previous-post, span.next-post {
+    display: block;
+    color:#0fc392
+}
+span.previous-post, span.next-post {
+    display: block;
+    color:#0fc392;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
 }
