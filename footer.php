@@ -18,7 +18,7 @@
 	do_action( 'astha_footer' );
 ?>
 <!--Scroll To Top-->
-<div id="back-top" class="scroll-top"><i class="fa fa-angle-up"></i></div>
+<div id="scroll_top" class="scroll-top"><i class="fa fa-angle-up"></i></div>
 
 <?php wp_footer();?>
 </body>

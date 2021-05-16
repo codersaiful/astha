@@ -16,8 +16,8 @@
     });
   }
   //scroll to top
-    jQuery("#back-top").hide();
-    jQuery("#back-top").on("click",function(e) {
+    jQuery("#scroll_top").hide();
+    jQuery("#scroll_top").on("click",function(e) {
       e.preventDefault();
       jQuery("html, body").animate({ scrollTop: 0 }, "slow");
     });
@@ -25,12 +25,12 @@
     jQuery(window).scroll(function(){
       var scrollheight =400;
       if( $(window).scrollTop() > scrollheight ) {
-        jQuery("#back-top").fadeIn();
-        jQuery("#back-top").addClass("scroll-visible");
+        jQuery("#scroll_top").fadeIn();
+        jQuery("#scroll-top").addClass("scroll-visible");
       }
       else {
-        jQuery("#back-top").fadeOut();
-        jQuery("#back-top").removeClass("scroll-visible");
+        jQuery("#scroll_top").fadeOut();
+        jQuery("#scroll_top").removeClass("scroll-visible");
       }
     });
 	

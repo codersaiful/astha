@@ -182,7 +182,7 @@ function astha_widgets_init() {
 			'name' 			=> esc_html__('Footer Menu Widget Area','astha'),
 			'id'        	=> 'footer_menu',
 			'description' 	=> esc_html__('Footer Menu Area','astha'),
-			'before_widget' => '<div class="col-md-3">',
+			'before_widget' => '<div class="col-md-4">',
 			'after_widget' 	=> '</div>',
 			'before_title' 	=> '<h4>',
 			'after_title' 	=> '</h4>',
