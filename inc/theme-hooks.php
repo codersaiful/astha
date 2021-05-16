@@ -16,6 +16,7 @@ if ( ! function_exists( 'astha_header' ) ) :
 				<span class="toggle-menu fa fa-bars"></span>
 			</button>
 			<?php
+			if ( has_nav_menu( 'primary' ) ) :
 				wp_nav_menu( array(
 					'theme_location'    => 'primary',
 					'depth'             => 3,
@@ -25,12 +26,24 @@ if ( ! function_exists( 'astha_header' ) ) :
 					'menu_class'        => 'nav navbar-nav',
 					'items_wrap'		=> '<ul class="nav navbar-nav" data-function="navbar">%3$s</ul>',
 				) );
-			?>
+			else:
+			wp_page_menu(
+				array(
+					'container'  => 'div',
+					'menu_id'    => 'navbar-collapse',
+					'menu_class' => 'nav navbar-nav',
+					'menu_class' => 'collapse navbar-collapse justify-content-center',
+					'before'     => '<ul class="nav navbar-nav" data-function="navbar">',
+					'after'      => '</ul>',
+				)
+			); 
+		 endif; 
+		 ?>
 		</div>
 	</nav>
 </header>
 <?php
-	}
+}
 endif;
 add_action('astha_header','astha_header', 10);
 

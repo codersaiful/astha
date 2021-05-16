@@ -41,7 +41,6 @@ Add Image Size
 **/
 function astha_thumbsize() {
 	add_image_size( 'astha-sidebar-thumbnail', 100, 100, true );
-	add_image_size( 'astha-search-thumbnail', 160, 170, true );
 	add_image_size( 'astha-home-thumbnail', 370, 320, true );
 	add_image_size( 'astha-blog-thumbnail', 1200, 628, true );
 }

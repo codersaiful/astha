@@ -301,3 +301,6 @@ main#primary {
 	margin-right:5px
 }
 .search-content .entry-title a {font-size: 24px;}
+.tagcloud a {
+    color: #0fc392;
+}
