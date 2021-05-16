@@ -140,7 +140,7 @@ function astha_scripts() {
 	wp_enqueue_script( 'navbar-js', get_template_directory_uri() . '/assets/js/navbar.min.js', array(), '20151215', true );
 	
 	wp_enqueue_script( 'lazyload', get_template_directory_uri() . '/assets/js/lazy-load-images.min.js', array(), '20151215', true );
-		
+			
 	wp_enqueue_script( 'astha-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), '20151215', true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -169,11 +169,16 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/theme-hooks.php';
 
+/**
+ * Kirki Customizer.
+ */
+require get_template_directory() . '/inc/kirki/kirki.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer/customizer.php';
+require get_template_directory() . '/inc/customizer/customizer-social.php';
 
 /**
  * Latest post widget additions.

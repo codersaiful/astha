@@ -53,7 +53,7 @@ Footer hook function
 if ( ! function_exists( 'astha_footer' ) ) :
 	function astha_footer(){?>
 <!--Footer-->
-<footer class="footer sec-bg">
+<footer class="footer">
     <div class="container">
         <div class="row text-left mt-4 mb-4">
 		<?php
@@ -64,9 +64,8 @@ if ( ! function_exists( 'astha_footer' ) ) :
         </div>
         <hr>
         <div class="row copyright_info">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="mt-2">
-				<?php do_action('astha_social');?>
                     <?php
 					if (!is_active_sidebar('copyright')) {
 					?>
@@ -92,6 +91,15 @@ if ( ! function_exists( 'astha_footer' ) ) :
                     <?php }?>
                 </div>
             </div>
+			<div class="col-md-6 text-right">
+				<?php 
+					/**
+					 * Hook - astha_social
+					 * @hooked astha_social - 10
+					 */
+					do_action('astha_social');
+				?>
+			</div>
         </div>
     </div>
 </footer>
@@ -99,3 +107,58 @@ if ( ! function_exists( 'astha_footer' ) ) :
 	}
 endif;
 add_action('astha_footer','astha_footer', 10);
+
+/**
+astha Social 
+*/
+function astha_social(){
+	$facebook	= get_theme_mod('facebook');
+	$twitter	= get_theme_mod('twitter');
+	$linkedin	= get_theme_mod('linkedin');
+	$pinterest	= get_theme_mod('pinterest');
+	$instagram	= get_theme_mod('instagram');
+	
+	if($facebook || $twitter || $linkedin || $pinterest || $instagram ):
+?>
+	<div class="social-network-wrap">
+		<ul class="social-network">
+			<?php if($facebook): ?>
+				<li>
+					<a href="<?php echo esc_url($facebook); ?>">
+						<i class="fa fa-facebook"></i>
+					</a>
+				</li>
+			<?php endif; ?>
+			<?php if($twitter): ?>
+				<li>
+					<a href="<?php echo esc_url($twitter); ?>">
+						<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+			<?php endif; ?>
+			<?php if($linkedin): ?>
+				<li>
+					<a href="<?php echo esc_url($linkedin); ?>">
+						<i class="fa fa-linkedin"></i>
+					</a>
+				</li>
+			<?php endif; ?>
+			<?php if($pinterest): ?>
+				<li>
+					<a href="<?php echo esc_url($pinterest); ?>">
+						<i class="fa fa-pinterest"></i>
+					</a>
+				</li>
+			<?php endif; ?>
+			<?php if($instagram): ?>
+				<li>
+					<a href="<?php echo esc_url($instagram); ?>">
+						<i class="fa fa-instagram"></i>
+					</a>
+				</li>
+			<?php endif; ?>
+		</ul>
+	</div>
+	<?php endif;?>
+<?php }
+add_action('astha_social', 'astha_social', 10);
