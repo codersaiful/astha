@@ -3,9 +3,12 @@
  */
 
 body {
-	line-height: 28px
+	line-height: 28px;
+    color:#5a5a5a
 }
-
+h1.entry-title {
+    color: #111;
+}
 h2 {
 	font-size: 34px;
 	text-transform: none;
@@ -27,7 +30,14 @@ a:visited {
 	color: #333;
 	line-height: 1.333;
 }
-
+blockquote {
+    border-left: 5px solid #0fc392;
+    padding-left: 20px;
+    margin: 30px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+}
 .blog_post_meta span {
 	margin-right: 15px
 }
@@ -95,7 +105,7 @@ article.post {
 }
 
 .sidebar section.widget ul li {
-	margin-bottom: 5px
+	margin-bottom: 10px;
 }
 
 .sidebar .widget.widget_categories li a:before,
@@ -599,11 +609,13 @@ footer a:before {
     content: "\2011";
 	margin-right:5px
 }
-footer.footer .media a:before, .social-network li a:before{
+footer.footer .media a:before, 
+.social-network li a:before, 
+.media .astha_recent_list li:before{
 	content: "";
 }
-/*Social*/
 
+/*Social*/
 ul.social-network {
   list-style: none;
   display: inline-block;
