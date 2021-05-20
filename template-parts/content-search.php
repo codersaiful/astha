@@ -30,11 +30,9 @@
 			<div class="search-content">
 				<?php
 				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-				echo astha_get_excerpt(250);
+				echo astha_get_excerpt(120);
 				?>
 			</div>
 		</div>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
-
-

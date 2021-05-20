@@ -101,7 +101,7 @@ class Astha_Widget_Recent_Posts extends WP_Widget {
 						$title      = ( ! empty( $post_title ) ) ? $post_title : __( '(no title)','astha' );
 						$thetitle = $title; /* or you can use get_the_title() */
 						$getlength = strlen($thetitle);
-						$thelength = 40;
+						$thelength = 50;
 						echo substr($thetitle, 0, $thelength);
 						if ($getlength > $thelength) 
 						echo "...";
