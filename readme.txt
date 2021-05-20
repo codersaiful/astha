@@ -1,6 +1,6 @@
 === astha ===
 
-Contributors: rafiul17,tbyte
+Contributors: codersaiful, rafiul17
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 Requires at least: 4.0
 Tested up to: 5.7.1
