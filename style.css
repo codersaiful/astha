@@ -1,6 +1,6 @@
 /*!
 Theme Name: astha
-Theme URI: https://astha.site/
+Theme URI: https://codeastrology.com/astha
 Author: Saiful Islam
 Author URI: https://profiles.wordpress.org/codersaiful/
 Description: astha is a responsive multipurpose magazine blog theme.  It is clean and compatible with many devices, 
@@ -628,6 +628,7 @@ input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
 	color: #111;
+	border:1px solid #0fc392 !important
 }
 
 select {

@@ -63,6 +63,10 @@ animate.css
 License: animate.css is licensed under the MIT License
 Source: http://daneden.me/animate
 
+kirki
+License: kirki is licensed under the MIT License
+Source: https://github.com/ItinerisLtd/kirki
+
 Code from Twenty Twenty
 Copyright (c) 2019-2021 WordPress.org
 License: GPLv2

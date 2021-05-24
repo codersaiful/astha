@@ -1,6 +1,8 @@
+/**************/
+// astha custom.js
+/**************/
 (function ($) {
-  "use strict";
-
+ "use strict";
   //Navigation Menu dropdown Focused
 
   var $openClass = "open open-position";
@@ -24,7 +26,7 @@
 
     jQuery(window).scroll(function(){
       var scrollheight =400;
-      if( $(window).scrollTop() > scrollheight ) {
+      if( jQuery(window).scrollTop() > scrollheight ) {
         jQuery("#scroll_top").fadeIn();
         jQuery("#scroll-top").addClass("scroll-visible");
       }
@@ -34,7 +36,6 @@
       }
     });
 	
-
     jQuery("a[href^=\\#]").click(function(event){     
         event.preventDefault();
         jQuery('html,body').animate({scrollTop:jQuery(this.hash).offset().top}, 500);
@@ -48,5 +49,5 @@
 			jQuery('.nav-header').removeClass('affix');
 		}
 	});
- 
+	
 })(jQuery);

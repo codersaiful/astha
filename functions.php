@@ -9,7 +9,7 @@
 
 if ( ! defined( '_ASTHA_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_ASTHA_VERSION', '1.0.0' );
+	define( '_ASTHA_VERSION', '0.6' );
 }
 
 if ( ! function_exists( 'astha_setup' ) ) :
@@ -132,6 +132,8 @@ function astha_scripts() {
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css');
 	
 	wp_enqueue_style( 'astha-main-style', get_template_directory_uri() . '/assets/css/astha-style.css');
+	
+	wp_enqueue_script('jquery');
 	
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20151215', true );
 	/**
