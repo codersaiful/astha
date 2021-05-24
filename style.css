@@ -769,7 +769,7 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
-.entry-content a {
+.single .entry-content a {
 	text-decoration:underline
 }
 /* Comments
