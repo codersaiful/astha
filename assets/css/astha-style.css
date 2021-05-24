@@ -395,7 +395,7 @@ form.comment-form .form-submit input.submit {
 	line-height: 1.1;
 	padding: 17px 30px;
 	font-weight: 500;
-	border: 2px solid transparent;
+	border: 2px solid #0fc392;
 	border-radius: 0;
 	cursor: pointer;
 	transition: 0.3s;
@@ -408,6 +408,7 @@ form.comment-form .form-submit input.submit:hover {
 	color: #0fc392;
 	border-color: #0fc392;
 	background: transparent;
+	outline: none;
 }
 
 form.comment-form p.comment-form-comment textarea {
@@ -648,12 +649,6 @@ main#primary {
 	float: left;
 	margin-top: 8px;
 	margin-right: 8px;
-}
-
-.input__field,
-.textarea__field {
-	margin-bottom: 15px;
-	font-size: 14px;
 }
 
 #comments .comment-body {
@@ -911,6 +906,10 @@ ul.social-network li {
 .navigation.posts-navigation {
     width: 100%;
     padding: 0 15px;
+}
+
+.form-control:focus {
+    box-shadow: none;
 }
 /*Responsive*/
 @media(max-width:450px){
