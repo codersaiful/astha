@@ -1,15 +1,15 @@
 /*!
 Theme Name: astha
-Theme URI: https://astha.site/
+Theme URI: https://codeastrology.com/astha
 Author: Saiful Islam
 Author URI: https://profiles.wordpress.org/codersaiful/
 Description: astha is a responsive multipurpose magazine blog theme.  It is clean and compatible with many devices, 
 It's flexible and suitable for agencies, blogs, magazine, businesses and others.
 Version: 0.6
-Tested up to: 5.4
+Tested up to: 5.7
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astha
 Tags: blog, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
@@ -609,6 +609,7 @@ textarea {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
+		outline:none
 }
 
 input[type="text"]:focus,
@@ -626,8 +627,9 @@ input[type="time"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
-textarea:focus {
-	color: #111;
+textarea:focus{
+	color: #333;
+	outline:1px solid #0fc392 !important;
 }
 
 select {
@@ -767,6 +769,9 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
+.single .entry-content a {
+	text-decoration:underline
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {

@@ -17,7 +17,7 @@
 			<?php 
 			astha_post_thumbnail('astha-blog-thumbnail');
 			else:?>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/no-thumb.png">
+				<img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/img/no-thumb.png'); ?>">
 			<?php 
 			endif;
 			?>
