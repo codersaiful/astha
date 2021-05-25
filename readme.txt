@@ -3,7 +3,7 @@
 Contributors: codersaiful, rafiul17
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 Requires at least: 4.0
-Tested up to: 5.7.2
+Tested up to: 5.7
 Stable tag: 5.0
 Requires PHP: 5.4
 License: GNU General Public License v2 or later
@@ -34,7 +34,7 @@ astha is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-= 0.1 - May 20 2021 =
+= 0.6 - May 20 2021 =
 * Initial release
 
 == Credits ==
