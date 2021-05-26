@@ -57,7 +57,7 @@ add_action( 'after_setup_theme', 'astha_woocommerce_setup' );
  * @return void
  */
 function astha_woocommerce_scripts() {
-    wp_enqueue_style( 'astha-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.css', array(), ASTHA_VERSION );
 
     $font_path   = WC()->plugin_url() . '/assets/fonts/';
     $inline_font = '@font-face {
@@ -81,14 +81,14 @@ function astha_woocommerce_scripts() {
      * *****************************
      * WooCommerce's Third Party Plugin's responsive Style also load from here 
      */
-    wp_enqueue_style( 'astha-responsive-woocommerce', get_template_directory_uri() . '/assets/css/responsive-woocommerce.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-responsive-woocommerce', get_template_directory_uri() . '/assets/css/responsive-woocommerce.css', array(), ASTHA_VERSION );
     
     /**
      * WooCommerce Related JS will load, When only Woocommerce Install
      * 
      * @since 1.0.0.29
      */
-    wp_enqueue_script( 'astha-woocommerce-custom-js', get_template_directory_uri() . '/assets/js/woocommerce.js', array(), MEDILAC_VERSION, true );
+    wp_enqueue_script( 'astha-woocommerce-custom-js', get_template_directory_uri() . '/assets/js/woocommerce.js', array(), ASTHA_VERSION, true );
     
 }
 add_action( 'wp_enqueue_scripts', 'astha_woocommerce_scripts', 20 );

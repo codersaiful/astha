@@ -22,7 +22,7 @@
         }
         
         // Our Theme's localize Data
-        console.log(MEDILAC_DATA);
+        console.log(ASTHA_DATA);
         
         /**
          * Information for adminbar

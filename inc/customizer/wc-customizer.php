@@ -271,7 +271,7 @@ if( ! function_exists( 'astha_wc_customizerr_manage' ) ){
          
          /**
          * *******************************
-         * SECTION BASIC MEDILAC IN WOOCOMMERCE
+         * SECTION BASIC ASTHA IN WOOCOMMERCE
          * ********************************
          * Header / Footer Layout
          * _wc

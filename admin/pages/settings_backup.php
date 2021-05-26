@@ -60,7 +60,7 @@ $asthatheme = wp_get_theme();
      * You have to be ensure/confirm that, these data is not restore able.
      */
     
-    if( ( isset( $_GET['customizer_delete'] ) && $_GET['customizer_delete'] == 'absolute_yes' ) || defined( 'MEDILAC_DELETE_CUSTOMIZER_BACKUP' ) || apply_filters( 'astha_delete_customizer_backup', false ) ){
+    if( ( isset( $_GET['customizer_delete'] ) && $_GET['customizer_delete'] == 'absolute_yes' ) || defined( 'ASTHA_DELETE_CUSTOMIZER_BACKUP' ) || apply_filters( 'astha_delete_customizer_backup', false ) ){
         update_option( $option_key . rand(10, 1000), $astha_modses );
         update_option( $option_key, false);
     }

@@ -52,7 +52,7 @@ if( ! $primary_menu ){
         ?>
         
         <?php
-        }elseif( current_user_can( MEDILAC_CAPABILITY ) ){
+        }elseif( current_user_can( ASTHA_CAPABILITY ) ){
             
             echo sprintf( esc_html__( '%sAdd Menu%s', 'astha' ),
                     '<a href=" ' . esc_url( admin_url( 'nav-menus.php' ) ) . ' ">',

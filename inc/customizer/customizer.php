@@ -58,24 +58,24 @@ add_action( 'customize_register', 'astha_customize_register' );
  * 
  * We have also Used a Hook to Change that file, where we have used Options
  */
-$cusmzr_options_file = apply_filters( 'astha_customizer_options', MEDILAC_THEME_DIR . 'inc/customizer/options-filters.php' );
+$cusmzr_options_file = apply_filters( 'astha_customizer_options', ASTHA_THEME_DIR . 'inc/customizer/options-filters.php' );
 include_once $cusmzr_options_file;
 
 /**
  * All Need File for Customizer file has been Added from Here
  */
-include_once MEDILAC_THEME_DIR . 'inc/customizer/fonts/class-fonts-manage.php';
-include_once MEDILAC_THEME_DIR . 'inc/customizer/custom-controls.php';
-include_once MEDILAC_THEME_DIR . 'inc/customizer/functions.php';
+include_once ASTHA_THEME_DIR . 'inc/customizer/fonts/class-fonts-manage.php';
+include_once ASTHA_THEME_DIR . 'inc/customizer/custom-controls.php';
+include_once ASTHA_THEME_DIR . 'inc/customizer/functions.php';
 
-include_once MEDILAC_THEME_DIR . 'inc/customizer/typography.php';
-include_once MEDILAC_THEME_DIR . 'inc/customizer/theme_options.php';
-include_once MEDILAC_THEME_DIR . 'inc/customizer/color.php';
+include_once ASTHA_THEME_DIR . 'inc/customizer/typography.php';
+include_once ASTHA_THEME_DIR . 'inc/customizer/theme_options.php';
+include_once ASTHA_THEME_DIR . 'inc/customizer/color.php';
 /**
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
-    include_once MEDILAC_THEME_DIR . 'inc/customizer/wc-customizer.php';
+    include_once ASTHA_THEME_DIR . 'inc/customizer/wc-customizer.php';
 }
 
 if ( ! function_exists( 'WooCommerce' ) ) {
@@ -98,12 +98,12 @@ if ( ! function_exists( 'WooCommerce' ) ) {
     function astha_customize_select_to_select2( $cusomizer ){
         ////$('li.customize-control.customize-control-select select').select2();
         $select2 = apply_filters( 'astha_select2_support', true, $cusomizer ); 
-        //$cusomizer->type,MEDILAC_CUSTOMIZER_URI . 'assets/js/select2.full.min.js';
+        //$cusomizer->type,ASTHA_CUSTOMIZER_URI . 'assets/js/select2.full.min.js';
         if( $select2 ){ //$cusomizer->type == 'select'
-            wp_enqueue_script( 'astha-select2-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
-            wp_enqueue_script( 'astha-custom-controls-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/customizer.js', array( 'astha-select2-js' ), '1.0', true );
-            //wp_enqueue_style( 'astha-custom-controls-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/customizer.css', array(), '1.1', 'all' );
-            wp_enqueue_style( 'astha-select2-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/select2.min.css', array(), '4.0.13', 'all' );
+            wp_enqueue_script( 'astha-select2-js', ASTHA_CUSTOMIZER_URI . 'assets/js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
+            wp_enqueue_script( 'astha-custom-controls-js', ASTHA_CUSTOMIZER_URI . 'assets/js/customizer.js', array( 'astha-select2-js' ), '1.0', true );
+            //wp_enqueue_style( 'astha-custom-controls-css', ASTHA_CUSTOMIZER_URI . 'assets/css/customizer.css', array(), '1.1', 'all' );
+            wp_enqueue_style( 'astha-select2-css', ASTHA_CUSTOMIZER_URI . 'assets/css/select2.min.css', array(), '4.0.13', 'all' );
         }
     }
 }

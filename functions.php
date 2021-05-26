@@ -8,27 +8,27 @@
  */
 
 
-if ( ! defined( 'MEDILAC_VERSION' ) ) {
+if ( ! defined( 'ASTHA_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'MEDILAC_VERSION', '1.0.0' );
+	define( 'ASTHA_VERSION', '1.0.0' );
 }
 
-if ( ! defined( 'MEDILAC_CAPABILITY' ) ) {
+if ( ! defined( 'ASTHA_CAPABILITY' ) ) {
     //astha_theme_options capability used at ThemeRoot/admin/loader.php
     $astha_cap = apply_filters( 'astha_cap_theme_options', 'astha_theme_options' ); //edit_theme_options
-    define( 'MEDILAC_CAPABILITY', $astha_cap );
+    define( 'ASTHA_CAPABILITY', $astha_cap );
 }
 
-if ( ! defined( 'MEDILAC_THEME_DIR' ) ) {
-    define( 'MEDILAC_THEME_DIR', trailingslashit( get_template_directory() ) );
+if ( ! defined( 'ASTHA_THEME_DIR' ) ) {
+    define( 'ASTHA_THEME_DIR', trailingslashit( get_template_directory() ) );
 }
 
-if ( ! defined( 'MEDILAC_THEME_URI' ) ) {
-    define( 'MEDILAC_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
+if ( ! defined( 'ASTHA_THEME_URI' ) ) {
+    define( 'ASTHA_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 }
 
-if ( ! defined( 'MEDILAC_CUSTOMIZER_URI' ) ) {
-    define( 'MEDILAC_CUSTOMIZER_URI', trailingslashit( esc_url( MEDILAC_THEME_URI . 'inc/customizer/' ) ) );
+if ( ! defined( 'ASTHA_CUSTOMIZER_URI' ) ) {
+    define( 'ASTHA_CUSTOMIZER_URI', trailingslashit( esc_url( ASTHA_THEME_URI . 'inc/customizer/' ) ) );
 }
 
 /**
@@ -36,44 +36,44 @@ if ( ! defined( 'MEDILAC_CUSTOMIZER_URI' ) ) {
  * 
  * @since 1.0.0.72
  */
-if ( ! function_exists( 'astha_fs' ) ) {
-    // Create a helper function for easy SDK access.
-    function astha_fs() {
-        global $astha_fs;
-
-        if ( ! isset( $astha_fs ) ) {
-            // Include Freemius SDK.
-            require_once dirname(__FILE__) . '/freemius/start.php';
-
-            $astha_fs = fs_dynamic_init( array(
-                'id'                  => '8259',
-                'slug'                => 'astha-multiperpose-wordpress-theme',
-                'type'                => 'theme',
-                'public_key'          => 'pk_3c3c7c2c7b081c7f6dfb8b48e6314',
-                'is_premium'          => true,
-                'is_premium_only'     => true,
-                'has_addons'          => false,
-                'has_paid_plans'      => true,
-                'is_org_compliant'    => false,
-                'menu'                => array(
-                    'slug'           => 'astha_welcome',
-                    'first-path'     => 'admin.php?page=astha_welcome',
-                    'support'        => false,
-                ),
-                // Set the SDK to work in a sandbox mode (for development & testing).
-                // IMPORTANT: MAKE SURE TO REMOVE SECRET KEY BEFORE DEPLOYMENT.
-                'secret_key'          => 'sk_Pd!K.=y]_4$;*hW@J_kLP_Sxw-q00',
-            ) );
-        }
-
-        return $astha_fs;
-    }
-
-    // Init Freemius.
-    astha_fs();
-    // Signal that SDK was initiated.
-    do_action( 'astha_fs_loaded' );
-}
+//if ( ! function_exists( 'astha_fs' ) ) {
+//    // Create a helper function for easy SDK access.
+//    function astha_fs() {
+//        global $astha_fs;
+//
+//        if ( ! isset( $astha_fs ) ) {
+//            // Include Freemius SDK.
+//            require_once dirname(__FILE__) . '/freemius/start.php';
+//
+//            $astha_fs = fs_dynamic_init( array(
+//                'id'                  => '8259',
+//                'slug'                => 'astha-multiperpose-wordpress-theme',
+//                'type'                => 'theme',
+//                'public_key'          => 'pk_3c3c7c2c7b081c7f6dfb8b48e6314',
+//                'is_premium'          => true,
+//                'is_premium_only'     => true,
+//                'has_addons'          => false,
+//                'has_paid_plans'      => true,
+//                'is_org_compliant'    => false,
+//                'menu'                => array(
+//                    'slug'           => 'astha_welcome',
+//                    'first-path'     => 'admin.php?page=astha_welcome',
+//                    'support'        => false,
+//                ),
+//                // Set the SDK to work in a sandbox mode (for development & testing).
+//                // IMPORTANT: MAKE SURE TO REMOVE SECRET KEY BEFORE DEPLOYMENT.
+//                'secret_key'          => 'sk_Pd!K.=y]_4$;*hW@J_kLP_Sxw-q00',
+//            ) );
+//        }
+//
+//        return $astha_fs;
+//    }
+//
+//    // Init Freemius.
+//    astha_fs();
+//    // Signal that SDK was initiated.
+//    do_action( 'astha_fs_loaded' );
+//}
 
 
 
@@ -354,11 +354,11 @@ add_action( 'widgets_init', 'astha_widgets_init' );
 function astha_scripts() {
 
     //FontAwesome
-    wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/fontawesome/css/fontawesome.min.css', array(), MEDILAC_VERSION );
-    wp_enqueue_style( 'fontawesome-solid', get_template_directory_uri() . '/assets/fontawesome/css/solid.min.css', array(), MEDILAC_VERSION );
-    wp_enqueue_style( 'fontawesome-brands', get_template_directory_uri() . '/assets/fontawesome/css/brands.min.css', array(), MEDILAC_VERSION );
-    wp_enqueue_style( 'fontawesome-regular', get_template_directory_uri() . '/assets/fontawesome/css/regular.min.css', array(), MEDILAC_VERSION );
-    wp_enqueue_style( 'fontawesome-regular', get_template_directory_uri() . '/assets/fontawesome/css/all.min.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/fontawesome/css/fontawesome.min.css', array(), ASTHA_VERSION );
+    wp_enqueue_style( 'fontawesome-solid', get_template_directory_uri() . '/assets/fontawesome/css/solid.min.css', array(), ASTHA_VERSION );
+    wp_enqueue_style( 'fontawesome-brands', get_template_directory_uri() . '/assets/fontawesome/css/brands.min.css', array(), ASTHA_VERSION );
+    wp_enqueue_style( 'fontawesome-regular', get_template_directory_uri() . '/assets/fontawesome/css/regular.min.css', array(), ASTHA_VERSION );
+    wp_enqueue_style( 'fontawesome-regular', get_template_directory_uri() . '/assets/fontawesome/css/all.min.css', array(), ASTHA_VERSION );
 
 
     
@@ -367,19 +367,19 @@ function astha_scripts() {
      * Credits: https://github.com/animate-css/animate.css
      * Website: https://animate.style/
      */
-    wp_enqueue_style( 'animate-css', get_template_directory_uri() . '/assets/css/animate.min.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'animate-css', get_template_directory_uri() . '/assets/css/animate.min.css', array(), ASTHA_VERSION );
     //Astha Style File
-    wp_enqueue_style( 'astha-style', get_stylesheet_uri(), array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-style', get_stylesheet_uri(), array(), ASTHA_VERSION );
     
     //Getenberg Styling
-    wp_enqueue_style( 'astha-gutenberg', get_template_directory_uri() . '/assets/css/gutenberg.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-gutenberg', get_template_directory_uri() . '/assets/css/gutenberg.css', array(), ASTHA_VERSION );
     
     /**
      * Main Style Sheet
      * has come from assets folder
      * 
      */
-    wp_enqueue_style( 'astha-main-style', get_template_directory_uri() . '/assets/css/style.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-main-style', get_template_directory_uri() . '/assets/css/style.css', array(), ASTHA_VERSION );
     
 
     
@@ -391,14 +391,14 @@ function astha_scripts() {
      * 
      * @since 1.0.0.14
      */
-    wp_enqueue_style( 'astha-layout', get_template_directory_uri() . '/assets/css/layout.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-layout', get_template_directory_uri() . '/assets/css/layout.css', array(), ASTHA_VERSION );
     
     //Responsive CSS File
-    wp_enqueue_style( 'astha-responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), ASTHA_VERSION );
 
     
     
-    wp_enqueue_script( 'astha-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), MEDILAC_VERSION, true );
+    wp_enqueue_script( 'astha-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), ASTHA_VERSION, true );
     
     /**
      * js Cookie Added for Astha
@@ -406,15 +406,15 @@ function astha_scripts() {
      * 
      * Credit: https://github.com/js-cookie/js-cookie
      */
-    wp_enqueue_script( 'js-cookie', get_template_directory_uri() . '/assets/js/js.cookie.min.js', array('jquery'), MEDILAC_VERSION, true );
-    wp_enqueue_script( 'astha-js', get_template_directory_uri() . '/assets/js/astha.js', array('jquery'), MEDILAC_VERSION, true );
+    wp_enqueue_script( 'js-cookie', get_template_directory_uri() . '/assets/js/js.cookie.min.js', array('jquery'), ASTHA_VERSION, true );
+    wp_enqueue_script( 'astha-js', get_template_directory_uri() . '/assets/js/astha.js', array('jquery'), ASTHA_VERSION, true );
     
     $ajax_url = admin_url( 'admin-ajax.php' );
-    $MEDILAC_DATA = array( 
+    $ASTHA_DATA = array( 
         'theme_name'    => 'Astha',
         'author'        => 'Saiful islam',
         'author_email'  => 'codersaiful@gmail.com',
-        'version'       => MEDILAC_VERSION,
+        'version'       => ASTHA_VERSION,
         'ajaxurl'       => $ajax_url,
         'ajax_url'      => $ajax_url,
         'site_url'      => home_url(),
@@ -424,8 +424,8 @@ function astha_scripts() {
         'cart_with_content'    => false,
         'theme_mode'    => get_theme_mods(),
     );
-    $MEDILAC_DATA = apply_filters( 'astha_localize_data', $MEDILAC_DATA );
-    wp_localize_script( 'astha-js', 'MEDILAC_DATA', $MEDILAC_DATA );
+    $ASTHA_DATA = apply_filters( 'astha_localize_data', $ASTHA_DATA );
+    wp_localize_script( 'astha-js', 'ASTHA_DATA', $ASTHA_DATA );
     
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
@@ -437,7 +437,7 @@ function astha_scripts() {
      * @since 1.0.0.68
      */
     if( is_rtl() ){
-       wp_enqueue_style( 'astha-rtl-style', get_template_directory_uri() . '/style-rtl.css', array(), MEDILAC_VERSION );
+       wp_enqueue_style( 'astha-rtl-style', get_template_directory_uri() . '/style-rtl.css', array(), ASTHA_VERSION );
      
     }
 }

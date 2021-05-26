@@ -37,7 +37,7 @@ if( ! class_exists( 'Astha_Fonts_Manage' ) ){
          * @return type $google_fonts Array List of All Supported Google Fonts
          */
         public static function fonts(){
-            $google_fonts_file = apply_filters( 'astha_google_fonts_php_file', MEDILAC_THEME_DIR . 'inc/customizer/fonts/google-fonts.php' );
+            $google_fonts_file = apply_filters( 'astha_google_fonts_php_file', ASTHA_THEME_DIR . 'inc/customizer/fonts/google-fonts.php' );
 
             if ( ! file_exists( $google_fonts_file ) ) {
                     return array();

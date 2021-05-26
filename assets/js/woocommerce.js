@@ -17,7 +17,7 @@
          * User also able to change
          * using filter Hook: astha_localize_data
          * Shold be an Array
-         * Sourch: $MEDILAC_DATA = apply_filters( 'astha_localize_data', $MEDILAC_DATA );
+         * Sourch: $ASTHA_DATA = apply_filters( 'astha_localize_data', $ASTHA_DATA );
          */
         
         /**
@@ -27,8 +27,8 @@
         var adminbar = $('#wpadminbar');
         var adminbarHeight = adminbar.height();
 
-        var animation_name = MEDILAC_DATA.cart_animation;
-        var cartWithContent = MEDILAC_DATA.cart_with_content;
+        var animation_name = ASTHA_DATA.cart_animation;
+        var cartWithContent = ASTHA_DATA.cart_with_content;
         
         var headerMiniCart = $('.main-header-mini-cart-wrapper');
         var topbarMiniCart = $('.topbar-mini-cart-wrapper');

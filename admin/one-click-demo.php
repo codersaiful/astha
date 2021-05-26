@@ -373,7 +373,7 @@ if( !function_exists( 'astha_demo_sub_menu' ) ){
      * @return Array
      */
     function astha_demo_sub_menu( $args ){
-        $capability = MEDILAC_CAPABILITY;
+        $capability = ASTHA_CAPABILITY;
         return array(
 			'parent_slug' => 'themes.php',
 			'page_title'  => esc_html__( 'Astha Demo Import' , 'astha' ),

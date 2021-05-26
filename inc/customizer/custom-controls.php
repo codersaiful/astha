@@ -7,21 +7,21 @@
  *
  * 
  * //Image URL Sample
- * MEDILAC_CUSTOMIZER_URI . 'assets/images/sidebar-left.png'
+ * ASTHA_CUSTOMIZER_URI . 'assets/images/sidebar-left.png'
  * 
  * @package Astha
  */
 
-$astha_cst_css = MEDILAC_CUSTOMIZER_URI . 'assets/images/sidebar-left.png';
-if ( ! defined( 'MEDILAC_CUSTOMIZER_CSS' ) ) {
-    define( 'MEDILAC_CUSTOMIZER_CSS', esc_url( MEDILAC_CUSTOMIZER_URI . 'assets/css/customizer.css' ) );
+$astha_cst_css = ASTHA_CUSTOMIZER_URI . 'assets/images/sidebar-left.png';
+if ( ! defined( 'ASTHA_CUSTOMIZER_CSS' ) ) {
+    define( 'ASTHA_CUSTOMIZER_CSS', esc_url( ASTHA_CUSTOMIZER_URI . 'assets/css/customizer.css' ) );
 }
 
-if ( ! defined( 'MEDILAC_CUSTOMIZER_JS' ) ) {
-    define( 'MEDILAC_CUSTOMIZER_JS', esc_url( MEDILAC_CUSTOMIZER_URI . 'assets/js/customizer.js' ) );
+if ( ! defined( 'ASTHA_CUSTOMIZER_JS' ) ) {
+    define( 'ASTHA_CUSTOMIZER_JS', esc_url( ASTHA_CUSTOMIZER_URI . 'assets/js/customizer.js' ) );
 }
-if ( ! defined( 'MEDILAC_CUSTOMIZER_JS_PREVIEW' ) ) {
-    define( 'MEDILAC_CUSTOMIZER_JS_PREVIEW', esc_url( MEDILAC_CUSTOMIZER_URI . 'assets/js/customizer-preview.js' ) );
+if ( ! defined( 'ASTHA_CUSTOMIZER_JS_PREVIEW' ) ) {
+    define( 'ASTHA_CUSTOMIZER_JS_PREVIEW', esc_url( ASTHA_CUSTOMIZER_URI . 'assets/js/customizer-preview.js' ) );
 }
 
 
@@ -42,7 +42,7 @@ if ( ! class_exists( 'Astha_Image_Radio_Control' ) &&  class_exists( 'WP_Customi
              * Enqueue our scripts and styles
              */
             public function enqueue(){
-                wp_enqueue_style( 'astha-customizer-css', MEDILAC_CUSTOMIZER_CSS, array(), '1.0', 'all' );
+                wp_enqueue_style( 'astha-customizer-css', ASTHA_CUSTOMIZER_CSS, array(), '1.0', 'all' );
             }
             /**
              * Render the control in the customizer
@@ -81,7 +81,7 @@ if ( ! class_exists( 'Astha_Image_Radio_Control' ) &&  class_exists( 'WP_Customi
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_style( 'astha-customizer-css', MEDILAC_CUSTOMIZER_CSS, array(), '1.0', 'all' );
+			wp_enqueue_style( 'astha-customizer-css', ASTHA_CUSTOMIZER_CSS, array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -191,10 +191,10 @@ if( ! class_exists( 'Astha_Select2_Custom_Control' ) && class_exists( 'WP_Custom
              * Enqueue our scripts and styles
              */
             public function enqueue() {
-                    wp_enqueue_script( 'astha-select2-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
-                    wp_enqueue_script( 'astha-custom-controls-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/customizer.js', array( 'astha-select2-js' ), '1.0', true );
-                    wp_enqueue_style( 'astha-custom-controls-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/customizer.css', array(), '1.1', 'all' );
-                    wp_enqueue_style( 'astha-select2-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/select2.min.css', array(), '4.0.13', 'all' );
+                    wp_enqueue_script( 'astha-select2-js', ASTHA_CUSTOMIZER_URI . 'assets/js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
+                    wp_enqueue_script( 'astha-custom-controls-js', ASTHA_CUSTOMIZER_URI . 'assets/js/customizer.js', array( 'astha-select2-js' ), '1.0', true );
+                    wp_enqueue_style( 'astha-custom-controls-css', ASTHA_CUSTOMIZER_URI . 'assets/css/customizer.css', array(), '1.1', 'all' );
+                    wp_enqueue_style( 'astha-select2-css', ASTHA_CUSTOMIZER_URI . 'assets/css/select2.min.css', array(), '4.0.13', 'all' );
             }
             /**
              * Render the control in the customizer

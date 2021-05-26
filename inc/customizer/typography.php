@@ -1209,14 +1209,14 @@ if( ! function_exists( 'astha_load_google_fonts' ) ){
                 foreach( $font_root as $root_font ){
 
                     if( ! empty( $root_font ) ){
-                        wp_enqueue_style( $root_font, $google_font_url . $root_font . $font_additonal, array(), MEDILAC_VERSION );
+                        wp_enqueue_style( $root_font, $google_font_url . $root_font . $font_additonal, array(), ASTHA_VERSION );
                     }
                 }
             }
             
             if( !empty( $fnt_mod['font-family'] ) ){
                 $font_name = $fnt_mod['font-family'];
-                wp_enqueue_style( $fonts, $google_font_url . $font_name . $font_additonal, array(), MEDILAC_VERSION );
+                wp_enqueue_style( $fonts, $google_font_url . $font_name . $font_additonal, array(), ASTHA_VERSION );
             }
         }
     }

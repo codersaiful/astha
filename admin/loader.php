@@ -27,16 +27,16 @@ if( ! function_exists( 'astha_menu' ) ){
     /**
      * Displaying / Adding A Menu Page for Admin Panel
      * Based on our Added Permission 
-     * Constant is: MEDILAC_CAPABILITY
+     * Constant is: ASTHA_CAPABILITY
      * Decleard at functions.php file
      * 
      * @package Astha
      * @link https://developer.wordpress.org/reference/hooks/admin_menu/
      */
     function astha_menu(){
-        $icon = MEDILAC_THEME_URI . 'assets/icons/astha.svg';
+        $icon = ASTHA_THEME_URI . 'assets/icons/astha.svg';
 
-        $capability = MEDILAC_CAPABILITY;
+        $capability = ASTHA_CAPABILITY;
         $url = isset( $_SERVER['REQUEST_URI'] ) && !empty( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
         $return = urlencode( home_url() . $url );
         add_menu_page( esc_html__( 'Astha', 'astha' ), esc_html__( 'Astha', 'astha' ), $capability, 'astha_welcome', 'astha_welcome', $icon, '59' );
@@ -106,7 +106,7 @@ if( ! function_exists( 'astha_demo_import' ) ){
  * Enqueue scripts and styles.
  */
 function astha_admin_scripts() {
-	wp_enqueue_style( 'astha-admin-style', get_template_directory_uri() . '/assets/css/admin.css', array(), MEDILAC_VERSION );
+	wp_enqueue_style( 'astha-admin-style', get_template_directory_uri() . '/assets/css/admin.css', array(), ASTHA_VERSION );
 	
 }
 add_action( 'admin_enqueue_scripts', 'astha_admin_scripts' );
