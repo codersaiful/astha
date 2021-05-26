@@ -1,8 +1,8 @@
 <?php
 /**
- * Medilac Theme Customizer
+ * Astha Theme Customizer
  *
- * @package Medilac
+ * @package Astha
  */
 
 
@@ -36,13 +36,13 @@ function medilac_customize_register( $wp_customize ) {
         
         
         /**
-         * Medilac Global Panel
+         * Astha Global Panel
          * It will show at the top of Customizer
          * Section,Setting,Control of this Panel
          * at Theme->inc->customizer->theme_options.php file
          */
         $wp_customize->add_panel( 'medilac_theme_mod', array(
-            'title' => __( 'Medilac Theme Options', 'medilac' ),
+            'title' => __( 'Astha Theme Options', 'medilac' ),
             'description' => esc_html__( 'This is Test It slfksd fsdkjf lksdjfkljsd fj sdfj skldjf', 'medilac' ),
             'priority' => 1,
             'capability' => 'edit_theme_options',

@@ -1,14 +1,14 @@
 <?php
 /**
- * Medilac Theme Customizer For Theme Options
+ * Astha Theme Customizer For Theme Options
  *
- * @package Medilac
+ * @package Astha
  */
 
 if( ! function_exists( 'medilac_theme_options_register' ) ){
     
     /**
-     * Medilac Theme Options All Section , Settings, Controll will controll from here
+     * Astha Theme Options All Section , Settings, Controll will controll from here
      * Panel added at customizer.php file Theme->inc->customizer.php
      * 
      * @param type $wp_customize
@@ -45,7 +45,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
             );
         $choices_topbar = apply_filters( 'medilac_topbar_layout_choises', $choices_topbar );
         $wp_customize->add_control( 
-            new Medilac_Image_Radio_Control( $wp_customize, 'layout_topbar',
+            new Astha_Image_Radio_Control( $wp_customize, 'layout_topbar',
                 array(
                    'label' => __( 'Topbar', 'medilac' ),
                    'description' => esc_html__( 'Select Topbar Layout', 'medilac' ),
@@ -74,7 +74,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
         $choices_header = apply_filters( 'medilac_header_layout_choises', $choices_header );
  
         $wp_customize->add_control( 
-            new Medilac_Image_Radio_Control( $wp_customize, 'layout_header',
+            new Astha_Image_Radio_Control( $wp_customize, 'layout_header',
                 array(
                    'label' => __( 'Header', 'medilac' ),
                    'description' => esc_html__( 'Select Header Layout', 'medilac' ),
@@ -111,7 +111,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
 //        ) );
 //        
         
-        $wp_customize->add_control( new Medilac_Image_Radio_Control( $wp_customize, 'layout_sidebar',
+        $wp_customize->add_control( new Astha_Image_Radio_Control( $wp_customize, 'layout_sidebar',
             array(
                'label' => __( 'Sidebar', 'medilac' ),
                'description' => esc_html__( 'Select Sidebar Layout', 'medilac' ),
@@ -145,7 +145,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
 //        ) );
 //        
         $wp_customize->add_control( 
-            new Medilac_Image_Radio_Control( $wp_customize, 'layout_footer',
+            new Astha_Image_Radio_Control( $wp_customize, 'layout_footer',
                 array(
                    'label' => __( 'Footer', 'medilac' ),
                    'description' => esc_html__( 'Select Footer Layout', 'medilac' ),
@@ -208,7 +208,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
 
 /*
         $wp_customize->add_control( 
-            new Medilac_Toggle_Switch_Custom_control( $wp_customize, 'control_name',
+            new Astha_Toggle_Switch_Custom_control( $wp_customize, 'control_name',
                 array(
                 )
             ) 
@@ -229,7 +229,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
                 )
         );
 //        $wp_customize->add_control( 
-//            new Medilac_Toggle_Switch_Custom_control( $wp_customize, 'breadcrumb_switch',
+//            new Astha_Toggle_Switch_Custom_control( $wp_customize, 'breadcrumb_switch',
 //                array(
 //                    'label'             =>  __( 'Breadcrumb', 'medilac' ),
 //                    'description'       =>  __( 'Show or Hide Breadcrumb', 'medilac' ),
@@ -862,7 +862,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
         
 
         $wp_customize->add_control( 
-            new Medilac_Toggle_Switch_Custom_control( $wp_customize, 'medilac_blog_taxonomy_sett',
+            new Astha_Toggle_Switch_Custom_control( $wp_customize, 'medilac_blog_taxonomy_sett',
                 array(
                     'label'             =>  __( 'Taxonomy on', 'medilac' ),
                     'description'       =>  __( 'Taxonomy Show/Hide for blog header in loop page and in single post.', 'medilac' ),
@@ -888,7 +888,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
         // Add control
 
         $wp_customize->add_control( 
-            new Medilac_Toggle_Switch_Custom_control( $wp_customize, 'medilac_blog_posted_by_sett',
+            new Astha_Toggle_Switch_Custom_control( $wp_customize, 'medilac_blog_posted_by_sett',
                 array(
                     'label'             =>  __( 'Posted By', 'medilac' ),
                     'description'       =>  __( 'Posted By Show/Hide for blog header in loop page and in single post.', 'medilac' ),
@@ -915,7 +915,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
 
         // Add control
         $wp_customize->add_control( 
-            new Medilac_Toggle_Switch_Custom_control( $wp_customize, 'medilac_blog_posted_on_sett',
+            new Astha_Toggle_Switch_Custom_control( $wp_customize, 'medilac_blog_posted_on_sett',
                 array(
                     'label'             =>  __( 'Posted On', 'medilac' ),
                     'description'       =>  __( 'Posted On (Post date time) Show/Hide for blog header in loop page and in single post.', 'medilac' ),
@@ -940,7 +940,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
 
         // Add control
         $wp_customize->add_control( 
-            new Medilac_Toggle_Switch_Custom_control( $wp_customize, 'medilac_blog_nav_sett',
+            new Astha_Toggle_Switch_Custom_control( $wp_customize, 'medilac_blog_nav_sett',
                 array(
                     'label'             =>  __( 'Post Navigation', 'medilac' ),
                     'description'       =>  __( 'Show or Hide post navigation(Next/Prev Button) in single blog details.', 'medilac' ),
@@ -965,7 +965,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
 
         // Add control
         $wp_customize->add_control( 
-            new Medilac_Toggle_Switch_Custom_control( $wp_customize, 'medilac_blog_sigle_footer_sett',
+            new Astha_Toggle_Switch_Custom_control( $wp_customize, 'medilac_blog_sigle_footer_sett',
                 array(
                     'label'             =>  __( 'Post Entry Footer', 'medilac' ),
                     'description'       =>  __( 'Show or Hide post entry footer in single details page.', 'medilac' ),
@@ -1168,7 +1168,7 @@ if( ! function_exists( 'medilac_theme_options_register' ) ){
         
         // Add control
 //        $wp_customize->add_control( 
-//            new Medilac_Toggle_Switch_Custom_control( $wp_customize, 'medilac_socket_switch_stt',
+//            new Astha_Toggle_Switch_Custom_control( $wp_customize, 'medilac_socket_switch_stt',
 //                array(
 //                    'label'             =>  __( 'Socket options', 'medilac' ),
 //                    'description'       =>  __( 'You can show or hide Socket section', 'medilac' ),
@@ -1246,7 +1246,7 @@ add_action( 'customize_register', 'medilac_theme_options_register' );
 if( ! function_exists( 'medilac_style_manage' ) ){
     
     /**
-     * Medilac Style Manager based on  
+     * Astha Style Manager based on  
      * Theme's Customizer
      * 
      * We will change breadcrumb height

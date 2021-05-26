@@ -1,10 +1,10 @@
 <?php
 /**
- * Medilac functions and definitions
+ * Astha functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Medilac
+ * @package Astha
  */
 
 
@@ -78,7 +78,7 @@ if ( ! function_exists( 'medilac_fs' ) ) {
 
 
 /**
- * Medilac Themes Top Function, which can be use any where of any position of Medilac Theme
+ * Astha Themes Top Function, which can be use any where of any position of Astha Theme
  * Specially we have use a function name medilac_option() function to this file
  * It's should at the top of the Theme
  * 
@@ -103,7 +103,7 @@ if ( ! function_exists( 'medilac_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Medilac, use a find and replace
+		 * If you're building a theme based on Astha, use a find and replace
 		 * to change 'medilac' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'medilac', get_template_directory() . '/languages' );
@@ -208,7 +208,7 @@ if ( ! function_exists( 'medilac_setup' ) ) :
                  * Almost Medium size thumbnail.
                  * It's called medilac-thumbnail.
                  * 
-                 * it will also will be use for Medilac-core recent blog
+                 * it will also will be use for Astha-core recent blog
                  * 
                  * @since 1.0.0.62
                  * @by Saiful
@@ -368,7 +368,7 @@ function medilac_scripts() {
      * Website: https://animate.style/
      */
     wp_enqueue_style( 'animate-css', get_template_directory_uri() . '/assets/css/animate.min.css', array(), MEDILAC_VERSION );
-    //Medilac Style File
+    //Astha Style File
     wp_enqueue_style( 'medilac-style', get_stylesheet_uri(), array(), MEDILAC_VERSION );
     
     //Getenberg Styling
@@ -401,7 +401,7 @@ function medilac_scripts() {
     wp_enqueue_script( 'medilac-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), MEDILAC_VERSION, true );
     
     /**
-     * js Cookie Added for Medilac
+     * js Cookie Added for Astha
      * WooCommerce Also has used this plugin
      * 
      * Credit: https://github.com/js-cookie/js-cookie
@@ -411,7 +411,7 @@ function medilac_scripts() {
     
     $ajax_url = admin_url( 'admin-ajax.php' );
     $MEDILAC_DATA = array( 
-        'theme_name'    => 'Medilac',
+        'theme_name'    => 'Astha',
         'author'        => 'Saiful islam',
         'author_email'  => 'codersaiful@gmail.com',
         'version'       => MEDILAC_VERSION,

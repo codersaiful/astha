@@ -1,9 +1,9 @@
 <?php
 /**
- * Medilac Adminsitration Functions Managing 
+ * Astha Adminsitration Functions Managing 
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Medilac
+ * @package Astha
  */
 

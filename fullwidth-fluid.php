@@ -14,7 +14,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Medilac
+ * @package Astha
  */
 
 /**
@@ -31,7 +31,7 @@ get_header();
  * 
  * @since 1.0.0.42
  * 
- * @package Medilac
+ * @package Astha
  */
 $template_page_comment = apply_filters( 'medilac_page_template_comment_show', false );
 

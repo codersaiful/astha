@@ -30,7 +30,7 @@ if ( is_multisite() ) {
 ?>
 
 <div class="wrap about-wrap medilac-wrap">
-    <h1><?php _e('Welcome to Medilac', 'medilac'); ?></h1>
+    <h1><?php _e('Welcome to Astha', 'medilac'); ?></h1>
 
     <div class="about-text"><?php echo esc_html__('medilac theme is now installed and ready to use!', 'medilac'); ?></div>
     <div class="medilac-badge">

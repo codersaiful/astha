@@ -1,5 +1,5 @@
 /**
- * Medilac main js file.
+ * Astha main js file.
  * 
  * @returns void
  */

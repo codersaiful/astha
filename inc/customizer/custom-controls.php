@@ -1,6 +1,6 @@
 <?php
 /**
- * Medilac Theme Customizer For for Custom Controll of Customizer
+ * Astha Theme Customizer For for Custom Controll of Customizer
  * 
  * @Credit maddisondesigns
  * @link https://github.com/maddisondesigns/customizer-custom-controls/blob/master/inc/custom-controls.php Getting Help from the Github Repo
@@ -9,7 +9,7 @@
  * //Image URL Sample
  * MEDILAC_CUSTOMIZER_URI . 'assets/images/sidebar-left.png'
  * 
- * @package Medilac
+ * @package Astha
  */
 
 $medilac_cst_css = MEDILAC_CUSTOMIZER_URI . 'assets/images/sidebar-left.png';
@@ -25,7 +25,7 @@ if ( ! defined( 'MEDILAC_CUSTOMIZER_JS_PREVIEW' ) ) {
 }
 
 
-if ( ! class_exists( 'Medilac_Image_Radio_Control' ) &&  class_exists( 'WP_Customize_Control' ) ) {
+if ( ! class_exists( 'Astha_Image_Radio_Control' ) &&  class_exists( 'WP_Customize_Control' ) ) {
     /**
      * Toggle Switch Custom Control
      *
@@ -33,7 +33,7 @@ if ( ! class_exists( 'Medilac_Image_Radio_Control' ) &&  class_exists( 'WP_Custo
      * @license http://www.gnu.org/licenses/gpl-2.0.html
      * @link https://github.com/maddisondesigns
      */
-    class Medilac_Toggle_Switch_Custom_control extends WP_Customize_Control {
+    class Astha_Toggle_Switch_Custom_control extends WP_Customize_Control {
             /**
              * The type of control being rendered
              */
@@ -71,8 +71,8 @@ if ( ! class_exists( 'Medilac_Image_Radio_Control' ) &&  class_exists( 'WP_Custo
             }
     }
 }
-if ( ! class_exists( 'Medilac_Image_Radio_Control' ) &&  class_exists( 'WP_Customize_Control' ) ) {
-    class Medilac_Image_Radio_Control extends WP_Customize_Control {
+if ( ! class_exists( 'Astha_Image_Radio_Control' ) &&  class_exists( 'WP_Customize_Control' ) ) {
+    class Astha_Image_Radio_Control extends WP_Customize_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -117,8 +117,8 @@ if ( ! class_exists( 'Medilac_Image_Radio_Control' ) &&  class_exists( 'WP_Custo
 	}
 }
 
-if ( ! class_exists( 'Medilac_Sample_Control' ) &&  class_exists( 'WP_Customize_Control' ) ) {
-    class Medilac_Sample_Control extends WP_Customize_Control{
+if ( ! class_exists( 'Astha_Sample_Control' ) &&  class_exists( 'WP_Customize_Control' ) ) {
+    class Astha_Sample_Control extends WP_Customize_Control{
         
         public $type = 'medilac';
         
@@ -151,7 +151,7 @@ if ( ! class_exists( 'Medilac_Sample_Control' ) &&  class_exists( 'WP_Customize_
 
 }
 
-if( ! class_exists( 'Medilac_Select2_Custom_Control' ) && class_exists( 'WP_Customize_Control' ) ){
+if( ! class_exists( 'Astha_Select2_Custom_Control' ) && class_exists( 'WP_Customize_Control' ) ){
     
     /**
      * Dropdown Select2 Custom Control
@@ -160,7 +160,7 @@ if( ! class_exists( 'Medilac_Select2_Custom_Control' ) && class_exists( 'WP_Cust
      * @license http://www.gnu.org/licenses/gpl-2.0.html
      * @link https://github.com/maddisondesigns
      */
-    class Medilac_Select2_Custom_Control extends WP_Customize_Control {
+    class Astha_Select2_Custom_Control extends WP_Customize_Control {
             /**
              * The type of control being rendered
              */

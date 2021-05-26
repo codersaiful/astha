@@ -1,7 +1,7 @@
 /**
  * Maintenance woocommerce and woocommerce related javascript 
  * all, and all code has written jQuery based
- * provided by Medilac
+ * provided by Astha
  * 
  * @param {type} $
  * @returns {undefined}
@@ -13,7 +13,7 @@
         
         
         /**
-         * Medilac Localize Data 
+         * Astha Localize Data 
          * User also able to change
          * using filter Hook: medilac_localize_data
          * Shold be an Array

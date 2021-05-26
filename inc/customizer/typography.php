@@ -1,8 +1,8 @@
 <?php
 /**
- * Medilac Theme Customizer For Fonts Controlling
+ * Astha Theme Customizer For Fonts Controlling
  *
- * @package Medilac
+ * @package Astha
  */
 
 if( ! function_exists( 'medilac_typography_register' ) ){
@@ -38,11 +38,11 @@ if( ! function_exists( 'medilac_typography_register' ) ){
     function medilac_typography_register( $wp_customize ){
 
         /**
-         * Panel for Medilac Typography
+         * Panel for Astha Typography
          */
         $wp_customize->add_panel( 'medilac_typo', array(
             'title' => __( 'Typography', 'medilac' ),
-            'description' => esc_html__( 'Medilac Typography control. User will able to Control of whole site Typography from here. There are some System Fonts and rest all are Google fonts.', 'medilac' ),
+            'description' => esc_html__( 'Astha Typography control. User will able to Control of whole site Typography from here. There are some System Fonts and rest all are Google fonts.', 'medilac' ),
             'priority' => 1,
             'capability' => 'edit_theme_options',
             'theme_support' => '',
@@ -80,7 +80,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -104,7 +104,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -146,7 +146,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -191,7 +191,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_transform_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_transform_choices(),
             
         ) );
         
@@ -209,7 +209,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_weight_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_weight_choices(),
             
         ) );
         
@@ -227,7 +227,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_style_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_style_choices(),
             
         ) );
         //*************************************************/
@@ -270,7 +270,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -312,7 +312,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_transform_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_transform_choices(),
             
         ) );
         
@@ -330,7 +330,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_weight_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_weight_choices(),
             
         ) );
         
@@ -348,7 +348,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_style_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_style_choices(),
             
         ) );
         
@@ -392,7 +392,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -434,7 +434,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_transform_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_transform_choices(),
             
         ) );
         
@@ -452,7 +452,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_weight_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_weight_choices(),
             
         ) );
         
@@ -470,7 +470,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_style_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_style_choices(),
             
         ) );
         
@@ -503,7 +503,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -543,7 +543,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_transform_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_transform_choices(),
             
         ) );
         
@@ -561,7 +561,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_weight_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_weight_choices(),
             
         ) );
         
@@ -579,7 +579,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_style_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_style_choices(),
             
         ) );
         
@@ -613,7 +613,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -655,7 +655,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_transform_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_transform_choices(),
             
         ) );
         
@@ -673,7 +673,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_weight_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_weight_choices(),
             
         ) );
         
@@ -691,7 +691,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_style_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_style_choices(),
             
         ) );
         
@@ -724,7 +724,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -766,7 +766,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_transform_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_transform_choices(),
             
         ) );
         
@@ -784,7 +784,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_weight_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_weight_choices(),
             
         ) );
         
@@ -802,7 +802,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_style_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_style_choices(),
             
         ) );
         
@@ -835,7 +835,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -876,7 +876,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_transform_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_transform_choices(),
             
         ) );
         
@@ -894,7 +894,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_weight_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_weight_choices(),
             
         ) );
         
@@ -912,7 +912,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_style_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_style_choices(),
             
         ) );
         
@@ -945,7 +945,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -987,7 +987,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_transform_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_transform_choices(),
             
         ) );
         
@@ -1005,7 +1005,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_weight_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_weight_choices(),
             
         ) );
         
@@ -1023,7 +1023,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_style_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_style_choices(),
             
         ) );
         
@@ -1056,7 +1056,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices' => Medilac_Fonts_Manage::fonts_choices(),
+            'choices' => Astha_Fonts_Manage::fonts_choices(),
             'input_attrs'   =>  array(
                 'class'         =>  'select2',
                 'placeholder'   => 'Choose Font',
@@ -1098,7 +1098,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_transform_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_transform_choices(),
             
         ) );
         
@@ -1116,7 +1116,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_weight_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_weight_choices(),
             
         ) );
         
@@ -1134,7 +1134,7 @@ if( ! function_exists( 'medilac_typography_register' ) ){
             'priority'      =>  10,
             'capability'    =>  'edit_theme_options',
             'type'          =>  'select',
-            'choices'   => Medilac_Fonts_Manage::fonts_style_choices(),
+            'choices'   => Astha_Fonts_Manage::fonts_style_choices(),
             
         ) );
         
@@ -1148,7 +1148,7 @@ add_action( 'customize_register', 'medilac_typography_register' );
 if( ! function_exists( 'medilac_load_google_fonts' ) ){
     
     /**
-     * Medilac Fonts Loading
+     * Astha Fonts Loading
      * Google Fonts Loaded based on Selection
      * 
      * @return Void Enequeue Google Fonts File

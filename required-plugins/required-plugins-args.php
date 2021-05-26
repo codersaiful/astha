@@ -7,7 +7,7 @@
  *
  * @package    TGM-Plugin-Activation
  * @subpackage Example
- * @version    2.6.1 for parent theme Medilac for publication on ThemeForest
+ * @version    2.6.1 for parent theme Astha for publication on ThemeForest
  * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
  * @copyright  Copyright (c) 2011, Thomas Griffin
  * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
@@ -43,7 +43,7 @@ function medilac_register_required_plugins() {
 
 		// This is an example of how to include a plugin bundled with a theme.
 		array(
-			'name'               => esc_html( 'Medilac Core', 'medilac' ), // The plugin name.
+			'name'               => esc_html( 'Astha Core', 'medilac' ), // The plugin name.
 			'slug'               => 'medilac-core', // The plugin slug (typically the folder name).
 			'source'             => $plugins_dir, // The plugin source.
 			'required'           => false, 
@@ -265,6 +265,6 @@ function medilac_register_required_plugins() {
 		),
 		*/
 	);
-        $config['strings']['page_title'] = __( 'Install Required Plugins - Medilac', 'medilac' );
+        $config['strings']['page_title'] = __( 'Install Required Plugins - Astha', 'medilac' );
 	tgmpa( $plugins, $config );
 }

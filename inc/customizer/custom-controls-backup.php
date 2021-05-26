@@ -1,11 +1,11 @@
 <?php
 /**
- * Medilac Theme Customizer For for Custom Controll of Customizer
+ * Astha Theme Customizer For for Custom Controll of Customizer
  * 
  * @Credit maddisondesigns
  * @link https://github.com/maddisondesigns/customizer-custom-controls/blob/master/inc/custom-controls.php Getting Help from the Github Repo
  *
- * @package Medilac
+ * @package Astha
  */
 
 if ( class_exists( 'WP_Customize_Control' ) ) {
@@ -16,7 +16,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Custom_Control extends WP_Customize_Control {
+	class Astha_Custom_Control extends WP_Customize_Control {
 		protected function get_medilac_resource_url() {
 			if( strpos( wp_normalize_path( __DIR__ ), wp_normalize_path( WP_PLUGIN_DIR ) ) === 0 ) {
 				// We're in a plugin directory and need to determine the url accordingly.
@@ -34,7 +34,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Custom_Section extends WP_Customize_Section {
+	class Astha_Custom_Section extends WP_Customize_Section {
 		protected function get_medilac_resource_url() {
 			if( strpos( wp_normalize_path( __DIR__ ), wp_normalize_path( WP_PLUGIN_DIR ) ) === 0 ) {
 				// We're in a plugin directory and need to determine the url accordingly.
@@ -52,7 +52,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	 class Medilac_Image_Checkbox_Custom_Control extends Medilac_Custom_Control {
+	 class Astha_Image_Checkbox_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -95,7 +95,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	 class Medilac_Text_Radio_Button_Custom_Control extends Medilac_Custom_Control {
+	 class Astha_Text_Radio_Button_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -139,7 +139,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Image_Radio_Button_Custom_Control extends Medilac_Custom_Control {
+	class Astha_Image_Radio_Button_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -181,7 +181,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Single_Accordion_Custom_Control extends Medilac_Custom_Control {
+	class Astha_Single_Accordion_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -240,7 +240,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Simple_Notice_Custom_Control extends Medilac_Custom_Control {
+	class Astha_Simple_Notice_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -287,7 +287,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Slider_Custom_Control extends Medilac_Custom_Control {
+	class Astha_Slider_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -319,7 +319,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Toggle_Switch_Custom_control extends Medilac_Custom_Control {
+	class Astha_Toggle_Switch_Custom_control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -359,7 +359,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Sortable_Repeater_Custom_Control extends Medilac_Custom_Control {
+	class Astha_Sortable_Repeater_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -418,7 +418,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Dropdown_Select2_Custom_Control extends Medilac_Custom_Control {
+	class Astha_Dropdown_Select2_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -515,7 +515,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Dropdown_Posts_Custom_Control extends Medilac_Custom_Control {
+	class Astha_Dropdown_Posts_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -571,7 +571,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_TinyMCE_Custom_control extends Medilac_Custom_Control {
+	class Astha_TinyMCE_Custom_control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -616,7 +616,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Google_Font_Select_Custom_Control extends Medilac_Custom_Control {
+	class Astha_Google_Font_Select_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -816,7 +816,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-3.0.html
 	 * @link https://github.com/BraadMartin/components/tree/master/customizer/alpha-color-picker
 	 */
-	class Medilac_Customize_Alpha_Color_Control extends Medilac_Custom_Control {
+	class Astha_Customize_Alpha_Color_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -882,7 +882,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-3.0.html
 	 * @link https://github.com/kallookoo/wp-color-picker-alpha
 	 */
-	class Medilac_Alpha_Color_Control extends Medilac_Custom_Control {
+	class Astha_Alpha_Color_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -954,7 +954,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	class Medilac_Pill_Checkbox_Custom_Control extends Medilac_Custom_Control {
+	class Astha_Pill_Checkbox_Custom_Control extends Astha_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -1039,7 +1039,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @link https://github.com/maddisondesigns
 	 *
 	 */
-	class Medilac_Upsell_Section extends Medilac_Custom_Section {
+	class Astha_Upsell_Section extends Astha_Custom_Section {
 		/**
 		 * The type of control being rendered
 		 */

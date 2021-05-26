@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Medilac Themes Top Function, which can be use any where of any position of Medilac Theme
+ * Astha Themes Top Function, which can be use any where of any position of Astha Theme
  * Specially we have use a function name medilac_option() function to this file
  * It's should at the top of the Theme
  * 
- * Medilac functions and definitions
+ * Astha functions and definitions
  * 
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  * 
  * @since 1.0.0.19
  * @by Saiful
  * 
- * @package Medilac
+ * @package Astha
  */
 
 /**
@@ -73,7 +73,7 @@ if( ! function_exists( 'medilac_get_device_type' ) ){
 if( ! function_exists( 'medilac_option' ) ){
     
     /**
-     * Medilac Theme's Option Or Page Option
+     * Astha Theme's Option Or Page Option
      * Typically get Theme Option/ Theme Mode Value
      * as well as page's option
      * which is manipulate by cmb2 plugin
@@ -131,7 +131,7 @@ if( ! function_exists( 'medilac_option' ) ){
 if( ! function_exists( 'medilac_is_woocommerce' ) ){
     
     /**
-     * Medilac Theme's Option Or Page Option
+     * Astha Theme's Option Or Page Option
      * 
      * @global type $post Getting info/Object from default
      * @param type $keyword Keyword of Customizer's Theme Option or CMB2's id/Keyword

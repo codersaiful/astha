@@ -1,14 +1,14 @@
 <?php
 /**
- * Medilac Theme Customizer For Color Manage for customizer
+ * Astha Theme Customizer For Color Manage for customizer
  *
- * @package Medilac
+ * @package Astha
  */
 
 if( ! function_exists( 'medilac_customizer_color_manage' ) ){
     
     /**
-     * Medilac Theme Options All Section , Settings, Controll will controll from here
+     * Astha Theme Options All Section , Settings, Controll will controll from here
      * Panel added at customizer.php file Theme->inc->customizer.php
      * 
      * @param type $wp_customize
@@ -572,7 +572,7 @@ add_action( 'customize_register', 'medilac_customizer_color_manage' );
 if( ! function_exists( 'medilac_root_color_manage' ) ){
     
     /**
-     * Medilac Style Root Color Manager based on 
+     * Astha Style Root Color Manager based on 
      * Theme's Customizer
      * 
      * We will change RooT color based on Theme Option's set color

@@ -1,14 +1,14 @@
 <?php
 /**
- * Medilac Theme Customizer For Color Manage for customizer
+ * Astha Theme Customizer For Color Manage for customizer
  *
- * @package Medilac
+ * @package Astha
  */
 
 if( ! function_exists( 'medilac_wc_customizerr_manage' ) ){
     
     /**
-     * Medilac Theme Options All Section , Settings, Controll will controll from here
+     * Astha Theme Options All Section , Settings, Controll will controll from here
      * Panel added at customizer.php file Theme->inc->customizer.php
      * 
      * @param type $wp_customize
@@ -49,7 +49,7 @@ if( ! function_exists( 'medilac_wc_customizerr_manage' ) ){
         $choices_shop_layout = apply_filters( 'medilac_shop_layout_choises', $choices_shop_layout );
         
         $wp_customize->add_control( 
-            new Medilac_Image_Radio_Control( $wp_customize, 'layout_shop_wc',
+            new Astha_Image_Radio_Control( $wp_customize, 'layout_shop_wc',
                 array(
                    'label' => __( 'Shop Layout', 'medilac' ),
                    'description' => esc_html__( 'Set your Header Layout from pre-define', 'medilac' ),
@@ -77,7 +77,7 @@ if( ! function_exists( 'medilac_wc_customizerr_manage' ) ){
         $choices_topbar = apply_filters( 'medilac_topbar_layout_choises', $choices_topbar );
         
         $wp_customize->add_control( 
-            new Medilac_Image_Radio_Control( $wp_customize, 'layout_topbar_wc',
+            new Astha_Image_Radio_Control( $wp_customize, 'layout_topbar_wc',
                 array(
                    'label' => __( 'Topbar', 'medilac' ),
                    'description' => esc_html__( 'Set your Header Layout from pre-define', 'medilac' ),
@@ -113,7 +113,7 @@ if( ! function_exists( 'medilac_wc_customizerr_manage' ) ){
 //            'choices'           => $choices_header,
 //        ) );
         $wp_customize->add_control( 
-            new Medilac_Image_Radio_Control( $wp_customize, 'layout_header_wc',
+            new Astha_Image_Radio_Control( $wp_customize, 'layout_header_wc',
                 array(
                    'label' => __( 'Header', 'medilac' ),
                    'description' => esc_html__( 'Set your Header Layout from pre-define', 'medilac' ),
@@ -146,7 +146,7 @@ if( ! function_exists( 'medilac_wc_customizerr_manage' ) ){
 //        ) );
         
         $wp_customize->add_control( 
-            new Medilac_Image_Radio_Control( $wp_customize, 'layout_footer_wc',
+            new Astha_Image_Radio_Control( $wp_customize, 'layout_footer_wc',
                 array(
                    'label' => __( 'Footer', 'medilac' ),
                    'description' => esc_html__( 'Set your Header Layout from pre-define', 'medilac' ),
@@ -178,7 +178,7 @@ if( ! function_exists( 'medilac_wc_customizerr_manage' ) ){
 //            'capability'        =>  'edit_theme_options',
 //            'choices'           => $choices_sidebar,
 //        ) );
-        $wp_customize->add_control( new Medilac_Image_Radio_Control( $wp_customize, 'layout_sidebar_wc',
+        $wp_customize->add_control( new Astha_Image_Radio_Control( $wp_customize, 'layout_sidebar_wc',
             array(
                'label' => __( 'Sidebar', 'medilac' ),
                'description' => esc_html__( 'Left Sidebar or Right Sidebar or No Sidebar', 'medilac' ),
@@ -196,7 +196,7 @@ if( ! function_exists( 'medilac_wc_customizerr_manage' ) ){
 //        ) );
 //        
 //        $choices_shop_loop_temp = array(
-//                    'shop-template-default'   => __( 'Medilac Default', 'medilac' ),
+//                    'shop-template-default'   => __( 'Astha Default', 'medilac' ),
 //                    'shop-template-wc'   => __( 'WooCommerce Default', 'medilac' ),
 //            );
 //        $choices_shop_loop_temp = apply_filters( 'medilac_shop_loop_product_temp_choises', $choices_shop_loop_temp );

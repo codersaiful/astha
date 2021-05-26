@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Medilac
+ * @package Astha
  */
 
 /*
@@ -52,7 +52,7 @@ if ( post_password_required() ) {
 			<?php
 			wp_list_comments(
 				array(
-					'walker'      => new Medilac_Walker_Comment(),
+					'walker'      => new Astha_Walker_Comment(),
 					'avatar_size' => 120,
 					'style'       => 'div',
 				)
