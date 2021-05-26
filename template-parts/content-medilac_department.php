@@ -7,12 +7,12 @@
  * @package Astha
  */
 
-$sub_heading = medilac_option( 'sub_heading' );
-$faq_data = medilac_option( 'department_faq_group' );
+$sub_heading = astha_option( 'sub_heading' );
+$faq_data = astha_option( 'department_faq_group' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php medilac_post_thumbnail(); ?>
+	<?php astha_post_thumbnail(); ?>
 	<header class="entry-header">
 		<?php
                 
@@ -21,16 +21,16 @@ $faq_data = medilac_option( 'department_faq_group' );
 			<div class="entry-meta">
 				<?php
 				
-				medilac_taxonomy_by();
-				medilac_posted_by();
-                                medilac_posted_on();
+				astha_taxonomy_by();
+				astha_posted_by();
+                                astha_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif;
                 
 		if ( is_singular() ) :
-                    ##$breadcrumb_switch              = medilac_option( 'medilac_breadcrumb_switch' );
-                    ##$breadcrumb_type                = medilac_option( 'medilac_breadcrumb_type' );
+                    ##$breadcrumb_switch              = astha_option( 'astha_breadcrumb_switch' );
+                    ##$breadcrumb_type                = astha_option( 'astha_breadcrumb_type' );
                     ?>
                   <div class="section-content-title v1">
                         <?php        
@@ -57,7 +57,7 @@ $faq_data = medilac_option( 'department_faq_group' );
                             sprintf(
                                     wp_kses(
                                             /* translators: %s: Name of current post. Only visible to screen readers */
-                                            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'medilac' ),
+                                            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'astha' ),
                                             array(
                                                     'span' => array(
                                                             'class' => array(),
@@ -70,12 +70,12 @@ $faq_data = medilac_option( 'department_faq_group' );
                 }else{
                     the_excerpt();
                     ?>
-                    <a class="medilac-blog continute-reading" href="<?php echo esc_url(get_the_permalink() ); ?>">
+                    <a class="astha-blog continute-reading" href="<?php echo esc_url(get_the_permalink() ); ?>">
                     <?php
                     echo sprintf(
                                             wp_kses(
                                                     /* translators: %s: Name of current post. Only visible to screen readers */
-                                                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'medilac' ),
+                                                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'astha' ),
                                                     array(
                                                             'span' => array(
                                                                     'class' => array(),
@@ -93,7 +93,7 @@ $faq_data = medilac_option( 'department_faq_group' );
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'medilac' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'astha' ),
 				'after'  => '</div>',
 			)
 		);
@@ -102,7 +102,7 @@ $faq_data = medilac_option( 'department_faq_group' );
 	</div><!-- .entry-content -->
         
         <div class="department-faq">
-            <h3><?php echo esc_html__( 'Frequently Asked Questions', 'medilac' );?></h3>
+            <h3><?php echo esc_html__( 'Frequently Asked Questions', 'astha' );?></h3>
             <ul class="department-faq-list">
             <?php 
             if(is_array( $faq_data ) ){
@@ -124,7 +124,7 @@ $faq_data = medilac_option( 'department_faq_group' );
 	<footer class="entry-footer">
 		<?php
                 
-                    medilac_entry_footer();
+                    astha_entry_footer();
                 ?>
 	</footer><!-- .entry-footer -->
         <?php } ?>

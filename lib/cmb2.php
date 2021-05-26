@@ -10,24 +10,24 @@
  * @since 1.0.0.19
  */
 
-add_action( 'cmb2_admin_init', 'medilac_cmb2_metaboxes' );
-if(!function_exists( 'medilac_cmb2_metaboxes' )){
+add_action( 'cmb2_admin_init', 'astha_cmb2_metaboxes' );
+if(!function_exists( 'astha_cmb2_metaboxes' )){
     
     /**
      * Page Options for Specific Page, Taxonomy, ETC
      * 
      * We have used CMB2
      */
-    function medilac_cmb2_metaboxes() {
-            $medilac_object_types = array( 'page','post', 'product','medilac_doctor','medilac_case', 'medilac_department' );
-            $medilac_object_types = apply_filters( 'medilac_cmb2_post_type_support', $medilac_object_types );
+    function astha_cmb2_metaboxes() {
+            $astha_object_types = array( 'page','post', 'product','astha_doctor','astha_case', 'astha_department' );
+            $astha_object_types = apply_filters( 'astha_cmb2_post_type_support', $astha_object_types );
             /**
              * For Page Options
              */
             $cmb = new_cmb2_box( array(
-                    'id'            => 'medilac_page_options',
-                    'title'         => __( 'Page Options', 'medilac' ),
-                    'object_types'  => $medilac_object_types, // Post type
+                    'id'            => 'astha_page_options',
+                    'title'         => __( 'Page Options', 'astha' ),
+                    'object_types'  => $astha_object_types, // Post type
                     'context'       => 'normal',
                     'priority'      => 'high',
                     'show_names'    => true, // Show field names on the left
@@ -36,18 +36,18 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             ) );
             //Layout Topbar
             $choices_topbar = array(
-                'topbar-one'        => __( 'Topbar One', 'medilac' ),
-                'topbar-two'        => __( 'Topbar Two', 'medilac' ),
-                'topbar-three'        => __( 'Topbar Three', 'medilac' ),
-                'topbar-four'        => __( 'Topbar Four', 'medilac' ),
-                'topbar-five'        => __( 'Topbar Five', 'medilac' ),
-                'none'              => __( 'None', 'medilac' ),
+                'topbar-one'        => __( 'Topbar One', 'astha' ),
+                'topbar-two'        => __( 'Topbar Two', 'astha' ),
+                'topbar-three'        => __( 'Topbar Three', 'astha' ),
+                'topbar-four'        => __( 'Topbar Four', 'astha' ),
+                'topbar-five'        => __( 'Topbar Five', 'astha' ),
+                'none'              => __( 'None', 'astha' ),
                 );
-            $choices_topbar = apply_filters( 'medilac_topbar_layout_choises', $choices_topbar );
-            $choices_topbar['default'] = __( 'Default', 'medilac' );
+            $choices_topbar = apply_filters( 'astha_topbar_layout_choises', $choices_topbar );
+            $choices_topbar['default'] = __( 'Default', 'astha' );
             $cmb->add_field( array(
-                    'name'       => __( 'Topbar Layout', 'medilac' ),
-                    'desc'       => __( 'Select custom header layout for this page or post', 'medilac' ),
+                    'name'       => __( 'Topbar Layout', 'astha' ),
+                    'desc'       => __( 'Select custom header layout for this page or post', 'astha' ),
                     'id'         => 'layout_header',
                     'type'       => 'select',
                     'default'    => 'default',
@@ -58,19 +58,19 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             //for Header
             $choices_header = array(
-                'header-one'        => __( 'Header One', 'medilac' ),
-                'header-two'        => __( 'Header Two', 'medilac' ),
-                'header-three'        => __( 'Header Three', 'medilac' ),
-                'none'              => __( 'None', 'medilac' ),
+                'header-one'        => __( 'Header One', 'astha' ),
+                'header-two'        => __( 'Header Two', 'astha' ),
+                'header-three'        => __( 'Header Three', 'astha' ),
+                'none'              => __( 'None', 'astha' ),
                 );
             /**
-             * @Hooked: medilac_header_choises_add_elementor 10 lib/bulldozer.php
+             * @Hooked: astha_header_choises_add_elementor 10 lib/bulldozer.php
              */
-            $choices_header = apply_filters( 'medilac_header_layout_choises', $choices_header );
-            $choices_header['default'] = __( 'Default', 'medilac' );
+            $choices_header = apply_filters( 'astha_header_layout_choises', $choices_header );
+            $choices_header['default'] = __( 'Default', 'astha' );
             $cmb->add_field( array(
-                    'name'       => __( 'Header Layout', 'medilac' ),
-                    'desc'       => __( 'Select custom header layout for this page or post', 'medilac' ),
+                    'name'       => __( 'Header Layout', 'astha' ),
+                    'desc'       => __( 'Select custom header layout for this page or post', 'astha' ),
                     'id'         => 'layout_header',
                     'type'       => 'select',
                     'default'    => 'default',
@@ -82,16 +82,16 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             //for Header Width
             $header_width_choices = array(
-                    'fluid'    => __( 'Fluid', 'medilac' ),
-                    'container'   => __( 'Container', 'medilac' ),
-                    'full-container'   => __( 'Container with Topbar', 'medilac' ),
+                    'fluid'    => __( 'Fluid', 'astha' ),
+                    'container'   => __( 'Container', 'astha' ),
+                    'full-container'   => __( 'Container with Topbar', 'astha' ),
             );
-            $header_width_choices = apply_filters( 'medilac_header_width_choices', $header_width_choices );
-            $header_width_choices['default'] = __( 'Default', 'medilac' );
+            $header_width_choices = apply_filters( 'astha_header_width_choices', $header_width_choices );
+            $header_width_choices['default'] = __( 'Default', 'astha' );
             $cmb->add_field( array(
-                    'name'       => __( 'Header Width', 'medilac' ),
-                    'desc'       => __( 'Select custom header layout for this page or post', 'medilac' ),
-                    'id'         => 'medilac_header_width',
+                    'name'       => __( 'Header Width', 'astha' ),
+                    'desc'       => __( 'Select custom header layout for this page or post', 'astha' ),
+                    'id'         => 'astha_header_width',
                     'type'       => 'select',
                     'default'    => 'default',
                     'sanitization_cb' => 'sanitize_text_field',
@@ -103,17 +103,17 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             //for Header Sticky Header
             $sticky_choices = array(
-                    'off'   => __( 'Disable', 'medilac' ),
-                    'on'    => __( 'Enable', 'medilac' ),
-                    'only_topbar'   => __( 'Only Topbar', 'medilac' ),
-                    //'only_header'   => __( 'Only Header', 'medilac' ),
+                    'off'   => __( 'Disable', 'astha' ),
+                    'on'    => __( 'Enable', 'astha' ),
+                    'only_topbar'   => __( 'Only Topbar', 'astha' ),
+                    //'only_header'   => __( 'Only Header', 'astha' ),
             );
-            $sticky_choices = apply_filters( 'medilac_sticky_choices', $sticky_choices );
-            $sticky_choices['default'] = __( 'Default', 'medilac' );
+            $sticky_choices = apply_filters( 'astha_sticky_choices', $sticky_choices );
+            $sticky_choices['default'] = __( 'Default', 'astha' );
             $cmb->add_field( array(
-                    'name'       => __( 'Sticky', 'medilac' ),
-                    'desc'       => __( 'Select custom header layout for this page or post', 'medilac' ),
-                    'id'         => 'medilac_header_sticky',
+                    'name'       => __( 'Sticky', 'astha' ),
+                    'desc'       => __( 'Select custom header layout for this page or post', 'astha' ),
+                    'id'         => 'astha_header_sticky',
                     'type'       => 'select',
                     'default'    => 'default',
                     'sanitization_cb' => 'sanitize_text_field',
@@ -125,15 +125,15 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             //for Breadcrumbs
             $choices_header = array(
-                    'on'   => __( 'On', 'medilac' ),
-                    'off'    => __( 'Off', 'medilac' ),
+                    'on'   => __( 'On', 'astha' ),
+                    'off'    => __( 'Off', 'astha' ),
             );
-            $choices_header = apply_filters( 'medilac_breadcrumb_choises', $choices_header );
-            $choices_header['default'] = __( 'Default', 'medilac' );
+            $choices_header = apply_filters( 'astha_breadcrumb_choises', $choices_header );
+            $choices_header['default'] = __( 'Default', 'astha' );
             $cmb->add_field( array(
-                    'name'       => __( 'Breadcrumbs', 'medilac' ),
-                    'desc'       => __( 'Show or hide the breadcrumb for this page or post', 'medilac' ),
-                    'id'         => 'medilac_breadcrumb_switch',
+                    'name'       => __( 'Breadcrumbs', 'astha' ),
+                    'desc'       => __( 'Show or hide the breadcrumb for this page or post', 'astha' ),
+                    'id'         => 'astha_breadcrumb_switch',
                     'type'       => 'select',
                     'default'    => 'default',
                     'sanitization_cb' => 'sanitize_text_field',
@@ -143,18 +143,18 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             //for Breadcrumbs Style
             $choices_breadcrumb_style = array(
-                    'breadcrumb-style-1'   => __( 'Style One', 'medilac' ),
-                    'breadcrumb-style-2'   => __( 'Style Two', 'medilac' ),
-                    'breadcrumb-style-3'   => __( 'Style Three', 'medilac' ),
-                    'breadcrumb-style-4'   => __( 'Style Four', 'medilac' ),
-                    //'breadcrumb-style-hidden'   => __( 'Display Hidden', 'medilac' ),
+                    'breadcrumb-style-1'   => __( 'Style One', 'astha' ),
+                    'breadcrumb-style-2'   => __( 'Style Two', 'astha' ),
+                    'breadcrumb-style-3'   => __( 'Style Three', 'astha' ),
+                    'breadcrumb-style-4'   => __( 'Style Four', 'astha' ),
+                    //'breadcrumb-style-hidden'   => __( 'Display Hidden', 'astha' ),
             );
-            $choices_breadcrumb_style = apply_filters( 'medilac_breadcrumb_style_choises', $choices_breadcrumb_style );
-            $choices_breadcrumb_style['default'] = __( 'Default', 'medilac' );
+            $choices_breadcrumb_style = apply_filters( 'astha_breadcrumb_style_choises', $choices_breadcrumb_style );
+            $choices_breadcrumb_style['default'] = __( 'Default', 'astha' );
             $cmb->add_field( array(
-                    'name'       => __( 'Breadcrumbs Style', 'medilac' ),
-                    'desc'       => __( 'Change your Breadcrumb style for this specific page or post.', 'medilac' ),
-                    'id'         => 'medilac_breadcrumb_style',
+                    'name'       => __( 'Breadcrumbs Style', 'astha' ),
+                    'desc'       => __( 'Change your Breadcrumb style for this specific page or post.', 'astha' ),
+                    'id'         => 'astha_breadcrumb_style',
                     'type'       => 'select',
                     'default'    => 'default',
                     'sanitization_cb' => 'sanitize_text_field',
@@ -167,7 +167,7 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             $cmb->add_field( array(
                 'name'    => 'Breadcrumb Background Image',
                 'desc'    => 'Upload an image or enter an URL.',
-                'id'      => 'medilac_breadcrumb_image',
+                'id'      => 'astha_breadcrumb_image',
                 'type'    => 'file',
                 // Optional:
                 'options' => array(
@@ -189,15 +189,15 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             //for Footer
             $choices_footer = array(
-                'footer-dark'        => __( 'Dark Footer', 'medilac' ),
-                'footer-light'        => __( 'Light Footer', 'medilac' ),
-                'none'              => __( 'None', 'medilac' ),
+                'footer-dark'        => __( 'Dark Footer', 'astha' ),
+                'footer-light'        => __( 'Light Footer', 'astha' ),
+                'none'              => __( 'None', 'astha' ),
                 );
-            $choices_footer = apply_filters( 'medilac_footer_layout_choises', $choices_footer );
-            $choices_footer['default'] = __( 'Default', 'medilac' );
+            $choices_footer = apply_filters( 'astha_footer_layout_choises', $choices_footer );
+            $choices_footer['default'] = __( 'Default', 'astha' );
             $cmb->add_field( array(
-                    'name'       => __( 'Footer Layout', 'medilac' ),
-                    'desc'       => __( 'Select custom footer layout for this page or post', 'medilac' ),
+                    'name'       => __( 'Footer Layout', 'astha' ),
+                    'desc'       => __( 'Select custom footer layout for this page or post', 'astha' ),
                     'id'         => 'layout_footer',
                     'type'       => 'select',
                     'default'    => 'default',
@@ -209,15 +209,15 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             //for Sidebar
             $choices_sidebar = array(
-                'no-sidebar'        => __( 'None', 'medilac' ),
-                'left-sidebar'      => __( 'Left Sidebar', 'medilac' ),
-                'right-sidebar'     => __( 'Right Sidebar', 'medilac' ),
+                'no-sidebar'        => __( 'None', 'astha' ),
+                'left-sidebar'      => __( 'Left Sidebar', 'astha' ),
+                'right-sidebar'     => __( 'Right Sidebar', 'astha' ),
                 );
-            $choices_sidebar = apply_filters( 'medilac_sidebar_layout_choises', $choices_sidebar );
-            $choices_sidebar['default'] = __( 'Default', 'medilac' );
+            $choices_sidebar = apply_filters( 'astha_sidebar_layout_choises', $choices_sidebar );
+            $choices_sidebar['default'] = __( 'Default', 'astha' );
             $cmb->add_field( array(
-                    'name'       => __( 'Sidebar Layout', 'medilac' ),
-                    'desc'       => __( 'Select left/right sidebar for this page or post', 'medilac' ),
+                    'name'       => __( 'Sidebar Layout', 'astha' ),
+                    'desc'       => __( 'Select left/right sidebar for this page or post', 'astha' ),
                     'id'         => 'layout_sidebar',
                     'type'       => 'select',
                     'default'    => 'default',
@@ -233,9 +233,9 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
              * For Page Typography
              */
             $fonts = new_cmb2_box( array(
-                    'id'            => 'medilac_page_typography',
-                    'title'         => __( 'Typography', 'medilac' ),
-                    'object_types'  => $medilac_object_types, // Post type
+                    'id'            => 'astha_page_typography',
+                    'title'         => __( 'Typography', 'astha' ),
+                    'object_types'  => $astha_object_types, // Post type
                     'context'       => 'normal',
                     'priority'      => 'high',
                     'show_names'    => true, // Show field names on the left
@@ -244,9 +244,9 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             ) );
             
             $fonts->add_field( array(
-                    'name'       => __( 'Primary Font', 'medilac' ),
-                    //'desc'       => __( 'Select left/right sidebar for this page or post', 'medilac' ),
-                    'id'         => '--medilac-font-primary',
+                    'name'       => __( 'Primary Font', 'astha' ),
+                    //'desc'       => __( 'Select left/right sidebar for this page or post', 'astha' ),
+                    'id'         => '--astha-font-primary',
                     'type'       => 'select',
                     'default'    => '',
                     'sanitization_cb' => 'sanitize_text_field',
@@ -256,9 +256,9 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             
             $fonts->add_field( array(
-                    'name'       => __( 'Secondary Font', 'medilac' ),
-                    //'desc'       => __( 'Select left/right sidebar for this page or post', 'medilac' ),
-                    'id'         => '--medilac-font-secondary',
+                    'name'       => __( 'Secondary Font', 'astha' ),
+                    //'desc'       => __( 'Select left/right sidebar for this page or post', 'astha' ),
+                    'id'         => '--astha-font-secondary',
                     'type'       => 'select',
                     'default'    => '',
                     'sanitization_cb' => 'sanitize_text_field',
@@ -275,13 +275,13 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
              * ***********************
              * for support color of Single post
              * need to add list at bulldozer.php file.
-             * inside function medilac_root_color_from_page
+             * inside function astha_root_color_from_page
              * 
              */
             $colors = new_cmb2_box( array(
-                    'id'            => 'medilac_page_colors',
-                    'title'         => __( 'Colors', 'medilac' ),
-                    'object_types'  => $medilac_object_types, // Post type
+                    'id'            => 'astha_page_colors',
+                    'title'         => __( 'Colors', 'astha' ),
+                    'object_types'  => $astha_object_types, // Post type
                     'context'       => 'normal',
                     'priority'      => 'high',
                     'show_names'    => true, // Show field names on the left
@@ -290,33 +290,24 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             ) );
             
             $colors->add_field( array(
-                    'name'    => esc_html__( 'Primary Color', 'medilac' ),
-                    'id'      => '--medilac-primary',
+                    'name'    => esc_html__( 'Primary Color', 'astha' ),
+                    'id'      => '--astha-primary',
                     'type'    => 'colorpicker',
                     'default' => '',
             ) );
             
             
             $colors->add_field( array(
-                    'name'    => esc_html__( 'Secondary Color', 'medilac' ),
-                    'id'      => '--medilac-secondary',
+                    'name'    => esc_html__( 'Secondary Color', 'astha' ),
+                    'id'      => '--astha-secondary',
                     'type'    => 'colorpicker',
                     'default' => '',
             ) );
             
             
             $colors->add_field( array(
-                    'name'    => esc_html__( 'Deep Dark Color', 'medilac' ),
-                    'id'      => '--medilac-deep-dark',
-                    'type'    => 'colorpicker',
-                    'default' => '',
-            ) );
-            
-            
-            
-            $colors->add_field( array(
-                    'name'    => esc_html__( 'Light Dark Color', 'medilac' ),
-                    'id'      => '--medilac-light-dark',
+                    'name'    => esc_html__( 'Deep Dark Color', 'astha' ),
+                    'id'      => '--astha-deep-dark',
                     'type'    => 'colorpicker',
                     'default' => '',
             ) );
@@ -324,8 +315,8 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             
             $colors->add_field( array(
-                    'name'    => esc_html__( 'Primary Deep Color', 'medilac' ),
-                    'id'      => '--medilac-primary-deep',
+                    'name'    => esc_html__( 'Light Dark Color', 'astha' ),
+                    'id'      => '--astha-light-dark',
                     'type'    => 'colorpicker',
                     'default' => '',
             ) );
@@ -333,8 +324,8 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             
             $colors->add_field( array(
-                    'name'    => esc_html__( 'Primary Light Color', 'medilac' ),
-                    'id'      => '--medilac-primary-light',
+                    'name'    => esc_html__( 'Primary Deep Color', 'astha' ),
+                    'id'      => '--astha-primary-deep',
                     'type'    => 'colorpicker',
                     'default' => '',
             ) );
@@ -342,8 +333,8 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             
             $colors->add_field( array(
-                    'name'    => esc_html__( 'Secondary Deep Color', 'medilac' ),
-                    'id'      => '--medilac-secondary-deep',
+                    'name'    => esc_html__( 'Primary Light Color', 'astha' ),
+                    'id'      => '--astha-primary-light',
                     'type'    => 'colorpicker',
                     'default' => '',
             ) );
@@ -351,8 +342,8 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             
             $colors->add_field( array(
-                    'name'    => esc_html__( 'Secondary Light Color', 'medilac' ),
-                    'id'      => '--medilac-secondary-light',
+                    'name'    => esc_html__( 'Secondary Deep Color', 'astha' ),
+                    'id'      => '--astha-secondary-deep',
                     'type'    => 'colorpicker',
                     'default' => '',
             ) );
@@ -360,29 +351,8 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             
             $colors->add_field( array(
-                    'name'    => esc_html__( 'Danger Color', 'medilac' ),
-                    'id'      => '--medilac-danger',
-                    'type'    => 'colorpicker',
-                    'default' => '',
-            ) );
-            
-            $colors->add_field( array(
-                    'name'    => esc_html__( 'Topbar Color', 'medilac' ),
-                    'id'      => '--medilac-topbar-color',
-                    'type'    => 'colorpicker',
-                    'default' => '',
-            ) );
-            
-            $colors->add_field( array(
-                    'name'    => esc_html__( 'Topbar Bacground Color', 'medilac' ),
-                    'id'      => '--medilac-topbar-bgcolor',
-                    'type'    => 'colorpicker',
-                    'default' => '',
-            ) );
-            
-            $colors->add_field( array(
-                    'name'    => esc_html__( 'Topbar Link Hover Color', 'medilac' ),
-                    'id'      => '--medilac-topbar-link-color',
+                    'name'    => esc_html__( 'Secondary Light Color', 'astha' ),
+                    'id'      => '--astha-secondary-light',
                     'type'    => 'colorpicker',
                     'default' => '',
             ) );
@@ -390,8 +360,38 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
             
             
             $colors->add_field( array(
-                    'name'    => esc_html__( 'Foreground Color', 'medilac' ),
-                    'id'      => '--medilac-foreground',
+                    'name'    => esc_html__( 'Danger Color', 'astha' ),
+                    'id'      => '--astha-danger',
+                    'type'    => 'colorpicker',
+                    'default' => '',
+            ) );
+            
+            $colors->add_field( array(
+                    'name'    => esc_html__( 'Topbar Color', 'astha' ),
+                    'id'      => '--astha-topbar-color',
+                    'type'    => 'colorpicker',
+                    'default' => '',
+            ) );
+            
+            $colors->add_field( array(
+                    'name'    => esc_html__( 'Topbar Bacground Color', 'astha' ),
+                    'id'      => '--astha-topbar-bgcolor',
+                    'type'    => 'colorpicker',
+                    'default' => '',
+            ) );
+            
+            $colors->add_field( array(
+                    'name'    => esc_html__( 'Topbar Link Hover Color', 'astha' ),
+                    'id'      => '--astha-topbar-link-color',
+                    'type'    => 'colorpicker',
+                    'default' => '',
+            ) );
+            
+            
+            
+            $colors->add_field( array(
+                    'name'    => esc_html__( 'Foreground Color', 'astha' ),
+                    'id'      => '--astha-foreground',
                     'type'    => 'colorpicker',
                     'default' => '',
             ) );

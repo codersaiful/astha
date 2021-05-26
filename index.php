@@ -42,7 +42,7 @@ get_header();
 			endwhile;
 
 			//the_posts_navigation();
-                        medilac_post_pagination();
+                        astha_post_pagination();
 
 		else :
 

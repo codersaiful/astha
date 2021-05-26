@@ -24,10 +24,10 @@
                         <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
                         <?php
                 endif;
-                $medilac_description = get_bloginfo( 'description', 'display' );
-                if ( $medilac_description || is_customize_preview() ) :
+                $astha_description = get_bloginfo( 'description', 'display' );
+                if ( $astha_description || is_customize_preview() ) :
                         ?>
-                        <p class="site-description"><?php echo $medilac_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+                        <p class="site-description"><?php echo $astha_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
                 <?php endif; ?>
         </div><!-- .site-branding -->
 
@@ -43,21 +43,21 @@
         <div class="menu-right-side header-right-area tools-panel">
             <?php
             /**
-             * Functions hooked into medilac_tools_panel action
+             * Functions hooked into astha_tools_panel action
              * 
-             * @hooked medilac_header_search_control    - 0 location: inc/template-functions.php
-             * @hooked medilac_header_user_login        - 10 location: inc/template-functions.php
+             * @hooked astha_header_search_control    - 0 location: inc/template-functions.php
+             * @hooked astha_header_user_login        - 10 location: inc/template-functions.php
              */
-            do_action( 'medilac_tools_panel' );
+            do_action( 'astha_tools_panel' );
             ?>
             
             <?php
-            $wc_header_tool = apply_filters( 'medilac_header_wc_minicart_bool', true );
+            $wc_header_tool = apply_filters( 'astha_header_wc_minicart_bool', true );
             if( class_exists( 'WooCommerce' ) && $wc_header_tool ) : ?>
             <div class="main-header-mini-cart-wrapper header-minicart-wrapper">
                 <?php
-		if ( function_exists( 'medilac_woocommerce_header_cart' ) ) {
-			medilac_woocommerce_header_cart();
+		if ( function_exists( 'astha_woocommerce_header_cart' ) ) {
+			astha_woocommerce_header_cart();
 		}
                 ?>
             </div>

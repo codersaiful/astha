@@ -13,7 +13,7 @@
  * To On Of Main Primary Menu by Filter, Use following Hook
  * @HOOK Filter Hook
  */
-$primary_menu = apply_filters( 'medilac_show_primary_menu', true );
+$primary_menu = apply_filters( 'astha_show_primary_menu', true );
 if( ! $primary_menu ){
     return;
 }
@@ -27,11 +27,11 @@ if( ! $primary_menu ){
          * @Hook Action HOOK
          * 
          */
-        do_action( 'medilac_primary_menu_top' );
+        do_action( 'astha_primary_menu_top' );
         
         if( has_nav_menu( 'primary-menu' ) ){
         ?>
-        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'medilac' ); ?></button>
+        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'astha' ); ?></button>
         
         <?php        
         /**
@@ -39,7 +39,7 @@ if( ! $primary_menu ){
          * Use following Hook
          * @HOOK Filter Hook
          */
-        $primary_menu_depth = apply_filters( 'medilac_primary_menu_depth', 6 );
+        $primary_menu_depth = apply_filters( 'astha_primary_menu_depth', 6 );
         wp_nav_menu(
             array(
                 'theme_location'    => 'primary-menu',
@@ -54,7 +54,7 @@ if( ! $primary_menu ){
         <?php
         }elseif( current_user_can( MEDILAC_CAPABILITY ) ){
             
-            echo sprintf( esc_html__( '%sAdd Menu%s', 'medilac' ),
+            echo sprintf( esc_html__( '%sAdd Menu%s', 'astha' ),
                     '<a href=" ' . esc_url( admin_url( 'nav-menus.php' ) ) . ' ">',
                     '</a>'
                 );
@@ -65,7 +65,7 @@ if( ! $primary_menu ){
          * @Hook Action HOOK
          * 
          */
-        do_action( 'medilac_primary_menu_bottom' );
+        do_action( 'astha_primary_menu_bottom' );
         
         ?>
         

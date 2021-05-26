@@ -26,27 +26,27 @@
  * @param type $roots_arr
  * @return type
  */
-function medilac_root_color_from_page( $roots_arr ){
+function astha_root_color_from_page( $roots_arr ){
 
     if( is_singular() ){
         $supported_root = array(
-            '--medilac-primary',
-            '--medilac-secondary',
-            '--medilac-deep-dark',
-            '--medilac-light-dark',
-            '--medilac-primary-deep',
-            '--medilac-primary-light',
+            '--astha-primary',
+            '--astha-secondary',
+            '--astha-deep-dark',
+            '--astha-light-dark',
+            '--astha-primary-deep',
+            '--astha-primary-light',
             //New Added at 1.0.0.46
-            '--medilac-secondary-deep',
-            '--medilac-secondary-light',
+            '--astha-secondary-deep',
+            '--astha-secondary-light',
             
-            '--medilac-danger',
-            '--medilac-foreground',
+            '--astha-danger',
+            '--astha-foreground',
             
             
-            '--medilac-topbar-color',
-            '--medilac-topbar-bgcolor',
-            '--medilac-topbar-link-color',
+            '--astha-topbar-color',
+            '--astha-topbar-bgcolor',
+            '--astha-topbar-link-color',
 
         );
         $post_ID = get_the_ID();
@@ -62,27 +62,27 @@ function medilac_root_color_from_page( $roots_arr ){
     
     return $roots_arr;
 }
-add_filter( 'medilac_color_root_arr', 'medilac_root_color_from_page' );
+add_filter( 'astha_color_root_arr', 'astha_root_color_from_page' );
 
-if( ! function_exists( 'medilac_root_font_from_page' ) ){
+if( ! function_exists( 'astha_root_font_from_page' ) ){
     
     /**
      * Font Root from page Options
      * Sample Array of Fonts
      * Array Sample
              * array (size=2)
-                '--medilac-font-primary' => string 'Work Sans' (length=9)
-                '--medilac-font-secondary' => string 'Roboto' (length=6)
+                '--astha-font-primary' => string 'Work Sans' (length=9)
+                '--astha-font-secondary' => string 'Roboto' (length=6)
      * 
      * @param type $roots_arr Fonts Array
      * @return Array
      */
-    function medilac_root_font_from_page( $roots_arr ){
+    function astha_root_font_from_page( $roots_arr ){
 
         if( is_singular() ){
             $supported_root = array(
-                '--medilac-font-primary',
-                '--medilac-font-secondary',
+                '--astha-font-primary',
+                '--astha-font-secondary',
             );
             $post_ID = get_the_ID();
             foreach( $supported_root as $eachRoot ){
@@ -97,20 +97,20 @@ if( ! function_exists( 'medilac_root_font_from_page' ) ){
         return $roots_arr;
     }
 }
-add_filter( 'medilac_root_font_arr', 'medilac_root_font_from_page' );
+add_filter( 'astha_root_font_arr', 'astha_root_font_from_page' );
 
-if( ! function_exists( 'medilac_breadcrumb_control' ) ){
+if( ! function_exists( 'astha_breadcrumb_control' ) ){
     
     /**
      * Breadcrumb on or Off using Theme's Filter 
-     * Filter is: medilac_breadcrumb_show
+     * Filter is: astha_breadcrumb_show
      * 
      * By Default: We will Hide Breadcrumb for Home Page and 404 Error Page
      * 
      * @param type $validation_bool
      * @return bool
      */
-    function medilac_breadcrumb_control( $validation_bool ){
+    function astha_breadcrumb_control( $validation_bool ){
         //For 404 and Home Error page
         if( is_404() || is_front_page() ){
             return false;
@@ -118,10 +118,10 @@ if( ! function_exists( 'medilac_breadcrumb_control' ) ){
         return $validation_bool;
     }
 }
-add_filter( 'medilac_breadcrumb_show', 'medilac_breadcrumb_control' );
+add_filter( 'astha_breadcrumb_show', 'astha_breadcrumb_control' );
 
 
-if( ! function_exists( 'medilac_header_footer_layout_choises' ) ){
+if( ! function_exists( 'astha_header_footer_layout_choises' ) ){
     
     /**
      * Header layout Handling 
@@ -132,7 +132,7 @@ if( ! function_exists( 'medilac_header_footer_layout_choises' ) ){
      * @param   Array    $choices
      * @return  Array   found new $choices
      */
-    function medilac_header_footer_layout_choises( $choices ){
+    function astha_header_footer_layout_choises( $choices ){
         $args = array(
             'post_type'         =>  'header_footer',
             'post_status'       =>  'publish',
@@ -157,11 +157,11 @@ if( ! function_exists( 'medilac_header_footer_layout_choises' ) ){
     }
 }
 if ( did_action( 'elementor/loaded' ) ) {
-    add_filter( 'medilac_header_layout_choises', 'medilac_header_footer_layout_choises' );
-    add_filter( 'medilac_footer_layout_choises', 'medilac_header_footer_layout_choises' );
+    add_filter( 'astha_header_layout_choises', 'astha_header_footer_layout_choises' );
+    add_filter( 'astha_footer_layout_choises', 'astha_header_footer_layout_choises' );
 }
 
-if( ! function_exists( 'medilac_header_choises_add_elementor' ) ){
+if( ! function_exists( 'astha_header_choises_add_elementor' ) ){
     
     /**
      * Adding new Custom Elementor Header Option
@@ -175,13 +175,13 @@ if( ! function_exists( 'medilac_header_choises_add_elementor' ) ){
      * @param array $choices
      * @return type Array
      */
-    function medilac_header_choises_add_elementor( $choices ){
-        $choices['header-elementor'] = esc_html__( 'Elementor Custom Header', 'medilac' );
+    function astha_header_choises_add_elementor( $choices ){
+        $choices['header-elementor'] = esc_html__( 'Elementor Custom Header', 'astha' );
         return $choices;
     }
 }
 
-if( ! function_exists( 'medilac_footer_choises_add_elementor' ) ){
+if( ! function_exists( 'astha_footer_choises_add_elementor' ) ){
     
     /**
      * Adding new Custom Elementor Footer Option
@@ -195,14 +195,14 @@ if( ! function_exists( 'medilac_footer_choises_add_elementor' ) ){
      * @param array $choices
      * @return type Array
      */
-    function medilac_footer_choises_add_elementor( $choices ){
-        $choices['footer-elementor'] = esc_html__( 'Elementor Custom Footer', 'medilac' );
+    function astha_footer_choises_add_elementor( $choices ){
+        $choices['footer-elementor'] = esc_html__( 'Elementor Custom Footer', 'astha' );
         return $choices;
     }
 }
 if ( did_action( 'elementor/loaded' ) ) {
-    //add_filter( 'medilac_header_layout_choises', 'medilac_header_choises_add_elementor' );
-    //add_filter( 'medilac_footer_layout_choises', 'medilac_footer_choises_add_elementor' );
+    //add_filter( 'astha_header_layout_choises', 'astha_header_choises_add_elementor' );
+    //add_filter( 'astha_footer_layout_choises', 'astha_footer_choises_add_elementor' );
 }
 
 /**
@@ -217,7 +217,7 @@ if ( did_action( 'elementor/loaded' ) ) {
  * @param   String $demo_name
  * @return  Array
  */
-function medilac_demo_import_name_manage( $arrs, $demo_name ){
+function astha_demo_import_name_manage( $arrs, $demo_name ){
     
     if( 'Five' == $demo_name ){
         $arrs['menu_name'] = 'Four';
@@ -225,4 +225,4 @@ function medilac_demo_import_name_manage( $arrs, $demo_name ){
     
     return $arrs;
 }
-//add_filter( 'medilac_demo_import_names_arg', 'medilac_demo_import_name_manage', 10, 2 );
+//add_filter( 'astha_demo_import_names_arg', 'astha_demo_import_name_manage', 10, 2 );

@@ -10,9 +10,9 @@
 /**
  * Custom Sidebar Boolean
  * 
- * @Hooked medilac_core_show_department_sidebar 10 from medilac_core plugin - functions.php
+ * @Hooked astha_core_show_department_sidebar 10 from astha_core plugin - functions.php
  */
-$medilac_custom_sidebar = apply_filters( 'medilac_custom_sidebar_bool', false );
+$astha_custom_sidebar = apply_filters( 'astha_custom_sidebar_bool', false );
 
 /**
  * Handling Common Sidebar
@@ -23,35 +23,35 @@ $medilac_custom_sidebar = apply_filters( 'medilac_custom_sidebar_bool', false );
  * 
  * @Hooked 
  */
-$medilac_common_sidebar = apply_filters( 'medilac_common_sidebar_bool', true );
+$astha_common_sidebar = apply_filters( 'astha_common_sidebar_bool', true );
 
-$_wc_medilac = '';
-if( medilac_is_woocommerce() ){
-    $_wc_medilac = '_wc';
+$_wc_astha = '';
+if( astha_is_woocommerce() ){
+    $_wc_astha = '_wc';
 }
 
-if( medilac_option( 'layout_sidebar' , 'right-sidebar', false, $_wc_medilac ) === 'no-sidebar' ){
+if( astha_option( 'layout_sidebar' , 'right-sidebar', false, $_wc_astha ) === 'no-sidebar' ){
     return;
 }
-$medilac_sidebar = 0;
+$astha_sidebar = 0;
 
 if( is_active_sidebar( 'sidebar' ) ){
-   $medilac_sidebar++; 
+   $astha_sidebar++; 
 }
 if( is_active_sidebar( 'sidebar-woocommerce' ) ){
-   $medilac_sidebar++; 
+   $astha_sidebar++; 
 }
-if( $medilac_common_sidebar && is_active_sidebar( 'sidebar-common' ) ){
-   $medilac_sidebar++; 
+if( $astha_common_sidebar && is_active_sidebar( 'sidebar-common' ) ){
+   $astha_sidebar++; 
 }
 
 //Condition for Custom Side, If enabled by using filter
-if( $medilac_custom_sidebar ){
-   $medilac_sidebar++; 
+if( $astha_custom_sidebar ){
+   $astha_sidebar++; 
 }
 
 //sidebar-woocommerce
-if ( ! $medilac_sidebar ) {
+if ( ! $astha_sidebar ) {
 	return;
 }
 ?>
@@ -63,9 +63,9 @@ if ( ! $medilac_sidebar ) {
          * @Hook Action
          * For Top of Sidebar
          */
-        do_action( 'medilac_sidebar_top' );
+        do_action( 'astha_sidebar_top' );
         
-        if( medilac_is_woocommerce() ){
+        if( astha_is_woocommerce() ){
             
             dynamic_sidebar( 'sidebar-woocommerce' );
             
@@ -73,17 +73,17 @@ if ( ! $medilac_sidebar ) {
              * @Hook Action
              * For after WooCommerce Sidebar
              */
-            do_action( 'medilac_sidebar_after_wc' );
-        }elseif( $medilac_custom_sidebar ){
+            do_action( 'astha_sidebar_after_wc' );
+        }elseif( $astha_custom_sidebar ){
             
-            do_action( 'medilac_custom_sidebar' );
-//            dynamic_sidebar( 'medilac_custom_sidebar' );
+            do_action( 'astha_custom_sidebar' );
+//            dynamic_sidebar( 'astha_custom_sidebar' );
             
             /**
              * @Hook Action
              * For after WooCommerce Sidebar
              */
-//            do_action( 'medilac_custom_sidebar_after' );
+//            do_action( 'astha_custom_sidebar_after' );
         }else{
             
             dynamic_sidebar( 'sidebar' );
@@ -92,7 +92,7 @@ if ( ! $medilac_sidebar ) {
              * @Hook Action
              * For after WooCommerce Sidebar
              */
-            do_action( 'medilac_sidebar_after' );
+            do_action( 'astha_sidebar_after' );
         }
         
         
@@ -100,7 +100,7 @@ if ( ! $medilac_sidebar ) {
          * @Hook Action
          * For Bottom of Sidebar
          */
-        do_action( 'medilac_sidebar_before_common' );
+        do_action( 'astha_sidebar_before_common' );
         
         /**
          * Handling Common Sidebar
@@ -109,7 +109,7 @@ if ( ! $medilac_sidebar ) {
          * 
          * @since 1.0.0.67
          */
-        if( $medilac_common_sidebar ){
+        if( $astha_common_sidebar ){
 
             /**
              * Sidebare Common is for All General WordPress as well as WooCommerce Page
@@ -121,7 +121,7 @@ if ( ! $medilac_sidebar ) {
          * @Hook Action
          * For Bottom of Sidebar
          */
-        do_action( 'medilac_sidebar_bottom' );
+        do_action( 'astha_sidebar_bottom' );
         ?>
     </div>
 </aside><!-- #secondary -->

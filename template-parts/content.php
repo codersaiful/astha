@@ -10,7 +10,7 @@
 /**
  * If any user want to hide Entry Footer for post,
  * Just use 
- * add_filter( 'medilac_post_entry_footer_loop', '__return_false' );
+ * add_filter( 'astha_post_entry_footer_loop', '__return_false' );
  * 
  * ****************************************
  * New Value has come from Theme Options
@@ -19,15 +19,15 @@
  * This part has added at
  * @since 1.0.0.61
  */
-$entry_footer = apply_filters( 'medilac_post_entry_footer', ! empty( medilac_option( 'medilac_blog_sigle_footer', 'on' ) ) );
+$entry_footer = apply_filters( 'astha_post_entry_footer', ! empty( astha_option( 'astha_blog_sigle_footer', 'on' ) ) );
 
 /**
  * Entry Footer in Loop page is not visible by default.
  * If any user want to show in Loop for Blog Grid/list
  * have to use
- * add_filter( 'medilac_post_entry_footer_loop', '__return_true' );
+ * add_filter( 'astha_post_entry_footer_loop', '__return_true' );
  */
-$entry_footer_loop = apply_filters( 'medilac_post_entry_footer_loop', false );
+$entry_footer_loop = apply_filters( 'astha_post_entry_footer_loop', false );
 $entry_footer_class = 'available-entry-footer'; 
 if( !$entry_footer ){
    $entry_footer_class = 'no-entry-footer'; 
@@ -35,20 +35,20 @@ if( !$entry_footer ){
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $entry_footer_class ); ?>>
-	<?php medilac_post_thumbnail(); ?>
+	<?php astha_post_thumbnail(); ?>
 	
 	<?php
         /**
          * Adding Entry Header Content
          * 
-         * @Hooked medilac_entry_header_content -20 at inc/template-functions.php
+         * @Hooked astha_entry_header_content -20 at inc/template-functions.php
          */
-        do_action( 'medilac_entry_header' );
+        do_action( 'astha_entry_header' );
         
         /**
          * Adding content based on Post Type
          */
-        do_action( 'medilac_entry_header_' . get_post_type() );
+        do_action( 'astha_entry_header_' . get_post_type() );
         ?>
 
 	<div class="entry-content">
@@ -58,7 +58,7 @@ if( !$entry_footer ){
                             sprintf(
                                     wp_kses(
                                             /* translators: %s: Name of current post. Only visible to screen readers */
-                                            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'medilac' ),
+                                            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'astha' ),
                                             array(
                                                     'span' => array(
                                                             'class' => array(),
@@ -71,12 +71,12 @@ if( !$entry_footer ){
                 }else{
                     the_excerpt();
                     ?>
-                    <a class="medilac-blog continute-reading" href="<?php echo esc_url( get_the_permalink() ); ?>">
+                    <a class="astha-blog continute-reading" href="<?php echo esc_url( get_the_permalink() ); ?>">
                     <?php
                     echo sprintf(
                                             wp_kses(
                                                     /* translators: %s: Name of current post. Only visible to screen readers */
-                                                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'medilac' ),
+                                                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'astha' ),
                                                     array(
                                                             'span' => array(
                                                                     'class' => array(),
@@ -94,7 +94,7 @@ if( !$entry_footer ){
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'medilac' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'astha' ),
 				'after'  => '</div>',
 			)
 		);
@@ -107,7 +107,7 @@ if( !$entry_footer ){
          * Content Area for Footer on Single Post Page and Loop Also
          * User able to Add anything Here
          */
-        do_action( 'medilac_entry_footer' );
+        do_action( 'astha_entry_footer' );
         
         //Footer Entry at footer, Only for Single Page
         //And when $entry_footer is true
@@ -116,7 +116,7 @@ if( !$entry_footer ){
 	<footer class="entry-footer">
 		<?php
                 
-                    medilac_entry_footer();
+                    astha_entry_footer();
                 ?>
 	</footer><!-- .entry-footer -->
         <?php } ?>

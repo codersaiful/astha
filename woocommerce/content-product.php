@@ -24,7 +24,7 @@ global $product;
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
-$shop_layout = medilac_get_shop_layout();
+$shop_layout = astha_get_shop_layout();
 ?>
 <li <?php wc_product_class( '', $product ); ?>>
     <?php
@@ -37,7 +37,7 @@ $shop_layout = medilac_get_shop_layout();
      * 
      * @since 1.0.0.61
      */
-    do_action( 'medilac_wc_loop_wrapper_top' );
+    do_action( 'astha_wc_loop_wrapper_top' );
     
     /**
      * Hook: woocommerce_before_shop_loop_item.
@@ -101,6 +101,6 @@ $shop_layout = medilac_get_shop_layout();
      * Do something, If need
      * for Bottom of Each Item
      */
-    do_action( 'medilac_wc_loop_wrapper_bottom' );
+    do_action( 'astha_wc_loop_wrapper_bottom' );
     ?>
 </li>

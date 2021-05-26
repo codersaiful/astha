@@ -8,7 +8,7 @@
  *
  * @package Astha
  */
-$secondary_menu = apply_filters( 'medilac_show_secondary_menu', true );
+$secondary_menu = apply_filters( 'astha_show_secondary_menu', true );
 
 if( ! $secondary_menu ){
     return;
@@ -16,7 +16,7 @@ if( ! $secondary_menu ){
 ?>
 <nav id="head-bottom-navigation" class="header-menu head-bottom-navigation">
     <div class="inside-head-bottom-navigation container">
-        <button class="menu-toggle" aria-controls="head-bottom" aria-expanded="false"><?php esc_html_e( 'Secondary Menu', 'medilac' ); ?></button>
+        <button class="menu-toggle" aria-controls="head-bottom" aria-expanded="false"><?php esc_html_e( 'Secondary Menu', 'astha' ); ?></button>
         <?php
         wp_nav_menu(
                 array(

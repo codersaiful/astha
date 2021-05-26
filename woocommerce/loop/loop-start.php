@@ -18,7 +18,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-$shop_layout = medilac_get_shop_layout();
+$shop_layout = astha_get_shop_layout();
 $this_layout = 'shop-grid';
 if( ( is_shop() || is_product_taxonomy() ) && ! empty( $shop_layout ) ){
     

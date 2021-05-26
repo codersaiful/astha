@@ -49,7 +49,7 @@ if ( ! class_exists( 'Astha_Walker_Comment' ) ) {
                                         )
                                 )
                         );
-                        $by_post_author = medilac_is_comment_by_post_author( $comment );
+                        $by_post_author = astha_is_comment_by_post_author( $comment );
 			?>
 			<<?php echo $tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
 				<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
@@ -107,7 +107,7 @@ if ( ! class_exists( 'Astha_Walker_Comment' ) ) {
 							printf(
 								'<span class="fn">%1$s</span><span class="screen-reader-text says">%2$s</span>',
 								esc_html( $comment_author ),
-								__( 'says:', 'medilac' )
+								__( 'says:', 'astha' )
 							);
                                                         
 							if ( ! empty( $comment_author_url ) ) {
@@ -115,7 +115,7 @@ if ( ! class_exists( 'Astha_Walker_Comment' ) ) {
 							}
                                                         
                                                         if ( $by_post_author ) {
-								echo '<span class="by-post-author">' . __( 'Author', 'medilac' ) . '</span>';
+								echo '<span class="by-post-author">' . __( 'Author', 'astha' ) . '</span>';
 							}
 							?>
 						</div><!-- .comment-author -->
@@ -124,7 +124,7 @@ if ( ! class_exists( 'Astha_Walker_Comment' ) ) {
 							<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
 								<?php
 								/* translators: 1: Comment date, 2: Comment time. */
-								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'medilac' ), get_comment_date( '', $comment ), get_comment_time() );
+								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'astha' ), get_comment_date( '', $comment ), get_comment_time() );
 								?>
 								<time datetime="<?php comment_time( 'c' ); ?>" title="<?php echo esc_attr( $comment_timestamp ); ?>">
 									<?php echo esc_html( $comment_timestamp ); ?>
@@ -132,7 +132,7 @@ if ( ! class_exists( 'Astha_Walker_Comment' ) ) {
 							</a>
 							<?php
 							if ( get_edit_comment_link() ) {
-								echo ' <span aria-hidden="true">&bull;</span> <a class="comment-edit-link" href="' . esc_url( get_edit_comment_link() ) . '">' . __( 'Edit', 'medilac' ) . '</a>';
+								echo ' <span aria-hidden="true">&bull;</span> <a class="comment-edit-link" href="' . esc_url( get_edit_comment_link() ) . '">' . __( 'Edit', 'astha' ) . '</a>';
 							}
 							?>
 						</div><!-- .comment-metadata -->
@@ -147,7 +147,7 @@ if ( ! class_exists( 'Astha_Walker_Comment' ) ) {
 
 						if ( '0' === $comment->comment_approved ) {
 							?>
-							<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'medilac' ); ?></p>
+							<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'astha' ); ?></p>
 							<?php
 						}
 

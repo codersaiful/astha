@@ -11,9 +11,9 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function medilac_body_classes( $classes ) {
+function astha_body_classes( $classes ) {
         //Add Theme Name at body
-        $classes[] = 'medilac';
+        $classes[] = 'astha';
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -26,7 +26,7 @@ function medilac_body_classes( $classes ) {
          * and
          * sidebar-common
          */
-        $custom_sidebar = apply_filters( 'medilac_custom_sidebar_bool', false );
+        $custom_sidebar = apply_filters( 'astha_custom_sidebar_bool', false );
         
         $sidebar = 0;
 	if ( is_active_sidebar( 'sidebar' ) ) {
@@ -54,8 +54,8 @@ function medilac_body_classes( $classes ) {
         }
         
 	// Adds a class for Device Type
-	if ( function_exists( 'medilac_get_device_type' ) ) {
-		$classes[] = 'medilac-device-' . medilac_get_device_type();
+	if ( function_exists( 'astha_get_device_type' ) ) {
+		$classes[] = 'astha-device-' . astha_get_device_type();
 	}
          
 
@@ -66,7 +66,7 @@ function medilac_body_classes( $classes ) {
         $_wc = $custom_header = $custom_footer = false;
         $header = 'header-one';
         $topbar = 'topbar-one';
-        if( medilac_is_woocommerce() ){
+        if( astha_is_woocommerce() ){
             $_wc = '_wc';
         }
 
@@ -74,24 +74,24 @@ function medilac_body_classes( $classes ) {
          * Default Header one is set as default header
          * @default header-one $header
          */
-        $header_layout = medilac_option( 'layout_header', $header, false, $_wc );
-        $topbar = medilac_option( 'layout_topbar', $topbar, false, $_wc ); 
+        $header_layout = astha_option( 'layout_header', $header, false, $_wc );
+        $topbar = astha_option( 'layout_topbar', $topbar, false, $_wc ); 
 
 
         $classes[] = $_wc;
 
         $classes[] = 'current-' . $topbar;
-        $classes[] = medilac_option( 'shop_loop_product_temp', 'shop-template-default' ); //For Shop Loop Product Template
-        $classes[] = 'current-' . medilac_option( 'layout_footer', false, false, $_wc );
-        $classes[] = medilac_option( 'layout_sidebar', 'right-sidebar', false, $_wc );
-        $classes[] = 'breadcrumb-' . medilac_option( 'medilac_breadcrumb_switch', false, false, $_wc );
-        $classes[] = 'breadcrumb-' . medilac_option( 'medilac_breadcrumb_type', false, false, $_wc );
-        $classes[] = 'header-sticky-' . medilac_option( 'medilac_header_sticky', 'off' );
-        $classes[] = 'header-' . medilac_option( 'medilac_header_width', 'fluid' );
-        //$classes[] = 'socket-sticky-' . medilac_option( 'medilac_sticky_socket', 'off', false, $_wc );
+        $classes[] = astha_option( 'shop_loop_product_temp', 'shop-template-default' ); //For Shop Loop Product Template
+        $classes[] = 'current-' . astha_option( 'layout_footer', false, false, $_wc );
+        $classes[] = astha_option( 'layout_sidebar', 'right-sidebar', false, $_wc );
+        $classes[] = 'breadcrumb-' . astha_option( 'astha_breadcrumb_switch', false, false, $_wc );
+        $classes[] = 'breadcrumb-' . astha_option( 'astha_breadcrumb_type', false, false, $_wc );
+        $classes[] = 'header-sticky-' . astha_option( 'astha_header_sticky', 'off' );
+        $classes[] = 'header-' . astha_option( 'astha_header_width', 'fluid' );
+        //$classes[] = 'socket-sticky-' . astha_option( 'astha_sticky_socket', 'off', false, $_wc );
 
         /**
-         * Using medilac_blog_layout
+         * Using astha_blog_layout
          * function in template-function.php
          * there is no default value set.
          * 
@@ -100,8 +100,8 @@ function medilac_body_classes( $classes ) {
          * Page wise and condition wise body class for body has added at V1.0.0.67
          * Added date 13.4.2021
          */
-        $blog_layout = medilac_blog_layout();
-        if( ! empty( $blog_layout ) && ! medilac_is_woocommerce() && ! is_single() && ! is_front_page() && ( is_front_page() || is_archive() || is_home() ) ){
+        $blog_layout = astha_blog_layout();
+        if( ! empty( $blog_layout ) && ! astha_is_woocommerce() && ! is_single() && ! is_front_page() && ( is_front_page() || is_archive() || is_home() ) ){
             $classes[] = 'blog-layout-' . $blog_layout;
         }
         /**
@@ -113,8 +113,8 @@ function medilac_body_classes( $classes ) {
          * 
          * This only when Archive class added
          */
-        if( medilac_is_woocommerce() && is_archive() ){
-            $classes[] = 'layout-' . medilac_get_shop_layout();//medilac_option( 'layout_shop' . $_wc, 'shop-grid' );
+        if( astha_is_woocommerce() && is_archive() ){
+            $classes[] = 'layout-' . astha_get_shop_layout();//astha_option( 'layout_shop' . $_wc, 'shop-grid' );
         }
 
         /**
@@ -141,16 +141,16 @@ function medilac_body_classes( $classes ) {
          * Just need to change the class name.
          * Or user able to change by using following 
          * 
-         * add_filter( 'medilac_topbar_hide_mobile','__return_false' );
+         * add_filter( 'astha_topbar_hide_mobile','__return_false' );
          * 
          * or
          * 
-         * add_filter( 'medilac_topbar_hide_mobile','your_function' );
+         * add_filter( 'astha_topbar_hide_mobile','your_function' );
          * 
-         * add_filter( 'medilac_topbar_hide_mobile','__return_false' );
+         * add_filter( 'astha_topbar_hide_mobile','__return_false' );
          * Important: for new name, Need obviously String
          */
-        $topbar_hide_mobile = apply_filters( 'medilac_topbar_hide_mobile', 'topbar-hide-on-mobile' );
+        $topbar_hide_mobile = apply_filters( 'astha_topbar_hide_mobile', 'topbar-hide-on-mobile' );
 
         if( is_string( $topbar_hide_mobile ) && ! empty( $topbar_hide_mobile ) ){
             $classes[] = $topbar_hide_mobile;
@@ -159,17 +159,17 @@ function medilac_body_classes( $classes ) {
         
 	return $classes;
 }
-add_filter( 'body_class', 'medilac_body_classes' );
+add_filter( 'body_class', 'astha_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function medilac_pingback_header() {
+function astha_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
-add_action( 'wp_head', 'medilac_pingback_header' );
+add_action( 'wp_head', 'astha_pingback_header' );
 
 /**
  * Pagination
@@ -179,7 +179,7 @@ add_action( 'wp_head', 'medilac_pingback_header' );
  * @global type $wp_query
  * @return void
  */
-function medilac_post_pagination() {
+function astha_post_pagination() {
  
     if( is_singular() )
         return;
@@ -209,8 +209,8 @@ function medilac_post_pagination() {
     }
  
     ?>
-    <div class="medilac-pagination-wrapper">
-        <ul class="medilac-pagination">    
+    <div class="astha-pagination-wrapper">
+        <ul class="astha-pagination">    
     <?php
  
     /* Previous Post Link */
@@ -249,14 +249,14 @@ function medilac_post_pagination() {
  
 
     ?>
-        </ul> <!-- .medilac-pagination -->
-    </div><!-- .medilac-pagination-wrapper -->
+        </ul> <!-- .astha-pagination -->
+    </div><!-- .astha-pagination-wrapper -->
     <?php
  
 }
 
 
-if( !function_exists( 'medilac_comments_fields_placeholder' ) ){
+if( !function_exists( 'astha_comments_fields_placeholder' ) ){
     
     /**
      * To change WordPress, Default Form field, you can use this.
@@ -266,21 +266,21 @@ if( !function_exists( 'medilac_comments_fields_placeholder' ) ){
      * @param type $fields
      * @return string
      */
-    function medilac_comments_fields_placeholder( $fields ) {
+    function astha_comments_fields_placeholder( $fields ) {
 
-        $name = esc_html__( 'Name', 'medilac' );
+        $name = esc_html__( 'Name', 'astha' );
         $fields['author'] = '<p class="comment-form-author"><label for="author">';
         $fields['author'] .= $name;
         $fields['author'] .= ' <span class="required">*</span></label> <input id="author" placeholder="' . esc_attr( $name . ' (*)' ) . '" name="author" type="text" value="" size="30" maxlength="245" required="required" /></p>';
         
         // <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
-        $name = esc_html__( 'Email', 'medilac' );
+        $name = esc_html__( 'Email', 'astha' );
         $fields['email'] = '<p class="comment-form-email"><label for="email">';
         $fields['email'] .= $name;
         $fields['email'] .= '<span class="required">*</span></label> <input id="email" placeholder="' . esc_attr( $name . ' (*)' ) . '" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required" /></p>';
         
         //<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
-        $name = esc_html__( 'Website', 'medilac' );
+        $name = esc_html__( 'Website', 'astha' );
         $fields['url'] = '<p class="comment-form-url"><label for="url">';
         $fields['url'] .= $name;
         $fields['url'] .= '</label> <input id="url" placeholder="' . esc_attr( $name ) . '" name="url" type="url" value="" size="30" maxlength="200" /></p>';
@@ -291,7 +291,7 @@ if( !function_exists( 'medilac_comments_fields_placeholder' ) ){
 }
 
 
-if( !function_exists( 'medilac_comments_fields_placeholder' ) ){
+if( !function_exists( 'astha_comments_fields_placeholder' ) ){
     
     /**
      * To change WordPress, Default Form field, you can use this.
@@ -301,21 +301,21 @@ if( !function_exists( 'medilac_comments_fields_placeholder' ) ){
      * @param type $fields
      * @return string
      */
-    function medilac_comments_fields_placeholder( $fields ) {
+    function astha_comments_fields_placeholder( $fields ) {
 
-        $name = esc_html__( 'Name', 'medilac' );
+        $name = esc_html__( 'Name', 'astha' );
         $fields['author'] = '<p class="comment-form-author"><label for="author">';
         $fields['author'] .= $name;
         $fields['author'] .= ' <span class="required">*</span></label> <input id="author" placeholder="' . esc_attr( $name . ' (*)' ) . '" name="author" type="text" value="" size="30" maxlength="245" required="required" /></p>';
         
         // <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
-        $name = esc_html__( 'Email', 'medilac' );
+        $name = esc_html__( 'Email', 'astha' );
         $fields['email'] = '<p class="comment-form-email"><label for="email">';
         $fields['email'] .= $name;
         $fields['email'] .= '<span class="required">*</span></label> <input id="email" placeholder="' . esc_attr( $name . ' (*)' ) . '" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required" /></p>';
         
         //<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
-        $name = esc_html__( 'Website', 'medilac' );
+        $name = esc_html__( 'Website', 'astha' );
         $fields['url'] = '<p class="comment-form-url"><label for="url">';
         $fields['url'] .= $name;
         $fields['url'] .= '</label> <input id="url" placeholder="' . esc_attr( $name ) . '" name="url" type="url" value="" size="30" maxlength="200" /></p>';
@@ -325,10 +325,10 @@ if( !function_exists( 'medilac_comments_fields_placeholder' ) ){
     }
 }
 //This Tas has done by JavaScript
-//add_filter( 'comment_form_default_fields', 'medilac_comments_fields_placeholder' );
+//add_filter( 'comment_form_default_fields', 'astha_comments_fields_placeholder' );
 
 
-if( !function_exists( 'medilac_placeholder_comment_form_field' ) ){
+if( !function_exists( 'astha_placeholder_comment_form_field' ) ){
     
     /**
      * For: Comment Form Placeholder Comment Field
@@ -339,8 +339,8 @@ if( !function_exists( 'medilac_placeholder_comment_form_field' ) ){
      * @param type $fields
      * @return string
      */
-    function medilac_placeholder_comment_form_field( $fields ) {
-       $replace_comment = __('Your Comment', 'medilac');
+    function astha_placeholder_comment_form_field( $fields ) {
+       $replace_comment = __('Your Comment', 'astha');
 
        $fields['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
        '</label><textarea id="comment" name="comment" cols="45" rows="8" placeholder="'.$replace_comment.'" aria-required="true"></textarea></p>';
@@ -350,31 +350,31 @@ if( !function_exists( 'medilac_placeholder_comment_form_field' ) ){
 
 }
 //This Tas has done by JavaScript
-//add_filter( 'comment_form_defaults', 'medilac_placeholder_comment_form_field' );
+//add_filter( 'comment_form_defaults', 'astha_placeholder_comment_form_field' );
 
 //Test Perpose
-if( !function_exists( 'medilac_customizer_paginate' ) ){
+if( !function_exists( 'astha_customizer_paginate' ) ){
     
     /**
      * Customize 
      */
-    function medilac_customizer_paginate( $dddd ){
+    function astha_customizer_paginate( $dddd ){
 
         return $dddd;
     }
 }
-//add_filter( 'navigation_markup_template', 'medilac_customizer_paginate', 999 );
+//add_filter( 'navigation_markup_template', 'astha_customizer_paginate', 999 );
 
-if( !function_exists( 'medilac_social_share' ) ) {
+if( !function_exists( 'astha_social_share' ) ) {
     /**
      * Social share button will show in post or page
      * 
      * @since 1.0.0.26
      */
-    function medilac_social_share() {
+    function astha_social_share() {
         $share_facebook_enabled = $share_twitter_enabled = $share_pinterest_enabled = $share_email_enabled = $share_whatsapp_enabled = $share_url_enabled = true;
-        $share_title = esc_html( 'Share', 'medilac' );
-        $share_title = apply_filters( 'medilac_share_title', $share_title );
+        $share_title = esc_html( 'Share', 'astha' );
+        $share_title = apply_filters( 'astha_share_title', $share_title );
         $share_title = wp_kses_post( $share_title );
         
         $share_link_url = get_the_permalink();
@@ -388,37 +388,37 @@ if( !function_exists( 'medilac_social_share' ) ) {
         $share_facebook_icon = '<i class="fab fa-facebook-f"></i>';
         $share_twitter_icon =  '<i class="fab fa-twitter"></i>';
         ?>
-        <div class="medilac-share">
-            <h4 class="medilac-share-title"><?php echo esc_html( $share_title ); ?></h4>
+        <div class="astha-share">
+            <h4 class="astha-share-title"><?php echo esc_html( $share_title ); ?></h4>
             <ul>
                     <?php if ( $share_facebook_enabled ): ?>
                             <li class="share-button">
-                                    <a target="_blank" class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo urlencode( $share_link_url ); ?>&p[title]=<?php echo esc_attr( $share_link_title ); ?>" title="<?php esc_attr_e( 'Facebook', 'medilac' ); ?>">
-                                            <?php echo $share_facebook_icon ? $share_facebook_icon : esc_html__( 'Facebook', 'medilac' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                    <a target="_blank" class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo urlencode( $share_link_url ); ?>&p[title]=<?php echo esc_attr( $share_link_title ); ?>" title="<?php esc_attr_e( 'Facebook', 'astha' ); ?>">
+                                            <?php echo $share_facebook_icon ? $share_facebook_icon : esc_html__( 'Facebook', 'astha' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                     </a>
                             </li>
                     <?php endif; ?>
 
                     <?php if ( $share_twitter_enabled ): ?>
                             <li class="share-button">
-                                    <a target="_blank" class="twitter" href="https://twitter.com/share?url=<?php echo urlencode( $share_link_url ); ?>&amp;text=<?php echo esc_attr( $share_twitter_summary ); ?>" title="<?php esc_html_e( 'Twitter', 'medilac' ); ?>">
-                                            <?php echo $share_twitter_icon ? $share_twitter_icon : esc_html__( 'Twitter', 'medilac' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                    <a target="_blank" class="twitter" href="https://twitter.com/share?url=<?php echo urlencode( $share_link_url ); ?>&amp;text=<?php echo esc_attr( $share_twitter_summary ); ?>" title="<?php esc_html_e( 'Twitter', 'astha' ); ?>">
+                                            <?php echo $share_twitter_icon ? $share_twitter_icon : esc_html__( 'Twitter', 'astha' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                     </a>
                             </li>
                     <?php endif; ?>
 
                     <?php if ( $share_pinterest_enabled ): ?>
                             <li class="share-button">
-                                    <a target="_blank" class="pinterest" href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode( $share_link_url ); ?>&amp;description=<?php echo esc_attr( $share_summary ); ?>&amp;media=<?php echo esc_attr( $share_image_url ); ?>" title="<?php esc_html_e( 'Pinterest', 'medilac' ); ?>" onclick="window.open(this.href); return false;">
-                                            <?php echo $share_pinterest_icon ? $share_pinterest_icon : esc_html__( 'Pinterest', 'medilac' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                    <a target="_blank" class="pinterest" href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode( $share_link_url ); ?>&amp;description=<?php echo esc_attr( $share_summary ); ?>&amp;media=<?php echo esc_attr( $share_image_url ); ?>" title="<?php esc_html_e( 'Pinterest', 'astha' ); ?>" onclick="window.open(this.href); return false;">
+                                            <?php echo $share_pinterest_icon ? $share_pinterest_icon : esc_html__( 'Pinterest', 'astha' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                     </a>
                             </li>
                     <?php endif; ?>
 
                     <?php if ( $share_email_enabled ): ?>
                             <li class="share-button">
-                                    <a class="email" href="mailto:?subject=<?php echo esc_attr( apply_filters( 'yith_wcwl_email_share_subject', $share_link_title ) ); ?>&amp;body=<?php echo esc_attr( apply_filters( 'yith_wcwl_email_share_body', urlencode( $share_link_url ) ) ); ?>&amp;title=<?php echo esc_attr( $share_link_title ); ?>" title="<?php esc_html_e( 'Email', 'medilac' ); ?>">
-                                            <?php echo $share_email_icon ? $share_email_icon : __( 'Email', 'medilac' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                    <a class="email" href="mailto:?subject=<?php echo esc_attr( apply_filters( 'yith_wcwl_email_share_subject', $share_link_title ) ); ?>&amp;body=<?php echo esc_attr( apply_filters( 'yith_wcwl_email_share_body', urlencode( $share_link_url ) ) ); ?>&amp;title=<?php echo esc_attr( $share_link_title ); ?>" title="<?php esc_html_e( 'Email', 'astha' ); ?>">
+                                            <?php echo $share_email_icon ? $share_email_icon : __( 'Email', 'astha' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                     </a>
                             </li>
                     <?php endif; ?>
@@ -426,8 +426,8 @@ if( !function_exists( 'medilac_social_share' ) ) {
                     <?php if ( $share_whatsapp_enabled ):
                             ?>
                             <li class="share-button">
-                                    <a class="whatsapp" href="<?php echo esc_attr( $share_whatsapp_url ); ?>" data-action="share/whatsapp/share" target="_blank" title="<?php esc_html_e( 'WhatsApp', 'medilac' ); ?>">
-                                            <?php echo $share_whatsapp_icon ? $share_whatsapp_icon : esc_html__( 'Whatsapp', 'medilac' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                    <a class="whatsapp" href="<?php echo esc_attr( $share_whatsapp_url ); ?>" data-action="share/whatsapp/share" target="_blank" title="<?php esc_html_e( 'WhatsApp', 'astha' ); ?>">
+                                            <?php echo $share_whatsapp_icon ? $share_whatsapp_icon : esc_html__( 'Whatsapp', 'astha' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                     </a>
                             </li>
                     <?php endif;
@@ -435,9 +435,9 @@ if( !function_exists( 'medilac_social_share' ) ) {
             </ul>
 <!--
             <?php if ( $share_url_enabled ): ?>
-                    <div class="medilac-after-share-section">
+                    <div class="astha-after-share-section">
                             <input class="copy-target" readonly="readonly" type="url" name="yith_wcwl_share_url" id="yith_wcwl_share_url" value="<?php echo esc_attr( $share_link_url ); ?>"/>
-                            <?php echo ( ! empty( $share_link_url ) ) ? sprintf( '<small>%s <span class="copy-trigger">%s</span> %s</small>', esc_html__( '(Now', 'medilac' ), esc_html__( 'copy', 'medilac' ), esc_html__( 'this wishlist link and share it anywhere)', 'medilac' ) ) : ''; ?>
+                            <?php echo ( ! empty( $share_link_url ) ) ? sprintf( '<small>%s <span class="copy-trigger">%s</span> %s</small>', esc_html__( '(Now', 'astha' ), esc_html__( 'copy', 'astha' ), esc_html__( 'this wishlist link and share it anywhere)', 'astha' ) ) : ''; ?>
                     </div>
             <?php endif; ?>
 -->
@@ -447,9 +447,9 @@ if( !function_exists( 'medilac_social_share' ) ) {
     }
 }
 
-add_action( 'woocommerce_share', 'medilac_social_share' );
+add_action( 'woocommerce_share', 'astha_social_share' );
 //Just need to add Do Ation for this HOOOK
-add_action( 'medilac_share', 'medilac_social_share' );
+add_action( 'astha_share', 'astha_social_share' );
 
 /**
  * Get unique ID.
@@ -466,7 +466,7 @@ add_action( 'medilac_share', 'medilac_social_share' );
  * @param string $prefix Prefix for the returned ID.
  * @return string Unique ID.
  */
-function medilac_unique_id( $prefix = '' ) {
+function astha_unique_id( $prefix = '' ) {
 	static $id_counter = 0;
 	if ( function_exists( 'wp_unique_id' ) ) {
 		return wp_unique_id( $prefix );
@@ -474,13 +474,13 @@ function medilac_unique_id( $prefix = '' ) {
 	return $prefix . (string) ++$id_counter;
 }
 
-if( !function_exists( 'medilac_header_search' ) ) {
+if( !function_exists( 'astha_header_search' ) ) {
     /**
      * Call the header search widget
      */
-    function medilac_header_search() {
+    function astha_header_search() {
        
-       $search_switch = medilac_option( 'medilac_searchbox_switch', 'on' );
+       $search_switch = astha_option( 'astha_searchbox_switch', 'on' );
        ?>
         <div class="custom-search-wrapper">
             <div class="custom-search-inside">
@@ -496,31 +496,31 @@ if( !function_exists( 'medilac_header_search' ) ) {
     <?php
     }
 }
-//add_action( 'medilac_after_header', 'medilac_header_search' );
-add_action( 'medilac_header_search_box', 'medilac_header_search', 10 );
+//add_action( 'astha_after_header', 'astha_header_search' );
+add_action( 'astha_header_search_box', 'astha_header_search', 10 );
 
-if( !function_exists( 'medilac_header_user_login' ) ) {
+if( !function_exists( 'astha_header_user_login' ) ) {
     /**
      * Function for front user login feature
      */
-    function medilac_header_user_login() {
+    function astha_header_user_login() {
 
         ?>
         <div class="user-login-icon">
             <?php
 
             $link = class_exists( 'WooCommerce' ) ? get_permalink( get_option('woocommerce_myaccount_page_id') ) : admin_url();
-            $link = apply_filters( 'medilac_user_login_url', $link );
+            $link = apply_filters( 'astha_user_login_url', $link );
             
             if ( is_user_logged_in() ) {
             ?>
 
-            <a href="<?php echo esc_url( $link ); ?>" title="<?php _e('My Account','medilac'); ?>"><i class="fas fa-user"></i></a>
+            <a href="<?php echo esc_url( $link ); ?>" title="<?php _e('My Account','astha'); ?>"><i class="fas fa-user"></i></a>
 
             <?php 
             }else { ?>
 
-            <a href="<?php echo esc_url( $link ); ?>" title="<?php _e('Login / Register','medilac'); ?>"><i class="fas fa-user"></i></a>
+            <a href="<?php echo esc_url( $link ); ?>" title="<?php _e('Login / Register','astha'); ?>"><i class="fas fa-user"></i></a>
 
             <?php 
 
@@ -531,13 +531,13 @@ if( !function_exists( 'medilac_header_user_login' ) ) {
     }
 }
 
-add_action( 'medilac_tools_panel', 'medilac_header_user_login', 10 );
+add_action( 'astha_tools_panel', 'astha_header_user_login', 10 );
 
-if( !function_exists( 'medilac_header_search_control' ) ) {
+if( !function_exists( 'astha_header_search_control' ) ) {
     /**
      * Function for front user login feature
      */
-    function medilac_header_search_control() {
+    function astha_header_search_control() {
         
         ?>
     <div class="search-control-icon">
@@ -546,18 +546,18 @@ if( !function_exists( 'medilac_header_search_control' ) ) {
         /**
          * To insert Search box here
          * 
-         * @Hooked medilac_header_search -10 at template-functions.php (this file)
+         * @Hooked astha_header_search -10 at template-functions.php (this file)
          */
-        do_action( 'medilac_header_search_box' ); ?>
+        do_action( 'astha_header_search_box' ); ?>
     </div>
         <?php
         
     }
 }
 
-add_action( 'medilac_tools_panel', 'medilac_header_search_control', 0 );
+add_action( 'astha_tools_panel', 'astha_header_search_control', 0 );
 
-if( !function_exists( 'medilac_topbar_right_area' ) ) {
+if( !function_exists( 'astha_topbar_right_area' ) ) {
     
     /**
      * Generating Minicart or Call to action button for Topbar
@@ -565,7 +565,7 @@ if( !function_exists( 'medilac_topbar_right_area' ) ) {
      * @param type $options
      * @return void
      */
-    function medilac_topbar_right_area( $options ) {
+    function astha_topbar_right_area( $options ) {
         
         if( ! isset( $options['tobpar_right_area'] ) ){
             return;
@@ -576,13 +576,13 @@ if( !function_exists( 'medilac_topbar_right_area' ) ) {
         ?>
         <div class="topbar-mini-cart-wrapper  header-minicart-wrapper">
             <?php
-		if ( function_exists( 'medilac_woocommerce_header_cart' ) ) {
-                    $shop_text = isset( $options['minicart_text'] ) ? $options['minicart_text'] : __( 'Shopping Cart', 'medilac' ) ;
-                    $shop_text = apply_filters( 'medilac_header_shop_text', $shop_text );
+		if ( function_exists( 'astha_woocommerce_header_cart' ) ) {
+                    $shop_text = isset( $options['minicart_text'] ) ? $options['minicart_text'] : __( 'Shopping Cart', 'astha' ) ;
+                    $shop_text = apply_filters( 'astha_header_shop_text', $shop_text );
                     ?>
                     <span class="topbar-shopping-cart-text"><?php echo esc_html( $shop_text ); ?></span>    
                     <?php
-			medilac_woocommerce_header_cart();
+			astha_woocommerce_header_cart();
 		}
             ?>
         </div>    
@@ -601,9 +601,9 @@ if( !function_exists( 'medilac_topbar_right_area' ) ) {
     }
 }
 
-add_action( 'medilac_topbar_right_area', 'medilac_topbar_right_area', 20 );
+add_action( 'astha_topbar_right_area', 'astha_topbar_right_area', 20 );
 
-if( !function_exists( 'medilac_social_links' ) ){
+if( !function_exists( 'astha_social_links' ) ){
     
     /**
      * Providing Social Link, Mainly for Topbar
@@ -613,7 +613,7 @@ if( !function_exists( 'medilac_social_links' ) ){
      * @param bool $echo Default is true, If set false, then total value will return. need to print for showing.
      * @return void
      */
-    function medilac_social_links( $social_network = false, $echo = true ){
+    function astha_social_links( $social_network = false, $echo = true ){
         if( ! isset( $social_network['social'] ) || ! is_array( $social_network['social'] ) ){
             return;
         }
@@ -653,8 +653,8 @@ if( !function_exists( 'medilac_social_links' ) ){
     }
 }
 
-add_action( 'medilac_entry_header', 'medilac_entry_header_content', 20 );
-if( ! function_exists( 'medilac_entry_header_content' ) ){
+add_action( 'astha_entry_header', 'astha_entry_header_content', 20 );
+if( ! function_exists( 'astha_entry_header_content' ) ){
     
     /**
      * Entry Header for Post
@@ -662,7 +662,7 @@ if( ! function_exists( 'medilac_entry_header_content' ) ){
      * Adding Article Entry Header Using this Function
      * We have used this function for Action Hook.
      */
-    function medilac_entry_header_content(){
+    function astha_entry_header_content(){
 
         ?>
         <header class="entry-header">
@@ -671,17 +671,17 @@ if( ! function_exists( 'medilac_entry_header_content' ) ){
                     ?>
                     <div class="entry-meta">
                             <?php
-                            if( ! empty( medilac_option( 'medilac_blog_taxonomy', 'on' ) ) ){
-                                medilac_taxonomy_by();
+                            if( ! empty( astha_option( 'astha_blog_taxonomy', 'on' ) ) ){
+                                astha_taxonomy_by();
                             }
                             
-                            if( ! empty( medilac_option( 'medilac_blog_posted_by', 'on' ) ) ){
-                                medilac_posted_by();
+                            if( ! empty( astha_option( 'astha_blog_posted_by', 'on' ) ) ){
+                                astha_posted_by();
                             }
                             
                             
-                            if( ! empty( medilac_option( 'medilac_blog_posted_on', 'on' ) ) && ( medilac_blog_layout() !== 'grid' || is_singular() ) ){
-                                medilac_posted_on();
+                            if( ! empty( astha_option( 'astha_blog_posted_on', 'on' ) ) && ( astha_blog_layout() !== 'grid' || is_singular() ) ){
+                                astha_posted_on();
                             }
                             
                             ?>
@@ -689,8 +689,8 @@ if( ! function_exists( 'medilac_entry_header_content' ) ){
             <?php endif;
 
             if ( is_singular() ) :
-                $breadcrumb_switch              = medilac_option( 'medilac_breadcrumb_switch' );
-                $breadcrumb_type                = medilac_option( 'medilac_breadcrumb_type' );
+                $breadcrumb_switch              = astha_option( 'astha_breadcrumb_switch' );
+                $breadcrumb_type                = astha_option( 'astha_breadcrumb_type' );
 
                 if( $breadcrumb_switch === 'off' || ( $breadcrumb_switch === 'on' && $breadcrumb_type === 'static' ) ):
                     the_title( '<h1 class="entry-title">', '</h1>' );
@@ -706,26 +706,26 @@ if( ! function_exists( 'medilac_entry_header_content' ) ){
     }
 }
 
-add_action( 'medilac_none_page', 'medilac_none_page_content', 20 );
-if( ! function_exists( 'medilac_none_page_content' ) ){
+add_action( 'astha_none_page', 'astha_none_page_content', 20 );
+if( ! function_exists( 'astha_none_page_content' ) ){
     
     /**
      * None page, which location is
      * template-parts/content-none.php
      * 
-     * Actually this Function is for Hook medilac_none_page
+     * Actually this Function is for Hook astha_none_page
      * of template-parts/content-none.php file
      * 
      * @since 1.0.0.43
      */
-    function medilac_none_page_content(){
+    function astha_none_page_content(){
 
         if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
                 printf(
                         '<p>' . wp_kses(
                                 /* translators: 1: link to WP admin new post page. */
-                                __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'medilac' ),
+                                __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'astha' ),
                                 array(
                                         'a' => array(
                                                 'href' => array(),
@@ -738,14 +738,14 @@ if( ! function_exists( 'medilac_none_page_content' ) ){
         elseif ( is_search() ) :
                 ?>
 
-                <p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'medilac' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'astha' ); ?></p>
                 <?php
                 get_search_form();
 
         else :
                 ?>
 
-                <p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'medilac' ); ?></p>
+                <p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'astha' ); ?></p>
                 <?php
                 get_search_form();
 
@@ -753,7 +753,7 @@ if( ! function_exists( 'medilac_none_page_content' ) ){
     }
 }
 
-if( ! function_exists( 'medilac_social_networks' ) ){
+if( ! function_exists( 'astha_social_networks' ) ){
     
     /**
      * List of our supported Social Network
@@ -761,35 +761,35 @@ if( ! function_exists( 'medilac_social_networks' ) ){
      * 
      * @return Array
      */
-    function medilac_social_networks(){
+    function astha_social_networks(){
         
         return array(
-            'fab fa-facebook-f'         => __( 'Facebook', 'medilac' ),
-            'fab fa-twitter'            => __( 'Twitter', 'medilac' ),
-            'fab fa-linkedin-in'        => __( 'LinkedIn', 'medilac' ),
-            'fab fa-instagram'          => __( 'Instagram', 'medilac' ),
-            'fab fa-youtube-square'     => __( 'Youtube', 'medilac' ),
-            'fab fa-vimeo'              => __( 'Vimeo', 'medilac' ),
-            'fab fa-pinterest'          => __( 'Pinterest', 'medilac' ),
-            'fab fa-reddit'             => __( 'Reddit', 'medilac' ),
-            'fab fa-whatsapp'           => __( 'WhatsApp', 'medilac' ),
-            'fab fa-facebook-messenger' => __( 'Facebook Messenger', 'medilac' ),
-            //'fab fa-adobe'              => __( 'Adobe', 'medilac' ),
-            'fab fa-amazon'             => __( 'Amazon', 'medilac' ),
-            'fab fa-angellist'          => __( 'AngelList', 'medilac' ),
-            'fab fa-behance'            => __( 'Behance', 'medilac' ),
-            'fab fa-blogger-b'          => __( 'Blogger', 'medilac' ),
-            'fab fa-delicious'          => __( 'Delicious', 'medilac' ),
-            'fab fa-digg'               => __( 'Digg', 'medilac' ),
-            'fab fa-github'             => __( 'Github', 'medilac' ),
-            'fab fa-jsfiddle'           => __( 'JSFiddle', 'medilac' ),
-            'fab fa-patreon'            => __( 'Patreon', 'medilac' ),
-            'fab fa-slack'              => __( 'Slack', 'medilac' ),
-            'fab fa-snapchat'           => __( 'Snapchat', 'medilac' ),
-            'fab fa-telegram'           => __( 'Telegram', 'medilac' ),
-            'fab fa-tumblr'             => __( 'Tumblr', 'medilac' ),
-            'fab fa-vine'               => __( 'Vine', 'medilac' ),
+            'fab fa-facebook-f'         => __( 'Facebook', 'astha' ),
+            'fab fa-twitter'            => __( 'Twitter', 'astha' ),
+            'fab fa-linkedin-in'        => __( 'LinkedIn', 'astha' ),
+            'fab fa-instagram'          => __( 'Instagram', 'astha' ),
+            'fab fa-youtube-square'     => __( 'Youtube', 'astha' ),
+            'fab fa-vimeo'              => __( 'Vimeo', 'astha' ),
+            'fab fa-pinterest'          => __( 'Pinterest', 'astha' ),
+            'fab fa-reddit'             => __( 'Reddit', 'astha' ),
+            'fab fa-whatsapp'           => __( 'WhatsApp', 'astha' ),
+            'fab fa-facebook-messenger' => __( 'Facebook Messenger', 'astha' ),
+            //'fab fa-adobe'              => __( 'Adobe', 'astha' ),
+            'fab fa-amazon'             => __( 'Amazon', 'astha' ),
+            'fab fa-angellist'          => __( 'AngelList', 'astha' ),
+            'fab fa-behance'            => __( 'Behance', 'astha' ),
+            'fab fa-blogger-b'          => __( 'Blogger', 'astha' ),
+            'fab fa-delicious'          => __( 'Delicious', 'astha' ),
+            'fab fa-digg'               => __( 'Digg', 'astha' ),
+            'fab fa-github'             => __( 'Github', 'astha' ),
+            'fab fa-jsfiddle'           => __( 'JSFiddle', 'astha' ),
+            'fab fa-patreon'            => __( 'Patreon', 'astha' ),
+            'fab fa-slack'              => __( 'Slack', 'astha' ),
+            'fab fa-snapchat'           => __( 'Snapchat', 'astha' ),
+            'fab fa-telegram'           => __( 'Telegram', 'astha' ),
+            'fab fa-tumblr'             => __( 'Tumblr', 'astha' ),
+            'fab fa-vine'               => __( 'Vine', 'astha' ),
         );
     }
 }
-add_filter( 'medilac_social_network_arr', 'medilac_social_networks' );
+add_filter( 'astha_social_network_arr', 'astha_social_networks' );

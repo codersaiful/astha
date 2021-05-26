@@ -11,8 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <?php
-        $breadcrumb_switch              = medilac_option( 'medilac_breadcrumb_switch' );
-        $breadcrumb_type                = medilac_option( 'medilac_breadcrumb_type' );
+        $breadcrumb_switch              = astha_option( 'astha_breadcrumb_switch' );
+        $breadcrumb_type                = astha_option( 'astha_breadcrumb_type' );
         if( ! is_front_page() && ( $breadcrumb_switch === 'off' || ( $breadcrumb_switch === 'on' && $breadcrumb_type === 'static' ) ) ):
         ?>
     
@@ -22,7 +22,7 @@
 
         <?php endif; ?>
         
-	<?php medilac_post_thumbnail(); ?>
+	<?php astha_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -30,7 +30,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'medilac' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'astha' ),
 				'after'  => '</div>',
 			)
 		);
@@ -43,7 +43,7 @@
          * Content Area for Footer on Single Post Page and Loop Also
          * User able to Add anything Here
          */
-        do_action( 'medilac_entry_footer' );
+        do_action( 'astha_entry_footer' );
         
         if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
@@ -52,7 +52,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'medilac' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'astha' ),
 						array(
 							'span' => array(
 								'class' => array(),

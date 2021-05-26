@@ -33,7 +33,7 @@
  */
 require_once get_template_directory() . '/path/to/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'medilac_register_required_plugins' );
+add_action( 'tgmpa_register', 'astha_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
@@ -52,7 +52,7 @@ add_action( 'tgmpa_register', 'medilac_register_required_plugins' );
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function medilac_register_required_plugins() {
+function astha_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
@@ -121,7 +121,7 @@ function medilac_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'medilac',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'astha',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'has_notices'  => true,                    // Show admin notices or not.
@@ -132,76 +132,76 @@ function medilac_register_required_plugins() {
 
 		/*
 		'strings'      => array(
-			'page_title'                      => __( 'Install Required Plugins', 'medilac' ),
-			'menu_title'                      => __( 'Install Plugins', 'medilac' ),
+			'page_title'                      => __( 'Install Required Plugins', 'astha' ),
+			'menu_title'                      => __( 'Install Plugins', 'astha' ),
 			/* translators: %s: plugin name. * /
-			'installing'                      => __( 'Installing Plugin: %s', 'medilac' ),
+			'installing'                      => __( 'Installing Plugin: %s', 'astha' ),
 			/* translators: %s: plugin name. * /
-			'updating'                        => __( 'Updating Plugin: %s', 'medilac' ),
-			'oops'                            => __( 'Something went wrong with the plugin API.', 'medilac' ),
+			'updating'                        => __( 'Updating Plugin: %s', 'astha' ),
+			'oops'                            => __( 'Something went wrong with the plugin API.', 'astha' ),
 			'notice_can_install_required'     => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'This theme requires the following plugin: %1$s.',
 				'This theme requires the following plugins: %1$s.',
-				'medilac'
+				'astha'
 			),
 			'notice_can_install_recommended'  => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'This theme recommends the following plugin: %1$s.',
 				'This theme recommends the following plugins: %1$s.',
-				'medilac'
+				'astha'
 			),
 			'notice_ask_to_update'            => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-				'medilac'
+				'astha'
 			),
 			'notice_ask_to_update_maybe'      => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'There is an update available for: %1$s.',
 				'There are updates available for the following plugins: %1$s.',
-				'medilac'
+				'astha'
 			),
 			'notice_can_activate_required'    => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'The following required plugin is currently inactive: %1$s.',
 				'The following required plugins are currently inactive: %1$s.',
-				'medilac'
+				'astha'
 			),
 			'notice_can_activate_recommended' => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'The following recommended plugin is currently inactive: %1$s.',
 				'The following recommended plugins are currently inactive: %1$s.',
-				'medilac'
+				'astha'
 			),
 			'install_link'                    => _n_noop(
 				'Begin installing plugin',
 				'Begin installing plugins',
-				'medilac'
+				'astha'
 			),
 			'update_link' 					  => _n_noop(
 				'Begin updating plugin',
 				'Begin updating plugins',
-				'medilac'
+				'astha'
 			),
 			'activate_link'                   => _n_noop(
 				'Begin activating plugin',
 				'Begin activating plugins',
-				'medilac'
+				'astha'
 			),
-			'return'                          => __( 'Return to Required Plugins Installer', 'medilac' ),
-			'plugin_activated'                => __( 'Plugin activated successfully.', 'medilac' ),
-			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'medilac' ),
+			'return'                          => __( 'Return to Required Plugins Installer', 'astha' ),
+			'plugin_activated'                => __( 'Plugin activated successfully.', 'astha' ),
+			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'astha' ),
 			/* translators: 1: plugin name. * /
-			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'medilac' ),
+			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'astha' ),
 			/* translators: 1: plugin name. * /
-			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'medilac' ),
+			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'astha' ),
 			/* translators: 1: dashboard link. * /
-			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'medilac' ),
-			'dismiss'                         => __( 'Dismiss this notice', 'medilac' ),
-			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'medilac' ),
-			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'medilac' ),
+			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'astha' ),
+			'dismiss'                         => __( 'Dismiss this notice', 'astha' ),
+			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'astha' ),
+			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'astha' ),
 
 			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
 		),

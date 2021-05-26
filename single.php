@@ -27,11 +27,11 @@ get_header();
                          * 
                          * @since 1.0.0.61
                          */
-                        if( ! empty( medilac_option( 'medilac_blog_nav', 'on' ) ) ){
+                        if( ! empty( astha_option( 'astha_blog_nav', 'on' ) ) ){
                             the_post_navigation(
                                     array(
-                                            'prev_text' => '<span class="prev-next-post-icon"><i class="fas fa-arrow-left"></i></span><div class="medilac-nav-wrapper prev-post-text"><span class="nav-subtitle">' . esc_html__( 'Previous:', 'medilac' ) . '</span> <span class="nav-title">%title</span></div>',
-                                            'next_text' => '<div class="medilac-nav-wrapper next-post-text"><span class="nav-subtitle">' . esc_html__( 'Next:', 'medilac' ) . '</span> <span class="nav-title">%title</span></div><span class="prev-next-post-icon"><i class="fas fa-arrow-right"></i></span>',
+                                            'prev_text' => '<span class="prev-next-post-icon"><i class="fas fa-arrow-left"></i></span><div class="astha-nav-wrapper prev-post-text"><span class="nav-subtitle">' . esc_html__( 'Previous:', 'astha' ) . '</span> <span class="nav-title">%title</span></div>',
+                                            'next_text' => '<div class="astha-nav-wrapper next-post-text"><span class="nav-subtitle">' . esc_html__( 'Next:', 'astha' ) . '</span> <span class="nav-title">%title</span></div><span class="prev-next-post-icon"><i class="fas fa-arrow-right"></i></span>',
                                     )
                             );
                         }

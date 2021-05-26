@@ -7,8 +7,8 @@
  *
  * @package Astha
  */
-$options = medilac_option('medilac_header_top');
-$social_network = medilac_option( 'medilac_social' );
+$options = astha_option('astha_header_top');
+$social_network = astha_option( 'astha_social' );
 ?>
 
 <div class="header-top">
@@ -20,7 +20,7 @@ $social_network = medilac_option( 'medilac_social' );
              * 
              * Located in template-functions.php
              */
-            medilac_social_links( $social_network );
+            astha_social_links( $social_network );
             ?>
         </div>
         <div class="header_top_right">
@@ -30,9 +30,9 @@ $social_network = medilac_option( 'medilac_social' );
              * 
              * Control over Hooked
              * 
-             * @Hooked medilac_topbar_right_area -20 Loc: at inc/template-functions.php
+             * @Hooked astha_topbar_right_area -20 Loc: at inc/template-functions.php
              */
-            do_action( 'medilac_topbar_right_area', $options ); 
+            do_action( 'astha_topbar_right_area', $options ); 
             ?>
         </div>
     </div> <!-- header-top-wrapper -->

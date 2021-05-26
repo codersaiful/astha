@@ -24,10 +24,10 @@
  *
  * @return void
  */
-function medilac_woocommerce_setup() {
+function astha_woocommerce_setup() {
 	add_theme_support(
 		'woocommerce',
-                apply_filters( 'medilac_wc_theme_support', array(
+                apply_filters( 'astha_wc_theme_support', array(
 			'thumbnail_image_width' => 270,
 			'single_image_width'    => 540,
 			'product_grid'          => array(
@@ -44,7 +44,7 @@ function medilac_woocommerce_setup() {
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
-add_action( 'after_setup_theme', 'medilac_woocommerce_setup' );
+add_action( 'after_setup_theme', 'astha_woocommerce_setup' );
 
 /**
  * WooCommerce specific scripts & stylesheets.
@@ -56,8 +56,8 @@ add_action( 'after_setup_theme', 'medilac_woocommerce_setup' );
  *
  * @return void
  */
-function medilac_woocommerce_scripts() {
-    wp_enqueue_style( 'medilac-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.css', array(), MEDILAC_VERSION );
+function astha_woocommerce_scripts() {
+    wp_enqueue_style( 'astha-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.css', array(), MEDILAC_VERSION );
 
     $font_path   = WC()->plugin_url() . '/assets/fonts/';
     $inline_font = '@font-face {
@@ -71,7 +71,7 @@ function medilac_woocommerce_scripts() {
                     font-style: normal;
             }';
 
-    wp_add_inline_style( 'medilac-woocommerce-style', $inline_font );
+    wp_add_inline_style( 'astha-woocommerce-style', $inline_font );
     
     /**
      * Responsive File for WooCommerce Plugin Only
@@ -81,17 +81,17 @@ function medilac_woocommerce_scripts() {
      * *****************************
      * WooCommerce's Third Party Plugin's responsive Style also load from here 
      */
-    wp_enqueue_style( 'medilac-responsive-woocommerce', get_template_directory_uri() . '/assets/css/responsive-woocommerce.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-responsive-woocommerce', get_template_directory_uri() . '/assets/css/responsive-woocommerce.css', array(), MEDILAC_VERSION );
     
     /**
      * WooCommerce Related JS will load, When only Woocommerce Install
      * 
      * @since 1.0.0.29
      */
-    wp_enqueue_script( 'medilac-woocommerce-custom-js', get_template_directory_uri() . '/assets/js/woocommerce.js', array(), MEDILAC_VERSION, true );
+    wp_enqueue_script( 'astha-woocommerce-custom-js', get_template_directory_uri() . '/assets/js/woocommerce.js', array(), MEDILAC_VERSION, true );
     
 }
-add_action( 'wp_enqueue_scripts', 'medilac_woocommerce_scripts', 20 );
+add_action( 'wp_enqueue_scripts', 'astha_woocommerce_scripts', 20 );
 
 /**
  * Disable the default WooCommerce stylesheet.
@@ -109,12 +109,12 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
  * @param  array $classes CSS classes applied to the body tag.
  * @return array $classes modified to include 'woocommerce-active' class.
  */
-function medilac_woocommerce_active_body_class( $classes ) {
+function astha_woocommerce_active_body_class( $classes ) {
 	$classes[] = 'woocommerce-active';
 
 	return $classes;
 }
-add_filter( 'body_class', 'medilac_woocommerce_active_body_class' );
+add_filter( 'body_class', 'astha_woocommerce_active_body_class' );
 
 /**
  * Related Products Args.
@@ -122,7 +122,7 @@ add_filter( 'body_class', 'medilac_woocommerce_active_body_class' );
  * @param array $args related products args.
  * @return array $args related products args.
  */
-function medilac_woocommerce_related_products_args( $args ) {
+function astha_woocommerce_related_products_args( $args ) {
 	$defaults = array(
             'posts_per_page' => 3,
             'columns'        => 3,
@@ -136,13 +136,13 @@ function medilac_woocommerce_related_products_args( $args ) {
          * 
          * Also able to do it by our Theme's Hook
          */
-        $defaults = apply_filters( 'medilac_wc_related_products_args', $defaults );
+        $defaults = apply_filters( 'astha_wc_related_products_args', $defaults );
         
 	$args = wp_parse_args( $defaults, $args );
 
 	return $args;
 }
-add_filter( 'woocommerce_output_related_products_args', 'medilac_woocommerce_related_products_args' );
+add_filter( 'woocommerce_output_related_products_args', 'astha_woocommerce_related_products_args' );
 
 /**
  * Remove default WooCommerce wrapper.
@@ -150,7 +150,7 @@ add_filter( 'woocommerce_output_related_products_args', 'medilac_woocommerce_rel
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-if ( ! function_exists( 'medilac_woocommerce_wrapper_before' ) ) {
+if ( ! function_exists( 'astha_woocommerce_wrapper_before' ) ) {
 	/**
 	 * Before Content.
 	 *
@@ -158,15 +158,15 @@ if ( ! function_exists( 'medilac_woocommerce_wrapper_before' ) ) {
 	 *
 	 * @return void
 	 */
-	function medilac_woocommerce_wrapper_before() {
+	function astha_woocommerce_wrapper_before() {
 		?>
-			<main id="primary" class="site-main medilac-before-wc-wrapper">
+			<main id="primary" class="site-main astha-before-wc-wrapper">
 		<?php
 	}
 }
-add_action( 'woocommerce_before_main_content', 'medilac_woocommerce_wrapper_before' );
+add_action( 'woocommerce_before_main_content', 'astha_woocommerce_wrapper_before' );
 
-if ( ! function_exists( 'medilac_woocommerce_wrapper_after' ) ) {
+if ( ! function_exists( 'astha_woocommerce_wrapper_after' ) ) {
 	/**
 	 * After Content.
 	 *
@@ -174,13 +174,13 @@ if ( ! function_exists( 'medilac_woocommerce_wrapper_after' ) ) {
 	 *
 	 * @return void
 	 */
-	function medilac_woocommerce_wrapper_after() {
+	function astha_woocommerce_wrapper_after() {
 		?>
 			</main><!-- #main -->
 		<?php
 	}
 }
-add_action( 'woocommerce_after_main_content', 'medilac_woocommerce_wrapper_after' );
+add_action( 'woocommerce_after_main_content', 'astha_woocommerce_wrapper_after' );
 
 /**
  * Sample implementation of the WooCommerce Mini Cart.
@@ -188,13 +188,13 @@ add_action( 'woocommerce_after_main_content', 'medilac_woocommerce_wrapper_after
  * You can add the WooCommerce Mini Cart to header.php like so ...
  *
 	<?php
-		if ( function_exists( 'medilac_woocommerce_header_cart' ) ) {
-			medilac_woocommerce_header_cart();
+		if ( function_exists( 'astha_woocommerce_header_cart' ) ) {
+			astha_woocommerce_header_cart();
 		}
 	?>
  */
 
-if ( ! function_exists( 'medilac_woocommerce_cart_link_fragment' ) ) {
+if ( ! function_exists( 'astha_woocommerce_cart_link_fragment' ) ) {
 	/**
 	 * Cart Fragments.
 	 *
@@ -203,17 +203,17 @@ if ( ! function_exists( 'medilac_woocommerce_cart_link_fragment' ) ) {
 	 * @param array $fragments Fragments to refresh via AJAX.
 	 * @return array Fragments to refresh via AJAX.
 	 */
-	function medilac_woocommerce_cart_link_fragment( $fragments ) {
+	function astha_woocommerce_cart_link_fragment( $fragments ) {
 		ob_start();
-		medilac_woocommerce_cart_link();
+		astha_woocommerce_cart_link();
 		$fragments['a.cart-contents'] = ob_get_clean();
 
 		return $fragments;
 	}
 }
-add_filter( 'woocommerce_add_to_cart_fragments', 'medilac_woocommerce_cart_link_fragment' );
+add_filter( 'woocommerce_add_to_cart_fragments', 'astha_woocommerce_cart_link_fragment' );
 
-if ( ! function_exists( 'medilac_woocommerce_cart_link' ) ) {
+if ( ! function_exists( 'astha_woocommerce_cart_link' ) ) {
 	/**
 	 * Cart Link.
 	 *
@@ -221,14 +221,14 @@ if ( ! function_exists( 'medilac_woocommerce_cart_link' ) ) {
 	 *
 	 * @return void
 	 */
-	function medilac_woocommerce_cart_link() {
+	function astha_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'medilac' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'astha' ); ?>">
 			<?php
-                        do_action( 'medilac_minicart_cart_icon' );
+                        do_action( 'astha_minicart_cart_icon' );
                         /* translators: number of items in the mini cart. */
-			$item_count_text = _n( 'item', 'items', WC()->cart->get_cart_contents_count(), 'medilac' );
-                        $item_count_text = apply_filters( 'medilac_minicart_item_text', $item_count_text, WC()->cart );
+			$item_count_text = _n( 'item', 'items', WC()->cart->get_cart_contents_count(), 'astha' );
+                        $item_count_text = apply_filters( 'astha_minicart_item_text', $item_count_text, WC()->cart );
                         if( WC()->cart->get_cart_contents_count() > 0 ){
 			?>
 			
@@ -245,13 +245,13 @@ if ( ! function_exists( 'medilac_woocommerce_cart_link' ) ) {
 	}
 }
 
-if ( ! function_exists( 'medilac_woocommerce_header_cart' ) ) {
+if ( ! function_exists( 'astha_woocommerce_header_cart' ) ) {
 	/**
 	 * Display Header Cart.
 	 *
 	 * @return void
 	 */
-	function medilac_woocommerce_header_cart() {
+	function astha_woocommerce_header_cart() {
 		if ( is_cart() ) {
 			$class = 'current-menu-item';
 		} else {
@@ -260,26 +260,26 @@ if ( ! function_exists( 'medilac_woocommerce_header_cart' ) ) {
 		?>
 		<ul id="site-header-cart" class="site-header-cart">
 			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php medilac_woocommerce_cart_link(); ?>
+				<?php astha_woocommerce_cart_link(); ?>
 			</li>
                         <li class="minicart-content-wrapper">
 				<?php
                                 /**
                                  * Do Insert something at the Top of the Mincart
                                  */
-                                do_action( 'medilac_minicart_top' );
+                                do_action( 'astha_minicart_top' );
                                 
 				$instance = array(
-					//'title' => esc_html( 'My Cart', 'medilac' ),
+					//'title' => esc_html( 'My Cart', 'astha' ),
 					'title' => '',
 				);
-                                $instance = apply_filters( 'medilac_minicart_args', $instance );
+                                $instance = apply_filters( 'astha_minicart_args', $instance );
 				the_widget( 'WC_Widget_Cart', $instance );
                                 
                                 /**
                                  * Do Insert something at the Top of the Mincart
                                  */
-                                do_action( 'medilac_minicart_bottom' );
+                                do_action( 'astha_minicart_bottom' );
                                 
 				?>
 			</li>
@@ -298,7 +298,7 @@ if ( ! function_exists( 'medilac_woocommerce_header_cart' ) ) {
  * REMEMBERED
  * ***************************************
  * We have create a content-product.php template file
- * inside theme. location: theme/medilac/woocommerce/content-product.php
+ * inside theme. location: theme/astha/woocommerce/content-product.php
  * 
  * @since 1.0.0.61
  */
@@ -309,7 +309,7 @@ add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loo
 add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_open', 8 );
 add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 12 );
 
-if ( ! function_exists( 'medilac_shop_loop_cart_before' ) ) {
+if ( ! function_exists( 'astha_shop_loop_cart_before' ) ) {
 	
     /**
      * Add Tag at the begining of @Hook woocommerce_after_shop_loop_item
@@ -318,19 +318,19 @@ if ( ! function_exists( 'medilac_shop_loop_cart_before' ) ) {
      * 
      * @return void
      */
-    function medilac_shop_loop_cart_before() {
-        $loop_wrp = apply_filters( 'medilac_wc_loop_wrapper', true );
+    function astha_shop_loop_cart_before() {
+        $loop_wrp = apply_filters( 'astha_wc_loop_wrapper', true );
         if( ! $loop_wrp ){
             return;
         }
-        echo wp_kses_post( '<section class="medilac-after-loop-wrapper add-list-pack-inside-wrapper"><div class="add-list-pack-inside">' );
-        do_action( 'medilac_wc_loop_wrapper_top' );
+        echo wp_kses_post( '<section class="astha-after-loop-wrapper add-list-pack-inside-wrapper"><div class="add-list-pack-inside">' );
+        do_action( 'astha_wc_loop_wrapper_top' );
     }
 }
 //Already template override completed. so no need this action. Removed at 1.0.0.61 when we have completed first complete deadline
-//add_action( 'woocommerce_after_shop_loop_item', 'medilac_shop_loop_cart_before', 5 );
+//add_action( 'woocommerce_after_shop_loop_item', 'astha_shop_loop_cart_before', 5 );
 
-if ( ! function_exists( 'medilac_shop_loop_cart_after' ) ) {
+if ( ! function_exists( 'astha_shop_loop_cart_after' ) ) {
 	
     /**
      * Add Tag at the end of @Hook woocommerce_after_shop_loop_item
@@ -339,20 +339,20 @@ if ( ! function_exists( 'medilac_shop_loop_cart_after' ) ) {
      * 
      * @return void
      */
-    function medilac_shop_loop_cart_after() {
-        $loop_wrp = apply_filters( 'medilac_wc_loop_wrapper', true );
+    function astha_shop_loop_cart_after() {
+        $loop_wrp = apply_filters( 'astha_wc_loop_wrapper', true );
         if( ! $loop_wrp ){
             return;
         }
-        do_action( 'medilac_wc_loop_wrapper_bottom' );
+        do_action( 'astha_wc_loop_wrapper_bottom' );
         echo wp_kses_post( '</div></section>' );
     }
 }
 //Already template override completed. so no need this action. Removed at 1.0.0.61 when we have completed first complete deadline
-//add_action( 'woocommerce_after_shop_loop_item', 'medilac_shop_loop_cart_after', PHP_INT_MAX );
+//add_action( 'woocommerce_after_shop_loop_item', 'astha_shop_loop_cart_after', PHP_INT_MAX );
 
 
-if ( ! function_exists( 'medilac_shop_loop_thumbs_before' ) ) {
+if ( ! function_exists( 'astha_shop_loop_thumbs_before' ) ) {
 	
     /**
      * Add Tag at the begining of @Hook woocommerce_after_shop_loop_item
@@ -361,15 +361,15 @@ if ( ! function_exists( 'medilac_shop_loop_thumbs_before' ) ) {
      * 
      * @return void
      */
-    function medilac_shop_loop_thumbs_before() {
+    function astha_shop_loop_thumbs_before() {
         
-        echo wp_kses_post( '<span class="medilac-loop-thumbs">' );
+        echo wp_kses_post( '<span class="astha-loop-thumbs">' );
     }
 }
 //To add tag with class at the first of this loop
-add_action( 'woocommerce_before_shop_loop_item_title', 'medilac_shop_loop_thumbs_before', 9 );
+add_action( 'woocommerce_before_shop_loop_item_title', 'astha_shop_loop_thumbs_before', 9 );
 
-if ( ! function_exists( 'medilac_shop_loop_thumbs_after' ) ) {
+if ( ! function_exists( 'astha_shop_loop_thumbs_after' ) ) {
 	
     /**
      * Add Tag at the end of @Hook woocommerce_after_shop_loop_item
@@ -378,12 +378,12 @@ if ( ! function_exists( 'medilac_shop_loop_thumbs_after' ) ) {
      * 
      * @return void
      */
-    function medilac_shop_loop_thumbs_after() {
+    function astha_shop_loop_thumbs_after() {
         echo wp_kses_post( '</span>' );
     }
 }
 //To add tag with class at the last of this loop
-add_action( 'woocommerce_before_shop_loop_item_title', 'medilac_shop_loop_thumbs_after', 11 );
+add_action( 'woocommerce_before_shop_loop_item_title', 'astha_shop_loop_thumbs_after', 11 );
 
 /**
  * Single Product ACTION HOOK ARRAGE
@@ -398,14 +398,14 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_m
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 
-$medilac_breadcrumb = medilac_option( 'medilac_breadcrumb_switch', false );
-if( $medilac_breadcrumb ){
+$astha_breadcrumb = astha_option( 'astha_breadcrumb_switch', false );
+if( $astha_breadcrumb ){
     add_action( 'woocommerce_single_product_summary', 'woocommerce_breadcrumb', 0 );
 }
 
 
-if( !function_exists( 'medilac_get_shop_layout' ) ) {
-    function medilac_get_shop_layout(){
+if( !function_exists( 'astha_get_shop_layout' ) ) {
+    function astha_get_shop_layout(){
         $layout_key_name = 'shop';
 
         //Check from Cookie
@@ -422,13 +422,13 @@ if( !function_exists( 'medilac_get_shop_layout' ) ) {
         }
         
         
-        $shop_layout = medilac_option('layout_shop_wc', 'shop-grid');
+        $shop_layout = astha_option('layout_shop_wc', 'shop-grid');
 
         
         return $shop_layout;
     }
 }
-if( !function_exists( 'medilac_catalog_display_options' ) ) {
+if( !function_exists( 'astha_catalog_display_options' ) ) {
     
     /**
      * Adding Product View Option for WooCommerce Shop Page
@@ -438,9 +438,9 @@ if( !function_exists( 'medilac_catalog_display_options' ) ) {
      * 
      * @return void It will display two view option.
      */
-    function medilac_catalog_display_options() {
-        //$_wc_medilac = '_wc';
-        $layout = medilac_get_shop_layout();//medilac_option( 'layout_shop' . $_wc_medilac, 'shop-grid' );
+    function astha_catalog_display_options() {
+        //$_wc_astha = '_wc';
+        $layout = astha_get_shop_layout();//astha_option( 'layout_shop' . $_wc_astha, 'shop-grid' );
 
         $pageURL = 'http';
         if (isset( $_SERVER["HTTPS"] ) && $_SERVER["HTTPS"] == "on") {
@@ -461,9 +461,9 @@ if( !function_exists( 'medilac_catalog_display_options' ) ) {
         <?php
     }
 }
-add_action( 'woocommerce_before_shop_loop', 'medilac_catalog_display_options', 25 );
+add_action( 'woocommerce_before_shop_loop', 'astha_catalog_display_options', 25 );
 
-if( !function_exists( 'medilac_wc_next_prev_text' ) ) {
+if( !function_exists( 'astha_wc_next_prev_text' ) ) {
     
     /**
      * Change Next Previous Icon from Shop Page Pagination
@@ -472,17 +472,17 @@ if( !function_exists( 'medilac_wc_next_prev_text' ) ) {
      * @param type $args
      * @return type
      */
-    function medilac_wc_next_prev_text( $args ) {
+    function astha_wc_next_prev_text( $args ) {
 
-        $args['prev_text'] = __( 'Previous Page', 'medilac' );
-        $args['next_text'] = __( 'Next Page', 'medilac' );
+        $args['prev_text'] = __( 'Previous Page', 'astha' );
+        $args['next_text'] = __( 'Next Page', 'astha' );
         
         return $args;
     }
 }
-add_filter( 'woocommerce_pagination_args', 'medilac_wc_next_prev_text', PHP_INT_MAX );
+add_filter( 'woocommerce_pagination_args', 'astha_wc_next_prev_text', PHP_INT_MAX );
 
-if( !function_exists( 'medilac_wc_shop_loop_short_description' ) ) {
+if( !function_exists( 'astha_wc_shop_loop_short_description' ) ) {
     
     /**
      * Add short description for Shop Page
@@ -496,10 +496,10 @@ if( !function_exists( 'medilac_wc_shop_loop_short_description' ) ) {
      * 
      * @link https://woocommerce.github.io/code-reference/files/woocommerce-templates-content-product.html#source-view.57 Template file code from WooCommerce
      */
-    function medilac_wc_shop_loop_short_description(  ) {
+    function astha_wc_shop_loop_short_description(  ) {
         global $product;
         $short_description = $product->get_short_description();
-        $short_description = apply_filters( 'medilac_product_loop_desc', $short_description, $product );
+        $short_description = apply_filters( 'astha_product_loop_desc', $short_description, $product );
         ?>
         <div class="shop-loop-shortdescription">
             <?php echo wp_kses_post( do_shortcode( $short_description ) ); ?>
@@ -507,11 +507,11 @@ if( !function_exists( 'medilac_wc_shop_loop_short_description' ) ) {
         <?php
     }
 }
-add_action( 'woocommerce_after_shop_loop_item_title', 'medilac_wc_shop_loop_short_description', 20 );
+add_action( 'woocommerce_after_shop_loop_item_title', 'astha_wc_shop_loop_short_description', 20 );
 
 
 
-if( !function_exists( 'medilac_wc_sinle_product_next_prev_link' ) ) {
+if( !function_exists( 'astha_wc_sinle_product_next_prev_link' ) ) {
     
     /**
      * Add Next Previous Link at Single Product Page
@@ -520,7 +520,7 @@ if( !function_exists( 'medilac_wc_sinle_product_next_prev_link' ) ) {
      * @param type $args
      * @return type
      */
-    function medilac_wc_sinle_product_next_prev_link(  ) {
+    function astha_wc_sinle_product_next_prev_link(  ) {
         if( ! is_singular() || !is_product() ){
             return;
         }
@@ -533,8 +533,8 @@ if( !function_exists( 'medilac_wc_sinle_product_next_prev_link' ) ) {
                     //'in_same_term'  => true,
                     'taxonomy'           => 'product_cat',
                     'class'              => 'post-navigation',
-                        'prev_text' => '<span class="prev-next-post-icon"><i class="fas fa-arrow-left"></i></span><div class="medilac-nav-wrapper prev-post-text"><span class="nav-subtitle">' . esc_html__( 'Previous:', 'medilac' ) . '</span> <span class="nav-title">%title</span></div>',
-                        'next_text' => '<div class="medilac-nav-wrapper next-post-text"><span class="nav-subtitle">' . esc_html__( 'Next:', 'medilac' ) . '</span> <span class="nav-title">%title</span></div><span class="prev-next-post-icon"><i class="fas fa-arrow-right"></i></span>',
+                        'prev_text' => '<span class="prev-next-post-icon"><i class="fas fa-arrow-left"></i></span><div class="astha-nav-wrapper prev-post-text"><span class="nav-subtitle">' . esc_html__( 'Previous:', 'astha' ) . '</span> <span class="nav-title">%title</span></div>',
+                        'next_text' => '<div class="astha-nav-wrapper next-post-text"><span class="nav-subtitle">' . esc_html__( 'Next:', 'astha' ) . '</span> <span class="nav-title">%title</span></div><span class="prev-next-post-icon"><i class="fas fa-arrow-right"></i></span>',
                 )
         );
         
@@ -543,8 +543,8 @@ if( !function_exists( 'medilac_wc_sinle_product_next_prev_link' ) ) {
 
 
 if( class_exists( 'YITH_WCWL_Shortcode' ) ){
-    add_action( 'woocommerce_after_add_to_cart_button', 'medilac_wishlist_control_by_shortcode' );
-    function medilac_wishlist_control_by_shortcode(){
+    add_action( 'woocommerce_after_add_to_cart_button', 'astha_wishlist_control_by_shortcode' );
+    function astha_wishlist_control_by_shortcode(){
         $atts = array();
         echo YITH_WCWL_Shortcode::add_to_wishlist( $atts );
     }
@@ -555,5 +555,5 @@ if( class_exists( 'YITH_WCWL_Shortcode' ) ){
 /**
  * Just need to enable for showing enxt prev button on single product page
  */
-//add_action( 'woocommerce_before_main_content', 'medilac_wc_sinle_product_next_prev_link', 19 );
-//add_action( 'woocommerce_single_product_summary', 'medilac_wc_sinle_product_next_prev_link', PHP_INT_MAX );
+//add_action( 'woocommerce_before_main_content', 'astha_wc_sinle_product_next_prev_link', 19 );
+//add_action( 'woocommerce_single_product_summary', 'astha_wc_sinle_product_next_prev_link', PHP_INT_MAX );

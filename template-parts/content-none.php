@@ -16,7 +16,7 @@
                 /**
                  * To change Nothing Found Text from child theme or from Plugin
                  */
-                $nothing_found = apply_filters( 'medilac_nothing_found_none_page', esc_html__( 'Nothing Found', 'medilac' ) );
+                $nothing_found = apply_filters( 'astha_nothing_found_none_page', esc_html__( 'Nothing Found', 'astha' ) );
                 echo wp_kses_data( $nothing_found );
                 ?></h1>
 	</header><!-- .page-header -->
@@ -30,9 +30,9 @@
                  * 
                  * Currently current content set by Action Hook
                  * 
-                 * @Hooked: medilac_none_page_content - 20 at inc/template-functions.php
+                 * @Hooked: astha_none_page_content - 20 at inc/template-functions.php
                  */
-		do_action( 'medilac_none_page' );
+		do_action( 'astha_none_page' );
 		?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

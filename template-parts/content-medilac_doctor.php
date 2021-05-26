@@ -6,35 +6,35 @@
  *
  * @package Astha
  */
-$sub_heading        = medilac_option( 'sub_heading' );
-$doctor_details     = medilac_option( 'doctor_details' );
-$doctor_appoint_link     = medilac_option( 'doctor_appoint_link' );
-$doctor_appoint_text     = medilac_option( 'doctor_appoint_text' );
-$doctor_phone     = medilac_option( 'doctor_phone' );
-$doctor_email     = medilac_option( 'doctor_email' );
-$doctor_address     = medilac_option( 'doctor_address' );
-$doctor_social_profile     = medilac_option( 'doctor_social_profile' );
-$skill_sub_heading     = medilac_option( 'skill_sub_heading' );
-$skill_heading     = medilac_option( 'skill_heading' );
-$doctor_skills     = medilac_option( 'doctor_skills' );
-$doc_bottom_template     = medilac_option( 'doctor_bottom_template' );
+$sub_heading        = astha_option( 'sub_heading' );
+$doctor_details     = astha_option( 'doctor_details' );
+$doctor_appoint_link     = astha_option( 'doctor_appoint_link' );
+$doctor_appoint_text     = astha_option( 'doctor_appoint_text' );
+$doctor_phone     = astha_option( 'doctor_phone' );
+$doctor_email     = astha_option( 'doctor_email' );
+$doctor_address     = astha_option( 'doctor_address' );
+$doctor_social_profile     = astha_option( 'doctor_social_profile' );
+$skill_sub_heading     = astha_option( 'skill_sub_heading' );
+$skill_heading     = astha_option( 'skill_heading' );
+$doctor_skills     = astha_option( 'doctor_skills' );
+$doc_bottom_template     = astha_option( 'doctor_bottom_template' );
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php if(is_single() ) : ?>
-    <div class="medilac-home-container section-padding pt-40">
+    <div class="astha-home-container section-padding pt-40">
         <div class="doctor-header">
     <?php endif; ?>
-        <?php medilac_post_thumbnail(); ?>
+        <?php astha_post_thumbnail(); ?>
         <?php if(is_single() ) : ?>
             <div class="doctor-summary">
         <?php endif; ?>
                 <header class="entry-header">
                         <?php
                         if ( is_singular() ) :
-                            ##$breadcrumb_switch              = medilac_option( 'medilac_breadcrumb_switch' );
-                            ##$breadcrumb_type                = medilac_option( 'medilac_breadcrumb_type' );
+                            ##$breadcrumb_switch              = astha_option( 'astha_breadcrumb_switch' );
+                            ##$breadcrumb_type                = astha_option( 'astha_breadcrumb_type' );
                              ?>
                     <div class="section-content-title v1">
                               <?php   
@@ -79,7 +79,7 @@ $doc_bottom_template     = medilac_option( 'doctor_bottom_template' );
                     <?php if( is_array($doctor_social_profile) && count( $doctor_social_profile ) > 0 && isset( $doctor_social_profile[0]['profile_link'] ) ){ ?>
                     <div class="doctor-follow-links">
                         <ul class="link-list">
-                            <li class="label"><?php echo __( 'Follow us on', 'medilac' );?></li>
+                            <li class="label"><?php echo __( 'Follow us on', 'astha' );?></li>
                         <?php
                         foreach ( $doctor_social_profile as $profile ){
                             $icon = isset( $profile['social_icon'] ) ? $profile['social_icon'] : false;
@@ -94,7 +94,7 @@ $doc_bottom_template     = medilac_option( 'doctor_bottom_template' );
                         </ul>
                     </div><!-- .doctor-follow-links -->
                     <div class="social-share-doctor">
-                        <?php medilac_social_share(); ?>
+                        <?php astha_social_share(); ?>
                     </div>
                     <?php } ?>
                 </div><!-- .doctor-details -->
@@ -106,7 +106,7 @@ $doc_bottom_template     = medilac_option( 'doctor_bottom_template' );
         <?php endif; ?>
 </div>
     <div class="doctor-skill-wrapper section-padding">
-        <div class="medilac-home-container">
+        <div class="astha-home-container">
             <div class="entry-content">
 		<?php
                 if( is_single() ){ ?>
@@ -114,7 +114,7 @@ $doc_bottom_template     = medilac_option( 'doctor_bottom_template' );
                 <?php if( is_array( $doctor_skills ) && count( $doctor_skills ) > 0 && isset( $doctor_skills[0]['skill_level'] ) && isset( $doctor_skills[0]['skill_name'] ) ) : ?>
                
                 <div class="doctor-skills-section">
-                    <div class="medilac-container container">
+                    <div class="astha-container container">
                         <div class="section-content-title v2">
                             <h3 class="sub-heading"><?php echo esc_html( $skill_sub_heading ); ?></h3>
                             <h2 class="heading"><?php echo esc_html( $skill_heading ); ?></h2>
@@ -153,7 +153,7 @@ $doc_bottom_template     = medilac_option( 'doctor_bottom_template' );
                             sprintf(
                                     wp_kses(
                                             /* translators: %s: Name of current post. Only visible to screen readers */
-                                            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'medilac' ),
+                                            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'astha' ),
                                             array(
                                                     'span' => array(
                                                             'class' => array(),
@@ -178,12 +178,12 @@ $doc_bottom_template     = medilac_option( 'doctor_bottom_template' );
                 }else{
                     the_excerpt();
                     ?>
-                    <a class="medilac-blog continute-reading" href="<?php echo esc_url(get_the_permalink() ); ?>">
+                    <a class="astha-blog continute-reading" href="<?php echo esc_url(get_the_permalink() ); ?>">
                     <?php
                     echo sprintf(
                                             wp_kses(
                                                     /* translators: %s: Name of current post. Only visible to screen readers */
-                                                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'medilac' ),
+                                                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'astha' ),
                                                     array(
                                                             'span' => array(
                                                                     'class' => array(),
@@ -201,7 +201,7 @@ $doc_bottom_template     = medilac_option( 'doctor_bottom_template' );
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'medilac' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'astha' ),
 				'after'  => '</div>',
 			)
 		);

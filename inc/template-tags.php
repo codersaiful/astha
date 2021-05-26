@@ -7,7 +7,7 @@
  * @package Astha
  */
 
-if ( ! function_exists( 'medilac_blog_layout' ) ) :
+if ( ! function_exists( 'astha_blog_layout' ) ) :
 	
     
         /**
@@ -21,16 +21,16 @@ if ( ! function_exists( 'medilac_blog_layout' ) ) :
          * 
          * @return string default|grid
          */
-	function medilac_blog_layout() {
-            return medilac_option( 'medilac_blog_layout' );
+	function astha_blog_layout() {
+            return astha_option( 'astha_blog_layout' );
 	}
 endif;
 
-if ( ! function_exists( 'medilac_posted_on' ) ) :
+if ( ! function_exists( 'astha_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function medilac_posted_on() {
+	function astha_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -52,7 +52,7 @@ if ( ! function_exists( 'medilac_posted_on' ) ) :
                 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'medilac' ),
+			esc_html_x( '%s', 'post date', 'astha' ),
 			'<a href="' . esc_url( $permalink ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -61,14 +61,14 @@ if ( ! function_exists( 'medilac_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'medilac_posted_by' ) ) :
+if ( ! function_exists( 'astha_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function medilac_posted_by() {
+	function astha_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'By %s', 'post author', 'medilac' ),
+			esc_html_x( 'By %s', 'post author', 'astha' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -77,28 +77,28 @@ if ( ! function_exists( 'medilac_posted_by' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'medilac_taxonomy_by' ) ) :
+if ( ! function_exists( 'astha_taxonomy_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function medilac_taxonomy_by() {
+	function astha_taxonomy_by() {
 		if ( 'post' === get_post_type() ) {
-                    $blog_meta_tax = apply_filters( 'medilac_blog_meta_taxonomy', 'cat' );
+                    $blog_meta_tax = apply_filters( 'astha_blog_meta_taxonomy', 'cat' );
                     $taxonomy_list = false;
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'medilac' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'astha' ) );
 			if ( $categories_list && $blog_meta_tax == 'cat' ) {
 				$taxonomy_list = $categories_list;
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'medilac' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'astha' ) );
 			if ( $tags_list && $blog_meta_tax == 'tag' ) {
                             $taxonomy_list = $tags_list;
 			}
                         
                         if( $taxonomy_list ){
-                            printf( '<span class="tax-links"><i class="far fa-folder-open"></i>' . esc_html__( '%1$s', 'medilac' ) . '</span>', $taxonomy_list );
+                            printf( '<span class="tax-links"><i class="far fa-folder-open"></i>' . esc_html__( '%1$s', 'astha' ) . '</span>', $taxonomy_list );
                         }
                         
 		}
@@ -106,44 +106,44 @@ if ( ! function_exists( 'medilac_taxonomy_by' ) ) :
 	}
 endif;
 
-// if( ! function_exists( 'medilac_comment_link' ) ) :
+// if( ! function_exists( 'astha_comment_link' ) ) :
 // 	/**
 // 	 * Prints the total comment number and links to there. 
 // 	 */
-// 	function medilac_comment_link() {
+// 	function astha_comment_link() {
 // 		if( 'post' === get_post_type() ) {
 
 // 		}
 // 	}
 // endif;
 
-if ( ! function_exists( 'medilac_entry_footer' ) ) :
+if ( ! function_exists( 'astha_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function medilac_entry_footer() {
+	function astha_entry_footer() {
     
             /**
              * Tax link
              * such: Category Link Or
              * Tag link showing 
              * Validation 
-             * using Filter: medilac_entry_footer_tax_link
+             * using Filter: astha_entry_footer_tax_link
              */
-            $tax_link = apply_filters( 'medilac_entry_footer_tax_link', true );
+            $tax_link = apply_filters( 'astha_entry_footer_tax_link', true );
             // Hide category and tag text for pages.
             if ( 'post' === get_post_type() && $tax_link ) {
                 /* translators: used between list items, there is a space after the comma */
-                $categories_list = get_the_category_list( esc_html__( ' ', 'medilac' ) );
+                $categories_list = get_the_category_list( esc_html__( ' ', 'astha' ) );
 
                 /* translators: used between list items, there is a space after the comma */
-                $tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'medilac' ) );
+                $tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'astha' ) );
                 if ( $tags_list ) {
                         /* translators: 1: list of tags. */
-                        printf( '<span class="tags-links" title="' . esc_attr__( 'Tags:' ) . '">' . esc_html__( '%1$s', 'medilac' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                        printf( '<span class="tags-links" title="' . esc_attr__( 'Tags:' ) . '">' . esc_html__( '%1$s', 'astha' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                 }elseif ( $categories_list ) {
                         /* translators: 1: list of categories. */
-                        printf( '<span class="cat-links" title="' . esc_attr__( 'Catagories:' ) . '">' . esc_html__( 'In %1$s', 'medilac' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                        printf( '<span class="cat-links" title="' . esc_attr__( 'Catagories:' ) . '">' . esc_html__( 'In %1$s', 'astha' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                 }
             }
                 
@@ -151,14 +151,14 @@ if ( ! function_exists( 'medilac_entry_footer' ) ) :
                  * Adding Share Button
                  * At the bottom of Post
                  * 
-                 * @Hooked: medilac_social_share -10 at inc/template-functions.php file
+                 * @Hooked: astha_social_share -10 at inc/template-functions.php file
                  * 
-                 * used: add_action( 'medilac_share', 'medilac_social_share' );
+                 * used: add_action( 'astha_share', 'astha_social_share' );
                  * To removed Social Share at Post,
                  * Just use
-                 * remove_action( 'medilac_share', 'medilac_social_share' );
+                 * remove_action( 'astha_share', 'astha_social_share' );
                  */
-                do_action( 'medilac_share' );
+                do_action( 'astha_share' );
                 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
@@ -166,7 +166,7 @@ if ( ! function_exists( 'medilac_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'medilac' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'astha' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -183,7 +183,7 @@ if ( ! function_exists( 'medilac_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'medilac' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'astha' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -198,14 +198,14 @@ if ( ! function_exists( 'medilac_entry_footer' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'medilac_post_thumbnail' ) ) :
+if ( ! function_exists( 'astha_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
 	 *
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function medilac_post_thumbnail() {
+	function astha_post_thumbnail() {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
@@ -222,10 +222,10 @@ if ( ! function_exists( 'medilac_post_thumbnail' ) ) :
                         <?php
                         $thumb_size = 'post-thumbnail';
                         
-                        if( ! empty( medilac_option( 'medilac_blog_posted_on', 'on' ) ) && medilac_blog_layout() == 'grid' ){
-                            $thumb_size = 'medilac-thumbnail';
+                        if( ! empty( astha_option( 'astha_blog_posted_on', 'on' ) ) && astha_blog_layout() == 'grid' ){
+                            $thumb_size = 'astha-thumbnail';
                         }
-                        $thumb_size = apply_filters( 'medilac_post_thumbnail', $thumb_size );
+                        $thumb_size = apply_filters( 'astha_post_thumbnail', $thumb_size );
                         ?>
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
@@ -247,7 +247,7 @@ if ( ! function_exists( 'medilac_post_thumbnail' ) ) :
                                          * 
                                          * @since 1.0.0.62
                                          */
-                                        if( ! empty( medilac_option( 'medilac_blog_posted_on', 'on' ) ) && medilac_blog_layout() == 'grid' ){
+                                        if( ! empty( astha_option( 'astha_blog_posted_on', 'on' ) ) && astha_blog_layout() == 'grid' ){
                                             ?>
                                             <span class="posted-on"><?php echo esc_html( get_the_date() ); ?></span>    
                                             <?php
@@ -277,7 +277,7 @@ endif;
  * @param object $comment Comment data.
  * @return bool
  */
-function medilac_is_comment_by_post_author( $comment = null ) {
+function astha_is_comment_by_post_author( $comment = null ) {
 
 	if ( is_object( $comment ) && $comment->user_id > 0 ) {
 
@@ -307,9 +307,9 @@ function medilac_is_comment_by_post_author( $comment = null ) {
  * @global type $author
  * @return void
  */
-function medilac_breadcrumb() {
-    $separator = apply_filters( 'medilac_breadcrumb_separator', '' );
-    $wooBreadCumb = apply_filters( 'medilac_wc_breadcrumb', true );
+function astha_breadcrumb() {
+    $separator = apply_filters( 'astha_breadcrumb_separator', '' );
+    $wooBreadCumb = apply_filters( 'astha_wc_breadcrumb', true );
     
     /**
      * First We will try to load Woocommerce Default Breadcrumb
@@ -321,7 +321,7 @@ function medilac_breadcrumb() {
         $args = array(
             'delimiter' => '<span>&nbsp;' . $separator . '&nbsp;</span>',
         );
-        $args = apply_filters( 'medilac_wc_breadcrumb_args', $args );
+        $args = apply_filters( 'astha_wc_breadcrumb_args', $args );
         woocommerce_breadcrumb( $args );
         return true;
     }
@@ -337,9 +337,9 @@ function medilac_breadcrumb() {
 
     $defaults = array(
         'seperator'   =>  $separator,//'&#187;',
-        'id'          =>  'medilac-breadcrumb',
-        'classes'     =>  'medilac-breadcrumb',
-        'home_title'  =>  esc_html__( 'Home', 'medilac' )
+        'id'          =>  'astha-breadcrumb',
+        'classes'     =>  'astha-breadcrumb',
+        'home_title'  =>  esc_html__( 'Home', 'astha' )
     );
     
     $sep = '';

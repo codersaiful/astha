@@ -12,36 +12,36 @@
  * Use following filter.
  * 
  * Just Use:
- * add_filter( 'medilac_breadcrumb_show', '__return_false' );
+ * add_filter( 'astha_breadcrumb_show', '__return_false' );
  */
-$breadcrumb = apply_filters( 'medilac_breadcrumb_show', true );
+$breadcrumb = apply_filters( 'astha_breadcrumb_show', true );
 
 if( !$breadcrumb ){
     return;
 }
 
-$_wc_medilac = '';
-if( medilac_is_woocommerce() ){
-    $_wc_medilac = '_wc';
+$_wc_astha = '';
+if( astha_is_woocommerce() ){
+    $_wc_astha = '_wc';
 }
 
-$breadcrumb_switch             = medilac_option( 'medilac_breadcrumb_switch', false, false, $_wc_medilac );
+$breadcrumb_switch             = astha_option( 'astha_breadcrumb_switch', false, false, $_wc_astha );
 if( $breadcrumb_switch === 'off' ){
     return;
 }
-$breadcrumb_type              = medilac_option( 'medilac_breadcrumb_type', false, false, $_wc_medilac );
-$breadcrumb_style              = medilac_option( 'medilac_breadcrumb_style', 'breadcrumb-style-1', false, $_wc_medilac );
-$breadcrumb_blog_title          = medilac_option( 'medilac_breadcrumb_blog_title', __( 'Blog Page', 'medilac' ), false, $_wc_medilac );
-$breadcrumb_shop_title          = medilac_option( 'medilac_breadcrumb_shop_title', __( 'Shop Page', 'medilac' ), false, $_wc_medilac );
-$breadcrumb_search_title          = medilac_option( 'medilac_breadcrumb_search_title', __( 'Search Result', 'medilac' ), false, $_wc_medilac );
-$breadcrumb_single_post_title   = medilac_option( 'medilac_breadcrumb_single_post_title', __( 'Single Post', 'medilac' ), false, $_wc_medilac );
-$breadcrumb_page_title          = medilac_option( 'medilac_breadcrumb_page_title', __( 'Page', 'medilac' ), false, $_wc_medilac );
-$breadcrumb_category_title      = medilac_option( 'medilac_breadcrumb_category_title', __( 'Category Page', 'medilac' ), false, $_wc_medilac );
-$breadcrumb_tag_title           = medilac_option( 'medilac_breadcrumb_tag_title', __( 'Tag Page', 'medilac' ), false, $_wc_medilac );
+$breadcrumb_type              = astha_option( 'astha_breadcrumb_type', false, false, $_wc_astha );
+$breadcrumb_style              = astha_option( 'astha_breadcrumb_style', 'breadcrumb-style-1', false, $_wc_astha );
+$breadcrumb_blog_title          = astha_option( 'astha_breadcrumb_blog_title', __( 'Blog Page', 'astha' ), false, $_wc_astha );
+$breadcrumb_shop_title          = astha_option( 'astha_breadcrumb_shop_title', __( 'Shop Page', 'astha' ), false, $_wc_astha );
+$breadcrumb_search_title          = astha_option( 'astha_breadcrumb_search_title', __( 'Search Result', 'astha' ), false, $_wc_astha );
+$breadcrumb_single_post_title   = astha_option( 'astha_breadcrumb_single_post_title', __( 'Single Post', 'astha' ), false, $_wc_astha );
+$breadcrumb_page_title          = astha_option( 'astha_breadcrumb_page_title', __( 'Page', 'astha' ), false, $_wc_astha );
+$breadcrumb_category_title      = astha_option( 'astha_breadcrumb_category_title', __( 'Category Page', 'astha' ), false, $_wc_astha );
+$breadcrumb_tag_title           = astha_option( 'astha_breadcrumb_tag_title', __( 'Tag Page', 'astha' ), false, $_wc_astha );
 
 //Breadcrumb Image
 $default_bred_img = get_template_directory_uri() . '/assets/images/breadcrumb-banner.png';
-$breadcrumb_background           = medilac_option( 'medilac_breadcrumb_image', $default_bred_img, false, $_wc_medilac );
+$breadcrumb_background           = astha_option( 'astha_breadcrumb_image', $default_bred_img, false, $_wc_astha );
 
 $breadcrumb_style_image = false;
 if( !empty( $breadcrumb_background ) ){
@@ -58,7 +58,7 @@ if( !empty( $breadcrumb_background ) ){
                     /**
                      * Add content at the top of Breadcrumb
                      */
-                    do_action( 'medilac_breadcrumb_top' );
+                    do_action( 'astha_breadcrumb_top' );
                     
                     if ( $breadcrumb_type == 'static' ) {
                         if ( is_page() ) :
@@ -86,13 +86,13 @@ if( !empty( $breadcrumb_background ) ){
                         elseif( is_archive() ) :
                             the_archive_title( '<h1 class="page-title">', '</h1>' );
                         elseif( is_search() ) :
-                            printf( esc_html__( 'Search Results for: %s', 'medilac' ), '<h3  class="page-title">' . get_search_query() . '</h3>' );
+                            printf( esc_html__( 'Search Results for: %s', 'astha' ), '<h3  class="page-title">' . get_search_query() . '</h3>' );
                         elseif( ! empty( single_post_title( '', false ) ) ):
                             echo wp_kses_post( '<h1 class="page-title">' . single_post_title( '', false ) . '</h1>' );
                         elseif( is_front_page() && is_home() ):
                             echo wp_kses_post( sprintf( '<h1 class="page-title">%s</h1>', $breadcrumb_blog_title ) );
                         elseif( is_404() ):
-                            echo wp_kses_post( sprintf( '<h1 class="page-title">%s</h1>', esc_html__( '404', 'medilac' ) ) );
+                            echo wp_kses_post( sprintf( '<h1 class="page-title">%s</h1>', esc_html__( '404', 'astha' ) ) );
                         else:
                             the_title( '<h2 class="entry-title">', '</h2>' );
                         endif;
@@ -101,7 +101,7 @@ if( !empty( $breadcrumb_background ) ){
                     /**
                      * Add content at the top of Breadcrumb
                      */
-                    do_action( 'medilac_breadcrumb_bottom' );
+                    do_action( 'astha_breadcrumb_bottom' );
                 
                 ?>
                 
@@ -112,7 +112,7 @@ if( !empty( $breadcrumb_background ) ){
                 
                 <?php 
                 //Astha Breadcrumb is Loadidng Here
-                medilac_breadcrumb();
+                astha_breadcrumb();
                 ?>
                 
             </div>
@@ -129,4 +129,4 @@ if( !empty( $breadcrumb_background ) ){
  * This Action will be available, Only when breadcrumb is On
  * Otherwise, it will not work
  */
-do_action( 'medilac_after_breadcrumb' );
+do_action( 'astha_after_breadcrumb' );

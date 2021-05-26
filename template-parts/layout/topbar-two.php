@@ -7,11 +7,11 @@
  *
  * @package Astha
  */
-$options = medilac_option( 'medilac_header_top' );
-$social_network = medilac_option( 'medilac_social' );
-$ph_num = medilac_option( 'medilac_header_top_phone', __( '(800) 123-1245', 'medilac' ) );
-$ph_text = medilac_option( 'medilac_header_top_phone_text', __( 'Have any questions? Call Now: (800) 123-1245', 'medilac' ) );
-$email = medilac_option( 'medilac_header_top_email', __( 'contact@medilac.com', 'medilac' ) );
+$options = astha_option( 'astha_header_top' );
+$social_network = astha_option( 'astha_social' );
+$ph_num = astha_option( 'astha_header_top_phone', __( '(800) 123-1245', 'astha' ) );
+$ph_text = astha_option( 'astha_header_top_phone_text', __( 'Have any questions? Call Now: (800) 123-1245', 'astha' ) );
+$email = astha_option( 'astha_header_top_email', __( 'contact@astha.com', 'astha' ) );
 ?>
 
 <div class="header-top">
@@ -43,16 +43,16 @@ $email = medilac_option( 'medilac_header_top_email', __( 'contact@medilac.com', 
              * 
              * Located in template-functions.php
              */
-            medilac_social_links( $social_network );
+            astha_social_links( $social_network );
 
             /**
              * Showing Cal to Action Button or WooCommerce Minicart
              * 
              * Control over Hooked
              * 
-             * @Hooked medilac_topbar_right_area -20 Loc: at inc/template-functions.php
+             * @Hooked astha_topbar_right_area -20 Loc: at inc/template-functions.php
              */
-            do_action( 'medilac_topbar_right_area', $options ); 
+            do_action( 'astha_topbar_right_area', $options ); 
             ?>
 
         </div>

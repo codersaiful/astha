@@ -99,10 +99,10 @@ body.rtl .custom-search-wrapper {
 }
 
 /* Content */
-.medilac-blog.continute-reading{
+.astha-blog.continute-reading{
     display: inline-block;
 }
-.medilac-blog.continute-reading::after {
+.astha-blog.continute-reading::after {
     top: 0px;
     right: unset;
     left: unset;
@@ -128,7 +128,7 @@ body.rtl .sidebar section.widget ul li article a {
 }
 
 /* Footer */
-.site-footer .medilac-recent-post ul.medilac-recent-post-list li article .post-content time i {
+.site-footer .astha-recent-post ul.astha-recent-post-list li article .post-content time i {
     margin-right: 0;
     margin-left: 5px;
 }
@@ -170,12 +170,12 @@ body.rtl .sidebar section.widget ul li article a {
     body.rtl .main_menu {
         width: 60% !important;
     }
-    body.rtl.layout-shop-list ul.products li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button::before, 
-    body.rtl.layout-shop-list ul.products li.product .medilac-after-loop-wrapper.area-shop-list a.button:before {
+    body.rtl.layout-shop-list ul.products li.product .astha-after-loop-wrapper a.button.yith-wcqv-button::before, 
+    body.rtl.layout-shop-list ul.products li.product .astha-after-loop-wrapper.area-shop-list a.button:before {
         margin-left: 10px;
     }
     body.rtl .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse,
-    body.rtl section.area-shop-list.medilac-after-loop-wrapper a.button {
+    body.rtl section.area-shop-list.astha-after-loop-wrapper a.button {
         margin-right: 0;
     }
     body.rtl .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse

@@ -8,29 +8,29 @@
  * @package Astha
  */
 
-if( ! function_exists( 'medilac_third_party_plugin_supports' ) ){
+if( ! function_exists( 'astha_third_party_plugin_supports' ) ){
     
-    function medilac_third_party_plugin_supports() {
+    function astha_third_party_plugin_supports() {
         $base_file = trailingslashit( get_template_directory_uri() . '/assets/css/plugin-supports/' );
         if( class_exists( 'WPT_Product_Table' ) ){
-            wp_enqueue_style( 'medilac-woo-product-table', $base_file . 'woo-product-table.css', array(), MEDILAC_VERSION );
+            wp_enqueue_style( 'astha-woo-product-table', $base_file . 'woo-product-table.css', array(), MEDILAC_VERSION );
         }
         
         if( defined( 'YITH_WCWL_INIT' ) ){
-            wp_enqueue_style( 'medilac-yith-wishlist', $base_file . 'yith-wishlist.css', array(), MEDILAC_VERSION );
+            wp_enqueue_style( 'astha-yith-wishlist', $base_file . 'yith-wishlist.css', array(), MEDILAC_VERSION );
         }
         
         if( defined( 'YITH_WCQV_INIT' ) ){
-            wp_enqueue_style( 'medilac-quick-view', $base_file . 'yith-quick-view.css', array(), MEDILAC_VERSION );
+            wp_enqueue_style( 'astha-quick-view', $base_file . 'yith-quick-view.css', array(), MEDILAC_VERSION );
         }
         
         if( class_exists( 'WQPMB_Button' ) ){
-            wp_enqueue_style( 'medilac-plus-minus-button', $base_file . 'wcqbm.css', array(), MEDILAC_VERSION );
+            wp_enqueue_style( 'astha-plus-minus-button', $base_file . 'wcqbm.css', array(), MEDILAC_VERSION );
         }
         
         
 //        if( class_exists( 'WPT_Product_Table' ) ){
-//            wp_enqueue_style( 'medilac-woo-product-table', $base_file . 'woo-product-table.css', array(), MEDILAC_VERSION );
+//            wp_enqueue_style( 'astha-woo-product-table', $base_file . 'woo-product-table.css', array(), MEDILAC_VERSION );
 //        }
         
         
@@ -44,4 +44,4 @@ if( ! function_exists( 'medilac_third_party_plugin_supports' ) ){
     }
     
 }
-add_action( 'wp_enqueue_scripts', 'medilac_third_party_plugin_supports', PHP_INT_MAX );
+add_action( 'wp_enqueue_scripts', 'astha_third_party_plugin_supports', PHP_INT_MAX );

@@ -8,7 +8,7 @@
 
 $this_layout = isset( $this_layout ) ? $this_layout : 'shop-grid';
 ?>
-<section class="area-<?php echo esc_attr( $this_layout ); ?> medilac-after-loop-wrapper add-list-pack-inside-wrapper">
+<section class="area-<?php echo esc_attr( $this_layout ); ?> astha-after-loop-wrapper add-list-pack-inside-wrapper">
     <div class="add-list-pack-inside">    
     <?php
     /**

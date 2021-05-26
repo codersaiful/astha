@@ -21,7 +21,7 @@
  * @since 1.0.0.37
  */
 $default_footer_img = get_template_directory_uri() . '/assets/images/footer-bg.png';
-$footer_background           = medilac_option( 'medilac_footer_image', $default_footer_img );
+$footer_background           = astha_option( 'astha_footer_image', $default_footer_img );
 
 $footer_style = false;
 if( !empty( $footer_background ) ){
@@ -34,7 +34,7 @@ if( !empty( $footer_background ) ){
     /**
      * Adding Content at the top of Widget Area
      */
-    do_action( 'medilac_footer_widget_area_top' ); ?>
+    do_action( 'astha_footer_widget_area_top' ); ?>
     
     <div class="container">
        
@@ -69,7 +69,7 @@ if( !empty( $footer_background ) ){
     /**
      * Adding Content at the bottom of Widget Area
      */
-    do_action( 'medilac_footer_widget_area_bottom' ); ?>
+    do_action( 'astha_footer_widget_area_bottom' ); ?>
 </div> <!-- .footer-wrapper -->
         
 

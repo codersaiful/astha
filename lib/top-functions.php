@@ -2,7 +2,7 @@
 
 /**
  * Astha Themes Top Function, which can be use any where of any position of Astha Theme
- * Specially we have use a function name medilac_option() function to this file
+ * Specially we have use a function name astha_option() function to this file
  * It's should at the top of the Theme
  * 
  * Astha functions and definitions
@@ -26,7 +26,7 @@ if ( ! class_exists( 'Mobile_Detect' ) ) {
     include get_theme_file_path('lib/module/Mobile_Detect.php');
 }
 
-if( ! function_exists( 'medilac_get_device_data' ) ){
+if( ! function_exists( 'astha_get_device_data' ) ){
     
     /**
      * Getting Device Data, 
@@ -36,7 +36,7 @@ if( ! function_exists( 'medilac_get_device_data' ) ){
      * 
      * @return Array Array of Device Data, Where can stay Device Name, Device Type ETC.
      */
-    function medilac_get_device_data(){
+    function astha_get_device_data(){
         $data = array('device' => 'desktop');
         $mobile_detect = new Mobile_Detect();
 
@@ -52,7 +52,7 @@ if( ! function_exists( 'medilac_get_device_data' ) ){
     }
 }
 
-if( ! function_exists( 'medilac_get_device_type' ) ){
+if( ! function_exists( 'astha_get_device_type' ) ){
     
     /**
      * Getting Device Name, 
@@ -62,15 +62,15 @@ if( ! function_exists( 'medilac_get_device_type' ) ){
      * 
      * @return String Type of Device, Such Tablet, Mobile, Destop ETC
      */
-    function medilac_get_device_type(){
-        $device = medilac_get_device_data();
+    function astha_get_device_type(){
+        $device = astha_get_device_data();
         
         return isset( $device['device'] ) ? $device['device'] : 'undefined';
     }
 }
 
 
-if( ! function_exists( 'medilac_option' ) ){
+if( ! function_exists( 'astha_option' ) ){
     
     /**
      * Astha Theme's Option Or Page Option
@@ -92,7 +92,7 @@ if( ! function_exists( 'medilac_option' ) ){
      * 
      * @since 1.0.0.10 Actually added at the begining, not exack version number is this
      */
-    function medilac_option( $keyword = false, $default = false, $post_ID = false, $sufix = false ){
+    function astha_option( $keyword = false, $default = false, $post_ID = false, $sufix = false ){
         global $post;
         if( !$keyword ) return get_theme_mods();
         
@@ -106,7 +106,7 @@ if( ! function_exists( 'medilac_option' ) ){
         $cmb2  = get_post_meta( $post_ID, $keyword, true );
         
         if( !empty( $cmb2 ) && $cmb2 !== 'default' ){
-            return apply_filters( 'medilac_option', $cmb2, $keyword, $post_ID, $sufix );
+            return apply_filters( 'astha_option', $cmb2, $keyword, $post_ID, $sufix );
         }
         
         $theme_mod = false;
@@ -125,10 +125,10 @@ if( ! function_exists( 'medilac_option' ) ){
             $theme_mod = get_theme_mod( $keyword, $default );
         }  
         
-        return apply_filters( 'medilac_option', $theme_mod, $keyword, $post_ID, $sufix );//get_theme_mod( $keyword );
+        return apply_filters( 'astha_option', $theme_mod, $keyword, $post_ID, $sufix );//get_theme_mod( $keyword );
     }
 }
-if( ! function_exists( 'medilac_is_woocommerce' ) ){
+if( ! function_exists( 'astha_is_woocommerce' ) ){
     
     /**
      * Astha Theme's Option Or Page Option
@@ -139,7 +139,7 @@ if( ! function_exists( 'medilac_is_woocommerce' ) ){
      * @param type $sufix Primarily we have used only one suffix. '_wc' . Actually its come from
      * @return String/Int/Bool
      */
-    function medilac_is_woocommerce(){
+    function astha_is_woocommerce(){
         if( ! class_exists( 'WooCommerce' ) || ! function_exists( 'is_woocommerce' ) || ! function_exists( 'is_checkout' ) || ! function_exists( 'is_cart' ) || ! function_exists( 'is_account_page' ) ){
             return false;
         }
@@ -156,16 +156,16 @@ if( ! function_exists( 'medilac_is_woocommerce' ) ){
         return false;
     }
 }
-if( ! function_exists( 'medilac_is_not_woocomemrce' ) ){
+if( ! function_exists( 'astha_is_not_woocomemrce' ) ){
     
     /**
      * Getting True Bool value for Not found WooCommerce
      * 
      * @return boolean If found WooCommerce Page, Return true
      */
-    function medilac_is_not_woocomemrce(){
+    function astha_is_not_woocomemrce(){
         
-        if( medilac_is_woocommerce() ){
+        if( astha_is_woocommerce() ){
             return false;
         }
         return true;

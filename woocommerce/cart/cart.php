@@ -2,7 +2,7 @@
 /**
  * ***************************************
  * CUSTOMIZED CART PAGE
- * customized cart page by medilac
+ * customized cart page by astha
  * ****************************************
  * Cart Page
  *

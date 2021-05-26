@@ -15,8 +15,8 @@ get_header();
 		<?php if ( have_posts() ) : ?>
             
                         <?php
-                        $breadcrumb_switch              = medilac_option( 'medilac_breadcrumb_switch' );
-                        $breadcrumb_type                = medilac_option( 'medilac_breadcrumb_type' );
+                        $breadcrumb_switch              = astha_option( 'astha_breadcrumb_switch' );
+                        $breadcrumb_type                = astha_option( 'astha_breadcrumb_type' );
 
                         if( $breadcrumb_switch === 'off' || ( $breadcrumb_switch === 'on' && $breadcrumb_type === 'static' ) ):
                         ?>
@@ -24,7 +24,7 @@ get_header();
 				<h1 class="page-title">
 					<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'medilac' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Search Results for: %s', 'astha' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
 			</header><!-- .page-header -->
