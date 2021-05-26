@@ -50,12 +50,12 @@ if( ! function_exists( 'astha_menu' ) ){
         add_submenu_page('astha_welcome', '', esc_html__( 'Setting Backup & Update', 'astha' ), $capability, 'astha-settings-backup', 'astha_settings_backup' );
         add_submenu_page('astha_welcome', '', esc_html__( 'Color Palette', 'astha' ), $capability, 'astha-color-palette', 'astha_color_palette' );
         
-        //ENVATO_MARKET_SLUG
-        if( defined( 'ENVATO_MARKET_SLUG' ) ){
-            add_submenu_page('astha_welcome', '', esc_html__( 'Envato Market', 'astha' ), $capability, 'admin.php?page=envato-market' );
-        }else{
-            add_submenu_page('astha_welcome', '', esc_html__( 'Envato Market', 'astha' ), $capability, 'astha-envato-market', 'astha_envato_market' );
-        }
+//        //ENVATO_MARKET_SLUG
+//        if( defined( 'ENVATO_MARKET_SLUG' ) ){
+//            add_submenu_page('astha_welcome', '', esc_html__( 'Envato Market', 'astha' ), $capability, 'admin.php?page=envato-market' );
+//        }else{
+//            add_submenu_page('astha_welcome', '', esc_html__( 'Envato Market', 'astha' ), $capability, 'astha-envato-market', 'astha_envato_market' );
+//        }
         
         //Documentation Page Link
         add_submenu_page('astha_welcome', '', esc_html__( 'Documentation', 'astha' ), $capability, 'https://docs.astha.codeastrology.com/' );
