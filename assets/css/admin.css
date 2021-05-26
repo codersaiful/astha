@@ -1,4 +1,4 @@
-.essb_template_medilac-essvb-template.essb_links li a {
+.essb_template_astha-essvb-template.essb_links li a {
 	border-radius: 50%;
 	margin-bottom: 10px!important;
 	padding: 3px;
@@ -8,22 +8,22 @@
 	transition: all .15s ease
 }
 
-.essb_template_medilac-essvb-template.essb_links li a:focus,
-.essb_template_medilac-essvb-template.essb_links li a:hover {
+.essb_template_astha-essvb-template.essb_links li a:focus,
+.essb_template_astha-essvb-template.essb_links li a:hover {
 	color: #fff!important
 }
 
-.essb_template_medilac-essvb-template.essb_links li a {
+.essb_template_astha-essvb-template.essb_links li a {
 	background: #eaebfb!important;
 	color: #1e0046!important
 }
 
-.essb_template_medilac-essvb-template.essb_links li a .essb_network_name {
+.essb_template_astha-essvb-template.essb_links li a .essb_network_name {
 	display: none
 }
 
 .gallery-add.button,
-.medilac-badge {
+.astha-badge {
 	text-align: center;
 	display: inline-block
 }
@@ -112,8 +112,8 @@ p#footer-upgrade {
 	margin-top: -30px
 }
 
-.medilac-license-details,
-.medilac-system-stats {
+.astha-license-details,
+.astha-system-stats {
 	background: #fff;
 	padding: 10px 30px 50px;
 	border-radius: 3px;
@@ -124,40 +124,40 @@ p#footer-upgrade {
 	box-shadow: 0 5px 40px 0 rgba(10, 10, 25, .1)
 }
 
-.medilac-active,
-.medilac-inactive {
+.astha-active,
+.astha-inactive {
 	padding: 3px 10px 5px;
 	border-radius: 3px
 }
 
-.medilac-active,
-.notice-success.medilac-success-notice,
+.astha-active,
+.notice-success.astha-success-notice,
 mark.green {
 	background-color: rgba(30, 170, 0, .1);
 	color: #1eaa00
 }
 
-.medilac-inactive,
-.medilac-purchase-panel .notice-error.notice-alt,
+.astha-inactive,
+.astha-purchase-panel .notice-error.notice-alt,
 mark.error {
 	background-color: rgba(230, 30, 31, .1);
 	color: #e61e1f
 }
 
-.medilac-purchase-panel .notice-error.notice-alt {
+.astha-purchase-panel .notice-error.notice-alt {
 	padding: 1px 10px;
 	font-size: 16px;
 	line-height: 16px
 }
 
-.medilac-purchase-panel .notice-warning.notice-alt {
+.astha-purchase-panel .notice-warning.notice-alt {
 	background-color: rgba(255, 185, 0, .1);
 	color: #ffb900;
 	padding: 1px 10px;
 	margin: 10px 0
 }
 
-.medilac-purchase-panel input[type=text] {
+.astha-purchase-panel input[type=text] {
 	border: 2px solid #fff;
 	box-shadow: none;
 	background-color: #fff;
@@ -169,7 +169,7 @@ mark.error {
 	font-weight: 700
 }
 
-.medilac-purchase-panel .button-primary {
+.astha-purchase-panel .button-primary {
 	background: #0fc392!important;
 	border-color: #0fc392!important;
 	box-shadow: 0 1px 0 #0fc392!important;
@@ -190,7 +190,7 @@ mark.error {
 	border-bottom: 1px solid #eee
 }
 
-.medilac-badge {
+.astha-badge {
 	background: #0fc392;
 	max-width: 165px;
 	padding: 20px;
@@ -201,12 +201,12 @@ mark.error {
 	border-radius: 3px
 }
 
-.medilac-badge p {
+.astha-badge p {
 	margin: 0;
 	padding: 0
 }
 
-.medilac-badge img {
+.astha-badge img {
 	max-width: 40px
 }
 
@@ -229,13 +229,13 @@ td.status.column-status .scheduled {
 
 
 
-.all-wrap.medilac-wrap .nav-tab-wrapper,
+.all-wrap.astha-wrap .nav-tab-wrapper,
 .wrap h2.nav-tab-wrapper,
 h1.nav-tab-wrapper {
 	border-bottom: 2px solid #ccc
 }
 
-.all-wrap.medilac-wrap .nav-tab.nav-tab-active {
+.all-wrap.astha-wrap .nav-tab.nav-tab-active {
 	margin-bottom: -2px;
 	background: 0 0;
 	outline: 0;
@@ -244,15 +244,15 @@ h1.nav-tab-wrapper {
 	color: #0fc392
 }
 
-.all-wrap.medilac-wrap .nav-tab:focus,
-.all-wrap.medilac-wrap .nav-tab:hover {
+.all-wrap.astha-wrap .nav-tab:focus,
+.all-wrap.astha-wrap .nav-tab:hover {
 	margin-bottom: -2px;
 	border-bottom: 2px solid #0fc392;
 	color: #0fc392;
 	outline: 0
 }
 
-.all-wrap.medilac-wrap .nav-tab {
+.all-wrap.astha-wrap .nav-tab {
 	float: left;
 	border: none;
 	outline: 0;
@@ -269,13 +269,13 @@ h1.nav-tab-wrapper {
 
 
 
-.about-wrap.medilac-wrap .nav-tab-wrapper,
+.about-wrap.astha-wrap .nav-tab-wrapper,
 .wrap h2.nav-tab-wrapper,
 h1.nav-tab-wrapper {
 	border-bottom: 2px solid #ccc
 }
 
-.about-wrap.medilac-wrap .nav-tab.nav-tab-active {
+.about-wrap.astha-wrap .nav-tab.nav-tab-active {
 	margin-bottom: -2px;
 	background: 0 0;
 	outline: 0;
@@ -284,15 +284,15 @@ h1.nav-tab-wrapper {
 	color: #0fc392
 }
 
-.about-wrap.medilac-wrap .nav-tab:focus,
-.about-wrap.medilac-wrap .nav-tab:hover {
+.about-wrap.astha-wrap .nav-tab:focus,
+.about-wrap.astha-wrap .nav-tab:hover {
 	margin-bottom: -2px;
 	border-bottom: 2px solid #0fc392;
 	color: #0fc392;
 	outline: 0
 }
 
-.about-wrap.medilac-wrap .nav-tab {
+.about-wrap.astha-wrap .nav-tab {
 	float: left;
 	border: none;
 	outline: 0;
@@ -312,36 +312,36 @@ h1.nav-tab-wrapper {
 	float: left
 }
 
-.medilac-meta-admin {
+.astha-meta-admin {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-end
 }
 
-.medilac-admin-col-6 {
+.astha-admin-col-6 {
 	width: 47%;
 	padding: 10px
 }
 
-.medilac-admin-col-12 {
+.astha-admin-col-12 {
 	width: 100%;
 	padding: 5px
 }
 
-.medilac-meta-admin #documentation {
+.astha-meta-admin #documentation {
 	margin-top: 0!important
 }
 
-.medilac-meta-admin label {
+.astha-meta-admin label {
 	font-weight: 700
 }
 
-.medilac-input-box-admin {
+.astha-input-box-admin {
 	margin-top: 7px
 }
 
 @media (max-width:991px) {
-	.medilac-admin-col-6 {
+	.astha-admin-col-6 {
 		width: 100%;
 		padding: 10px
 	}
@@ -374,19 +374,19 @@ h1.nav-tab-wrapper {
 	color: rgba(255, 2, 2, 1)
 }
 
-.medilac-license input[type=checkbox],
-.medilac-license input[type=color],
-.medilac-license input[type=datetime-local],
-.medilac-license input[type=number],
-.medilac-license input[type=password],
-.medilac-license input[type=radio],
-.medilac-license input[type=search],
-.medilac-license input[type=tel],
-.medilac-license input[type=text],
-.medilac-license input[type=time],
-.medilac-license input[type=week],
-.medilac-license select,
-.medilac-license textarea,
+.astha-license input[type=checkbox],
+.astha-license input[type=color],
+.astha-license input[type=datetime-local],
+.astha-license input[type=number],
+.astha-license input[type=password],
+.astha-license input[type=radio],
+.astha-license input[type=search],
+.astha-license input[type=tel],
+.astha-license input[type=text],
+.astha-license input[type=time],
+.astha-license input[type=week],
+.astha-license select,
+.astha-license textarea,
 input[type=url] {
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
 	background-color: transparent;
@@ -401,7 +401,7 @@ input[type=url] {
 	padding: 0 15px
 }
 
-.medilac-license .submit .button-primary {
+.astha-license .submit .button-primary {
 	background: #0fc392!important;
 	border-color: #0fc392!important;
 	box-shadow: 0 1px 0 #0473aa!important;
@@ -412,7 +412,7 @@ input[type=url] {
 	padding: 0 40px
 }
 
-.medilac-system-stats .button {
+.astha-system-stats .button {
 	min-height: 40px!important
 }
 
@@ -429,32 +429,32 @@ input[type=url] {
 	font-family: Zeroicons-Line
 }
 
-#accordion-panel-medilac_studio .accordion-section-title:before {
+#accordion-panel-astha_studio .accordion-section-title:before {
 	content: "\2a33";
 	font-family: Zeroicons-Line
 }
 
-#accordion-panel-medilac_typgraphy .accordion-section-title:before {
+#accordion-panel-astha_typgraphy .accordion-section-title:before {
 	content: "\1f6c8";
 	font-family: Zeroicons-Line
 }
 
-#accordion-panel-medilac_footer .accordion-section-title:before {
+#accordion-panel-astha_footer .accordion-section-title:before {
 	content: "\2193";
 	font-family: Zeroicons-Line
 }
 
-#accordion-panel-medilac_product .accordion-section-title:before {
+#accordion-panel-astha_product .accordion-section-title:before {
 	content: "\1f4c2";
 	font-family: Zeroicons-Line
 }
 
-#accordion-panel-medilac_template .accordion-section-title:before {
+#accordion-panel-astha_template .accordion-section-title:before {
 	content: "\25a6";
 	font-family: Zeroicons-Line
 }
 
-#accordion-panel-medilac_other_template .accordion-section-title:before {
+#accordion-panel-astha_other_template .accordion-section-title:before {
 	content: "\2630";
 	font-family: Zeroicons-Line
 }
@@ -823,16 +823,16 @@ input[type=url] {
 	margin-top: 25px
 }
 
-.medilac-license-details {
+.astha-license-details {
 	max-width: 700px;
 }
 
-.medilac-input-box-admin.audio_url,
-.medilac-input-box-admin.video_url {
+.astha-input-box-admin.audio_url,
+.astha-input-box-admin.video_url {
 	display: flex;
 }
 
-.medilac-upload-button {
+.astha-upload-button {
 	color: #0071a1;
 	border-color: #0071a1;
 	background: #f3f5f6;
@@ -896,7 +896,7 @@ display: flex;
     min-height:100px;
 }
 
-.medilac-expired .support-period-dates{
+.astha-expired .support-period-dates{
     color:red;
 }
 
@@ -908,13 +908,13 @@ display: flex;
 .section_title{text-align: left !important;}
 
 /** Customizing Demo Importer **/
-.medilac_demo_import_title.dashicons-before:before {
+.astha_demo_import_title.dashicons-before:before {
     color: white;
     /* background: #8BC34A; */
     /* padding: 8px 15px; */
     margin-right: 10px;
 }
-.medilac_demo_import_title {
+.astha_demo_import_title {
     background: #607d8b;
     /* width: 100%; */
     clear: both;
@@ -951,8 +951,8 @@ textarea.palette-soruce-code {
     min-height: 400px;
     min-width: 100%;
 }
-a.medilac-add-palette-button {margin: 20px 0 !important;}
-.menu-top.toplevel_page_medilac_welcome .wp-menu-image img {
+a.astha-add-palette-button {margin: 20px 0 !important;}
+.menu-top.toplevel_page_astha_welcome .wp-menu-image img {
     width: 20px;
 }
 .color-set {}

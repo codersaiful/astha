@@ -27,19 +27,19 @@ get_header();
  * Page Template Comment - By Default Disable
  * If any user want to Enable Comment,
  * Just Use
- * add_filter( 'medilac_page_template_comment_show', '__return_true' );
+ * add_filter( 'astha_page_template_comment_show', '__return_true' );
  * 
  * @since 1.0.0.42
  * 
  * @package Astha
  */
-$template_page_comment = apply_filters( 'medilac_page_template_comment_show', false );
+$template_page_comment = apply_filters( 'astha_page_template_comment_show', false );
 
 /**
  * Adding content at the before of the Content for Page
  * Tempalte: Fullwidth
  */
-do_action( 'medilac_before_page_template_fullwidth_fluid' );
+do_action( 'astha_before_page_template_fullwidth_fluid' );
 ?>
 
 	<main id="primary" class="site-main">
@@ -52,7 +52,7 @@ do_action( 'medilac_before_page_template_fullwidth_fluid' );
                          * Adding content at the top of the Content for Page
                          * Tempalte: Fullwidth
                          */
-                        do_action( 'medilac_page_template_fullwidth_fluid_top' );
+                        do_action( 'astha_page_template_fullwidth_fluid_top' );
                 
 			get_template_part( 'template-parts/content', 'page' );
                         
@@ -60,7 +60,7 @@ do_action( 'medilac_before_page_template_fullwidth_fluid' );
                          * Adding content at the bottom of the Content for Page
                          * Tempalte: Fullwidth
                          */
-                        do_action( 'medilac_page_template_fullwidth_fluid_bottom' );
+                        do_action( 'astha_page_template_fullwidth_fluid_bottom' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( $template_page_comment && ( comments_open() || get_comments_number() ) ) :
@@ -77,6 +77,6 @@ do_action( 'medilac_before_page_template_fullwidth_fluid' );
  * Adding content at the before of the Content for Page
  * Tempalte: Fullwidth
  */
-do_action( 'medilac_after_page_template_fullwidth_fluid' );
+do_action( 'astha_after_page_template_fullwidth_fluid' );
 
 get_footer();

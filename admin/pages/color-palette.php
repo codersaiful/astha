@@ -16,23 +16,23 @@
  */
 
 //Getting Theme's Information
-$medilactheme = wp_get_theme();
+$asthatheme = wp_get_theme();
 
 $palettes = array(
     'classic'   => array(
-        'name'      => __( 'Classic', 'medilac' ),
+        'name'      => __( 'Classic', 'astha' ),
         'colors'    => array(
             'color_root' => array(
-                '--medilac-foreground' => '#ffffff',
-                '--medilac-primary' => '#0fc392',
-                '--medilac-secondary' => '#f4f9fc',
-                '--medilac-deep-dark' => '#021429',
-                '--medilac-light-dark' => '#5c6b79',
-                '--medilac-primary-light' => '#16ecb2',
-                '--medilac-primary-deep' => '#0c9e77',
-                '--medilac-secondary-light' => '#fdfdfd',
-                '--medilac-secondary-deep' => '#e2ebf1',
-                '--medilac-danger' => '#fd5a5a',
+                '--astha-foreground' => '#ffffff',
+                '--astha-primary' => '#0fc392',
+                '--astha-secondary' => '#f4f9fc',
+                '--astha-deep-dark' => '#021429',
+                '--astha-light-dark' => '#5c6b79',
+                '--astha-primary-light' => '#16ecb2',
+                '--astha-primary-deep' => '#0c9e77',
+                '--astha-secondary-light' => '#fdfdfd',
+                '--astha-secondary-deep' => '#e2ebf1',
+                '--astha-danger' => '#fd5a5a',
             ),
             'color_text' => '#5c6b79',
             'color_link' => '#0fc392',
@@ -41,18 +41,18 @@ $palettes = array(
     ),
     
     'red_light'   => array(
-        'name'      => __( 'Red Light', 'medilac' ),
+        'name'      => __( 'Red Light', 'astha' ),
         'colors'    => array(
             'color_root' => array(
-                '--medilac-primary' => '#dd3333',
-                '--medilac-secondary' => '#fff7f7',
-                '--medilac-deep-dark' => '#2d0000',
-                '--medilac-light-dark' => '#5e4242',
-                '--medilac-primary-light' => '#ff5656',
-                '--medilac-primary-deep' => '#b20000',
-                '--medilac-secondary-light' => '#ffddc9',
-                '--medilac-secondary-deep' => '#edafaf',
-                '--medilac-danger' => '#eb5bff',
+                '--astha-primary' => '#dd3333',
+                '--astha-secondary' => '#fff7f7',
+                '--astha-deep-dark' => '#2d0000',
+                '--astha-light-dark' => '#5e4242',
+                '--astha-primary-light' => '#ff5656',
+                '--astha-primary-deep' => '#b20000',
+                '--astha-secondary-light' => '#ffddc9',
+                '--astha-secondary-deep' => '#edafaf',
+                '--astha-danger' => '#eb5bff',
             ),
             'color_text' => '#4b6582',
             'color_link' => '#dd3333',
@@ -61,33 +61,33 @@ $palettes = array(
     ),
     
     'green_light'   => array(
-        'name'      => __( 'Green Light', 'medilac' ),
+        'name'      => __( 'Green Light', 'astha' ),
         'colors'    => array(
             'color_root' => array(
-		'--medilac-primary' => '#81d742',
-		'--medilac-secondary' => '#f9f9f9',
-		'--medilac-secondary-light' => '#faffed',
-		'--medilac-secondary-deep' => '#f6efff',
-		'--medilac-primary-light' => '#28a9ff',
-		'--medilac-danger' => '#fc0000',
+		'--astha-primary' => '#81d742',
+		'--astha-secondary' => '#f9f9f9',
+		'--astha-secondary-light' => '#faffed',
+		'--astha-secondary-deep' => '#f6efff',
+		'--astha-primary-light' => '#28a9ff',
+		'--astha-danger' => '#fc0000',
             ),
         ),
     ),
 
     'temporary'   => array(
-        'name'      => __( 'Temporary', 'medilac' ),
+        'name'      => __( 'Temporary', 'astha' ),
         'colors'    => array(
             'color_root' => array(
-                '--medilac-foreground' => '#f7f7f7',
-                '--medilac-primary' => '#11db4e',
-                '--medilac-secondary' => '#f7fffa',
-                '--medilac-deep-dark' => '#040030',
-                '--medilac-light-dark' => '#625570',
-                '--medilac-primary-light' => '#2c8e31',
-                '--medilac-primary-deep' => '#81d742',
-                '--medilac-secondary-light' => '#5e5e5e',
-                '--medilac-secondary-deep' => '#c1def2',
-                '--medilac-danger' => '#dd9933',
+                '--astha-foreground' => '#f7f7f7',
+                '--astha-primary' => '#11db4e',
+                '--astha-secondary' => '#f7fffa',
+                '--astha-deep-dark' => '#040030',
+                '--astha-light-dark' => '#625570',
+                '--astha-primary-light' => '#2c8e31',
+                '--astha-primary-deep' => '#81d742',
+                '--astha-secondary-light' => '#5e5e5e',
+                '--astha-secondary-deep' => '#c1def2',
+                '--astha-danger' => '#dd9933',
             ),
             'color_text' => '#4b6582',
             'color_link' => '#1e73be',
@@ -96,19 +96,19 @@ $palettes = array(
     ),
     
     'black_n_white'   => array(
-        'name'      => __( 'Black And White', 'medilac' ),
+        'name'      => __( 'Black And White', 'astha' ),
         'colors'    => array(
             'color_root' => array(
-                '--medilac-foreground' => '#fff',
-                '--medilac-primary' => '#3a3838',
-                '--medilac-secondary' => '#ededed',
-                '--medilac-deep-dark' => '#0a0002',
-                '--medilac-light-dark' => '#565656',
-                '--medilac-primary-light' => '#4f4f4f',
-                '--medilac-primary-deep' => '#0a0a0a',
-                '--medilac-secondary-light' => '#5e5e5e',
-                '--medilac-secondary-deep' => '#bcbcbc',
-                '--medilac-danger' => '#140000',
+                '--astha-foreground' => '#fff',
+                '--astha-primary' => '#3a3838',
+                '--astha-secondary' => '#ededed',
+                '--astha-deep-dark' => '#0a0002',
+                '--astha-light-dark' => '#565656',
+                '--astha-primary-light' => '#4f4f4f',
+                '--astha-primary-deep' => '#0a0a0a',
+                '--astha-secondary-light' => '#5e5e5e',
+                '--astha-secondary-deep' => '#bcbcbc',
+                '--astha-danger' => '#140000',
             ),
             'color_text' => '#454854',
             'color_link' => '#0e0644',
@@ -116,14 +116,14 @@ $palettes = array(
         ),
     ),
     'pink_panther'   => array(
-        'name'      => __( 'Pink Panther', 'medilac' ),
+        'name'      => __( 'Pink Panther', 'astha' ),
         'colors'    => array(
             'color_root' => array(
-		'--medilac-primary' => '#ff14c4',
-		'--medilac-primary-light' => '#ff2bca',
-		'--medilac-primary-deep' => '#ff009d',
-		'--medilac-secondary' => '#fff7fc',
-		'--medilac-secondary-deep' => '#f4def4',
+		'--astha-primary' => '#ff14c4',
+		'--astha-primary-light' => '#ff2bca',
+		'--astha-primary-deep' => '#ff009d',
+		'--astha-secondary' => '#fff7fc',
+		'--astha-secondary-deep' => '#f4def4',
             ),
 	'color_text' => '#285577',
 	'color_link' => '#ff14c4',
@@ -140,20 +140,20 @@ $palettes = array(
  * @Since 1.0.0.49
  * @date 23.12.2020
  */
-$palettes = apply_filters( 'medilac_predefined_color_palette', $palettes );
+$palettes = apply_filters( 'astha_predefined_color_palette', $palettes );
 
 
 
 
-$this_main_url = admin_url( 'admin.php?page=medilac-color-palette' );
+$this_main_url = admin_url( 'admin.php?page=astha-color-palette' );
 
 // Save URL for saving current setting as new Color Palette
-$save_url = admin_url( 'admin.php?page=medilac-color-palette&save=current&action=save_now' );
+$save_url = admin_url( 'admin.php?page=astha-color-palette&save=current&action=save_now' );
 
 //Update URL for set a specific color palette for current theme
-$update_url = admin_url( 'admin.php?page=medilac-color-palette&update=current&action=update_now' );
+$update_url = admin_url( 'admin.php?page=astha-color-palette&update=current&action=update_now' );
 //Reset in URL data will Reset
-//$reset_update_url = admin_url( 'admin.php?page=medilac-color-palette&update=current&action=update_now&reset=yes' );
+//$reset_update_url = admin_url( 'admin.php?page=astha-color-palette&update=current&action=update_now&reset=yes' );
 
 
 
@@ -221,25 +221,25 @@ if( isset( $_GET['save'] ) && isset( $_GET['action'] ) && $_GET['save'] == 'curr
 }
 
 
-$medilactheme = wp_get_theme();
+$asthatheme = wp_get_theme();
 ?>
-<div class="wrap about-wrap medilac-wrap">
-    <h1><?php echo esc_html__( 'Welcome to Astha', 'medilac' );  ?></h1>
+<div class="wrap about-wrap astha-wrap">
+    <h1><?php echo esc_html__( 'Welcome to Astha', 'astha' );  ?></h1>
 
-    <div class="about-text"><?php echo esc_html( $medilactheme->get( 'Description' ) ); ?></div>
-    <div class="medilac-badge">
+    <div class="about-text"><?php echo esc_html( $asthatheme->get( 'Description' ) ); ?></div>
+    <div class="astha-badge">
 
         <p><?php
         
 
-        echo esc_html( $medilactheme->get( 'Version' ) ); ?></p>
+        echo esc_html( $asthatheme->get( 'Version' ) ); ?></p>
     </div>
     
-    <div class="medilac-color-palette-wrapper">
-        <div class="medilac-cp-inside">
+    <div class="astha-color-palette-wrapper">
+        <div class="astha-cp-inside">
             
-            <div class="medilac-color-list-wrapper">
-                <div class="medilac-color-palette-list">
+            <div class="astha-color-list-wrapper">
+                <div class="astha-color-palette-list">
                     <?php
                     
                     /**
@@ -247,7 +247,7 @@ $medilactheme = wp_get_theme();
                      * //update=applied-palette
                      */
                     if( isset( $_GET['update'] ) && $_GET['update'] == 'applied-palette' ){
-                        echo wp_kses_post( '<p>' . esc_html__( 'Successfully Color Palette Applid.', 'medilac' ) . '</p>' );
+                        echo wp_kses_post( '<p>' . esc_html__( 'Successfully Color Palette Applid.', 'astha' ) . '</p>' );
                     }
                     
                     if( is_array( $palettes ) ){
@@ -256,7 +256,7 @@ $medilactheme = wp_get_theme();
                             $palette_name = isset( $palette['name'] ) ? $palette['name'] : $palette_id;
                             $update_url_final = $update_url . '&id=' . $palette_id;
                             $palette_colors = is_array( $palette['colors'] ) ? $palette['colors'] : false;
-                            $colors = medilac_color_arr_return_from_arr( $palette_colors );
+                            $colors = astha_color_arr_return_from_arr( $palette_colors );
                     ?>
                     <section class="color-set-wrapper color-set-wrapper-<?php echo esc_attr( $palette_id ); ?>">
                         <h3><?php echo esc_html( $palette_name ); ?></h3>
@@ -277,10 +277,10 @@ $medilactheme = wp_get_theme();
                                 }
                                 ?>
                             </div>
-                            <a onclick="return confirm('<?php _e( 'Current color setting will be replace with Color Palette:[' . $palette_name . '].\nUnable to redo.\nAre you sure?.', 'medilac' ); ?>');"
-                                class="medilac-add-palette-button button button-primary" 
+                            <a onclick="return confirm('<?php _e( 'Current color setting will be replace with Color Palette:[' . $palette_name . '].\nUnable to redo.\nAre you sure?.', 'astha' ); ?>');"
+                                class="astha-add-palette-button button button-primary" 
                                 href="<?php echo esc_attr( $update_url_final ); ?>">
-                            <?php echo esc_html__( 'Apply ', 'medilac' ) . esc_html( $palette_name ); ?>
+                            <?php echo esc_html__( 'Apply ', 'astha' ) . esc_html( $palette_name ); ?>
                             </a>
                         </div>
                     </section>
@@ -302,11 +302,11 @@ $medilactheme = wp_get_theme();
                     $mod = get_theme_mods();
                     $dev_colors = isset( $mod['color_root'] ) ? $mod['color_root'] : array();
                 ?>
-                <div class="medilac-for-developer">
+                <div class="astha-for-developer">
                     <h3>Create new Palette - for <span>WP Developer</span></h3>
                     <textarea class="palette-soruce-code" cols="15" rows="20">
 'palette_key'   => array(
-        'name'      => __( 'Pallete Name', 'medilac' ),
+        'name'      => __( 'Pallete Name', 'astha' ),
         'colors'    => array(
             'color_root' => array(
 <?php

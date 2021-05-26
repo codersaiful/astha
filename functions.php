@@ -14,9 +14,9 @@ if ( ! defined( 'MEDILAC_VERSION' ) ) {
 }
 
 if ( ! defined( 'MEDILAC_CAPABILITY' ) ) {
-    //medilac_theme_options capability used at ThemeRoot/admin/loader.php
-    $medilac_cap = apply_filters( 'medilac_cap_theme_options', 'medilac_theme_options' ); //edit_theme_options
-    define( 'MEDILAC_CAPABILITY', $medilac_cap );
+    //astha_theme_options capability used at ThemeRoot/admin/loader.php
+    $astha_cap = apply_filters( 'astha_cap_theme_options', 'astha_theme_options' ); //edit_theme_options
+    define( 'MEDILAC_CAPABILITY', $astha_cap );
 }
 
 if ( ! defined( 'MEDILAC_THEME_DIR' ) ) {
@@ -36,18 +36,18 @@ if ( ! defined( 'MEDILAC_CUSTOMIZER_URI' ) ) {
  * 
  * @since 1.0.0.72
  */
-if ( ! function_exists( 'medilac_fs' ) ) {
+if ( ! function_exists( 'astha_fs' ) ) {
     // Create a helper function for easy SDK access.
-    function medilac_fs() {
-        global $medilac_fs;
+    function astha_fs() {
+        global $astha_fs;
 
-        if ( ! isset( $medilac_fs ) ) {
+        if ( ! isset( $astha_fs ) ) {
             // Include Freemius SDK.
             require_once dirname(__FILE__) . '/freemius/start.php';
 
-            $medilac_fs = fs_dynamic_init( array(
+            $astha_fs = fs_dynamic_init( array(
                 'id'                  => '8259',
-                'slug'                => 'medilac-multiperpose-wordpress-theme',
+                'slug'                => 'astha-multiperpose-wordpress-theme',
                 'type'                => 'theme',
                 'public_key'          => 'pk_3c3c7c2c7b081c7f6dfb8b48e6314',
                 'is_premium'          => true,
@@ -56,8 +56,8 @@ if ( ! function_exists( 'medilac_fs' ) ) {
                 'has_paid_plans'      => true,
                 'is_org_compliant'    => false,
                 'menu'                => array(
-                    'slug'           => 'medilac_welcome',
-                    'first-path'     => 'admin.php?page=medilac_welcome',
+                    'slug'           => 'astha_welcome',
+                    'first-path'     => 'admin.php?page=astha_welcome',
                     'support'        => false,
                 ),
                 // Set the SDK to work in a sandbox mode (for development & testing).
@@ -66,20 +66,20 @@ if ( ! function_exists( 'medilac_fs' ) ) {
             ) );
         }
 
-        return $medilac_fs;
+        return $astha_fs;
     }
 
     // Init Freemius.
-    medilac_fs();
+    astha_fs();
     // Signal that SDK was initiated.
-    do_action( 'medilac_fs_loaded' );
+    do_action( 'astha_fs_loaded' );
 }
 
 
 
 /**
  * Astha Themes Top Function, which can be use any where of any position of Astha Theme
- * Specially we have use a function name medilac_option() function to this file
+ * Specially we have use a function name astha_option() function to this file
  * It's should at the top of the Theme
  * 
  * @since 1.0.0.19
@@ -91,7 +91,7 @@ include get_theme_file_path('lib/top-functions.php'); //This file should at the 
 include get_theme_file_path('lib/bulldozer.php');
 
 
-if ( ! function_exists( 'medilac_setup' ) ) :
+if ( ! function_exists( 'astha_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -99,14 +99,14 @@ if ( ! function_exists( 'medilac_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function medilac_setup() {
+	function astha_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Astha, use a find and replace
-		 * to change 'medilac' to the name of your theme in all the template files.
+		 * to change 'astha' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'medilac', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'astha', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -129,8 +129,8 @@ if ( ! function_exists( 'medilac_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary-menu' => esc_html__( 'Primary', 'medilac' ),
-				'head_bottom' => esc_html__( 'Head Bottom', 'medilac' ),
+				'primary-menu' => esc_html__( 'Primary', 'astha' ),
+				'head_bottom' => esc_html__( 'Head Bottom', 'astha' ),
 			)
 		);
 
@@ -155,7 +155,7 @@ if ( ! function_exists( 'medilac_setup' ) ) :
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'medilac_custom_background_args',
+				'astha_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -206,7 +206,7 @@ if ( ! function_exists( 'medilac_setup' ) ) :
                 /**
                  * Image Theme Support
                  * Almost Medium size thumbnail.
-                 * It's called medilac-thumbnail.
+                 * It's called astha-thumbnail.
                  * 
                  * it will also will be use for Astha-core recent blog
                  * 
@@ -214,13 +214,13 @@ if ( ! function_exists( 'medilac_setup' ) ) :
                  * @by Saiful
                  * @date 30.3.2021
                  */
-                $width = apply_filters( 'medilac_thumb_width', 570 );
-                $height = apply_filters( 'medilac_thumb_height', 356 );;
-                add_image_size( 'medilac-thumbnail', $width, $height, true );
+                $width = apply_filters( 'astha_thumb_width', 570 );
+                $height = apply_filters( 'astha_thumb_height', 356 );;
+                add_image_size( 'astha-thumbnail', $width, $height, true );
 
 	}
 endif;
-add_action( 'after_setup_theme', 'medilac_setup' );
+add_action( 'after_setup_theme', 'astha_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -229,24 +229,24 @@ add_action( 'after_setup_theme', 'medilac_setup' );
  *
  * @global int $content_width
  */
-function medilac_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'medilac_content_width', 980 );
+function astha_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'astha_content_width', 980 );
 }
-add_action( 'after_setup_theme', 'medilac_content_width', 0 );
+add_action( 'after_setup_theme', 'astha_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function medilac_widgets_init() {
+function astha_widgets_init() {
         //Register Sidebar only for WooCommerce
         if( class_exists( 'WooCommerce' ) ){
             register_sidebar(
                     array(
-                            'name'          => esc_html__( 'WooCommerce Sidebar', 'medilac' ),
+                            'name'          => esc_html__( 'WooCommerce Sidebar', 'astha' ),
                             'id'            => 'sidebar-woocommerce',
-                            'description'   => esc_html__( 'Add widgets here for WooCommerce page. These widget will be available only for WooCommerce page. Such: Product page, cart page etc.', 'medilac' ),
+                            'description'   => esc_html__( 'Add widgets here for WooCommerce page. These widget will be available only for WooCommerce page. Such: Product page, cart page etc.', 'astha' ),
                             'before_widget' => '<section id="%1$s" class="widget widget-woocommerce %2$s">',
                             'after_widget'  => '</section>',
                             'before_title'  => '<h2 class="widget-title">',
@@ -258,9 +258,9 @@ function medilac_widgets_init() {
     
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'medilac' ),
+			'name'          => esc_html__( 'Sidebar', 'astha' ),
 			'id'            => 'sidebar',
-			'description'   => esc_html__( 'Add widgets here.', 'medilac' ),
+			'description'   => esc_html__( 'Add widgets here.', 'astha' ),
 			'before_widget' => '<section id="%1$s" class="widget widget-general %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -270,9 +270,9 @@ function medilac_widgets_init() {
 	
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Common Sidebar', 'medilac' ),
+			'name'          => esc_html__( 'Common Sidebar', 'astha' ),
 			'id'            => 'sidebar-common',
-			'description'   => esc_html__( 'Add widgets here. These widgets will display for Both Default WordPress as well as WooCommerce', 'medilac' ),
+			'description'   => esc_html__( 'Add widgets here. These widgets will display for Both Default WordPress as well as WooCommerce', 'astha' ),
 			'before_widget' => '<section id="%1$s" class="widget widget-common %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -283,9 +283,9 @@ function medilac_widgets_init() {
         
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer 1st Position', 'medilac' ),
+			'name'          => esc_html__( 'Footer 1st Position', 'astha' ),
 			'id'            => 'footer-1',
-			'description'   => esc_html__( 'Add widgets here.', 'medilac' ),
+			'description'   => esc_html__( 'Add widgets here.', 'astha' ),
 			'before_widget' => '<section id="%1$s" class="footer-widget footer-widget-1 widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -296,9 +296,9 @@ function medilac_widgets_init() {
         
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer 2nd Position', 'medilac' ),
+			'name'          => esc_html__( 'Footer 2nd Position', 'astha' ),
 			'id'            => 'footer-2',
-			'description'   => esc_html__( 'Add widgets here.', 'medilac' ),
+			'description'   => esc_html__( 'Add widgets here.', 'astha' ),
 			'before_widget' => '<section id="%1$s" class="footer-widget footer-widget-2 widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -308,9 +308,9 @@ function medilac_widgets_init() {
         
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer 3rd Position', 'medilac' ),
+			'name'          => esc_html__( 'Footer 3rd Position', 'astha' ),
 			'id'            => 'footer-3',
-			'description'   => esc_html__( 'Add widgets here.', 'medilac' ),
+			'description'   => esc_html__( 'Add widgets here.', 'astha' ),
 			'before_widget' => '<section id="%1$s" class="footer-widget footer-widget-3 widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -320,9 +320,9 @@ function medilac_widgets_init() {
         
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer 4th Position', 'medilac' ),
+			'name'          => esc_html__( 'Footer 4th Position', 'astha' ),
 			'id'            => 'footer-4',
-			'description'   => esc_html__( 'Add widgets here.', 'medilac' ),
+			'description'   => esc_html__( 'Add widgets here.', 'astha' ),
 			'before_widget' => '<section id="%1$s" class="footer-widget footer-widget-4 widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -333,9 +333,9 @@ function medilac_widgets_init() {
         
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Header Three Right Side', 'medilac' ),
+			'name'          => esc_html__( 'Header Three Right Side', 'astha' ),
 			'id'            => 'header-sidebar',
-			'description'   => esc_html__( 'Add widgets for Header For Version Three Header.', 'medilac' ),
+			'description'   => esc_html__( 'Add widgets for Header For Version Three Header.', 'astha' ),
 			'before_widget' => '<section id="%1$s" class="header-widget widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -345,13 +345,13 @@ function medilac_widgets_init() {
         
         
 }
-add_action( 'widgets_init', 'medilac_widgets_init' );
+add_action( 'widgets_init', 'astha_widgets_init' );
 
 
 /**
  * Enqueue scripts and styles.
  */
-function medilac_scripts() {
+function astha_scripts() {
 
     //FontAwesome
     wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/fontawesome/css/fontawesome.min.css', array(), MEDILAC_VERSION );
@@ -369,17 +369,17 @@ function medilac_scripts() {
      */
     wp_enqueue_style( 'animate-css', get_template_directory_uri() . '/assets/css/animate.min.css', array(), MEDILAC_VERSION );
     //Astha Style File
-    wp_enqueue_style( 'medilac-style', get_stylesheet_uri(), array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-style', get_stylesheet_uri(), array(), MEDILAC_VERSION );
     
     //Getenberg Styling
-    wp_enqueue_style( 'medilac-gutenberg', get_template_directory_uri() . '/assets/css/gutenberg.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-gutenberg', get_template_directory_uri() . '/assets/css/gutenberg.css', array(), MEDILAC_VERSION );
     
     /**
      * Main Style Sheet
      * has come from assets folder
      * 
      */
-    wp_enqueue_style( 'medilac-main-style', get_template_directory_uri() . '/assets/css/style.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-main-style', get_template_directory_uri() . '/assets/css/style.css', array(), MEDILAC_VERSION );
     
 
     
@@ -391,14 +391,14 @@ function medilac_scripts() {
      * 
      * @since 1.0.0.14
      */
-    wp_enqueue_style( 'medilac-layout', get_template_directory_uri() . '/assets/css/layout.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-layout', get_template_directory_uri() . '/assets/css/layout.css', array(), MEDILAC_VERSION );
     
     //Responsive CSS File
-    wp_enqueue_style( 'medilac-responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), MEDILAC_VERSION );
+    wp_enqueue_style( 'astha-responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), MEDILAC_VERSION );
 
     
     
-    wp_enqueue_script( 'medilac-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), MEDILAC_VERSION, true );
+    wp_enqueue_script( 'astha-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), MEDILAC_VERSION, true );
     
     /**
      * js Cookie Added for Astha
@@ -407,7 +407,7 @@ function medilac_scripts() {
      * Credit: https://github.com/js-cookie/js-cookie
      */
     wp_enqueue_script( 'js-cookie', get_template_directory_uri() . '/assets/js/js.cookie.min.js', array('jquery'), MEDILAC_VERSION, true );
-    wp_enqueue_script( 'medilac-js', get_template_directory_uri() . '/assets/js/medilac.js', array('jquery'), MEDILAC_VERSION, true );
+    wp_enqueue_script( 'astha-js', get_template_directory_uri() . '/assets/js/astha.js', array('jquery'), MEDILAC_VERSION, true );
     
     $ajax_url = admin_url( 'admin-ajax.php' );
     $MEDILAC_DATA = array( 
@@ -424,8 +424,8 @@ function medilac_scripts() {
         'cart_with_content'    => false,
         'theme_mode'    => get_theme_mods(),
     );
-    $MEDILAC_DATA = apply_filters( 'medilac_localize_data', $MEDILAC_DATA );
-    wp_localize_script( 'medilac-js', 'MEDILAC_DATA', $MEDILAC_DATA );
+    $MEDILAC_DATA = apply_filters( 'astha_localize_data', $MEDILAC_DATA );
+    wp_localize_script( 'astha-js', 'MEDILAC_DATA', $MEDILAC_DATA );
     
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
@@ -437,11 +437,11 @@ function medilac_scripts() {
      * @since 1.0.0.68
      */
     if( is_rtl() ){
-       wp_enqueue_style( 'medilac-rtl-style', get_template_directory_uri() . '/style-rtl.css', array(), MEDILAC_VERSION );
+       wp_enqueue_style( 'astha-rtl-style', get_template_directory_uri() . '/style-rtl.css', array(), MEDILAC_VERSION );
      
     }
 }
-add_action( 'wp_enqueue_scripts', 'medilac_scripts' );
+add_action( 'wp_enqueue_scripts', 'astha_scripts' );
 
 /****************************************
  * IMPORTANT FILE INCLUDE

@@ -13,31 +13,31 @@
  * To identify as Another 
  * of shop or default header, we able to set variable at the top of the file
  */
-$_wc_medilac = '';
-$medilac_header = 'header-one';
+$_wc_astha = '';
+$astha_header = 'header-one';
 $topbar_layout = 'topbar-one';
-if( medilac_is_woocommerce() ){
-    $_wc_medilac = '_wc';
+if( astha_is_woocommerce() ){
+    $_wc_astha = '_wc';
 }
 
-$_wc_medilac = isset( $_wc_medilac ) && is_string( $_wc_medilac ) ? $_wc_medilac : false;
-$medilac_header = isset( $medilac_header ) && is_string( $medilac_header ) ? $medilac_header : false;
+$_wc_astha = isset( $_wc_astha ) && is_string( $_wc_astha ) ? $_wc_astha : false;
+$astha_header = isset( $astha_header ) && is_string( $astha_header ) ? $astha_header : false;
 $topbar_layout = isset( $topbar_layout ) && is_string( $topbar_layout ) ? $topbar_layout : false;
 
-$medilac_body_class = isset( $medilac_body_class ) && is_string( $medilac_body_class ) ? $medilac_body_class : '';
-$_medilac_classes = array();
-$_medilac_classes[] = $_wc_medilac;
-$_medilac_classes[] = 'current-' . medilac_option( 'layout_header', $medilac_header, false, $_wc_medilac );
-$_medilac_classes[] = 'current-' . medilac_option( 'layout_topbar', $topbar_layout, false, $_wc_medilac );
-$_medilac_classes[] = 'current-' . medilac_option( 'layout_footer', false, false, $_wc_medilac );
-$_medilac_classes[] = medilac_option( 'layout_sidebar', 'right-sidebar', false, $_wc_medilac );
-$_medilac_classes[] = 'breadcrumb-' . medilac_option( 'medilac_breadcrumb_switch', false, false, $_wc_medilac );
-$_medilac_classes[] = 'breadcrumb-' . medilac_option( 'medilac_breadcrumb_type', false, false, $_wc_medilac );
-$_medilac_classes[] = 'header-sticky-' . medilac_option( 'medilac_header_sticky', 'off' );
-$_medilac_classes[] = 'header-' . medilac_option( 'medilac_header_width', 'fluid' );
-//$_medilac_classes[] = 'socket-sticky-' . medilac_option( 'medilac_sticky_socket', 'off', false, $_wc_medilac );
-if( medilac_is_woocommerce() ){
-    $_medilac_classes[] = 'layout-' . medilac_get_shop_layout();//medilac_option( 'layout_shop' . $_wc_medilac, 'layout-grid' );
+$astha_body_class = isset( $astha_body_class ) && is_string( $astha_body_class ) ? $astha_body_class : '';
+$_astha_classes = array();
+$_astha_classes[] = $_wc_astha;
+$_astha_classes[] = 'current-' . astha_option( 'layout_header', $astha_header, false, $_wc_astha );
+$_astha_classes[] = 'current-' . astha_option( 'layout_topbar', $topbar_layout, false, $_wc_astha );
+$_astha_classes[] = 'current-' . astha_option( 'layout_footer', false, false, $_wc_astha );
+$_astha_classes[] = astha_option( 'layout_sidebar', 'right-sidebar', false, $_wc_astha );
+$_astha_classes[] = 'breadcrumb-' . astha_option( 'astha_breadcrumb_switch', false, false, $_wc_astha );
+$_astha_classes[] = 'breadcrumb-' . astha_option( 'astha_breadcrumb_type', false, false, $_wc_astha );
+$_astha_classes[] = 'header-sticky-' . astha_option( 'astha_header_sticky', 'off' );
+$_astha_classes[] = 'header-' . astha_option( 'astha_header_width', 'fluid' );
+//$_astha_classes[] = 'socket-sticky-' . astha_option( 'astha_sticky_socket', 'off', false, $_wc_astha );
+if( astha_is_woocommerce() ){
+    $_astha_classes[] = 'layout-' . astha_get_shop_layout();//astha_option( 'layout_shop' . $_wc_astha, 'layout-grid' );
 }
 
 /**
@@ -47,18 +47,18 @@ if( medilac_is_woocommerce() ){
  * Just need to change the class name.
  * Or user able to change by using following 
  * 
- * add_filter( 'medilac_topbar_hide_mobile','__return_false' );
+ * add_filter( 'astha_topbar_hide_mobile','__return_false' );
  * 
  * or
  * 
- * add_filter( 'medilac_topbar_hide_mobile','your_function' );
+ * add_filter( 'astha_topbar_hide_mobile','your_function' );
  * 
  * Important: for new name, Need obviously String
  */
-$topbar_hide_mobile = apply_filters( 'medilac_topbar_hide_mobile', 'topbar-hide-on-mobile' );
+$topbar_hide_mobile = apply_filters( 'astha_topbar_hide_mobile', 'topbar-hide-on-mobile' );
 
 if( is_string( $topbar_hide_mobile ) && ! empty( $topbar_hide_mobile ) ){
-    $_medilac_classes[] = $topbar_hide_mobile;
+    $_astha_classes[] = $topbar_hide_mobile;
 }
 
 
@@ -74,7 +74,7 @@ if( is_string( $topbar_hide_mobile ) && ! empty( $topbar_hide_mobile ) ){
 </head>
 
 <body <?php
-$_medilac_classes = apply_filters( 'medilac_body_class', $_medilac_classes );
-body_class( $_medilac_classes ); 
+$_astha_classes = apply_filters( 'astha_body_class', $_astha_classes );
+body_class( $_astha_classes ); 
 ?>>
 <?php wp_body_open(); ?>

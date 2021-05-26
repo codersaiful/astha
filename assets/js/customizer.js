@@ -53,79 +53,79 @@
 
         //Starting root and CSS Styling based on customizer Value
         
-        /***** --medilac-primary ************/
-        wp.customize('color_root[--medilac-primary]',function(value){
+        /***** --astha-primary ************/
+        wp.customize('color_root[--astha-primary]',function(value){
             value.bind( function( to ) {
-                var cssRules = ':root {--medilac-primary: '+ to +';}';
+                var cssRules = ':root {--astha-primary: '+ to +';}';
                 $('<style>' + cssRules + '</style>').appendTo('head');
             } );
         });
 
-        /***** --medilac-secondary ************/
-        wp.customize('color_root[--medilac-secondary]',function(value){
+        /***** --astha-secondary ************/
+        wp.customize('color_root[--astha-secondary]',function(value){
             value.bind( function( to ) {
-                var cssRules = ':root {--medilac-secondary: '+ to +';}';
-                $('<style>' + cssRules + '</style>').appendTo('head');
-            } );
-        });
-        
-        /***** --medilac-deep-dark ************/
-        wp.customize('color_root[--medilac-deep-dark]',function(value){
-            value.bind( function( to ) {
-                var cssRules = ':root {--medilac-deep-dark: '+ to +';}';
-                $('<style>' + cssRules + '</style>').appendTo('head');
-            } );
-        });
-
-        /***** --medilac-light-dark ************/
-        wp.customize('color_root[--medilac-light-dark]',function(value){
-            value.bind( function( to ) {
-                var cssRules = ':root {--medilac-light-dark: '+ to +';}';
-                $('<style>' + cssRules + '</style>').appendTo('head');
-            } );
-        });
-
-
-        /***** --medilac-primary-deep ************/
-        wp.customize('color_root[--medilac-primary-deep]',function(value){
-            value.bind( function( to ) {
-                var cssRules = ':root {--medilac-primary-deep: '+ to +';}';
-                $('<style>' + cssRules + '</style>').appendTo('head');
-            } );
-        });
-
-        /***** --medilac-secondary ************/
-        wp.customize('color_root[--medilac-primary-light]',function(value){
-            value.bind( function( to ) {
-                var cssRules = ':root {--medilac-primary-light: '+ to +';}';
+                var cssRules = ':root {--astha-secondary: '+ to +';}';
                 $('<style>' + cssRules + '</style>').appendTo('head');
             } );
         });
         
-
-        /***** --medilac-secondary-deep ************/
-        wp.customize('color_root[--medilac-secondary-deep]',function(value){
+        /***** --astha-deep-dark ************/
+        wp.customize('color_root[--astha-deep-dark]',function(value){
             value.bind( function( to ) {
-                var cssRules = ':root {--medilac-secondary-deep: '+ to +';}';
+                var cssRules = ':root {--astha-deep-dark: '+ to +';}';
+                $('<style>' + cssRules + '</style>').appendTo('head');
+            } );
+        });
+
+        /***** --astha-light-dark ************/
+        wp.customize('color_root[--astha-light-dark]',function(value){
+            value.bind( function( to ) {
+                var cssRules = ':root {--astha-light-dark: '+ to +';}';
+                $('<style>' + cssRules + '</style>').appendTo('head');
+            } );
+        });
+
+
+        /***** --astha-primary-deep ************/
+        wp.customize('color_root[--astha-primary-deep]',function(value){
+            value.bind( function( to ) {
+                var cssRules = ':root {--astha-primary-deep: '+ to +';}';
+                $('<style>' + cssRules + '</style>').appendTo('head');
+            } );
+        });
+
+        /***** --astha-secondary ************/
+        wp.customize('color_root[--astha-primary-light]',function(value){
+            value.bind( function( to ) {
+                var cssRules = ':root {--astha-primary-light: '+ to +';}';
                 $('<style>' + cssRules + '</style>').appendTo('head');
             } );
         });
         
 
-        /***** --medilac-secondary-light ************/
-        wp.customize('color_root[--medilac-secondary-light]',function(value){
+        /***** --astha-secondary-deep ************/
+        wp.customize('color_root[--astha-secondary-deep]',function(value){
             value.bind( function( to ) {
-                var cssRules = ':root {--medilac-secondary-light: '+ to +';}';
+                var cssRules = ':root {--astha-secondary-deep: '+ to +';}';
+                $('<style>' + cssRules + '</style>').appendTo('head');
+            } );
+        });
+        
+
+        /***** --astha-secondary-light ************/
+        wp.customize('color_root[--astha-secondary-light]',function(value){
+            value.bind( function( to ) {
+                var cssRules = ':root {--astha-secondary-light: '+ to +';}';
                 $('<style>' + cssRules + '</style>').appendTo('head');
             } );
         });
         
         
 
-        /***** --medilac-danger ************/
-        wp.customize('color_root[--medilac-danger]',function(value){
+        /***** --astha-danger ************/
+        wp.customize('color_root[--astha-danger]',function(value){
             value.bind( function( to ) {
-                var cssRules = ':root {--medilac-danger: '+ to +';}';
+                var cssRules = ':root {--astha-danger: '+ to +';}';
                 $('<style>' + cssRules + '</style>').appendTo('head');
             } );
         });
@@ -133,10 +133,10 @@
         
         
 
-        /***** --medilac-danger ************/
-        wp.customize('color_root[--medilac-foreground]',function(value){
+        /***** --astha-danger ************/
+        wp.customize('color_root[--astha-foreground]',function(value){
             value.bind( function( to ) {
-                var cssRules = ':root {--medilac-foreground: '+ to +';}';
+                var cssRules = ':root {--astha-foreground: '+ to +';}';
                 $('<style>' + cssRules + '</style>').appendTo('head');
             } );
         });
@@ -154,28 +154,28 @@
         });
         
         
-        /***** ----medilac-topbar-bgcolor ************/
-        wp.customize('color_root[--medilac-topbar-bgcolor]',function(value){
+        /***** ----astha-topbar-bgcolor ************/
+        wp.customize('color_root[--astha-topbar-bgcolor]',function(value){
             value.bind( function( to ) {
-                var cssRules = ':root {--medilac-topbar-bgcolor: '+ to +';}';
+                var cssRules = ':root {--astha-topbar-bgcolor: '+ to +';}';
                 $('<style>' + cssRules + '</style>').appendTo('head');
             } );
         });
         
         
-        /***** ----medilac-topbar-link-color ************/
-        wp.customize('color_root[--medilac-topbar-link-color]',function(value){
+        /***** ----astha-topbar-link-color ************/
+        wp.customize('color_root[--astha-topbar-link-color]',function(value){
             value.bind( function( to ) {
-                var cssRules = ':root {--medilac-topbar-link-color: '+ to +';}';
+                var cssRules = ':root {--astha-topbar-link-color: '+ to +';}';
                 $('<style>' + cssRules + '</style>').appendTo('head');
             } );
         });
         
         
-        /***** ----medilac-topbar-color ************/
-        wp.customize('color_root[--medilac-topbar-color]',function(value){
+        /***** ----astha-topbar-color ************/
+        wp.customize('color_root[--astha-topbar-color]',function(value){
             value.bind( function( to ) {
-                var cssRules = ':root {--medilac-topbar-color: '+ to +';}';
+                var cssRules = ':root {--astha-topbar-color: '+ to +';}';
                 $('<style>' + cssRules + '</style>').appendTo('head');
             } );
         });

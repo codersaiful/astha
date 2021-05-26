@@ -8,7 +8,7 @@
  */
 
 
-if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
+if( ! function_exists( 'astha_oneclickdemo_import_files' ) ){
     
     /**
      * Array of List Files of Demo Content,
@@ -28,7 +28,7 @@ if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
      * 
      * @return Array list of links of files. Basically a Array of Details
      */
-    function medilac_oneclickdemo_import_files() {
+    function astha_oneclickdemo_import_files() {
         
         /**
          * ****************************
@@ -43,7 +43,7 @@ if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
          * **************************
          * SERVER LOCATION
          * **************************
-         * https://medilac.codeastrology.com/
+         * https://astha.codeastrology.com/
          * 
          * 
          * @since 1.0.0.61
@@ -53,7 +53,7 @@ if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
         
         /**
          * Finally we decided to keep our file to
-         * subdomain of https://medilac.codeastrology.com/
+         * subdomain of https://astha.codeastrology.com/
          * 
          * @since 1.0.0.61
          */
@@ -106,13 +106,13 @@ if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
 //                'local_import_widget_file'     => $parent_url . 'demo-1/widgets.wie',
 //                'local_import_customizer_file' => $parent_url . 'demo-1/settings.dat',
 //                'import_preview_image_url'   => $parent_url . 'demo-1/preview.png',
-//                'import_notice'              => __( 'Here All Element and All Page will be upload. Make sure, all recommeded plugin is installed.', 'medilac' ),
+//                'import_notice'              => __( 'Here All Element and All Page will be upload. Make sure, all recommeded plugin is installed.', 'astha' ),
 //                'preview_url'                => $demo_url,
 //                
 //                /**
 //                 * New Added index of Array
 //                 * use for: 'pt-ocdi/after_import'
-//                 * add_action( 'pt-ocdi/after_import', 'medilac_oneclickdemo_after_import' );
+//                 * add_action( 'pt-ocdi/after_import', 'astha_oneclickdemo_after_import' );
 //                 * 
 //                 * ei ongsho to ami add korechi. eta diye Demo site er Home Page er Title nebo 
 //                 * ebong menu'r name nebo.
@@ -122,9 +122,9 @@ if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
 //                 * @since 1.0.0.59
 //                 */
 //                'preset_args'               => array(
-//                    'menu_name'     => esc_html__( 'Primary Menu - Astha', 'medilac' ),
-//                    'home_title'    => esc_html__( 'HomePage', 'medilac' ),
-//                    'blog_title'    => esc_html__( 'Blogs', 'medilac' ),
+//                    'menu_name'     => esc_html__( 'Primary Menu - Astha', 'astha' ),
+//                    'home_title'    => esc_html__( 'HomePage', 'astha' ),
+//                    'blog_title'    => esc_html__( 'Blogs', 'astha' ),
 //                ),                 
 //            ),
             
@@ -136,12 +136,12 @@ if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
                 'import_widget_file_url'     => $content_widgets,
                 'import_customizer_file_url' => $content_settings,
                 'import_preview_image_url'   => $full_demo_preview,
-                'import_notice'              => __( 'Here All Element and All Page will be upload. Make sure, all recommeded plugin is installed.', 'medilac' ),
+                'import_notice'              => __( 'Here All Element and All Page will be upload. Make sure, all recommeded plugin is installed.', 'astha' ),
                 'preview_url'                => $demo_url,
                 'preset_args'               => array(
-                    'menu_name'     => esc_html__( 'Astha Main Menu', 'medilac' ),
-                    'home_title'    => esc_html__( 'Home 1', 'medilac' ),
-                    'blog_title'    => esc_html__( 'Blog', 'medilac' ),
+                    'menu_name'     => esc_html__( 'Astha Main Menu', 'astha' ),
+                    'home_title'    => esc_html__( 'Home 1', 'astha' ),
+                    'blog_title'    => esc_html__( 'Blog', 'astha' ),
                 ),
                 
             ),
@@ -154,7 +154,7 @@ if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
 //                'import_widget_file_url'     => $content_widgets,
 //                'import_customizer_file_url' => $content_settings,
                 'import_preview_image_url'   => $xml_demo_preview,
-                'import_notice'              => __( 'This file will import Only Content. using content xml file of our full demo.', 'medilac' ),
+                'import_notice'              => __( 'This file will import Only Content. using content xml file of our full demo.', 'astha' ),
                 'preview_url'                => 'https://medilac.codeastrology.com/',
             ),
             
@@ -165,7 +165,7 @@ if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
                 'import_widget_file_url'     => $content_widgets,
 //                'import_customizer_file_url' => $content_settings,
                 'import_preview_image_url'   => $Wie_demo_preview,
-                'import_notice'              => __( 'This file will import Only Widgets. Make sure, medilac-core is already installed.', 'medilac' ),
+                'import_notice'              => __( 'This file will import Only Widgets. Make sure, astha-core is already installed.', 'astha' ),
                 'preview_url'                => 'https://medilac.codeastrology.com/',
             ),
             
@@ -177,7 +177,7 @@ if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
 //                'import_widget_file_url'     => $content_widgets,
                 'import_customizer_file_url' => $content_settings,
                 'import_preview_image_url'   => $Dat_demo_preview,
-                'import_notice'              => __( 'Only import Customizer setting. Customizer will load Astha Demo\'s Customizer setting.', 'medilac' ),
+                'import_notice'              => __( 'Only import Customizer setting. Customizer will load Astha Demo\'s Customizer setting.', 'astha' ),
                 'preview_url'                => 'https://medilac.codeastrology.com/',
             ),
             
@@ -209,13 +209,13 @@ if( ! function_exists( 'medilac_oneclickdemo_import_files' ) ){
          * 
          * @since 1.0.0.46
          */
-        return apply_filters( 'medilac_import_files' , $import_files );
+        return apply_filters( 'astha_import_files' , $import_files );
     }
 }
-add_filter( 'pt-ocdi/import_files', 'medilac_oneclickdemo_import_files' );
+add_filter( 'pt-ocdi/import_files', 'astha_oneclickdemo_import_files' );
 
 //Do something after Install Import
-if( ! function_exists( 'medilac_oneclickdemo_after_import' ) ){
+if( ! function_exists( 'astha_oneclickdemo_after_import' ) ){
     
     /**
      * Do something, Such:
@@ -228,7 +228,7 @@ if( ! function_exists( 'medilac_oneclickdemo_after_import' ) ){
      * 
      * @param Array $selected_index
      */
-    function medilac_oneclickdemo_after_import( $selected_index ){
+    function astha_oneclickdemo_after_import( $selected_index ){
         
         //Checking $selected_import['import_file_name']
         //if ( 'Three' === $selected_import['import_file_name'] ) {
@@ -245,9 +245,9 @@ if( ! function_exists( 'medilac_oneclickdemo_after_import' ) ){
         
         $preset_args = isset( $selected_index['preset_args'] ) ? $selected_index['preset_args'] : false;
 //        $preset_args = array(
-//                    'menu_name'     => esc_html__( 'Main Menu', 'medilac' ),
-//                    'home_title'    => esc_html__( 'Home 1', 'medilac' ),
-//                    'blog_title'    => esc_html__( 'Blog', 'medilac' ),
+//                    'menu_name'     => esc_html__( 'Main Menu', 'astha' ),
+//                    'home_title'    => esc_html__( 'Home 1', 'astha' ),
+//                    'blog_title'    => esc_html__( 'Blog', 'astha' ),
 //                );
         
         /**
@@ -263,7 +263,7 @@ if( ! function_exists( 'medilac_oneclickdemo_after_import' ) ){
          * @param   Array   $selected_index  Array of Full data, which is provided by one click demo installer plugin
          * 
          */
-//        $name_args = apply_filters( 'medilac_demo_import_names_arg', array(
+//        $name_args = apply_filters( 'astha_demo_import_names_arg', array(
 //            'menu_name'     =>  $demo_name,
 //            'home_title'    =>  'Home - ' . $demo_name,
 //            'blog_title'    =>  'Blog',
@@ -278,9 +278,9 @@ if( ! function_exists( 'medilac_oneclickdemo_after_import' ) ){
 //        );
         
         $name_args = array(
-                    'menu_name'     => ! empty( $preset_args['menu_name'] ) ? $preset_args['menu_name'] : esc_html__( 'Primary Menu - Astha', 'medilac' ),
-                    'home_title'    => ! empty( $preset_args['home_title'] ) ? $preset_args['home_title'] : esc_html__( 'Home Page - Astha', 'medilac' ),
-                    'blog_title'    => ! empty( $preset_args['blog_title'] ) ? $preset_args['blog_title'] : esc_html__( 'Blog', 'medilac' ),
+                    'menu_name'     => ! empty( $preset_args['menu_name'] ) ? $preset_args['menu_name'] : esc_html__( 'Primary Menu - Astha', 'astha' ),
+                    'home_title'    => ! empty( $preset_args['home_title'] ) ? $preset_args['home_title'] : esc_html__( 'Home Page - Astha', 'astha' ),
+                    'blog_title'    => ! empty( $preset_args['blog_title'] ) ? $preset_args['blog_title'] : esc_html__( 'Blog', 'astha' ),
                 );
         
      
@@ -319,14 +319,14 @@ if( ! function_exists( 'medilac_oneclickdemo_after_import' ) ){
         * 
         * @since 1.0.0.46
         */
-       do_action( 'medilac_after_import', $selected_index );
+       do_action( 'astha_after_import', $selected_index );
     }
 }
-add_action( 'pt-ocdi/after_import', 'medilac_oneclickdemo_after_import' );
+add_action( 'pt-ocdi/after_import', 'astha_oneclickdemo_after_import' );
 
 
 
-if( !function_exists( 'medilac_demo_page_title' ) ){
+if( !function_exists( 'astha_demo_page_title' ) ){
     
     /**
      * Page Title Change for Demo Import
@@ -334,15 +334,15 @@ if( !function_exists( 'medilac_demo_page_title' ) ){
      * @param type $title
      * @return void
      */
-    function medilac_demo_page_title( $title ){
-        $title = esc_html__( 'Demo Import', 'medilac' );
-        return wp_kses_post( '<h1 class="medilac_demo_import_title ocdi__title dashicons-before dashicons-cloud-upload">' . $title . '</h1>' );
+    function astha_demo_page_title( $title ){
+        $title = esc_html__( 'Demo Import', 'astha' );
+        return wp_kses_post( '<h1 class="astha_demo_import_title ocdi__title dashicons-before dashicons-cloud-upload">' . $title . '</h1>' );
     }
 }
-add_filter( 'pt-ocdi/plugin_page_title', 'medilac_demo_page_title' );
+add_filter( 'pt-ocdi/plugin_page_title', 'astha_demo_page_title' );
 
 
-if( !function_exists( 'medilac_demo_page_intro_text' ) ){
+if( !function_exists( 'astha_demo_page_intro_text' ) ){
     
     /**
      * Intro Text, Currently Empty
@@ -350,7 +350,7 @@ if( !function_exists( 'medilac_demo_page_intro_text' ) ){
      * 
      * @return void
      */
-    function medilac_demo_page_intro_text(){
+    function astha_demo_page_intro_text(){
         ob_start();
         ?>
 
@@ -359,11 +359,11 @@ if( !function_exists( 'medilac_demo_page_intro_text' ) ){
         return wp_kses_post( $introtext );
     }
 }
-add_filter( 'pt-ocdi/plugin_intro_text', 'medilac_demo_page_intro_text' );
+add_filter( 'pt-ocdi/plugin_intro_text', 'astha_demo_page_intro_text' );
 
 
 
-if( !function_exists( 'medilac_demo_sub_menu' ) ){
+if( !function_exists( 'astha_demo_sub_menu' ) ){
     
     /**
      * To change Menu Slug, We have created this function
@@ -372,22 +372,22 @@ if( !function_exists( 'medilac_demo_sub_menu' ) ){
      * @param type $args
      * @return Array
      */
-    function medilac_demo_sub_menu( $args ){
+    function astha_demo_sub_menu( $args ){
         $capability = MEDILAC_CAPABILITY;
         return array(
 			'parent_slug' => 'themes.php',
-			'page_title'  => esc_html__( 'Astha Demo Import' , 'medilac' ),
-			'menu_title'  => esc_html__( 'Demo Import' , 'medilac' ),
+			'page_title'  => esc_html__( 'Astha Demo Import' , 'astha' ),
+			'menu_title'  => esc_html__( 'Demo Import' , 'astha' ),
 			'capability'  => $capability,
-			'menu_slug'   => 'medilac-demo-import', //Menu Slug for Demo Installer Link
+			'menu_slug'   => 'astha-demo-import', //Menu Slug for Demo Installer Link
 		);
     }
 }
-add_filter( 'pt-ocdi/plugin_page_setup', 'medilac_demo_sub_menu' );
+add_filter( 'pt-ocdi/plugin_page_setup', 'astha_demo_sub_menu' );
 
 
 
-if( ! function_exists( 'medilac_demo_page_footer_content' ) ){
+if( ! function_exists( 'astha_demo_page_footer_content' ) ){
     
     /**
      * Adding Customize Content at the bottom of Demo Installer Page
@@ -396,7 +396,7 @@ if( ! function_exists( 'medilac_demo_page_footer_content' ) ){
      * 
      * @return void Adding content at here
      */
-    function medilac_demo_page_footer_content(){
+    function astha_demo_page_footer_content(){
         ob_start();
         ?>
 <h2>Thanks for Using Astha Theme</h2>
@@ -405,7 +405,7 @@ if( ! function_exists( 'medilac_demo_page_footer_content' ) ){
         echo wp_kses_post( $content );
     }
 }
-add_filter( 'pt-ocdi/plugin_page_footer', 'medilac_demo_page_footer_content' );
+add_filter( 'pt-ocdi/plugin_page_footer', 'astha_demo_page_footer_content' );
 
 
 
@@ -447,7 +447,7 @@ function ocdi_import_files() {
         ),
       ),
       'import_preview_image_url'     => 'http://www.your_domain.com/ocdi/preview_import_image1.jpg',
-      'import_notice'                => __( 'After you import this demo, you will have to setup the slider separately.', 'medilac' ),
+      'import_notice'                => __( 'After you import this demo, you will have to setup the slider separately.', 'astha' ),
       'preview_url'                  => 'http://www.your_domain.com/my-demo-1',
     ),
     array(
@@ -467,7 +467,7 @@ function ocdi_import_files() {
         ),
       ),
       'import_preview_image_url'     => 'http://www.your_domain.com/ocdi/preview_import_image2.jpg',
-      'import_notice'                => __( 'A special note for this import.', 'medilac' ),
+      'import_notice'                => __( 'A special note for this import.', 'astha' ),
       'preview_url'                  => 'http://www.your_domain.com/my-demo-2',
     ),
   );

@@ -12,7 +12,7 @@
  */
 
 //Getting Theme's Information
-$medilactheme = wp_get_theme();
+$asthatheme = wp_get_theme();
 
 $datas = filter_input_array( INPUT_POST );
 
@@ -20,14 +20,14 @@ $datas = filter_input_array( INPUT_POST );
  * Datas Saving is Handle from function.php file of admin.
  * location admin/functions.php
  * 
- * @Hooked medilac_elementor_header_footer_saving 10 admin/functions.php
+ * @Hooked astha_elementor_header_footer_saving 10 admin/functions.php
  */
-do_action( 'medilac_elementor_header_footer_save', $datas );
+do_action( 'astha_elementor_header_footer_save', $datas );
 
 ?>
-<div class="wrap about-wrap medilac-wrap">
+<div class="wrap about-wrap astha-wrap">
     
-    <div class="medilac-system-stats">
+    <div class="astha-system-stats">
         <div class="header-footer-form">
             <form action="" method="POST">
                 <?php
@@ -38,8 +38,8 @@ do_action( 'medilac_elementor_header_footer_save', $datas );
                 );
                 $query = get_posts( $args );
                 
-                $new_datas = get_option( 'medilac_custom_header_footer' );
-                $new_datas = apply_filters( 'medilac_custom_header_footer', $new_datas );
+                $new_datas = get_option( 'astha_custom_header_footer' );
+                $new_datas = apply_filters( 'astha_custom_header_footer', $new_datas );
                 
                 $custom_header_id = isset( $new_datas['custom-header-id'] ) ? $new_datas['custom-header-id'] : false;
                 $custom_footer_id = isset( $new_datas['custom-footer-id'] ) ? $new_datas['custom-footer-id'] : false;
@@ -48,7 +48,7 @@ do_action( 'medilac_elementor_header_footer_save', $datas );
                 <table class="system-status-table">
                     <tbody>
                         <tr>
-                            <td><?php echo esc_html__( 'Choose Template as Header:', 'medilac' ); ?></td>
+                            <td><?php echo esc_html__( 'Choose Template as Header:', 'astha' ); ?></td>
                             <td>
                                 <?php if( ! empty( $query ) ){  ?>
                                 <select 
@@ -66,10 +66,10 @@ do_action( 'medilac_elementor_header_footer_save', $datas );
                                     }
                                     ?>
                                 </select>    
-                                <p><?php echo esc_html__( 'Choose Header from Elementor Template', 'medilac' ); ?></p>
+                                <p><?php echo esc_html__( 'Choose Header from Elementor Template', 'astha' ); ?></p>
                                 
                                 <?php }else{ ?>
-                                <p><?php echo esc_html__( 'Not found any template. Clear Elementor Template', 'medilac' ); ?></p>
+                                <p><?php echo esc_html__( 'Not found any template. Clear Elementor Template', 'astha' ); ?></p>
                                 <?php } ?>
                             </td>
 
@@ -78,7 +78,7 @@ do_action( 'medilac_elementor_header_footer_save', $datas );
                         
                         
                         <tr>
-                            <td><?php echo esc_html__( 'Choose Template as Footer:', 'medilac' ); ?></td>
+                            <td><?php echo esc_html__( 'Choose Template as Footer:', 'astha' ); ?></td>
                             <td>
                                 <?php if( ! empty( $query ) ){  ?>
                                 <select 
@@ -96,10 +96,10 @@ do_action( 'medilac_elementor_header_footer_save', $datas );
                                     }
                                     ?>
                                 </select>    
-                                <p><?php echo esc_html__( 'Choose Footer from Elementor Template', 'medilac' ); ?></p>
+                                <p><?php echo esc_html__( 'Choose Footer from Elementor Template', 'astha' ); ?></p>
                                 
                                 <?php }else{ ?>
-                                <p><?php echo esc_html__( 'Not found any template. Clear Elementor Template', 'medilac' ); ?></p>
+                                <p><?php echo esc_html__( 'Not found any template. Clear Elementor Template', 'astha' ); ?></p>
                                 <?php } ?>
                             </td>
 
@@ -110,14 +110,14 @@ do_action( 'medilac_elementor_header_footer_save', $datas );
                     </tbody>
                 </table>
                 <input 
-                    class="button button-primary medilac-header-footer-submit" 
+                    class="button button-primary astha-header-footer-submit" 
                     name="submit_header_footer"
                     type="submit" 
-                    value="<?php echo esc_html__( 'Save Changes', 'medilac' ); ?>">
+                    value="<?php echo esc_html__( 'Save Changes', 'astha' ); ?>">
             </form>
         </div>
         
-        <h3 class="medilac-instruction"><?php echo esc_html__( 'Instruction:', 'medilac' ); ?></h3>
-        <p><?php echo esc_html__( 'Custom Header and Footer will be active after Choose Custom Header of Custom Footer fromm Customizer.', 'medilac' ); ?></p>
+        <h3 class="astha-instruction"><?php echo esc_html__( 'Instruction:', 'astha' ); ?></h3>
+        <p><?php echo esc_html__( 'Custom Header and Footer will be active after Choose Custom Header of Custom Footer fromm Customizer.', 'astha' ); ?></p>
     </div>
 </div>

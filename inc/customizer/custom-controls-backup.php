@@ -17,7 +17,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @link https://github.com/maddisondesigns
 	 */
 	class Astha_Custom_Control extends WP_Customize_Control {
-		protected function get_medilac_resource_url() {
+		protected function get_astha_resource_url() {
 			if( strpos( wp_normalize_path( __DIR__ ), wp_normalize_path( WP_PLUGIN_DIR ) ) === 0 ) {
 				// We're in a plugin directory and need to determine the url accordingly.
 				return plugin_dir_url( __DIR__ );
@@ -35,7 +35,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @link https://github.com/maddisondesigns
 	 */
 	class Astha_Custom_Section extends WP_Customize_Section {
-		protected function get_medilac_resource_url() {
+		protected function get_astha_resource_url() {
 			if( strpos( wp_normalize_path( __DIR__ ), wp_normalize_path( WP_PLUGIN_DIR ) ) === 0 ) {
 				// We're in a plugin directory and need to determine the url accordingly.
 				return plugin_dir_url( __DIR__ );
@@ -61,7 +61,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -104,7 +104,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -148,7 +148,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -190,8 +190,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_medilac_resource_url() . 'js/customizer.js', array( 'jquery' ), '1.0', true );
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_astha_resource_url() . 'js/customizer.js', array( 'jquery' ), '1.0', true );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -296,8 +296,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_medilac_resource_url() . 'js/customizer.js', array( 'jquery', 'jquery-ui-core' ), '1.0', true );
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_astha_resource_url() . 'js/customizer.js', array( 'jquery', 'jquery-ui-core' ), '1.0', true );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -328,7 +328,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue(){
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -384,8 +384,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_medilac_resource_url() . 'js/customizer.js', array( 'jquery', 'jquery-ui-core' ), '1.0', true );
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_astha_resource_url() . 'js/customizer.js', array( 'jquery', 'jquery-ui-core' ), '1.0', true );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -449,10 +449,10 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'skyrocket-select2-js', $this->get_medilac_resource_url() . 'js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
-			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_medilac_resource_url() . 'js/customizer.js', array( 'skyrocket-select2-js' ), '1.0', true );
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.1', 'all' );
-			wp_enqueue_style( 'skyrocket-select2-css', $this->get_medilac_resource_url() . 'css/select2.min.css', array(), '4.0.13', 'all' );
+			wp_enqueue_script( 'skyrocket-select2-js', $this->get_astha_resource_url() . 'js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
+			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_astha_resource_url() . 'js/customizer.js', array( 'skyrocket-select2-js' ), '1.0', true );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.1', 'all' );
+			wp_enqueue_style( 'skyrocket-select2-css', $this->get_astha_resource_url() . 'css/select2.min.css', array(), '4.0.13', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -580,8 +580,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue(){
-			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_medilac_resource_url() . 'js/customizer.js', array( 'jquery' ), '1.0', true );
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_astha_resource_url() . 'js/customizer.js', array( 'jquery' ), '1.0', true );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
 			wp_enqueue_editor();
 		}
 		/**
@@ -656,20 +656,20 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 					$this->fontCount = ( abs( (int) $this->input_attrs['font_count'] ) > 0 ? abs( (int) $this->input_attrs['font_count'] ) : 'all' );
 				}
 			}
-			$this->fontList = $this->medilac_getGoogleFonts( 'all' );
+			$this->fontList = $this->astha_getGoogleFonts( 'all' );
 			// Decode the default json font value
 			$this->fontValues = json_decode( $this->value() );
 			// Find the index of our default font within our list of Google fonts
-			$this->fontListIndex = $this->medilac_getFontIndex( $this->fontList, $this->fontValues->font );
+			$this->fontListIndex = $this->astha_getFontIndex( $this->fontList, $this->fontValues->font );
 		}
 		/**
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'skyrocket-select2-js', $this->get_medilac_resource_url() . 'js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
-			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_medilac_resource_url() . 'js/customizer.js', array( 'skyrocket-select2-js' ), '1.0', true );
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.1', 'all' );
-			wp_enqueue_style( 'skyrocket-select2-css', $this->get_medilac_resource_url() . 'css/select2.min.css', array(), '4.0.13', 'all' );
+			wp_enqueue_script( 'skyrocket-select2-js', $this->get_astha_resource_url() . 'js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
+			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_astha_resource_url() . 'js/customizer.js', array( 'skyrocket-select2-js' ), '1.0', true );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.1', 'all' );
+			wp_enqueue_style( 'skyrocket-select2-css', $this->get_astha_resource_url() . 'css/select2.min.css', array(), '4.0.13', 'all' );
 		}
 		/**
 		 * Export our List of Google Fonts to JavaScript
@@ -774,7 +774,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Find the index of the saved font in our multidimensional array of Google Fonts
 		 */
-		public function medilac_getFontIndex( $haystack, $needle ) {
+		public function astha_getFontIndex( $haystack, $needle ) {
 			foreach( $haystack as $key => $value ) {
 				if( $value->family == $needle ) {
 					return $key;
@@ -786,11 +786,11 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Return the list of Google Fonts from our json file. Unless otherwise specfied, list will be limited to 30 fonts.
 		 */
-		public function medilac_getGoogleFonts( $count = 30 ) {
+		public function astha_getGoogleFonts( $count = 30 ) {
 			// Google Fonts json generated from https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=YOUR-API-KEY
-			$fontFile = $this->get_medilac_resource_url() . 'inc/google-fonts-alphabetical.json';
+			$fontFile = $this->get_astha_resource_url() . 'inc/google-fonts-alphabetical.json';
 			if ( $this->fontOrderBy === 'popular' ) {
-				$fontFile = $this->get_medilac_resource_url() . 'inc/google-fonts-popularity.json';
+				$fontFile = $this->get_astha_resource_url() . 'inc/google-fonts-popularity.json';
 			}
 
 			$request = wp_remote_get( $fontFile );
@@ -835,8 +835,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_medilac_resource_url() . 'js/customizer.js', array( 'jquery', 'wp-color-picker' ), '1.0', true );
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array( 'wp-color-picker' ), '1.0', 'all' );
+			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_astha_resource_url() . 'js/customizer.js', array( 'jquery', 'wp-color-picker' ), '1.0', true );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array( 'wp-color-picker' ), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -918,8 +918,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
-			wp_enqueue_script( 'wp-color-picker-alpha', $this->get_medilac_resource_url() . 'js/wp-color-picker-alpha-min.js', array( 'wp-color-picker' ), '1.0', true );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_script( 'wp-color-picker-alpha', $this->get_astha_resource_url() . 'js/wp-color-picker-alpha-min.js', array( 'wp-color-picker' ), '1.0', true );
 			wp_enqueue_style( 'wp-color-picker' );
 		}
 		/**
@@ -984,8 +984,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_medilac_resource_url() . 'js/customizer.js', array( 'jquery', 'jquery-ui-core' ), '1.1', true );
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_astha_resource_url() . 'js/customizer.js', array( 'jquery', 'jquery-ui-core' ), '1.1', true );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -1060,8 +1060,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_medilac_resource_url() . 'js/customizer.js', array( 'jquery' ), '1.0', true );
-			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_medilac_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_script( 'skyrocket-custom-controls-js', $this->get_astha_resource_url() . 'js/customizer.js', array( 'jquery' ), '1.0', true );
+			wp_enqueue_style( 'skyrocket-custom-controls-css', $this->get_astha_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the section, and the controls that have been added to it.
@@ -1070,7 +1070,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			$bkgrndcolor = !empty( $this->backgroundcolor ) ? esc_attr( $this->backgroundcolor ) : '#fff';
 			$color = !empty( $this->textcolor ) ? esc_attr( $this->textcolor ) : '#555d66';
 			?>
-			<li id="accordion-section-<?php echo esc_attr( $this->id ); ?>" class="medilac_upsell_section accordion-section control-section control-section-<?php echo esc_attr( $this->id ); ?> cannot-expand">
+			<li id="accordion-section-<?php echo esc_attr( $this->id ); ?>" class="astha_upsell_section accordion-section control-section control-section-<?php echo esc_attr( $this->id ); ?> cannot-expand">
 				<h3 class="upsell-section-title" <?php echo ' style="color:' . $color . ';border-left-color:' . $bkgrndcolor .';border-right-color:' . $bkgrndcolor .';"'; ?>>
 					<a href="<?php echo esc_url( $this->url); ?>" target="_blank"<?php echo ' style="background-color:' . $bkgrndcolor . ';color:' . $color .';"'; ?>><?php echo esc_html( $this->title ); ?></a>
 				</h3>
@@ -1085,8 +1085,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  string	Input to be sanitized (either a string containing a single url or multiple, separated by commas)
 	 * @return string	Sanitized input
 	 */
-	if ( ! function_exists( 'medilac_url_sanitization' ) ) {
-		function medilac_url_sanitization( $input ) {
+	if ( ! function_exists( 'astha_url_sanitization' ) ) {
+		function astha_url_sanitization( $input ) {
 			if ( strpos( $input, ',' ) !== false) {
 				$input = explode( ',', $input );
 			}
@@ -1109,8 +1109,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  string		Switch value
 	 * @return integer	Sanitized value
 	 */
-	if ( ! function_exists( 'medilac_switch_sanitization' ) ) {
-		function medilac_switch_sanitization( $input ) {
+	if ( ! function_exists( 'astha_switch_sanitization' ) ) {
+		function astha_switch_sanitization( $input ) {
 			if ( true === $input ) {
 				return 1;
 			} else {
@@ -1125,8 +1125,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  string		Radio Button value
 	 * @return integer	Sanitized value
 	 */
-	if ( ! function_exists( 'medilac_radio_sanitization' ) ) {
-		function medilac_radio_sanitization( $input, $setting ) {
+	if ( ! function_exists( 'astha_radio_sanitization' ) ) {
+		function astha_radio_sanitization( $input, $setting ) {
 			//get the list of possible radio box or select options
 		 $choices = $setting->manager->get_control( $setting->id )->choices;
 
@@ -1144,8 +1144,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  string		Input value to check
 	 * @return integer	Returned integer value
 	 */
-	if ( ! function_exists( 'medilac_sanitize_integer' ) ) {
-		function medilac_sanitize_integer( $input ) {
+	if ( ! function_exists( 'astha_sanitize_integer' ) ) {
+		function astha_sanitize_integer( $input ) {
 			return (int) $input;
 		}
 	}
@@ -1156,8 +1156,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  string	Input to be sanitized (either a string containing a single string or multiple, separated by commas)
 	 * @return string	Sanitized input
 	 */
-	if ( ! function_exists( 'medilac_text_sanitization' ) ) {
-		function medilac_text_sanitization( $input ) {
+	if ( ! function_exists( 'astha_text_sanitization' ) ) {
+		function astha_text_sanitization( $input ) {
 			if ( strpos( $input, ',' ) !== false) {
 				$input = explode( ',', $input );
 			}
@@ -1180,8 +1180,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  array	Input to be sanitized
 	 * @return array	Sanitized input
 	 */
-	if ( ! function_exists( 'medilac_array_sanitization' ) ) {
-		function medilac_array_sanitization( $input ) {
+	if ( ! function_exists( 'astha_array_sanitization' ) ) {
+		function astha_array_sanitization( $input ) {
 			if( is_array( $input ) ) {
 				foreach ( $input as $key => $value ) {
 					$input[$key] = sanitize_text_field( $value );
@@ -1200,8 +1200,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  string	Input to be sanitized
 	 * @return string	Sanitized input
 	 */
-	if ( ! function_exists( 'medilac_hex_rgba_sanitization' ) ) {
-		function medilac_hex_rgba_sanitization( $input, $setting ) {
+	if ( ! function_exists( 'astha_hex_rgba_sanitization' ) ) {
+		function astha_hex_rgba_sanitization( $input, $setting ) {
 			if ( empty( $input ) || is_array( $input ) ) {
 				return $setting->default;
 			}
@@ -1214,13 +1214,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 					// Sanitize as RGB color
 					$input = str_replace( ' ', '', $input );
 					sscanf( $input, 'rgb(%d,%d,%d)', $red, $green, $blue );
-					$input = 'rgb(' . medilac_in_range( $red, 0, 255 ) . ',' . medilac_in_range( $green, 0, 255 ) . ',' . medilac_in_range( $blue, 0, 255 ) . ')';
+					$input = 'rgb(' . astha_in_range( $red, 0, 255 ) . ',' . astha_in_range( $green, 0, 255 ) . ',' . astha_in_range( $blue, 0, 255 ) . ')';
 				}
 				else {
 					// Sanitize as RGBa color
 					$input = str_replace( ' ', '', $input );
 					sscanf( $input, 'rgba(%d,%d,%d,%f)', $red, $green, $blue, $alpha );
-					$input = 'rgba(' . medilac_in_range( $red, 0, 255 ) . ',' . medilac_in_range( $green, 0, 255 ) . ',' . medilac_in_range( $blue, 0, 255 ) . ',' . medilac_in_range( $alpha, 0, 1 ) . ')';
+					$input = 'rgba(' . astha_in_range( $red, 0, 255 ) . ',' . astha_in_range( $green, 0, 255 ) . ',' . astha_in_range( $blue, 0, 255 ) . ',' . astha_in_range( $alpha, 0, 1 ) . ')';
 				}
 			}
 			return $input;
@@ -1233,8 +1233,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  number	Input to be sanitized
 	 * @return number	Sanitized input
 	 */
-	if ( ! function_exists( 'medilac_in_range' ) ) {
-		function medilac_in_range( $input, $min, $max ){
+	if ( ! function_exists( 'astha_in_range' ) ) {
+		function astha_in_range( $input, $min, $max ){
 			if ( $input < $min ) {
 				$input = $min;
 			}
@@ -1251,8 +1251,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  string	JSON string to be sanitized
 	 * @return string	Sanitized input
 	 */
-	if ( ! function_exists( 'medilac_google_font_sanitization' ) ) {
-		function medilac_google_font_sanitization( $input ) {
+	if ( ! function_exists( 'astha_google_font_sanitization' ) ) {
+		function astha_google_font_sanitization( $input ) {
 			$val =  json_decode( $input, true );
 			if( is_array( $val ) ) {
 				foreach ( $val as $key => $value ) {
@@ -1273,8 +1273,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  string	Date/Time string to be sanitized
 	 * @return string	Sanitized input
 	 */
-	if ( ! function_exists( 'medilac_date_time_sanitization' ) ) {
-		function medilac_date_time_sanitization( $input, $setting ) {
+	if ( ! function_exists( 'astha_date_time_sanitization' ) ) {
+		function astha_date_time_sanitization( $input, $setting ) {
 			$datetimeformat = 'Y-m-d';
 			if ( $setting->manager->get_control( $setting->id )->include_time ) {
 				$datetimeformat = 'Y-m-d H:i:s';
@@ -1293,8 +1293,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @param  string	Slider value to be sanitized
 	 * @return string	Sanitized input
 	 */
-	if ( ! function_exists( 'medilac_range_sanitization' ) ) {
-		function medilac_range_sanitization( $input, $setting ) {
+	if ( ! function_exists( 'astha_range_sanitization' ) ) {
+		function astha_range_sanitization( $input, $setting ) {
 			$attrs = $setting->manager->get_control( $setting->id )->input_attrs;
 
 			$min = ( isset( $attrs['min'] ) ? $attrs['min'] : $input );
@@ -1303,7 +1303,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 			$number = floor( $input / $attrs['step'] ) * $attrs['step'];
 
-			return medilac_in_range( $number, $min, $max );
+			return astha_in_range( $number, $min, $max );
 		}
 	}
 

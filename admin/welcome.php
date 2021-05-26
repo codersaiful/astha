@@ -1,5 +1,5 @@
 <?php
-function medilac_let_to_num( $size ) {
+function astha_let_to_num( $size ) {
   $l   = substr( $size, -1 );
   $ret = substr( $size, 0, -1 );
   switch ( strtoupper( $l ) ) {
@@ -19,7 +19,7 @@ function medilac_let_to_num( $size ) {
 $ssl_check = 'https' === substr( get_home_url(), 0, 5 );
 $green_mark = '<mark class="green"><span class="dashicons dashicons-yes"></span></mark>';
 
-$medilactheme = wp_get_theme();
+$asthatheme = wp_get_theme();
 
 $plugins_counts = (array) get_option( 'active_plugins', array() );
 
@@ -29,70 +29,70 @@ if ( is_multisite() ) {
 }
 ?>
 
-<div class="wrap about-wrap medilac-wrap">
-    <h1><?php _e('Welcome to Astha', 'medilac'); ?></h1>
+<div class="wrap about-wrap astha-wrap">
+    <h1><?php _e('Welcome to Astha', 'astha'); ?></h1>
 
-    <div class="about-text"><?php echo esc_html__('medilac theme is now installed and ready to use!', 'medilac'); ?></div>
-    <div class="medilac-badge">
+    <div class="about-text"><?php echo esc_html__('astha theme is now installed and ready to use!', 'astha'); ?></div>
+    <div class="astha-badge">
 
-        <p><?php echo esc_html( $medilactheme->get( 'Version' ) ); ?></p>
+        <p><?php echo esc_html( $asthatheme->get( 'Version' ) ); ?></p>
     </div>
     <h2 class="nav-tab-wrapper">
         <?php
-        $return = urlencode( admin_url( 'admin.php?page=medilac_welcome' ) );
-        printf( '<a href="#" class="nav-tab nav-tab-active">%s</a>', __( 'Welcome', 'medilac' ) );
-        printf( '<a href="%s" class="nav-tab">%s</a>', admin_url( 'customize.php?return=' . $return  ), __( 'Theme Options', 'medilac' ) );
-//         printf( '<a href="admin.php?page=medilac_license" class="nav-tab">%s</a>', __( 'License', 'medilac' ) );
+        $return = urlencode( admin_url( 'admin.php?page=astha_welcome' ) );
+        printf( '<a href="#" class="nav-tab nav-tab-active">%s</a>', __( 'Welcome', 'astha' ) );
+        printf( '<a href="%s" class="nav-tab">%s</a>', admin_url( 'customize.php?return=' . $return  ), __( 'Theme Options', 'astha' ) );
+//         printf( '<a href="admin.php?page=astha_license" class="nav-tab">%s</a>', __( 'License', 'astha' ) );
        if( defined( 'PT_OCDI_PATH' ) ){
-        printf( '<a href="%s" class="nav-tab">%s</a>', admin_url( 'themes.php?page=medilac-demo-import' ), __( 'Demo Import', 'medilac' ) );
+        printf( '<a href="%s" class="nav-tab">%s</a>', admin_url( 'themes.php?page=astha-demo-import' ), __( 'Demo Import', 'astha' ) );
        }
-//        printf( '<a href="admin.php?page=medilac-recommandation" class="nav-tab">%s</a>', __( 'Recommandations', 'medilac' ) );
+//        printf( '<a href="admin.php?page=astha-recommandation" class="nav-tab">%s</a>', __( 'Recommandations', 'astha' ) );
         ?>
     </h2>
     
    
-    <div class="medilac-section nav-tab-active" id="welcome">
+    <div class="astha-section nav-tab-active" id="welcome">
         <p class="about-description">
-            <?php printf( __( 'Before you get started, please be sure to always check out documentation Which Included In the theme folder or from <a href="%s" target="_blank">Website</a>. We outline all kinds of good information and provide you with all the details you need to use medilac.', 'medilac'), 'https://docs.medilac.codeastrology.com/'); ?>
+            <?php printf( __( 'Before you get started, please be sure to always check out documentation Which Included In the theme folder or from <a href="%s" target="_blank">Website</a>. We outline all kinds of good information and provide you with all the details you need to use astha.', 'astha'), 'https://docs.astha.codeastrology.com/'); ?>
         </p>
         <p class="about-description">
-            <?php printf( __( 'If you are unable to find your answer in our documentation, please contact us via  <a href="https://codeastrology.com/support/" target="_blank">submit a ticket</a> with your purchase code, site CPanel, and admin login info.', 'medilac'), 'mailto:hello@codeastrology.com'); ?>
+            <?php printf( __( 'If you are unable to find your answer in our documentation, please contact us via  <a href="https://codeastrology.com/support/" target="_blank">submit a ticket</a> with your purchase code, site CPanel, and admin login info.', 'astha'), 'mailto:hello@codeastrology.com'); ?>
         </p>
         <p class="about-description">
-            <?php printf( __( 'We are very happy to help you and you will get the reply from us  faster than you expected.', 'medilac'), 'https://docs.medilac.codeastrology.com/'); ?>
+            <?php printf( __( 'We are very happy to help you and you will get the reply from us  faster than you expected.', 'astha'), 'https://docs.astha.codeastrology.com/'); ?>
         </p>
         
         <p class="about-description">
-            <?php printf( __( 'Note: Please <a href="%s">Install All Required Plugins</a> Before Install Demo !', 'medilac'), admin_url('themes.php?page=medilac-required-plugins')); ?>
+            <?php printf( __( 'Note: Please <a href="%s">Install All Required Plugins</a> Before Install Demo !', 'astha'), admin_url('themes.php?page=astha-required-plugins')); ?>
         </p>
     </div>
-    <div class="medilac-thanks">
-        <p class="description">Thank you for using <strong>medilac</strong> theme! Powered by <a href="https://codeastrology.com" target="_blank">CodeAstrology</a></p>
+    <div class="astha-thanks">
+        <p class="description">Thank you for using <strong>astha</strong> theme! Powered by <a href="https://codeastrology.com" target="_blank">CodeAstrology</a></p>
     </div>
     
     
-    <div class="medilac-system-stats">
+    <div class="astha-system-stats">
         <h3>System Status</h3>
 
     <table class="system-status-table">
         <tbody>
                      <tr>
-							<td><?php esc_html_e( 'WP Version', 'medilac' ); ?></td>
+							<td><?php esc_html_e( 'WP Version', 'astha' ); ?></td>
 							<td><?php bloginfo('version'); ?></td>
 						</tr>
 						
 						<tr>
-							<td><?php esc_html_e( 'Language', 'medilac' ); ?></td>
+							<td><?php esc_html_e( 'Language', 'astha' ); ?></td>
 							<td><?php echo get_locale() ?></td>
 						</tr>
 						
 						<tr>
-							<td><?php esc_html_e( 'WP Memory Limit', 'medilac' ); ?></td>
+							<td><?php esc_html_e( 'WP Memory Limit', 'astha' ); ?></td>
 							<td><?php
-								$memory = medilac_let_to_num( WP_MEMORY_LIMIT );
+								$memory = astha_let_to_num( WP_MEMORY_LIMIT );
 
 								if ( $memory < 100663296 ) {
-									echo '<mark class="error">' . sprintf(esc_html__('%s - We recommend setting memory to at least 96MB. %s.','medilac'), size_format( $memory ), '<a href="' . esc_url('//codeastrology.com/support/increase-wordpress-memory-limit/') . '" target="_blank">'.esc_html__('More info','medilac').'</a>') . '</mark>';
+									echo '<mark class="error">' . sprintf(esc_html__('%s - We recommend setting memory to at least 96MB. %s.','astha'), size_format( $memory ), '<a href="' . esc_url('//codeastrology.com/support/increase-wordpress-memory-limit/') . '" target="_blank">'.esc_html__('More info','astha').'</a>') . '</mark>';
 								} else {
 									echo '<mark class="green">' . size_format( $memory ) . '</mark>';
 								}
@@ -102,11 +102,11 @@ if ( is_multisite() ) {
 						
 						
 						<tr>
-							<td><?php esc_html_e( 'PHP Max Input Vars', 'medilac' ); ?></td>
+							<td><?php esc_html_e( 'PHP Max Input Vars', 'astha' ); ?></td>
 							<td><?php
 								$max_input = ini_get('max_input_vars');
 								if ( $max_input < 3000 ) {
-									echo '<mark class="error">' . sprintf( wp_kses(__( '%s - We recommend setting PHP max_input_vars to at least 3000. See: <a href="%s" target="_blank">Increasing the PHP max vars limit</a>', 'medilac' ), array( 'a' => array( 'href' => array(),'target' => array() ) ) ), $max_input, '//codeastrology.com/support/increasing-max-input-vars/' ) . '</mark>';
+									echo '<mark class="error">' . sprintf( wp_kses(__( '%s - We recommend setting PHP max_input_vars to at least 3000. See: <a href="%s" target="_blank">Increasing the PHP max vars limit</a>', 'astha' ), array( 'a' => array( 'href' => array(),'target' => array() ) ) ), $max_input, '//codeastrology.com/support/increasing-max-input-vars/' ) . '</mark>';
 								} else {
 									echo '<mark class="green">' . $max_input . '</mark>';
 								}
@@ -114,7 +114,7 @@ if ( is_multisite() ) {
 						</tr>
 						<tr>
 						  <td>
-						     <?php esc_html_e( 'PHP Version', 'medilac' ); ?> 
+						     <?php esc_html_e( 'PHP Version', 'astha' ); ?> 
 						  </td>
 						  
 						  <td>
@@ -134,7 +134,7 @@ if ( is_multisite() ) {
 						
 						<tr>
 						    <td>
-						     <?php esc_html_e( 'Server Info', 'medilac' ); ?> 
+						     <?php esc_html_e( 'Server Info', 'astha' ); ?> 
 						  </td>
 						  
 						  <td>
@@ -144,7 +144,7 @@ if ( is_multisite() ) {
 						
 						<tr>
 						    <td>
-						        <?php esc_html_e( 'Secure Connection(HTTPS)', 'medilac' ); ?> 
+						        <?php esc_html_e( 'Secure Connection(HTTPS)', 'astha' ); ?> 
 						    </td>
 						    <td>
 						        <?php 
@@ -156,40 +156,40 @@ if ( is_multisite() ) {
     </table>
         </div>
         
-         <div class="medilac-system-stats">
+         <div class="astha-system-stats">
         <h3>Theme Information</h3>
 
     <table class="system-status-table">
         <tbody>
             <tr>
-                <td><?php esc_html_e( 'Theme Name', 'medilac' ); ?></td>
+                <td><?php esc_html_e( 'Theme Name', 'astha' ); ?></td>
                 <td><?php echo wp_get_theme(); ?></td>
             </tr>
             
              <tr>
-                <td><?php esc_html_e( 'Author Name', 'medilac' ); ?></td>
-                <td><?php echo maybe_unserialize($medilactheme->get( 'Author' )); ?></td>
+                <td><?php esc_html_e( 'Author Name', 'astha' ); ?></td>
+                <td><?php echo maybe_unserialize($asthatheme->get( 'Author' )); ?></td>
             </tr>
             
             <tr>
-					<td><?php esc_html_e( 'Current Version', 'medilac' ); ?></td>
-					<td><?php echo esc_html($medilactheme->get( 'Version' )); ?></td>
+					<td><?php esc_html_e( 'Current Version', 'astha' ); ?></td>
+					<td><?php echo esc_html($asthatheme->get( 'Version' )); ?></td>
 				</tr>
 				
 				  <tr>
-					<td><?php esc_html_e( 'Text Domain', 'medilac' ); ?></td>
-					<td><?php echo esc_html($medilactheme->get( 'TextDomain' )); ?></td>
+					<td><?php esc_html_e( 'Text Domain', 'astha' ); ?></td>
+					<td><?php echo esc_html($asthatheme->get( 'TextDomain' )); ?></td>
 				</tr>
 				
 				<tr>
-				    <td><?php esc_html_e( 'Child Theme', 'medilac' ); ?></td>
+				    <td><?php esc_html_e( 'Child Theme', 'astha' ); ?></td>
 					<td><?php echo is_child_theme() ? $green_mark : 'No'; ?></td>
 				</tr>
 				</tbody>
 				</table>
 	</div>
 	
-        <div class="medilac-system-stats">
+        <div class="astha-system-stats">
             <h3>Active Plugins (<?php echo count( $plugins_counts ); ?>)</h3>
         <table class="system-status-table">
 			<tbody>

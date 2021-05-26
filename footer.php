@@ -13,10 +13,10 @@
  * To identify as Another 
  * of shop or default header, we able to set variable at the top of the file
  */
-$_wc_medilac = $custom_footer = false;
-$medilac_footer = 'footer-dark';
-if( medilac_is_woocommerce() ){
-    $_wc_medilac = '_wc';
+$_wc_astha = $custom_footer = false;
+$astha_footer = 'footer-dark';
+if( astha_is_woocommerce() ){
+    $_wc_astha = '_wc';
 }
 
 
@@ -29,7 +29,7 @@ if( medilac_is_woocommerce() ){
  * 
  * @HOOK for at bottom Content Area of Site
  */
-do_action( 'medilac_content_area_bottom' );
+do_action( 'astha_content_area_bottom' );
 ?>
 </div><!-- #page -->
 <?php
@@ -39,7 +39,7 @@ do_action( 'medilac_content_area_bottom' );
  * 
  * @HOOK for at After Content Area of Site
  */
-do_action( 'medilac_after_content_area' );
+do_action( 'astha_after_content_area' );
 ?>
     
 <?php
@@ -47,7 +47,7 @@ do_action( 'medilac_after_content_area' );
  * Default Header two is set as default header
  * @default footer-dark
  */
-$footer_layout = medilac_option( 'layout_footer', $medilac_footer, false, $_wc_medilac ); //Set default Footer
+$footer_layout = astha_option( 'layout_footer', $astha_footer, false, $_wc_astha ); //Set default Footer
 
 /**
  * Checking Custom Footer, If found numeric header from customizer
@@ -61,12 +61,12 @@ if( is_numeric( $footer_layout ) ){
      $custom_footer = true;
 
      $footer_class = 'custom-footer custom-footer-' . $footer_layout;
-//    $_medilac_classes[] = 'elementor-footer';
-//    $_medilac_classes[] = 'custom-footer';
-//    $_medilac_classes[] = 'custom-footer-' . $footer_layout;
+//    $_astha_classes[] = 'elementor-footer';
+//    $_astha_classes[] = 'custom-footer';
+//    $_astha_classes[] = 'custom-footer-' . $footer_layout;
 }else{
     $footer_class = $footer_layout;
-//    $_medilac_classes[] = 'current-' . $footer_layout;
+//    $_astha_classes[] = 'current-' . $footer_layout;
 }
 
 
@@ -84,7 +84,7 @@ $total_footer_widget = $footer_1 + $footer_2 + $footer_3 + $footer_4;
  * 
  * @HOOK for at Footer Top
  */
-do_action( 'medilac_before_footer' );
+do_action( 'astha_before_footer' );
 
 ?>
 <footer id="footer" class="site-footer <?php echo esc_attr( $footer_class ); ?> available-widgets-<?php echo esc_attr( $total_footer_widget ); ?>">	
@@ -94,7 +94,7 @@ do_action( 'medilac_before_footer' );
      * 
      * @HOOK for at Footer Top
      */
-    do_action( 'medilac_footer_top' );
+    do_action( 'astha_footer_top' );
 
     if ( ! $custom_footer && ( $footer_1 || $footer_2 || $footer_3 || $footer_4 ) ) {
         get_template_part( 'template-parts/layout/' . $footer_layout );
@@ -108,9 +108,9 @@ do_action( 'medilac_before_footer' );
      * 
      * @HOOK for at Before Header
      */
-    do_action( 'medilac_footer_bottom' );
+    do_action( 'astha_footer_bottom' );
 
-    $socket_switch = medilac_option( 'medilac_socket_switch', 'on' );
+    $socket_switch = astha_option( 'astha_socket_switch', 'on' );
     if( $socket_switch === 'on' && ! $custom_footer ){
         get_template_part( 'template-parts/layout/footer', 'socket' );
     }
@@ -120,7 +120,7 @@ do_action( 'medilac_before_footer' );
      * 
      * @HOOK for at Before Header
      */
-    do_action( 'medilac_after_footer_socket' );
+    do_action( 'astha_after_footer_socket' );
     
     ?>
 </footer><!-- #footer -->
@@ -131,7 +131,7 @@ do_action( 'medilac_before_footer' );
  * 
  * @HOOK for at Before Header
  */
-do_action( 'medilac_after_footer' );
+do_action( 'astha_after_footer' );
 
 wp_footer(); 
 
@@ -140,7 +140,7 @@ wp_footer();
  * 
  * @HOOK for Site Bottom
  */
-do_action( 'medilac_site_bottom' );
+do_action( 'astha_site_bottom' );
 
 ?>
 <!-- Scrollbar -->

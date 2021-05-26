@@ -10,14 +10,14 @@
  * @package Astha
  */
 
-if( ! function_exists( 'medilac_color_arr_return_from_arr' ) ){
+if( ! function_exists( 'astha_color_arr_return_from_arr' ) ){
     
     /**
      * 
      * @param type $two_dimention_array
      * @return Array
      */
-    function medilac_color_arr_return_from_arr( $two_dimention_array = false ){
+    function astha_color_arr_return_from_arr( $two_dimention_array = false ){
         //If not array, null
         if( ! is_array( $two_dimention_array ) ){
             return;
@@ -40,20 +40,20 @@ if( ! function_exists( 'medilac_color_arr_return_from_arr' ) ){
     }
 }
 
-if( ! function_exists( 'medilac_elementor_header_footer_saving' ) ){
+if( ! function_exists( 'astha_elementor_header_footer_saving' ) ){
     
     /**
      * 
      * @param type $two_dimention_array
      * @return Array
      */
-    function medilac_elementor_header_footer_saving( $datas ){
+    function astha_elementor_header_footer_saving( $datas ){
         if( ! $datas ){
             return;
         }
-        $datas = apply_filters( 'medilac_custom_header_footer_on_save', $datas );
-        update_option( 'medilac_custom_header_footer', $datas );
+        $datas = apply_filters( 'astha_custom_header_footer_on_save', $datas );
+        update_option( 'astha_custom_header_footer', $datas );
         
     }
 }
-add_action( 'medilac_elementor_header_footer_save', 'medilac_elementor_header_footer_saving' );
+add_action( 'astha_elementor_header_footer_save', 'astha_elementor_header_footer_saving' );

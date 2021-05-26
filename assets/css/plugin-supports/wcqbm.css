@@ -13,7 +13,7 @@
     position: relative;
     margin: 0 15px 0 0;
     background: #f4f9fc;
-    background: var(--medilac-secondary);
+    background: var(--astha-secondary);
 
 }
 
@@ -28,7 +28,7 @@
     bottom: 0;
     width: 25px;
     background: #0fc392;
-    background: var(--medilac-primary);
+    background: var(--astha-primary);
     color: #ffffff;
     font-size: 26px;
 }
@@ -47,7 +47,7 @@
     height: 52px;
     width: 100%;
     background-color: #f4f9fc;
-    background-color: var(--medilac-secondary);
+    background-color: var(--astha-secondary);
     padding: 20px 26px 15px 20px;
     text-align: left;
     border:none;

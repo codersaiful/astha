@@ -10,7 +10,7 @@ table.wishlist_table tr {
 }
 /*
 .yith-wcwl-add-to-wishlist.add-to-wishlist-1943.exists.wishlist-fragment.on-first-load div {
-    background: var(--medilac-light-dark);
+    background: var(--astha-light-dark);
     width: 55px;
     height: 55px;
     color: #f37676;
@@ -20,7 +20,7 @@ table.wishlist_table tr {
 
 .yith-wcwl-add-to-wishlist.add-to-wishlist-1943.exists.wishlist-fragment.on-first-load div:before {
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
     content: "\f004";
     position: absolute;
     width: 33px;

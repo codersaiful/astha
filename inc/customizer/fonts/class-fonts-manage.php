@@ -37,7 +37,7 @@ if( ! class_exists( 'Astha_Fonts_Manage' ) ){
          * @return type $google_fonts Array List of All Supported Google Fonts
          */
         public static function fonts(){
-            $google_fonts_file = apply_filters( 'medilac_google_fonts_php_file', MEDILAC_THEME_DIR . 'inc/customizer/fonts/google-fonts.php' );
+            $google_fonts_file = apply_filters( 'astha_google_fonts_php_file', MEDILAC_THEME_DIR . 'inc/customizer/fonts/google-fonts.php' );
 
             if ( ! file_exists( $google_fonts_file ) ) {
                     return array();
@@ -53,7 +53,7 @@ if( ! class_exists( 'Astha_Fonts_Manage' ) ){
                     //self::$choices[$name] = $name;
             }
 
-            return apply_filters( 'medilac_google_fonts', $google_fonts );
+            return apply_filters( 'astha_google_fonts', $google_fonts );
         }
         
         /**
@@ -65,14 +65,14 @@ if( ! class_exists( 'Astha_Fonts_Manage' ) ){
          */
         public static function fonts_choices() {
             if( is_array( self::fonts() ) ){
-                self::$choices[''] = __( 'Default', 'medilac' );
+                self::$choices[''] = __( 'Default', 'astha' );
                 foreach( self::fonts() as $name => $font ){
 
                     //$extra = !empty( $font['category'] ) ? ',' . $font['category'] : '';
                     self::$choices[$name] = $name;
                 }
             }
-            $choices = apply_filters( 'medilac_fonts_choices', self::$choices );
+            $choices = apply_filters( 'astha_fonts_choices', self::$choices );
             return $choices;
         }
         
@@ -83,19 +83,19 @@ if( ! class_exists( 'Astha_Fonts_Manage' ) ){
          */
         public static function fonts_weight_choices() {
             $choices = array(
-                ''                  => __( 'No Value', 'medilac' ),
-                'inherit'           => __( 'Default', 'medilac' ),
-                '100'               => __( 'Thin 100', 'medilac' ),
-                '200'               => __( 'Thin 200', 'medilac' ),
-                '300'               => __( 'Light 300', 'medilac' ),
-                '400'               => __( 'Normal 400', 'medilac' ),
-                '500'               => __( 'Medium 500', 'medilac' ),
-                '600'               => __( 'Medium 600', 'medilac' ),
-                '700'               => __( 'Bold 700', 'medilac' ),
-                '800'               => __( 'Extra-Bold 800', 'medilac' ),
-                '900'               => __( 'Ultra-Bold 900', 'medilac' ),
+                ''                  => __( 'No Value', 'astha' ),
+                'inherit'           => __( 'Default', 'astha' ),
+                '100'               => __( 'Thin 100', 'astha' ),
+                '200'               => __( 'Thin 200', 'astha' ),
+                '300'               => __( 'Light 300', 'astha' ),
+                '400'               => __( 'Normal 400', 'astha' ),
+                '500'               => __( 'Medium 500', 'astha' ),
+                '600'               => __( 'Medium 600', 'astha' ),
+                '700'               => __( 'Bold 700', 'astha' ),
+                '800'               => __( 'Extra-Bold 800', 'astha' ),
+                '900'               => __( 'Ultra-Bold 900', 'astha' ),
             );
-            $choise = apply_filters( 'medilac_weight_choices', $choices );
+            $choise = apply_filters( 'astha_weight_choices', $choices );
             return $choise;
         }
         
@@ -106,14 +106,14 @@ if( ! class_exists( 'Astha_Fonts_Manage' ) ){
          */
         public static function fonts_transform_choices() {
             $choices = array(
-                ''                  => __( 'No Value', 'medilac' ),
-                'inherit'           => __( 'Default', 'medilac' ),
-                'none'              => __( 'None', 'medilac' ),
-                'capitalize'        => __( 'Capitalize', 'medilac' ),
-                'uppercase'         => __( 'Uppercase', 'medilac' ),
-                'lowercase'         => __( 'Lowercase', 'medilac' ),
+                ''                  => __( 'No Value', 'astha' ),
+                'inherit'           => __( 'Default', 'astha' ),
+                'none'              => __( 'None', 'astha' ),
+                'capitalize'        => __( 'Capitalize', 'astha' ),
+                'uppercase'         => __( 'Uppercase', 'astha' ),
+                'lowercase'         => __( 'Lowercase', 'astha' ),
             );
-            $choise = apply_filters( 'medilac_text_transform_choices', $choices );
+            $choise = apply_filters( 'astha_text_transform_choices', $choices );
             return $choise;
         }
         
@@ -124,13 +124,13 @@ if( ! class_exists( 'Astha_Fonts_Manage' ) ){
          */
         public static function fonts_style_choices() {
             $choices = array(
-                ''                  => __( 'No Value', 'medilac' ),
-                'inherit'           => __( 'Default', 'medilac' ),
-                'italic'            => __( 'Italic', 'medilac' ),
-                'normal'            => __( 'Normal', 'medilac' ),
-                'oblique'           => __( 'Oblique', 'medilac' ),
+                ''                  => __( 'No Value', 'astha' ),
+                'inherit'           => __( 'Default', 'astha' ),
+                'italic'            => __( 'Italic', 'astha' ),
+                'normal'            => __( 'Normal', 'astha' ),
+                'oblique'           => __( 'Oblique', 'astha' ),
             );
-            $choise = apply_filters( 'medilac_font_style_choices', $choices );
+            $choise = apply_filters( 'astha_font_style_choices', $choices );
             return $choise;
         }
         
@@ -153,7 +153,7 @@ if( ! class_exists( 'Astha_Fonts_Manage' ) ){
                 $family    = array();
 
                 // This is deprecated filter hook.
-                $fonts = apply_filters( 'medilac_google_fonts', medilac_google_fonts() );
+                $fonts = apply_filters( 'astha_google_fonts', astha_google_fonts() );
 
                 /* Format Each Font Family in Array */
                 foreach ( $fonts as $font_name => $font_weight ) {

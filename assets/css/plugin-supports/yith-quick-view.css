@@ -6,14 +6,14 @@ div#yith-quick-view-content .summary.entry-summary .summary-content form.cart {
 
 
 
-body.medilac #yith-quick-view-content div.summary>div.summary-content {
+body.astha #yith-quick-view-content div.summary>div.summary-content {
 /*    overflow-y: auto;
     height: 400px;*/
     padding-top: 15px;
     padding-bottom: 35px;
     padding-right: 20px;
 }
-body.medilac #yith-quick-view-content div.summary {
+body.astha #yith-quick-view-content div.summary {
     padding: 0 0 20px 25px;
 }
 #yith-quick-view-close {
@@ -24,39 +24,39 @@ body.medilac #yith-quick-view-content div.summary {
 
 /* Scrollbar Design */
 /* width */
-body.medilac #yith-quick-view-modal ::-webkit-scrollbar {
+body.astha #yith-quick-view-modal ::-webkit-scrollbar {
   width: 7px;
 }
 
 /* Track */
-body.medilac #yith-quick-view-modal ::-webkit-scrollbar-track {
+body.astha #yith-quick-view-modal ::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
  
 /* Handle */
-body.medilac #yith-quick-view-modal ::-webkit-scrollbar-thumb {
-  background: var(--medilac-primary); 
+body.astha #yith-quick-view-modal ::-webkit-scrollbar-thumb {
+  background: var(--astha-primary); 
 }
 
 /* Handle on hover */
-body.medilac #yith-quick-view-modal ::-webkit-scrollbar-thumb:hover {
-  background: var(--medilac-primary-deep); 
+body.astha #yith-quick-view-modal ::-webkit-scrollbar-thumb:hover {
+  background: var(--astha-primary-deep); 
 }
 div#yith-quick-view-modal * {
     direction: ltr;
 }
 @media (min-width:768px) {
-    body.medilac #yith-quick-view-modal .yith-wcqv-wrapper {
+    body.astha #yith-quick-view-modal .yith-wcqv-wrapper {
         height: 400px;
         min-height: 350px;
         overflow: hidden;
         /* border: 9px solid #000000; */
     }
-    body.medilac #yith-quick-view-modal.open .yith-wcqv-main {
+    body.astha #yith-quick-view-modal.open .yith-wcqv-main {
         overflow-y: unset;
     }
     
-    body.medilac #yith-quick-view-content div.summary>div.summary-content {
+    body.astha #yith-quick-view-content div.summary>div.summary-content {
         overflow-y: auto;
         height: 400px;
 /*        padding-top: 15px;

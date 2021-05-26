@@ -15,9 +15,9 @@
         /**
          * Astha Localize Data 
          * User also able to change
-         * using filter Hook: medilac_localize_data
+         * using filter Hook: astha_localize_data
          * Shold be an Array
-         * Sourch: $MEDILAC_DATA = apply_filters( 'medilac_localize_data', $MEDILAC_DATA );
+         * Sourch: $MEDILAC_DATA = apply_filters( 'astha_localize_data', $MEDILAC_DATA );
          */
         
         /**

@@ -80,7 +80,7 @@ section.widget.widget_rating_filter li a:before {
 /* Handle */
 .site-header-cart ::-webkit-scrollbar-thumb {
   background: #0fc392; 
-  background: var(--medilac-primary); 
+  background: var(--astha-primary); 
 }
 
 /* Handle on hover */
@@ -90,24 +90,24 @@ section.widget.widget_rating_filter li a:before {
 
 .site-header-cart .product_list_widget{
   scrollbar-color: #0fc392 #f1f1f1;
-  scrollbar-color: var(--medilac-primary) #f1f1f1;
+  scrollbar-color: var(--astha-primary) #f1f1f1;
   scrollbar-width: thin;
 }
 
 /**
  * Shop tables
  */
-section.area-shop-grid.medilac-after-loop-wrapper a.button {
+section.area-shop-grid.astha-after-loop-wrapper a.button {
     display: none;
 }
-section.area-shop-list.medilac-after-loop-wrapper a.button {
+section.area-shop-list.astha-after-loop-wrapper a.button {
     margin-right: 10px;
 }
 .products-shop-list .title-wrapper>* {
     margin-bottom: 10px;
     display: block;
 }
-ul.products.products-shop-list li.product .medilac-after-loop-wrapper {
+ul.products.products-shop-list li.product .astha-after-loop-wrapper {
      bottom: unset; 
 
 }
@@ -212,7 +212,7 @@ ul.products.products-shop-list li.product-category.product>a h2.woocommerce-loop
 ul.products.products-shop-list li.product-category.product>a:focus h2.woocommerce-loop-category__title,
 ul.products.products-shop-list li.product-category.product:hover>a h2.woocommerce-loop-category__title{
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
 }
 ul.products.products-shop-list li.product-category.product>a img {
     /* float: left; */
@@ -243,7 +243,7 @@ margin: 18px 0 5px;
 ul.products.products-shop-grid li.product-category.product>a:focus h2.woocommerce-loop-category__title,
 ul.products.products-shop-grid li.product-category.product:hover>a h2.woocommerce-loop-category__title{
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
 }
 ul.products.products-shop-grid li.product-category.product>a img {
 
@@ -464,7 +464,7 @@ ul.products li.product img {
 
 .stock.in-stock {
 	color: #0fc392;
-	color: var(--medilac-primary);
+	color: var(--astha-primary);
 }
 
 .stock.out-of-stock {
@@ -539,7 +539,7 @@ ul.products li.product img {
     position: absolute;
     left: 0;
     color: #ffc107;
-    color: var(--medilac-warning);
+    color: var(--astha-warning);
 }
 
 p.stars a {
@@ -577,14 +577,14 @@ p.stars a:hover ~ a::before {
 p.stars:hover a::before {
     content: "\53";
     color: #0fc392;
-    color: var(--medilac-warning);
+    color: var(--astha-warning);
     opacity: 1;
 }
 
 p.stars.selected a.active::before {
     content: "\53";
     color: #0fc392;
-    color: var(--medilac-warning);
+    color: var(--astha-warning);
     opacity: 1;
 }
 
@@ -597,7 +597,7 @@ p.stars.selected a.active ~ a::before {
 p.stars.selected a:not(.active)::before {
     content: "\53";
     color: #0fc392;
-    color: var(--medilac-warning);
+    color: var(--astha-warning);
     opacity: 1;
 }
 
@@ -638,7 +638,7 @@ p.stars.selected a:not(.active)::before {
 
 .woocommerce-password-strength.strong {
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
 }
 
 .woocommerce-password-strength.short {
@@ -658,7 +658,7 @@ p.stars.selected a:not(.active)::before {
  */
 .form-row.woocommerce-validated input.input-text {
     box-shadow: inset 2px 0 0 #0fc392;
-    box-shadow: inset 2px 0 0 var(--medilac-primary);
+    box-shadow: inset 2px 0 0 var(--astha-primary);
 }
 
 .form-row.woocommerce-invalid input.input-text {
@@ -674,7 +674,7 @@ p.stars.selected a:not(.active)::before {
  */
 p.woocommerce-info {
     color: #021429;
-    color: var(--medilac-deep-dark);
+    color: var(--astha-deep-dark);
 }
 .woocommerce-message,
 .woocommerce-info,
@@ -682,7 +682,7 @@ p.woocommerce-info {
 .woocommerce-noreviews,
 p.no-comments {
 	background-color: #0fc392;
-	background-color: var(--medilac-primary);
+	background-color: var(--astha-primary);
         padding: 18px 20px;
 	clear: both;
         color: #fff;
@@ -725,14 +725,14 @@ p.no-comments a:focus,
 .entry-content .woocommerce-noreviews,
 p.no-comments {
     background-color: #0fc392;
-    background-color: var(--medilac-primary);
+    background-color: var(--astha-primary);
     padding: 18px 20px;
     color: #fff;
 }
 
 ul.woocommerce-error {
     background: #fd5a5a;
-    background: var(--medilac-danger);
+    background: var(--astha-danger);
     /*color: #fff;*/
     /*padding: 15px 20px;*/
     margin: 10px 0 15px;
@@ -771,11 +771,11 @@ div[disabled]
 }
 .demo_store a {
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
 }
 .demo_store a:hover, .demo_store a:focus, .demo_store a:active {
     color: #16ecb2;
-    color: var(--medilac-primary-light);
+    color: var(--astha-primary-light);
 }
 
 /**
@@ -809,7 +809,7 @@ div[disabled]
 	cursor: ew-resize;
 	outline: none;
 	background: #0fc392;
-	background: var(--medilac-primary);
+	background: var(--astha-primary);
 	box-sizing: border-box;
 	margin-top: -0.25em;
 	opacity: 1;
@@ -830,7 +830,7 @@ div[disabled]
 	display: block;
 	border: 0;
 	background: #0fc392;
-	background: var(--medilac-primary);
+	background: var(--astha-primary);
 }
 
 .widget_price_filter .price_slider_wrapper .ui-widget-content {
@@ -849,12 +849,12 @@ div[disabled]
 
 .woocommerce  aside.sidebar .widget_price_filter .price_slider_wrapper .ui-widget-content {
     background: #e2ebf1;
-    background: var(--medilac-secondary-deep);
+    background: var(--astha-secondary-deep);
 }
 
 .woocommerce  aside.sidebar .widget_price_filter .ui-slider .ui-slider-handle {
     background: #0fc392;
-    background: var(--medilac-primary);
+    background: var(--astha-primary);
     border-radius: 50%;
     height: 15px;
     width: 15px;
@@ -867,7 +867,7 @@ div[disabled]
 
 body.woocommerce  aside.sidebar .widget_price_filter .ui-slider-horizontal .ui-slider-range {
     background: #0fc392;
-    background: var(--medilac-primary);
+    background: var(--astha-primary);
 }
 
 .woocommerce  aside.sidebar .widget_price_filter .ui-slider .ui-slider-handle:hover,
@@ -889,7 +889,7 @@ body.woocommerce  aside.sidebar .widget_price_filter .ui-slider-horizontal .ui-s
 }
 .woocommerce  aside.sidebar .widget_price_filter .price_label {
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
 }
  
 .sidebar section.widget.widget_rating_filter ul li.wc-layered-nav-rating a{
@@ -919,19 +919,19 @@ body.woocommerce  aside.sidebar .widget_price_filter .ui-slider-horizontal .ui-s
 }
 .woocommerce .product-view-option .product-view-btn {
     background: #f4f9fc;
-    background: var(--medilac-secondary);
+    background: var(--astha-secondary);
     display: inline-block;
     border: 1px solid #e2ebf1;
-    border: 1px solid var(--medilac-secondary-deep);
+    border: 1px solid var(--astha-secondary-deep);
     cursor: pointer;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
 }
 .woocommerce .product-view-option .product-view-btn.selected {
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
     border-color: #0fc392;
-    border-color: var(--medilac-primary);
+    border-color: var(--astha-primary);
 }
 .woocommerce .product-view-option .product-view-btn i {
     line-height: 17px;
@@ -974,7 +974,7 @@ body.woocommerce  aside.sidebar .widget_price_filter .ui-slider-horizontal .ui-s
 
 .woocommerce  ul.products li.product  a span.price:hover {
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
 }
 
 .woocommerce  ul.products li.product .star-rating {
@@ -983,7 +983,7 @@ body.woocommerce  aside.sidebar .widget_price_filter .ui-slider-horizontal .ui-s
 
 /*.woocommerce  ul.products li.product .star-rating span::before {
     color: #ffc107;
-    color: var(--medilac-warning);
+    color: var(--astha-warning);
 }*/
 
 /*  Cart Widget  */
@@ -1043,7 +1043,7 @@ ul.product_list_widget li a.remove{
     right: 0;
     font-weight: 300;
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
     font-size: 24px;
     z-index: 2;
     margin-top: 5px;
@@ -1076,9 +1076,9 @@ span.woocommerce-Price-amount.amount{
     width: 100%;
     text-align: center;
     text-transform: capitalize;
-    font-family: var(--medilac-font-secondary);
+    font-family: var(--astha-font-secondary);
     background: #0fc392;
-    background: var(--medilac-primary);
+    background: var(--astha-primary);
     color: #fff;
     margin: 10px 0;
     line-height: 26px;
@@ -1089,10 +1089,10 @@ span.woocommerce-Price-amount.amount{
 }
 .woocommerce-mini-cart__buttons.buttons a:hover {
     border-color: #0fc392;
-    border-color: var(--medilac-primary);
+    border-color: var(--astha-primary);
     background: transparent;
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
 }
 
 /**
@@ -1108,7 +1108,7 @@ span.woocommerce-Price-amount.amount{
 .site-header-cart .cart-contents {
         text-decoration: none;
         color: #021429;
-        color: var(--medilac-deep-dark);
+        color: var(--astha-deep-dark);
 }
 .header .site-header-cart .cart-contents {
         display: block;
@@ -1123,7 +1123,7 @@ span.woocommerce-Price-amount.amount{
 .header .site-header-cart .cart-contents span.count {
     position: absolute;
     background: #0fc392;
-    background: var(--medilac-primary);
+    background: var(--astha-primary);
     color: #fff;
     height: 25px;
     min-width: 25px;
@@ -1181,9 +1181,9 @@ span.woocommerce-Price-amount.amount{
     padding: 0;
     /* max-height: 51px; */
     border-bottom: 2px solid #0fc392;
-    border-bottom: 2px solid var(--medilac-primary);
+    border-bottom: 2px solid var(--astha-primary);
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
     padding-bottom: 8px;
 }
 .topbar-mini-cart-wrapper{cursor: pointer;}
@@ -1249,8 +1249,8 @@ ul.products li.product .title-wrapper {
     width: 40px;
     height: 40px;
 }
-.single-product .medilac-nav-wrapper.prev-post-text, 
-.single-product .medilac-nav-wrapper.next-post-text {
+.single-product .astha-nav-wrapper.prev-post-text, 
+.single-product .astha-nav-wrapper.next-post-text {
     width: 87%;
 }
 .single-product .nav-previous .prev-next-post-icon i, 
@@ -1258,10 +1258,10 @@ ul.products li.product .title-wrapper {
     font-size: 17px;
 }
 
-.single-product .summary.entry-summary nav.navigation.post-navigation .medilac-nav-wrapper{
+.single-product .summary.entry-summary nav.navigation.post-navigation .astha-nav-wrapper{
     /*display: none;*/
 }
-.single-product .summary.entry-summary .medilac-nav-wrapper{
+.single-product .summary.entry-summary .astha-nav-wrapper{
     width: 66%;
 }
 .product .summary.entry-summary .yith-wcwl-add-to-wishlist.wishlist-fragment.on-first-load,
@@ -1277,7 +1277,7 @@ body.woocommerce p.woocommerce-result-count {
     display: inline-block;
     font-size: 16px;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
     margin: 0 0 25px;
     line-height: 46px;
 }
@@ -1286,7 +1286,7 @@ body.woocommerce p.woocommerce-result-count {
     margin: 0 0 25px;
     line-height: 1.5;
     font-size: 34px;
-    color: var(--medilac-deep-dark);
+    color: var(--astha-deep-dark);
 }
 
 
@@ -1300,15 +1300,15 @@ body.woocommerce p.woocommerce-result-count {
 }
 
 /* product options view */
-ul.products li.product .medilac-after-loop-wrapper a.button.add_to_cart_button:before {
+ul.products li.product .astha-after-loop-wrapper a.button.add_to_cart_button:before {
     font-weight: 600;
 }
 
-ul.products li.product .medilac-after-loop-wrapper a.button.add_to_cart_button:before{
+ul.products li.product .astha-after-loop-wrapper a.button.add_to_cart_button:before{
     content: "\f07a";
 
 }
-ul.products li.product .medilac-after-loop-wrapper a.button.add_to_cart_button.loading:after{
+ul.products li.product .astha-after-loop-wrapper a.button.add_to_cart_button.loading:after{
     content: "";
     position: absolute;
     z-index: 9;
@@ -1332,31 +1332,31 @@ ul.products li.product .medilac-after-loop-wrapper a.button.add_to_cart_button.l
   100% {transform: rotate(360deg);}
 }
 
-ul.products li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button:before,
-ul.products li.product .medilac-after-loop-wrapper a.button.product_type_variable:before,
-ul.products li.product .medilac-after-loop-wrapper a.button.product_type_external:before,
-ul.products li.product .medilac-after-loop-wrapper a.button.product_type_grouped:before,
-ul.products li.product .medilac-after-loop-wrapper a.added_to_cart.wc-forward:before {
+ul.products li.product .astha-after-loop-wrapper a.button.yith-wcqv-button:before,
+ul.products li.product .astha-after-loop-wrapper a.button.product_type_variable:before,
+ul.products li.product .astha-after-loop-wrapper a.button.product_type_external:before,
+ul.products li.product .astha-after-loop-wrapper a.button.product_type_grouped:before,
+ul.products li.product .astha-after-loop-wrapper a.added_to_cart.wc-forward:before {
     font-weight: 600;
     font-family: "Font Awesome 5 Free";
     font-size: 16px;
 }
-ul.products li.product .medilac-after-loop-wrapper a.added_to_cart.wc-forward:before {
+ul.products li.product .astha-after-loop-wrapper a.added_to_cart.wc-forward:before {
     content: "\f290";
 }
-ul.products li.product .medilac-after-loop-wrapper a.button.product_type_variable:before,
-ul.products li.product .medilac-after-loop-wrapper a.button.product_type_external:before,
-ul.products li.product .medilac-after-loop-wrapper a.button.product_type_grouped:before {
+ul.products li.product .astha-after-loop-wrapper a.button.product_type_variable:before,
+ul.products li.product .astha-after-loop-wrapper a.button.product_type_external:before,
+ul.products li.product .astha-after-loop-wrapper a.button.product_type_grouped:before {
     content: "\f35d";
 }
 
-ul.products li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button:before {
+ul.products li.product .astha-after-loop-wrapper a.button.yith-wcqv-button:before {
    content: "\f06e";
 }
 
 
 
-ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist i {
+ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist i {
    display: none;
 }
 
@@ -1374,15 +1374,15 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist i {
 }
 
 
-ul.products li.product .medilac-after-loop-wrapper .yith-wcwl-add-to-wishlist {
+ul.products li.product .astha-after-loop-wrapper .yith-wcwl-add-to-wishlist {
     margin-top: 0;
 }
 
 
-/*.related ul.products li.product .medilac-after-loop-wrapper .yith-wcwl-add-to-wishlist .yith-wcwl-add-button,
-.related ul.products li.product .medilac-after-loop-wrapper .yith-wcwl-add-to-wishlist,
-.upsells ul.products li.product .medilac-after-loop-wrapper .yith-wcwl-add-to-wishlist .yith-wcwl-add-button,
-.upsells ul.products li.product .medilac-after-loop-wrapper .yith-wcwl-add-to-wishlist {
+/*.related ul.products li.product .astha-after-loop-wrapper .yith-wcwl-add-to-wishlist .yith-wcwl-add-button,
+.related ul.products li.product .astha-after-loop-wrapper .yith-wcwl-add-to-wishlist,
+.upsells ul.products li.product .astha-after-loop-wrapper .yith-wcwl-add-to-wishlist .yith-wcwl-add-button,
+.upsells ul.products li.product .astha-after-loop-wrapper .yith-wcwl-add-to-wishlist {
     margin-top: 3px;
 }*/
 
@@ -1405,7 +1405,7 @@ span.onsale {
     left: 0;
     z-index: 2;
     background: #0fc392;
-    background: var(--medilac-primary);
+    background: var(--astha-primary);
     color: #fff;
     padding: 10px 20px;
     border-top-right-radius: 6px;
@@ -1477,9 +1477,9 @@ form.variations_form.cart .single_variation_wrap {
 .single-product form.cart table select {
     width: 100%;
     background-color: #f4f9fc;
-    background-color: var(--medilac-secondary);
+    background-color: var(--astha-secondary);
     border: 1px solid #e2ebf1;
-    border: 1px solid var(--medilac-secondary-deep);
+    border: 1px solid var(--astha-secondary-deep);
     height: 50px;
     position: relative;
 }
@@ -1495,7 +1495,7 @@ form.variations_form.cart .single_variation_wrap {
     position: relative;
     margin: 0 15px 0 0;
     background: #f4f9fc;
-    background: var(--medilac-secondary);
+    background: var(--astha-secondary);
 
 }
 
@@ -1511,7 +1511,7 @@ form.variations_form.cart .single_variation_wrap {
     width: 25px;
     background:transparent;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
     font-size: 26px;
 
 }
@@ -1523,7 +1523,7 @@ form.variations_form.cart .single_variation_wrap {
     width: 25px;
     background:transparent;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
     font-size: 22px;
 }
 
@@ -1531,7 +1531,7 @@ form.variations_form.cart .single_variation_wrap {
     height: 55px;
     width: 100%;
     background-color: #f4f9fc;
-    background-color: var(--medilac-secondary);
+    background-color: var(--astha-secondary);
     padding: 20px 26px 15px 20px;
     text-align: left;
     border:none;
@@ -1582,7 +1582,7 @@ form.variations_form.cart .single_variation_wrap {
 }
 /* single product details */
 
-.single-product .summary.entry-summary .medilac-share:before {
+.single-product .summary.entry-summary .astha-share:before {
     content: "";
     clear: both;
     display: block;
@@ -1594,7 +1594,7 @@ form.variations_form.cart .single_variation_wrap {
     padding-top: 25px;
     margin-top: 10px;
 }
-.single-product .summary.entry-summary .medilac-share, 
+.single-product .summary.entry-summary .astha-share, 
 .woocommerce.single-product .product-type-simple .cart {
     border-top: 1px solid rgb(0 0 0 / 10%);
     padding-top: 30px;
@@ -1605,7 +1605,7 @@ form.variations_form.cart .single_variation_wrap {
     padding-top: 14px;
     margin-top: 14px;
 }
-.single-product .summary.entry-summary .medilac-share ul{
+.single-product .summary.entry-summary .astha-share ul{
     padding-left: 0;
     padding-right: 0;
 }
@@ -1621,7 +1621,7 @@ form.variations_form.cart .single_variation_wrap {
     font-size: 46px;
     line-height: 55px;
     color: #021429;
-    color: var(--medilac-deep-dark);
+    color: var(--astha-deep-dark);
     margin: 0 0 15px;
 }
 
@@ -1647,7 +1647,7 @@ form.variations_form.cart .single_variation_wrap {
 .woocommerce.single-product .woocommerce-product-rating .woocommerce-review-link {
   margin-left: 15px;
   color: #5c6b79;
-  color: var(--medilac-light-dark);
+  color: var(--astha-light-dark);
 }
 
 .woocommerce.single-product .product .summary .price {
@@ -1665,7 +1665,7 @@ form.variations_form.cart .single_variation_wrap {
 
 .woocommerce.single-product .product .summary  .price ins{
     color: #021429;
-    color: var(--medilac-deep-dark);
+    color: var(--astha-deep-dark);
     background:transparent;
 
 }
@@ -1674,7 +1674,7 @@ form.variations_form.cart .single_variation_wrap {
 .woocommerce.single-product .product .summary  .price ins{
     font-size: 22px;
     line-height: 55px;
-    font-family: var(--medilac-font-secondary);
+    font-family: var(--astha-font-secondary);
 }
 
 .woocommerce.single-product .woocommerce-product-details__short-description {
@@ -1686,11 +1686,11 @@ form.variations_form.cart .single_variation_wrap {
 .woocommerce.single-product .product_meta {
     margin: 0 0 20px;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
 }
 .woocommerce.single-product .summary.entry-summary .product_meta>span {
     color: #021429;
-    color: var(--medilac-deep-dark);
+    color: var(--astha-deep-dark);
     font-weight: 600;
 }
 
@@ -1705,7 +1705,7 @@ form.variations_form.cart .single_variation_wrap {
 .woocommerce.single-product .product_meta .posted_in a{
   font-weight: 400;
   color: #5c6b79;
-  color: var(--medilac-light-dark);
+  color: var(--astha-light-dark);
   text-transform: capitalize;
 }
 
@@ -1735,7 +1735,7 @@ section.up-sells.upsells.products {
 .woocommerce.single-product  .woocommerce-tabs.wc-tabs-wrapper ul.tabs {
     align-items: center;
     border: 1px solid #e2ebf1;
-    border: 1px solid var(--medilac-secondary-deep);
+    border: 1px solid var(--astha-secondary-deep);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1765,7 +1765,7 @@ body.archive.layout-shop-list ul.products li.product .shop-loop-shortdescription
     display: block;
     background: transparent;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
     font-size: 18px;
     line-height: 26px;
     padding: 17px 40px;
@@ -1775,13 +1775,13 @@ body.archive.layout-shop-list ul.products li.product .shop-loop-shortdescription
 
 .woocommerce.single-product .woocommerce-tabs ul.tabs li.active a{
     background: #0fc392;
-    background: var(--medilac-primary);
+    background: var(--astha-primary);
     color: #fff;
 }
 
 .woocommerce.single-product .woocommerce-Tabs-panel {
     border: 1px solid #e2ebf1;
-    border: 1px solid var(--medilac-secondary-deep);
+    border: 1px solid var(--astha-secondary-deep);
     margin: 0 !important;
     padding: 25px 25px;
     border-top-color:transparent;
@@ -1791,14 +1791,14 @@ body.archive.layout-shop-list ul.products li.product .shop-loop-shortdescription
     font-weight: 600;
     font-size: 18px;
     margin: 40px 0;
-    color: var(--medilac-deep-dark);
+    color: var(--astha-deep-dark);
 }*/
 
 /*  Product Review box */
 .woocommerce-Reviews #comments li.review {
     width: 100%;
     border-bottom: 1px solid #e2ebf1;
-    border-bottom: 1px solid var(--medilac-secondary-deep);
+    border-bottom: 1px solid var(--astha-secondary-deep);
     padding-bottom: 15px;
     margin-bottom: 25px;
     list-style: none;
@@ -1827,7 +1827,7 @@ body.archive.layout-shop-list ul.products li.product .shop-loop-shortdescription
 
 .woocommerce-Reviews #comments li.review .comment_container .comment-text p.meta .woocommerce-review__author {
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
     font-size: 18px;
     font-weight: 500;
     line-height: 26px;
@@ -1837,7 +1837,7 @@ body.archive.layout-shop-list ul.products li.product .shop-loop-shortdescription
     font-size: 18px;
     line-height: 26px;
     color: #021429;
-    color: var(--medilac-deep-dark);
+    color: var(--astha-deep-dark);
     font-weight: 500;
 }
 
@@ -1920,7 +1920,7 @@ form#yith-wcwl-form a.button.yith-wcqv-button {
 .woocommerce-wishlist table.wishlist_table .product-name a,
 form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name a {
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
 }
 @media only screen and (min-width: 768px) {
     
@@ -1931,13 +1931,13 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     .woocommerce-wishlist table.wishlist_table thead tr th,
     .woocommerce-cart-form table.shop_table thead tr th {
         background: #021429;
-        background: var(--medilac-deep-dark);
+        background: var(--astha-deep-dark);
         color: #ffffff;
         font-size: 18px;
         line-height: 55px;
         font-weight: 500;
         border-bottom: 3px solid #0fc392;
-        border-bottom: 3px solid var(--medilac-primary);
+        border-bottom: 3px solid var(--astha-primary);
     }
     
     .woocommerce-wishlist table.wishlist_table .product-thumbnail,
@@ -1965,7 +1965,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     .woocommerce-wishlist table.wishlist_table td.product-remove a:hover,
     form.woocommerce-cart-form .shop_table.shop_table_responsive.cart td.product-remove a:hover{
         color: #0fc392;
-        color: var(--medilac-primary);
+        color: var(--astha-primary);
         border-color: transparent;
     }
 
@@ -2014,7 +2014,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     .woocommerce .cart-collaterals {
         width: 100%;
         border: 1px solid #e2ebf1;
-        border: 1px solid var(--medilac-secondary-deep);
+        border: 1px solid var(--astha-secondary-deep);
         padding: 20px 35px 30px;
     }
     .woocommerce .cart-collaterals:before,
@@ -2043,7 +2043,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
 
     .woocommerce-wishlist table.wishlist_table .product-name a {
         color: #5c6b79;
-        color: var(--medilac-light-dark);
+        color: var(--astha-light-dark);
         font-size: 16px;
         line-height: 26px;
         float: left;
@@ -2060,7 +2060,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     
     .woocommerce-wishlist table.wishlist_table .product-name a.button:hover{
         color: #0fc392;
-        color: var(--medilac-primary);
+        color: var(--astha-primary);
     }
     
      .woocommerce-wishlist .wishlist_table tr td.product-remove {
@@ -2089,7 +2089,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     font-weight: 500;
     margin: 0;
     border-bottom: 1px solid #e2ebf1;
-    border-bottom: 1px solid var(--medilac-secondary-deep);
+    border-bottom: 1px solid var(--astha-secondary-deep);
     padding: 0 0 15px;
     font-size: 22px;
 }
@@ -2098,7 +2098,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     padding: 15px 0;
     font-weight: 500;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
 }
 
 .woocommerce  .cart-collaterals .shop_table.shop_table_responsive tbody,
@@ -2110,7 +2110,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     text-align: right;
     padding: 10px 0;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
 }
 
 .woocommerce  .cart-collaterals tr.cart-subtotal td, tr.cart-subtotal th {
@@ -2119,7 +2119,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
 
 .woocommerce  .cart-collaterals table.shop_table tr.cart-subtotal th {
     border-bottom: 1px solid #e2ebf1;
-    border-bottom: 1px solid var(--medilac-secondary-deep);
+    border-bottom: 1px solid var(--astha-secondary-deep);
 }
 
 .woocommerce  .cart-collaterals .wc-proceed-to-checkout a {
@@ -2127,7 +2127,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     text-align: center;
     width: 100%;
     background: #0fc392;
-    background: var(--medilac-primary);
+    background: var(--astha-primary);
     color: #fff;
     padding: 15px;
     font-size: 20px;
@@ -2151,7 +2151,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
 
 .woocommerce .checkout.woocommerce-checkout #customer_details {
      border: 1px solid #e2ebf1;
-     border: 1px solid var(--medilac-secondary-deep);
+     border: 1px solid var(--astha-secondary-deep);
      margin: 0 0 30px;
 }
 
@@ -2160,14 +2160,14 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     font-size: 24px;
     line-height: 28px;
     color: #021429;
-    color: var(--medilac-deep-dark);
+    color: var(--astha-deep-dark);
     margin: 0;
     background: #f4f9fc;
-    background: var(--medilac-secondary);
+    background: var(--astha-secondary);
     padding: 15px 35px;
     font-weight: 500;
     border-bottom: 1px solid #e2ebf1;
-    border-bottom: 1px solid var(--medilac-secondary-deep);
+    border-bottom: 1px solid var(--astha-secondary-deep);
 }
 
 .woocommerce .checkout.woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
@@ -2179,13 +2179,13 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     font-size: 16px;
     line-height: 19px;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
     margin: 0 0 6px;
 }
 
 .woocommerce .checkout.woocommerce-checkout .woocommerce-billing-fields__field-wrapper p label abbr {
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
     border: none;
     text-decoration: none;
 }
@@ -2195,21 +2195,21 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     width: 100%;
     height: 55px;
     background: #f4f9fc;
-    background: var(--medilac-secondary);
+    background: var(--astha-secondary);
     border: 1px solid #e2ebf1;
-    border: 1px solid var(--medilac-secondary-deep);
+    border: 1px solid var(--astha-secondary-deep);
 }
 
 .woocommerce .checkout.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
     line-height: 50px;
     padding-left: 17px;
 }
 
 .woocommerce .checkout.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__arrow b {
     border-color: #5c6b79 transparent transparent transparent;
-    border-color: var(--medilac-light-dark) transparent transparent transparent;
+    border-color: var(--astha-light-dark) transparent transparent transparent;
     border-width: 6px 6px 0 6px;
     margin-left: -20px;
     margin-top: -2px;
@@ -2228,7 +2228,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
 
 .woocommerce .checkout.woocommerce-checkout  #order_review_heading {
     border: 1px solid #e2ebf1;
-    border: 1px solid var(--medilac-secondary-deep);
+    border: 1px solid var(--astha-secondary-deep);
     text-align: center;
     text-transform: capitalize;
     display:none;
@@ -2251,17 +2251,17 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
 
 .shop_table.woocommerce-checkout-review-order-table thead tr {
     border-bottom: 1px solid #e2ebf1;
-    border-bottom: 1px solid var(--medilac-secondary-deep);
+    border-bottom: 1px solid var(--astha-secondary-deep);
 }
 
 .shop_table.woocommerce-checkout-review-order-table thead tr th {
     font-size: 16px;
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
     line-height: 43px;
     font-weight: 500;
     border-bottom: 1px solid #e2ebf1;
-    border-bottom: 1px solid var(--medilac-secondary-deep);
+    border-bottom: 1px solid var(--astha-secondary-deep);
     padding: 0;
 }
 
@@ -2272,7 +2272,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     text-align: left;
     font-size: 16px;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
     padding: 10px 0 15px;
     line-height: 25px;
 }
@@ -2283,7 +2283,7 @@ form.woocommerce-cart-form .shop_table.shop_table_responsive.cart .product-name 
     border: none;
     font-size: 16px;
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
     padding: 10px 0 15px;
     line-height: 25px;
 }
@@ -2298,9 +2298,9 @@ table.shop_table tr.order-total th {
 table.shop_table tfoot tr.cart-subtotal th,
 table.shop_table tfoot tr.cart-subtotal td{
     border-top: 1px solid #e2ebf1;
-    border-top: 1px solid var(--medilac-secondary-deep);
+    border-top: 1px solid var(--astha-secondary-deep);
     border-bottom: 1px solid #e2ebf1;
-    border-bottom: 1px solid var(--medilac-secondary-deep);
+    border-bottom: 1px solid var(--astha-secondary-deep);
     padding: 15px 0;
     font-weight: 500;
 }
@@ -2383,7 +2383,7 @@ ul.wc_payment_methods.payment_methods li.wc_payment_method  .payment_box p {
     width: 30%;
     display: inline-block;
     border: 1px solid #0fc392;
-    border: 1px solid var(--medilac-primary);
+    border: 1px solid var(--astha-primary);
     padding: 20px;
 }
 
@@ -2400,13 +2400,13 @@ body.woocommerce-account nav.woocommerce-MyAccount-navigation ul {
 .woocommerce-MyAccount-navigation ul li {
     margin: 0 0 7px;
     color: #021429;
-    color: var(--medilac-deep-dark);
+    color: var(--astha-deep-dark);
     position: relative;
 }
 
 .woocommerce-MyAccount-navigation ul li a {
     color: #021429;
-    color: var(--medilac-deep-dark);
+    color: var(--astha-deep-dark);
 }
 
 .woocommerce-EditAccountForm.edit-account {
@@ -2460,7 +2460,7 @@ body.woocommerce-account nav.woocommerce-MyAccount-navigation ul {
 
 .woocommerce-MyAccount-content table.woocommerce-orders-table thead tr {
     background: #f4f9fc;
-    background: var(--medilac-secondary);
+    background: var(--astha-secondary);
 }
 
 .woocommerce-MyAccount-content table.woocommerce-orders-table thead tr th{
@@ -2505,9 +2505,9 @@ body.woocommerce-account nav.woocommerce-MyAccount-navigation ul {
 .woocommerce-address-fields__field-wrapper p input{
     width: 100%;
     border:1px solid #e2ebf1;
-    border:1px solid var(--medilac-secondary-deep);
+    border:1px solid var(--astha-secondary-deep);
     background-color: #f4f9fc;
-    background-color: var(--medilac-secondary);
+    background-color: var(--astha-secondary);
 }
 
 .woocommerce-form.woocommerce-form-login.login{
@@ -2535,16 +2535,16 @@ body.woocommerce-account nav.woocommerce-MyAccount-navigation ul {
 
 .woocommerce-address-fields__field-wrapper .select2-container--default .select2-selection--single {
     background-color: #f4f9fc;
-    background-color: var(--medilac-secondary);
+    background-color: var(--astha-secondary);
     border: 1px solid #e2ebf1;
-    border: 1px solid var(--medilac-secondary-deep);
+    border: 1px solid var(--astha-secondary-deep);
     border-radius:0;
     height: 48px;
 }
 
 .woocommerce-address-fields__field-wrapper .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #5c6b79;
-    color: var(--medilac-light-dark);
+    color: var(--astha-light-dark);
     line-height: 44px;
     padding-left: 15px;
 }
@@ -2606,7 +2606,7 @@ body.woocommerce-account nav.woocommerce-MyAccount-navigation ul {
     text-align: center;
     font-size: 22px;
     color: #0fc392;
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
     font-weight: 500;
     padding: 50px;
     border: 1px solid #0000001a;
@@ -2615,7 +2615,7 @@ body.woocommerce-account nav.woocommerce-MyAccount-navigation ul {
 /**
 * Ressponsive
 */
-ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
+ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist:before,
 .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse:before,
 .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse:before {
     content: "\f004";
@@ -2625,12 +2625,12 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
 }
 
 @media only screen and (min-width:768px){
-    ul.products li.product .medilac-after-loop-wrapper.area-shop-list {
+    ul.products li.product .astha-after-loop-wrapper.area-shop-list {
         top: unset;
         /*bottom: 0;*/
     }
 
-    span.medilac-loop-thumbs {
+    span.astha-loop-thumbs {
         background: #eaeff3;
         display: block;
         position: relative;
@@ -2642,30 +2642,30 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
 
 
 
-    ul.products li.product .medilac-after-loop-wrapper a.button.add_to_cart_button,
-    ul.products li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button,
-    ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist{
+    ul.products li.product .astha-after-loop-wrapper a.button.add_to_cart_button,
+    ul.products li.product .astha-after-loop-wrapper a.button.yith-wcqv-button,
+    ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist{
         display: inline-block;
     }
 
 
-/*    ul.products li.product .medilac-after-loop-wrapper a.button.add_to_cart_button,
-    ul.products li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button,
-    ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist{
+/*    ul.products li.product .astha-after-loop-wrapper a.button.add_to_cart_button,
+    ul.products li.product .astha-after-loop-wrapper a.button.yith-wcqv-button,
+    ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist{
         display: inline-block;
     }*/
-    ul.products li.product .medilac-after-loop-wrapper.area-shop-list a.button.add_to_cart_button,
-    ul.products li.product .medilac-after-loop-wrapper.area-shop-list a.button.yith-wcqv-button,
-    ul.products li.product .medilac-after-loop-wrapper.area-shop-list a.add_to_wishlist,
+    ul.products li.product .astha-after-loop-wrapper.area-shop-list a.button.add_to_cart_button,
+    ul.products li.product .astha-after-loop-wrapper.area-shop-list a.button.yith-wcqv-button,
+    ul.products li.product .astha-after-loop-wrapper.area-shop-list a.add_to_wishlist,
     body.archive.layout-shop-list .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse,
     body.archive.layout-shop-list .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse {
         display: inline-block;
     }
-    ul.products li.product .medilac-after-loop-wrapper.area-shop-list a.button.add_to_cart_button.added{
+    ul.products li.product .astha-after-loop-wrapper.area-shop-list a.button.add_to_cart_button.added{
        /*display: none;*/ 
     }
     
-    .medilac-after-loop-wrapper .add-list-pack-inside {
+    .astha-after-loop-wrapper .add-list-pack-inside {
         /*width: 100%;*/
         text-align: center;
         display: flex;
@@ -2673,13 +2673,13 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
         align-items: center;
     }
 
-    .medilac-after-loop-wrapper a.button.product_type_grouped,
-    .medilac-after-loop-wrapper a.button.product_type_variable,
-    .medilac-after-loop-wrapper a.button.product_type_external,
-    ul.products li.product .medilac-after-loop-wrapper a.button.add_to_cart_button,
-    ul.products li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button,
-    ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist,
-    ul.products li.product .medilac-after-loop-wrapper a.added_to_cart.wc-forward,
+    .astha-after-loop-wrapper a.button.product_type_grouped,
+    .astha-after-loop-wrapper a.button.product_type_variable,
+    .astha-after-loop-wrapper a.button.product_type_external,
+    ul.products li.product .astha-after-loop-wrapper a.button.add_to_cart_button,
+    ul.products li.product .astha-after-loop-wrapper a.button.yith-wcqv-button,
+    ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist,
+    ul.products li.product .astha-after-loop-wrapper a.added_to_cart.wc-forward,
     .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse,
     .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse{
         display: flex;
@@ -2689,7 +2689,7 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
         width: 50px;
         height: 50px;
         background-color: #5c6b79;
-        background-color: var(--medilac-light-dark);
+        background-color: var(--astha-light-dark);
         border-radius: 50%;
         transition: 0.3s;
         -webkit-transition:0.3s;
@@ -2697,11 +2697,11 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
         position: relative;
     }
     
-    ul.products li.product .medilac-after-loop-wrapper a.added_to_cart.wc-forward,
+    ul.products li.product .astha-after-loop-wrapper a.added_to_cart.wc-forward,
     .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse,
     .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse{
         background-color: #0fc392;
-        background-color: var(--medilac-primary);
+        background-color: var(--astha-primary);
     }
     
     body.archive.layout-shop-list .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse,
@@ -2721,13 +2721,13 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
         position: relative;
     }
     
-    ul.products.columns-4 li.product .medilac-after-loop-wrapper a.button.product_type_grouped,
-    ul.products.columns-4 li.product .medilac-after-loop-wrapper a.button.product_type_variable,
-    ul.products.columns-4 li.product .medilac-after-loop-wrapper a.button.product_type_external,
-    ul.products.columns-4 li.product .medilac-after-loop-wrapper a.button.add_to_cart_button,
-    ul.products.columns-4 li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button,
-    ul.products.columns-4 li.product .medilac-after-loop-wrapper a.add_to_wishlist,
-    ul.products.columns-4 li.product .medilac-after-loop-wrapper a.added_to_cart.wc-forward,
+    ul.products.columns-4 li.product .astha-after-loop-wrapper a.button.product_type_grouped,
+    ul.products.columns-4 li.product .astha-after-loop-wrapper a.button.product_type_variable,
+    ul.products.columns-4 li.product .astha-after-loop-wrapper a.button.product_type_external,
+    ul.products.columns-4 li.product .astha-after-loop-wrapper a.button.add_to_cart_button,
+    ul.products.columns-4 li.product .astha-after-loop-wrapper a.button.yith-wcqv-button,
+    ul.products.columns-4 li.product .astha-after-loop-wrapper a.add_to_wishlist,
+    ul.products.columns-4 li.product .astha-after-loop-wrapper a.added_to_cart.wc-forward,
     ul.products.columns-4 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load,
     ul.products.columns-4 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse,
     ul.products.columns-4 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse,
@@ -2744,13 +2744,13 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
     .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse,
     .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse a,
     .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse a,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_grouped,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_variable,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_external,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.add_to_cart_button,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.add_to_wishlist,
-    .no-sidebar ul.products.columns-6 li.product .medilac-after-loop-wrapper a,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_grouped,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_variable,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_external,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.add_to_cart_button,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.yith-wcqv-button,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.add_to_wishlist,
+    .no-sidebar ul.products.columns-6 li.product .astha-after-loop-wrapper a,
     .no-sidebar ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load,
     .no-sidebar ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse,
     .no-sidebar ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse,
@@ -2759,11 +2759,11 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
 /*        width: 35px;
         height: 35px;*/
     }
-    ul.products.products-shop-grid.columns-4 li.product .medilac-after-loop-wrapper a.added_to_cart.wc-forward,
-    ul.products.products-shop-grid.columns-5 li.product .medilac-after-loop-wrapper a.added_to_cart.wc-forward {
+    ul.products.products-shop-grid.columns-4 li.product .astha-after-loop-wrapper a.added_to_cart.wc-forward,
+    ul.products.products-shop-grid.columns-5 li.product .astha-after-loop-wrapper a.added_to_cart.wc-forward {
         display: none;
     }
-    .no-sidebar ul.products.columns-4 li.product .medilac-after-loop-wrapper a.added_to_cart.wc-forward{
+    .no-sidebar ul.products.columns-4 li.product .astha-after-loop-wrapper a.added_to_cart.wc-forward{
         display: flex;
     }
     
@@ -2775,12 +2775,12 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
         top: 20px;
     }
 
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_grouped,
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_variable,
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_external,
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.add_to_cart_button,
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button,
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.add_to_wishlist,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_grouped,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_variable,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_external,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.add_to_cart_button,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.yith-wcqv-button,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.add_to_wishlist,
     .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load,
     .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse,
     .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse,
@@ -2790,8 +2790,8 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
     ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse a,
     ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse a,
     .woocommerce-cart .cross-sells ul.products.columns-2 li.product .add-list-pack-inside a.button,
-    .woocommerce-cart .cross-sells ul.products li.product .medilac-after-loop-wrapper .yith-wcwl-add-to-wishlist,
-    .woocommerce-cart .cross-sells ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist,
+    .woocommerce-cart .cross-sells ul.products li.product .astha-after-loop-wrapper .yith-wcwl-add-to-wishlist,
+    .woocommerce-cart .cross-sells ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist,
     .woocommerce-cart .cross-sells .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse,
     .woocommerce-cart .cross-sells .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse
     {
@@ -2799,18 +2799,18 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
         height: 28px;*/
     }
     
-    body.archive.layout-shop-list ul.products.columns-4 li.product .medilac-after-loop-wrapper a.button.product_type_grouped,
-    body.archive.layout-shop-list ul.products.columns-4 li.product .medilac-after-loop-wrapper a.button.product_type_variable,
-    body.archive.layout-shop-list ul.products.columns-4 li.product .medilac-after-loop-wrapper a.button.product_type_external,
-    body.archive.layout-shop-list ul.products.columns-4 li.product .medilac-after-loop-wrapper a.button.add_to_cart_button,
-    body.archive.layout-shop-list ul.products.columns-4 li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button,
-    body.archive.layout-shop-list ul.products.columns-4 li.product .medilac-after-loop-wrapper a.add_to_wishlist,
-    body.archive.layout-shop-list ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_grouped,
-    body.archive.layout-shop-list ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_variable,
-    body.archive.layout-shop-list ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_external,
-    body.archive.layout-shop-list ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.add_to_cart_button,
-    body.archive.layout-shop-list ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button,
-    body.archive.layout-shop-list ul.products.columns-5 li.product .medilac-after-loop-wrapper a.add_to_wishlist,
+    body.archive.layout-shop-list ul.products.columns-4 li.product .astha-after-loop-wrapper a.button.product_type_grouped,
+    body.archive.layout-shop-list ul.products.columns-4 li.product .astha-after-loop-wrapper a.button.product_type_variable,
+    body.archive.layout-shop-list ul.products.columns-4 li.product .astha-after-loop-wrapper a.button.product_type_external,
+    body.archive.layout-shop-list ul.products.columns-4 li.product .astha-after-loop-wrapper a.button.add_to_cart_button,
+    body.archive.layout-shop-list ul.products.columns-4 li.product .astha-after-loop-wrapper a.button.yith-wcqv-button,
+    body.archive.layout-shop-list ul.products.columns-4 li.product .astha-after-loop-wrapper a.add_to_wishlist,
+    body.archive.layout-shop-list ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_grouped,
+    body.archive.layout-shop-list ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_variable,
+    body.archive.layout-shop-list ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_external,
+    body.archive.layout-shop-list ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.add_to_cart_button,
+    body.archive.layout-shop-list ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.yith-wcqv-button,
+    body.archive.layout-shop-list ul.products.columns-5 li.product .astha-after-loop-wrapper a.add_to_wishlist,
     body.archive.layout-shop-list .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load,
     body.archive.layout-shop-list .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse,
     body.archive.layout-shop-list .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse,
@@ -2831,49 +2831,49 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
         height: auto;
     }
     
-    ul.products li.product .medilac-after-loop-wrapper a:before {
+    ul.products li.product .astha-after-loop-wrapper a:before {
         font-family: "Font Awesome 5 Free";
         font-size: 16px;
         color: #fff;
     }
     
-    ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before{
+    ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist:before{
         top: 8%;
         left: 20%;
     }
 
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_grouped:before,
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_variable:before,
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_external:before,
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.add_to_cart_button:before,
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button:before,
-    ul.products.columns-5 li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
-    .elementor-widget-medilac_wc_products ul.products.columns-5 li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_grouped:before,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_variable:before,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_external:before,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.add_to_cart_button:before,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.yith-wcqv-button:before,
+    ul.products.columns-5 li.product .astha-after-loop-wrapper a.add_to_wishlist:before,
+    .elementor-widget-astha_wc_products ul.products.columns-5 li.product .astha-after-loop-wrapper a.add_to_wishlist:before,
     .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse:before,
     .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse:before,
     ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse:before,
     ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse:before {
         font-size: 12px;
     }
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_grouped:before,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_variable:before,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.product_type_external:before,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.add_to_cart_button:before,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button:before,
-    .no-sidebar ul.products.columns-5 li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_grouped:before,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_variable:before,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.product_type_external:before,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.add_to_cart_button:before,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.button.yith-wcqv-button:before,
+    .no-sidebar ul.products.columns-5 li.product .astha-after-loop-wrapper a.add_to_wishlist:before,
     .no-sidebar .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse:before,
     .no-sidebar .products.upsells ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse:before,
     .no-sidebar ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse:before,
     .no-sidebar ul.products.columns-5 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse:before,
     .woocommerce-cart .cross-sells ul.products.columns-2 li.product .add-list-pack-inside a.button:before,
-    .woocommerce-cart .cross-sells ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
+    .woocommerce-cart .cross-sells ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist:before,
     .woocommerce-cart .cross-sells .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse:before,
     .woocommerce-cart .cross-sells .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse:before {
         font-size: 16px;
     }
     
-    ul.products.columns-2 li.product .medilac-after-loop-wrapper a:before,
-    ul.products.columns-3 li.product .medilac-after-loop-wrapper a:before,
+    ul.products.columns-2 li.product .astha-after-loop-wrapper a:before,
+    ul.products.columns-3 li.product .astha-after-loop-wrapper a:before,
     .products.columns-2 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse:before,
     .products.columns-2 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse:before,
     .products.columns-3 .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse:before,
@@ -2882,9 +2882,9 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
         font-size: 16px;
     }
     
-    ul.products li.product a:focus span.medilac-loop-thumbs:before,
-    .medilac-device-tablet ul.products li.product span.medilac-loop-thumbs:before,
-    ul.products li.product:hover span.medilac-loop-thumbs:before {
+    ul.products li.product a:focus span.astha-loop-thumbs:before,
+    .astha-device-tablet ul.products li.product span.astha-loop-thumbs:before,
+    ul.products li.product:hover span.astha-loop-thumbs:before {
         content: " ";
         position: absolute;
         height: calc(100% - 20px);
@@ -2895,27 +2895,27 @@ ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
         z-index: 2;
     }
     
-    ul.products.products-shop-grid li.product .medilac-after-loop-wrapper a.button.product_type_grouped:hover,
-    ul.products.products-shop-grid li.product .medilac-after-loop-wrapper a.button.product_type_variable:hover,
-    ul.products.products-shop-grid li.product .medilac-after-loop-wrapper a.button.product_type_external:hover,
-    ul.products.products-shop-grid li.product .medilac-after-loop-wrapper a.button.add_to_cart_button:hover,
-    ul.products.products-shop-grid li.product .medilac-after-loop-wrapper a.button.add_to_cart_button.added,
-    ul.products.products-shop-grid li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button:hover,
-    ul.products.products-shop-grid li.product .medilac-after-loop-wrapper a.added_to_cart.wc-forward,
-    ul.products.products-shop-grid li.product .medilac-after-loop-wrapper a.add_to_wishlist:hover{
+    ul.products.products-shop-grid li.product .astha-after-loop-wrapper a.button.product_type_grouped:hover,
+    ul.products.products-shop-grid li.product .astha-after-loop-wrapper a.button.product_type_variable:hover,
+    ul.products.products-shop-grid li.product .astha-after-loop-wrapper a.button.product_type_external:hover,
+    ul.products.products-shop-grid li.product .astha-after-loop-wrapper a.button.add_to_cart_button:hover,
+    ul.products.products-shop-grid li.product .astha-after-loop-wrapper a.button.add_to_cart_button.added,
+    ul.products.products-shop-grid li.product .astha-after-loop-wrapper a.button.yith-wcqv-button:hover,
+    ul.products.products-shop-grid li.product .astha-after-loop-wrapper a.added_to_cart.wc-forward,
+    ul.products.products-shop-grid li.product .astha-after-loop-wrapper a.add_to_wishlist:hover{
         background-color: #0fc392;
-        background-color: var(--medilac-primary);
+        background-color: var(--astha-primary);
     }
     
-    ul.products li.product .medilac-after-loop-wrapper a.button.add_to_cart_button.added{
+    ul.products li.product .astha-after-loop-wrapper a.button.add_to_cart_button.added{
         
     }
-    ul.products  li.product:hover .medilac-after-loop-wrapper{
+    ul.products  li.product:hover .astha-after-loop-wrapper{
         visibility: visible;
         opacity: 1;
     } 
     
-   ul.products li.product .medilac-after-loop-wrapper.area-shop-list .yith-wcwl-add-to-wishlist.exists  a.add_to_wishlist {
+   ul.products li.product .astha-after-loop-wrapper.area-shop-list .yith-wcwl-add-to-wishlist.exists  a.add_to_wishlist {
         padding: 13px 25px;
         position: relative;
         top: -4px;

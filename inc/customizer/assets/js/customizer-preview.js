@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
 //    });
 
 
-    wp.customize('color_root[--medilac-primary]', function (control) {
+    wp.customize('color_root[--astha-primary]', function (control) {
         //console.log("HEEEEEEEEEEEE");
         console.log(control);
         control.bind(function (controlValue) {

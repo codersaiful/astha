@@ -1,4 +1,4 @@
-<div class="medilac-system-stats envato-market-plugin-wrapper">
+<div class="astha-system-stats envato-market-plugin-wrapper">
         <h3> Envato Market WordPress Plugin</h3>
         <div class="envato-market-plugin">
             <p>
@@ -10,7 +10,7 @@ Authors are encouraged to implement this plugin in their items so that customers
             <p>
             <h4>Insall Envato Market WordPress Plugin</h4>
                 You can install this plugin from our recommended plugin list.
-                <a href="<?php echo esc_url( admin_url( 'themes.php?page=medilac-required-plugins' ) ); ?>" class="envato-market-read-details" target="_blank">Go to Recommended Plugin Area </a>
+                <a href="<?php echo esc_url( admin_url( 'themes.php?page=astha-required-plugins' ) ); ?>" class="envato-market-read-details" target="_blank">Go to Recommended Plugin Area </a>
             </p>
             
             <p>

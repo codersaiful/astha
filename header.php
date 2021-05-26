@@ -6,7 +6,7 @@
  * 
  * **********************
  * at the beggining of theme development, here was classes array
- * which was in body_class($_medilac_classes) and finally we have transferred to inc/template-functions.php
+ * which was in body_class($_astha_classes) and finally we have transferred to inc/template-functions.php
  * Because, we wanted to handle class from function.
  * AND it will help to support custom header, imean: custom header file, which will control from any other plugin
  * and class will stay at body tag
@@ -23,19 +23,19 @@
  * To identify as Another 
  * of shop or default header, we able to set variable at the top of the file
  */
-$_wc_medilac = $custom_header = false;
-$medilac_header = 'header-one';
+$_wc_astha = $custom_header = false;
+$astha_header = 'header-one';
 $topbar_layout = 'topbar-one';
-if( medilac_is_woocommerce() ){
-    $_wc_medilac = '_wc';
+if( astha_is_woocommerce() ){
+    $_wc_astha = '_wc';
 }
 
 /**
  * Default Header one is set as default header
- * @default header-one $medilac_header
+ * @default header-one $astha_header
  */
-$header_layout = medilac_option( 'layout_header', $medilac_header, false, $_wc_medilac );
-$topbar_layout = medilac_option( 'layout_topbar', $topbar_layout, false, $_wc_medilac ); 
+$header_layout = astha_option( 'layout_header', $astha_header, false, $_wc_astha );
+$topbar_layout = astha_option( 'layout_topbar', $topbar_layout, false, $_wc_astha ); 
 
 /**
  * Checking Custom Header, If found numeric header from customizer
@@ -60,7 +60,7 @@ if( is_numeric( $header_layout ) ){
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 <!--	<meta name="viewport" content="width=device-width, initial-scale=1">-->
         <?php 
-        $no_scal_responsive = apply_filters( 'medilac_no_scale_responsive', true );
+        $no_scal_responsive = apply_filters( 'astha_no_scale_responsive', true );
         if( $no_scal_responsive ): ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<?php endif; ?>
@@ -72,7 +72,7 @@ if( is_numeric( $header_layout ) ){
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'medilac' ); ?></a>
+    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'astha' ); ?></a>
     <?php
     
     /**
@@ -80,14 +80,14 @@ if( is_numeric( $header_layout ) ){
      * 
      * @HOOK for Site Top
      */
-    do_action( 'medilac_site_top' );
+    do_action( 'astha_site_top' );
     
     /**
      * Insert Content or Do something at the Before Header of Site.
      * 
      * @HOOK for at Before Header
      */
-    do_action( 'medilac_before_header' );
+    do_action( 'astha_before_header' );
     
     ?>
     <header id="masthead" class="site-header <?php echo esc_attr( $header_class ); ?>">
@@ -102,7 +102,7 @@ if( is_numeric( $header_layout ) ){
          * 
          * @return book Only True or False. Noting Elese
          */
-        $top_logo = apply_filters( 'medilac_topbar_logo', true );
+        $top_logo = apply_filters( 'astha_topbar_logo', true );
         
         if( $top_logo ){
         ?>
@@ -128,7 +128,7 @@ if( is_numeric( $header_layout ) ){
          * 
          * @HOOK for at Before Header
          */
-        do_action( 'medilac_header_top' );
+        do_action( 'astha_header_top' );
     
         if( ! $custom_header ){
             get_template_part( 'template-parts/layout/' . $header_layout );
@@ -143,7 +143,7 @@ if( is_numeric( $header_layout ) ){
          * 
          * @HOOK for at Before Head Bottom Head Menu
          */
-        do_action( 'medilac_before_head_bottom_nav' );
+        do_action( 'astha_before_head_bottom_nav' );
         
         /**
          * Bottom Navigation File 
@@ -160,7 +160,7 @@ if( is_numeric( $header_layout ) ){
          * 
          * @HOOK for at Before Header
          */
-        do_action( 'medilac_header_bottom' );
+        do_action( 'astha_header_bottom' );
         ?>
     </header><!-- #masthead -->
     <?php 
@@ -170,7 +170,7 @@ if( is_numeric( $header_layout ) ){
      * 
      * @HOOK for at After Header
      */
-    do_action( 'medilac_after_header' );
+    do_action( 'astha_after_header' );
     
     
     
@@ -179,9 +179,9 @@ if( is_numeric( $header_layout ) ){
      * We already disable breadcrumb for Home Page and 404 page
      * Controlled by Hook from bulldozer file of our theme.
      * 
-     * @Hooked: medilac_breadcrumb_control 10 lib/bulldozer.php
+     * @Hooked: astha_breadcrumb_control 10 lib/bulldozer.php
      */
-    $breadcrumb_validation = apply_filters( 'medilac_breadcrumb_show', true );
+    $breadcrumb_validation = apply_filters( 'astha_breadcrumb_show', true );
     if( $breadcrumb_validation ){
         //Including Breadcrumb file
         get_template_part( 'template-parts/header', 'breadcrumb' ); 
@@ -192,10 +192,10 @@ if( is_numeric( $header_layout ) ){
      * 
      * @HOOK for at Before Content Area of Site
      */
-    do_action( 'medilac_before_content_area' );
+    do_action( 'astha_before_content_area' );
     
     ?>
-    <div id="page" class="hfeed site medilac-container container">
+    <div id="page" class="hfeed site astha-container container">
         
         
     <?php
@@ -204,4 +204,4 @@ if( is_numeric( $header_layout ) ){
      * 
      * @HOOK for at top Content Area of Site
      */
-    do_action( 'medilac_content_area_top' );
+    do_action( 'astha_content_area_top' );

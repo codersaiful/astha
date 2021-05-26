@@ -12,7 +12,7 @@
  * @package Astha
  */
 
-$medilac_cst_css = MEDILAC_CUSTOMIZER_URI . 'assets/images/sidebar-left.png';
+$astha_cst_css = MEDILAC_CUSTOMIZER_URI . 'assets/images/sidebar-left.png';
 if ( ! defined( 'MEDILAC_CUSTOMIZER_CSS' ) ) {
     define( 'MEDILAC_CUSTOMIZER_CSS', esc_url( MEDILAC_CUSTOMIZER_URI . 'assets/css/customizer.css' ) );
 }
@@ -42,7 +42,7 @@ if ( ! class_exists( 'Astha_Image_Radio_Control' ) &&  class_exists( 'WP_Customi
              * Enqueue our scripts and styles
              */
             public function enqueue(){
-                wp_enqueue_style( 'medilac-customizer-css', MEDILAC_CUSTOMIZER_CSS, array(), '1.0', 'all' );
+                wp_enqueue_style( 'astha-customizer-css', MEDILAC_CUSTOMIZER_CSS, array(), '1.0', 'all' );
             }
             /**
              * Render the control in the customizer
@@ -81,7 +81,7 @@ if ( ! class_exists( 'Astha_Image_Radio_Control' ) &&  class_exists( 'WP_Customi
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_style( 'medilac-customizer-css', MEDILAC_CUSTOMIZER_CSS, array(), '1.0', 'all' );
+			wp_enqueue_style( 'astha-customizer-css', MEDILAC_CUSTOMIZER_CSS, array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer
@@ -120,12 +120,12 @@ if ( ! class_exists( 'Astha_Image_Radio_Control' ) &&  class_exists( 'WP_Customi
 if ( ! class_exists( 'Astha_Sample_Control' ) &&  class_exists( 'WP_Customize_Control' ) ) {
     class Astha_Sample_Control extends WP_Customize_Control{
         
-        public $type = 'medilac';
+        public $type = 'astha';
         
         public function render_content() {
             //echo($this->value());
             ?>
-            <div class="medilac-sample-theme-mode">
+            <div class="astha-sample-theme-mode">
                 <input type="text" value="<?php echo $this->value(); ?>">
                 <?php if( !empty( $this->label ) ): ?>
                 <h1><?php echo esc_html( $this->label ); ?></h1>
@@ -191,10 +191,10 @@ if( ! class_exists( 'Astha_Select2_Custom_Control' ) && class_exists( 'WP_Custom
              * Enqueue our scripts and styles
              */
             public function enqueue() {
-                    wp_enqueue_script( 'medilac-select2-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
-                    wp_enqueue_script( 'medilac-custom-controls-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/customizer.js', array( 'medilac-select2-js' ), '1.0', true );
-                    wp_enqueue_style( 'medilac-custom-controls-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/customizer.css', array(), '1.1', 'all' );
-                    wp_enqueue_style( 'medilac-select2-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/select2.min.css', array(), '4.0.13', 'all' );
+                    wp_enqueue_script( 'astha-select2-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
+                    wp_enqueue_script( 'astha-custom-controls-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/customizer.js', array( 'astha-select2-js' ), '1.0', true );
+                    wp_enqueue_style( 'astha-custom-controls-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/customizer.css', array(), '1.1', 'all' );
+                    wp_enqueue_style( 'astha-select2-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/select2.min.css', array(), '4.0.13', 'all' );
             }
             /**
              * Render the control in the customizer

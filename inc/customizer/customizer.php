@@ -12,7 +12,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function medilac_customize_register( $wp_customize ) {
+function astha_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -22,14 +22,14 @@ function medilac_customize_register( $wp_customize ) {
 			'blogname',
 			array(
 				'selector'        => '.site-title a',
-				'render_callback' => 'medilac_customize_partial_blogname',
+				'render_callback' => 'astha_customize_partial_blogname',
 			)
 		);
 		$wp_customize->selective_refresh->add_partial(
 			'blogdescription',
 			array(
 				'selector'        => '.site-description',
-				'render_callback' => 'medilac_customize_partial_blogdescription',
+				'render_callback' => 'astha_customize_partial_blogdescription',
 			)
 		);
 	}
@@ -41,9 +41,9 @@ function medilac_customize_register( $wp_customize ) {
          * Section,Setting,Control of this Panel
          * at Theme->inc->customizer->theme_options.php file
          */
-        $wp_customize->add_panel( 'medilac_theme_mod', array(
-            'title' => __( 'Astha Theme Options', 'medilac' ),
-            'description' => esc_html__( 'This is Test It slfksd fsdkjf lksdjfkljsd fj sdfj skldjf', 'medilac' ),
+        $wp_customize->add_panel( 'astha_theme_mod', array(
+            'title' => __( 'Astha Theme Options', 'astha' ),
+            'description' => esc_html__( 'This is Test It slfksd fsdkjf lksdjfkljsd fj sdfj skldjf', 'astha' ),
             'priority' => 1,
             'capability' => 'edit_theme_options',
             'theme_support' => '',
@@ -51,14 +51,14 @@ function medilac_customize_register( $wp_customize ) {
         ) );
         
 }
-add_action( 'customize_register', 'medilac_customize_register' );
+add_action( 'customize_register', 'astha_customize_register' );
 
 /**
  * Customizers Options/Choice Filter Hooks are Hooked from here
  * 
  * We have also Used a Hook to Change that file, where we have used Options
  */
-$cusmzr_options_file = apply_filters( 'medilac_customizer_options', MEDILAC_THEME_DIR . 'inc/customizer/options-filters.php' );
+$cusmzr_options_file = apply_filters( 'astha_customizer_options', MEDILAC_THEME_DIR . 'inc/customizer/options-filters.php' );
 include_once $cusmzr_options_file;
 
 /**
@@ -95,16 +95,16 @@ if ( ! function_exists( 'WooCommerce' ) ) {
      * 
      * @param Object $cusomizer Default Customizer object.
      */
-    function medilac_customize_select_to_select2( $cusomizer ){
+    function astha_customize_select_to_select2( $cusomizer ){
         ////$('li.customize-control.customize-control-select select').select2();
-        $select2 = apply_filters( 'medilac_select2_support', true, $cusomizer ); 
+        $select2 = apply_filters( 'astha_select2_support', true, $cusomizer ); 
         //$cusomizer->type,MEDILAC_CUSTOMIZER_URI . 'assets/js/select2.full.min.js';
         if( $select2 ){ //$cusomizer->type == 'select'
-            wp_enqueue_script( 'medilac-select2-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
-            wp_enqueue_script( 'medilac-custom-controls-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/customizer.js', array( 'medilac-select2-js' ), '1.0', true );
-            //wp_enqueue_style( 'medilac-custom-controls-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/customizer.css', array(), '1.1', 'all' );
-            wp_enqueue_style( 'medilac-select2-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/select2.min.css', array(), '4.0.13', 'all' );
+            wp_enqueue_script( 'astha-select2-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/select2.full.min.js', array( 'jquery' ), '4.0.13', true );
+            wp_enqueue_script( 'astha-custom-controls-js', MEDILAC_CUSTOMIZER_URI . 'assets/js/customizer.js', array( 'astha-select2-js' ), '1.0', true );
+            //wp_enqueue_style( 'astha-custom-controls-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/customizer.css', array(), '1.1', 'all' );
+            wp_enqueue_style( 'astha-select2-css', MEDILAC_CUSTOMIZER_URI . 'assets/css/select2.min.css', array(), '4.0.13', 'all' );
         }
     }
 }
-add_action( 'customize_render_control','medilac_customize_select_to_select2' );
+add_action( 'customize_render_control','astha_customize_select_to_select2' );

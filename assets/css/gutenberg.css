@@ -51,13 +51,13 @@ ul.wc-block-grid__products li.wc-block-grid__product .wc-block-grid__product-tit
     color: #0A1823;
 }
 ul.wc-block-grid__products li.wc-block-grid__product:hover .wc-block-grid__product-title {
-    color: var(--medilac-primary);
+    color: var(--astha-primary);
 }
 
 .wc-block-grid__product-price.price {
     font-size: 16px;
     font-family: 'Work Sans';
-    font-family: var(--medilac-font-primary);
+    font-family: var(--astha-font-primary);
     line-height: 26px;
     color: black;
 }
@@ -65,7 +65,7 @@ ul.wc-block-grid__products li.wc-block-grid__product:hover .wc-block-grid__produ
 a.wc-block-grid__product-link {
     font-size: 22px;
     font-family: 'Roboto';
-    font-family: var(--medilac-font-secondary);
+    font-family: var(--astha-font-secondary);
 }
 
 .wc-block-grid__product-onsale {
@@ -76,7 +76,7 @@ a.wc-block-grid__product-link {
     border: 0 none;
     border-radius: 0;
     background: #0fc392;
-    background: var(--medilac-primary);
+    background: var(--astha-primary);
     color: #fff;
     padding: 10px 20px;
     border-top-right-radius: 6px;

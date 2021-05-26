@@ -50,7 +50,7 @@
         column-gap: 25px;
     }
 
-    body.archive.layout-shop-list span.medilac-loop-thumbs {
+    body.archive.layout-shop-list span.astha-loop-thumbs {
         background: #eaeff3;
         position: absolute;
         top: 0;
@@ -73,7 +73,7 @@
         margin-left: 0;
         margin-bottom: 10px;
     }
-    .medilac-after-loop-wrapper.area-shop-list .add-list-pack-inside {
+    .astha-after-loop-wrapper.area-shop-list .add-list-pack-inside {
         /* min-height: 112px; */
     }
     
@@ -86,7 +86,7 @@
         padding: 0 60px;
     }
     
-    ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
+    ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist:before,
     .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse:before,
     .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse:before {
         color: #fff;
@@ -104,16 +104,16 @@
     /**************
     * Shop and Related,Upsale Product for Tablet
     ******************/
-    .medilac-device-tablet ul.products li.product .medilac-after-loop-wrapper{
+    .astha-device-tablet ul.products li.product .astha-after-loop-wrapper{
         visibility: visible;
         opacity: 1;
     }
-    .medilac-device-tablet ul.products li.product span.medilac-loop-thumbs:before{
+    .astha-device-tablet ul.products li.product span.astha-loop-thumbs:before{
         background: #ffffff59;
         border: 1px solid #0c9e77;
-        border: 1px solid var(--medilac-primary-deep);
+        border: 1px solid var(--astha-primary-deep);
     }
-    .medilac-device-tablet .menu.nav-menu li > .available-submenu {
+    .astha-device-tablet .menu.nav-menu li > .available-submenu {
             width: 25px;
     background: #00000012;
     z-index: 77;
@@ -123,23 +123,23 @@
     white-space: nowrap;
     position: absolute;
     }
-    .medilac-device-tablet .menu.nav-menu > li.menu-item-has-children > a {
+    .astha-device-tablet .menu.nav-menu > li.menu-item-has-children > a {
         padding-right: 27px;
     }
     .layout-shop-list ul.products li.product .thumbnail-wrapper {
         float: left;
         background: #f4f9fc;
-        background-color: var(--medilac-secondary);
+        background-color: var(--astha-secondary);
     }
     .layout-shop-list ul.products li.product .title-wrapper {
         text-align: left;
         float: left;
         padding: 35px 25px 25px 0;
     }
-    body.archive.layout-shop-list span.medilac-loop-thumbs {
+    body.archive.layout-shop-list span.astha-loop-thumbs {
         position: relative;
     }
-    ul.products li.product .medilac-after-loop-wrapper.area-shop-list {
+    ul.products li.product .astha-after-loop-wrapper.area-shop-list {
         /* left: 250px; */
     }
     
@@ -309,7 +309,7 @@
         align-items: center;
         flex-wrap: wrap;
         background-color: #021429;
-        background-color: var(--medilac-deep-dark);
+        background-color: var(--astha-deep-dark);
     }
     
     .current-header-three .header-bottom  menu-right-side{
@@ -366,7 +366,7 @@
     .current-header-two .head-bottom-navigation .head-bottom-menu .menu.nav-menu > li.current-menu-item > .available-submenu,
     .current-header-two .head-bottom-navigation .head-bottom-menu .menu.nav-menu > li.menu-item-has-children:hover > .available-submenu{
         color: #0fc392;
-        color: var(--medilac-primary);
+        color: var(--astha-primary);
     }
     
     .current-header-three .main_menu .menu.nav-menu ul.sub-menu > li.menu-item-has-children > .available-submenu,
@@ -403,7 +403,7 @@
     }
     .header-menu.main-navigation .menu.nav-menu > li.current-menu-ancestor  ul.sub-menu > li.current-menu-item  > a{
         background-color: #0fc392;
-        background-color: var(--medilac-primary);
+        background-color: var(--astha-primary);
         border-color:transparent;
         color:#fff;
         border-bottom: 1px solid #0000002e;
@@ -439,7 +439,7 @@ a {}
         transform: translateX(-50%);
         content: "";
         background-color: #0fc392;
-        background-color: var(--medilac-primary);
+        background-color: var(--astha-primary);
         width: 0;
         height: 2px;
         visibility: hidden;
@@ -462,7 +462,7 @@ a {}
     .header-menu .menu.nav-menu > li > a:focus,
     .header-menu .menu.nav-menu > li > a:hover {
         color: #0fc392;
-        color: var(--medilac-primary);
+        color: var(--astha-primary);
         outline: none;
     }
 
@@ -511,7 +511,7 @@ a {}
     .header-menu.main-navigation  .menu.nav-menu .sub-menu li.current_page_ancestor>a,
     .header-menu.main-navigation  .menu.nav-menu li.menu-item-has-children .sub-menu > li:hover > a{
         background-color: #0fc392;
-        background-color: var(--medilac-primary);
+        background-color: var(--astha-primary);
         border-color: transparent;
     }
     
@@ -568,7 +568,7 @@ a {}
     }
     p.woocommerce-mini-cart__empty-message {
         color: #5c6b79;
-        color: var(--medilac-light-dark);
+        color: var(--astha-light-dark);
         padding: 10px;
         text-align: center;
         /* background: beige; */
@@ -665,10 +665,10 @@ a {}
         width: 55px;
         height: 55px;
         background: #f4f9fc;
-        background: var(--medilac-secondary);
+        background: var(--astha-secondary);
         text-align: center;
         color: #5c6b79;
-        color: var(--medilac-light-dark);
+        color: var(--astha-light-dark);
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -710,7 +710,7 @@ a {}
         margin: 20px 0 0;
     }
     
-    .single-post .entry-footer .medilac-share {
+    .single-post .entry-footer .astha-share {
         text-align: right;
     }
 }
@@ -791,10 +791,10 @@ a {}
     
     /* Product Page */
     
-    ul.products li.product .medilac-after-loop-wrapper a.button.product_type_grouped,
-    ul.products li.product .medilac-after-loop-wrapper a.button.add_to_cart_button,
-    ul.products li.product .medilac-after-loop-wrapper a.button.yith-wcqv-button,
-    ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist {
+    ul.products li.product .astha-after-loop-wrapper a.button.product_type_grouped,
+    ul.products li.product .astha-after-loop-wrapper a.button.add_to_cart_button,
+    ul.products li.product .astha-after-loop-wrapper a.button.yith-wcqv-button,
+    ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist {
         width: 50px;
         height: 50px;
     }
@@ -1192,7 +1192,7 @@ a {}
     .breadcrumb-menu li a,
     .breadcrumb-menu .woocommerce-breadcrumb a{
        color: #021429;
-       color: var(--medilac-deep-dark);
+       color: var(--astha-deep-dark);
 
     }
     
@@ -1207,51 +1207,51 @@ a {}
     }
     /* Social icon background color */
 
-    .medilac-share ul li.share-button a,
+    .astha-share ul li.share-button a,
     .doctor-follow-links ul.link-list li a,
     .footer-socket-social-wrapper ul.social_link li.socila-item a{
         border-color: transparent;
         background: #0fc392;
-        background: var(--medilac-primary);
+        background: var(--astha-primary);
     }
 
-    .medilac-share ul li.share-button a i,
+    .astha-share ul li.share-button a i,
     .doctor-follow-links ul.link-list li a i,
     .footer-socket-social-wrapper ul.social_link li a i,
     .site-footer.footer-dark .site-info.footer-socket .footer-socket-social-wrapper .social_link li a i{
         color: #fff;
     }
 
-    .medilac-share ul li.share-button a.facebook,
+    .astha-share ul li.share-button a.facebook,
     .doctor-follow-links ul.link-list li.item-la-facebook-f a,
     .footer-socket-social-wrapper ul.social_link li.socila-item.facebook a{
         background: #395197;
     }
 
-    .medilac-share ul li.share-button a.twitter,
+    .astha-share ul li.share-button a.twitter,
     .doctor-follow-links ul.link-list li.item-la-twitter a,
     .footer-socket-social-wrapper ul.social_link li.socila-item.twitter a{
         background: #00A8FF;
     }
 
-    .medilac-share ul li.share-button a.pinterest,
+    .astha-share ul li.share-button a.pinterest,
     .doctor-follow-links ul.link-list li.item-la-pinterest-p a,
     .footer-socket-social-wrapper ul.social_link li.socila-item.google a{
         background: #C51F26;
     }
 
-    .medilac-share ul li.share-button a.whatsapp,
+    .astha-share ul li.share-button a.whatsapp,
     .doctor-follow-links ul.link-list li.item-la-whatsapp a,
     .footer-socket-social-wrapper ul.social_link li.socila-item.whatsapp a{
         background: #1AD03F;
     }
 
-    .medilac-share ul li.share-button a.instagram,
+    .astha-share ul li.share-button a.instagram,
     .doctor-follow-links ul.link-list li.item-la-instagram-in a{
         background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     }
 
-    .medilac-share ul li.share-button a.linkedin,
+    .astha-share ul li.share-button a.linkedin,
     .doctor-follow-links ul.link-list li.item-la-linkedin-in a,
     .footer-socket-social-wrapper ul.social_link li.socila-item.linkedin a{
         background:#0076B3;
@@ -1271,10 +1271,10 @@ a {}
 
 /* SMALL Mobile */
 @media only screen and (max-width: 374px){
-    .medilac-share ul li.share-button a i, .doctor-follow-links ul.link-list li a i {
+    .astha-share ul li.share-button a i, .doctor-follow-links ul.link-list li a i {
         padding: 10px;
     }
-    .medilac-share ul li.share-button a, .doctor-follow-links ul.link-list li a, .footer-socket-social-wrapper ul.social_link li a {
+    .astha-share ul li.share-button a, .doctor-follow-links ul.link-list li a, .footer-socket-social-wrapper ul.social_link li a {
         width: 40px;
         height: 40px;
     }
@@ -1785,7 +1785,7 @@ a {}
         flex: 1 0 100%;
     }
     
-    .medilac-nav-wrapper.prev-post-text, .medilac-nav-wrapper.next-post-text {
+    .astha-nav-wrapper.prev-post-text, .astha-nav-wrapper.next-post-text {
         width: 66%;
     }
     
@@ -1795,7 +1795,7 @@ a {}
     
     .comment-respond {
         border: 1px solid #e2ebf1;
-        border: 1px solid var(--medilac-secondary-deep);
+        border: 1px solid var(--astha-secondary-deep);
         padding: 20px 20px 25px;
     }
     
@@ -1842,7 +1842,7 @@ a {}
         font-size: 26px;
     }
     
-    ul.products li.product .medilac-after-loop-wrapper a.add_to_wishlist:before,
+    ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist:before,
     .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistaddedbrowse:before,
     .products .yith-wcwl-add-to-wishlist.exists.wishlist-fragment.on-first-load .yith-wcwl-wishlistexistsbrowse:before {
         display: none;

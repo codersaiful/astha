@@ -9,10 +9,10 @@
 
 get_header();
 
-$search_switch = medilac_option( 'medilac_searchbox_switch_404', 'on' );
-$_404_text = medilac_option( 'medilac_404_error', __( '404', 'medilac') );
-$_404_message = medilac_option( 'medilac_404_error_message', esc_html__( 'Oops! There&rsquo;s not much left here for you', 'medilac' ) );
-$search_text = medilac_option( 'medilac_404_search_message', __( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'medilac' ) );
+$search_switch = astha_option( 'astha_searchbox_switch_404', 'on' );
+$_404_text = astha_option( 'astha_404_error', __( '404', 'astha') );
+$_404_message = astha_option( 'astha_404_error_message', esc_html__( 'Oops! There&rsquo;s not much left here for you', 'astha' ) );
+$search_text = astha_option( 'astha_404_search_message', __( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'astha' ) );
 ?>
 
 	<main id="primary" class="site-main">
@@ -21,15 +21,15 @@ $search_text = medilac_option( 'medilac_404_search_message', __( 'It looks like 
                  * Action Hook for Bottom Side of 404 Error Page
                  * User Able to do anything Here.
                  */
-                do_action( 'medilac_404_page_top' );
-                $validation_404 = apply_filters( 'medilac_404_content_validation', true );
+                do_action( 'astha_404_page_top' );
+                $validation_404 = apply_filters( 'astha_404_content_validation', true );
                 if( $validation_404 ){
                 ?>
             
 		<section class="error-404 not-found">
 			<header class="page-header">
                             <p class="error-msg"><?php 
-                            $_404_text = ! empty( $_404_text ) ? $_404_text : __( '404', 'medilac');
+                            $_404_text = ! empty( $_404_text ) ? $_404_text : __( '404', 'astha');
                             echo esc_html( $_404_text );
                             
                             ?></p>
@@ -44,7 +44,7 @@ $search_text = medilac_option( 'medilac_404_search_message', __( 'It looks like 
                                          * Action Hook for Bottom Side of 404 Error Page
                                          * User Able to do anything Here.
                                          */
-                                        do_action( 'medilac_404_before_searchbox' );
+                                        do_action( 'astha_404_before_searchbox' );
                                         
                                         
                                         if( class_exists( 'WooCommerce' ) && $search_switch !== 'off' ){
@@ -54,8 +54,8 @@ $search_text = medilac_option( 'medilac_404_search_message', __( 'It looks like 
                                         }
                                         
                                 //Manage Back Home Button
-                                $go_back_text = medilac_option( 'medilac_404_back_text', __( 'Go Back Home', 'medilac' ) );
-                                $go_back_url = medilac_option( 'medilac_404_back_url', get_home_url() );
+                                $go_back_text = astha_option( 'astha_404_back_text', __( 'Go Back Home', 'astha' ) );
+                                $go_back_url = astha_option( 'astha_404_back_url', get_home_url() );
                                 if( ! empty( $go_back_text ) && ! empty( $go_back_url ) ){        
                                         ?>
                                 <p><a href="<?php echo esc_url( $go_back_url ); ?>" class="button"><?php echo esc_html( $go_back_text );?></a></p>
@@ -72,7 +72,7 @@ $search_text = medilac_option( 'medilac_404_search_message', __( 'It looks like 
                  * Action Hook for Bottom Side of 404 Error Page
                  * User Able to do anything Here.
                  */
-                do_action( 'medilac_404_page_bottom' ); ?>
+                do_action( 'astha_404_page_bottom' ); ?>
 	</main><!-- #main -->
 
 <?php
