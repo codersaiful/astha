@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Medilac
+ * @package Astha
  */
 $sub_heading        = medilac_option( 'sub_heading' );
 $doctor_details     = medilac_option( 'doctor_details' );

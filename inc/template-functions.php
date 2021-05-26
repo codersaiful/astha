@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Medilac
+ * @package Astha
  */
 
 /**
@@ -174,7 +174,7 @@ add_action( 'wp_head', 'medilac_pingback_header' );
 /**
  * Pagination
  * 
- * @package Medilac
+ * @package Astha
  * 
  * @global type $wp_query
  * @return void

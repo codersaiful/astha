@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Medilac
+ * @package Astha
  */
 
 if( ! function_exists( 'medilac_third_party_plugin_supports' ) ){

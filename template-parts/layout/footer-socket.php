@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Medilac
+ * @package Astha
  */
 
 $options = medilac_option( 'medilac_header_top' );

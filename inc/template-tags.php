@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Medilac
+ * @package Astha
  */
 
 if ( ! function_exists( 'medilac_blog_layout' ) ) :
@@ -296,7 +296,7 @@ function medilac_is_comment_by_post_author( $comment = null ) {
 
 
 /**
- * WordPress Breadcrumb for Medilac Theme
+ * WordPress Breadcrumb for Astha Theme
  * 
  * Credit decleared at Link
  * 

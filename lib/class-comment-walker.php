@@ -2,16 +2,16 @@
 /**
  * Custom comment walker for this theme.
  *
- * @package Medilac
+ * @package Astha
  * @since 1.0.0.17
  */
 
-if ( ! class_exists( 'Medilac_Walker_Comment' ) ) {
+if ( ! class_exists( 'Astha_Walker_Comment' ) ) {
 	/**
 	 * CUSTOM COMMENT WALKER
 	 * A custom walker for comments, based on the walker in Twenty Twenty.
 	 */
-	class Medilac_Walker_Comment extends Walker_Comment {
+	class Astha_Walker_Comment extends Walker_Comment {
 
 		/**
 		 * Outputs a comment in the HTML5 format.

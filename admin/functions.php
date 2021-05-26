@@ -1,13 +1,13 @@
 <?php
 /**
  * ADMIN FUNCTIONS
- * Medilac Administration Functions Managing 
+ * Astha Administration Functions Managing 
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @since 1.0.0.46
  * 
- * @package Medilac
+ * @package Astha
  */
 
 if( ! function_exists( 'medilac_color_arr_return_from_arr' ) ){

@@ -6,7 +6,7 @@
  *
  * @link https://github.com/CMB2/CMB2/wiki/Basic-Usage
  *
- * @package Medilac
+ * @package Astha
  * @since 1.0.0.19
  */
 
@@ -250,7 +250,7 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
                     'type'       => 'select',
                     'default'    => '',
                     'sanitization_cb' => 'sanitize_text_field',
-                    'options'    => Medilac_Fonts_Manage::fonts_choices(),
+                    'options'    => Astha_Fonts_Manage::fonts_choices(),
                     
             ) );
             
@@ -262,7 +262,7 @@ if(!function_exists( 'medilac_cmb2_metaboxes' )){
                     'type'       => 'select',
                     'default'    => '',
                     'sanitization_cb' => 'sanitize_text_field',
-                    'options'    => Medilac_Fonts_Manage::fonts_choices(),
+                    'options'    => Astha_Fonts_Manage::fonts_choices(),
                     
             ) );
             

@@ -1,6 +1,6 @@
 <?php
 /**
- * Medilac Administration Functions Managing 
+ * Astha Administration Functions Managing 
  * Specially for Choosing Custom Header and footer
  * Which is Come from Elementor Template
  * 
@@ -8,7 +8,7 @@
  * 
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Medilac
+ * @package Astha
  */
 
 //Getting Theme's Information

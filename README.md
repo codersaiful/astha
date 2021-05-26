@@ -1,4 +1,4 @@
-### Medilac - Medical WordPress Theme Documentation
+### Astha - Multiperpose WordPress Theme Documentation
 
 A WordPress Medical & Medical Shop Theme. Build a Medical Website easily.
 

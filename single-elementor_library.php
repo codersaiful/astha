@@ -1,11 +1,4 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Medilac
- */
 
 /**
  * The header content for our theme
@@ -14,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Medilac
+ * @package Astha
  */
 get_header( 'empty' );
 the_content();

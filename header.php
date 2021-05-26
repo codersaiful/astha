@@ -16,7 +16,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @since 1.0.0.0
- * @package Medilac
+ * @package Astha
  */
 
 /**
@@ -149,7 +149,7 @@ if( is_numeric( $header_layout ) ){
          * Bottom Navigation File 
          * Only when Menu set for head_bottom
          * 
-         * @package Medilac
+         * @package Astha
          */
         if( has_nav_menu( 'head_bottom' ) ){
             //Including Head Bottom Navigation File

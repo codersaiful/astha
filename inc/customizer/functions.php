@@ -1,9 +1,9 @@
 <?php
 /**
  * All Functions List, Which is Used at Customizer
- * Medilac Theme Customizer
+ * Astha Theme Customizer
  *
- * @package Medilac
+ * @package Astha
  */
 
 /**

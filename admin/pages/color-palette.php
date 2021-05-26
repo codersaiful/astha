@@ -1,6 +1,6 @@
 <?php
 /**
- * Medilac Adminsitration Functions Managing 
+ * Astha Adminsitration Functions Managing 
  * Specially for Color Pallate Submenu
  * 
  * To this file, We will handle color palette
@@ -12,7 +12,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Medilac
+ * @package Astha
  */
 
 //Getting Theme's Information
@@ -224,7 +224,7 @@ if( isset( $_GET['save'] ) && isset( $_GET['action'] ) && $_GET['save'] == 'curr
 $medilactheme = wp_get_theme();
 ?>
 <div class="wrap about-wrap medilac-wrap">
-    <h1><?php echo esc_html__( 'Welcome to Medilac', 'medilac' );  ?></h1>
+    <h1><?php echo esc_html__( 'Welcome to Astha', 'medilac' );  ?></h1>
 
     <div class="about-text"><?php echo esc_html( $medilactheme->get( 'Description' ) ); ?></div>
     <div class="medilac-badge">

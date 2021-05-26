@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Medilac
+ * @package Astha
  */
 
 /**
@@ -111,7 +111,7 @@ if( !empty( $breadcrumb_background ) ){
             <div class="breadcrumb-menu">
                 
                 <?php 
-                //Medilac Breadcrumb is Loadidng Here
+                //Astha Breadcrumb is Loadidng Here
                 medilac_breadcrumb();
                 ?>
                 

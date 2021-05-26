@@ -1,19 +1,19 @@
 <?php
 
 /**
- * Medilac Themes Bulldozer
+ * Astha Themes Bulldozer
  * Where All kind of filter, whice we wanted to change/update. we will do it from this file.
  * 
  * Normally We will use Filter and will customize Options/Features from Here
  * 
- * Medilac functions and definitions
+ * Astha functions and definitions
  * 
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  * 
  * @since 1.0.0.19
  * @by Saiful
  * 
- * @package Medilac
+ * @package Astha
  */
 
 /**

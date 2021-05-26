@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Medilac
+ * @package Astha
  */
 $secondary_menu = apply_filters( 'medilac_show_secondary_menu', true );
 

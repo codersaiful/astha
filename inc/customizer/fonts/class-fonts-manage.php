@@ -4,13 +4,13 @@
  * Final Class
  * Unable to Extend from ThirdParty
  *
- * @package     Medilac
+ * @package     Astha
  * @author      Saiful<codersaiful@gmail.com>
  * @copyright   Copyright (c) 2020, Saiful Islam
  */
 
 
-if( ! class_exists( 'Medilac_Fonts_Manage' ) ){
+if( ! class_exists( 'Astha_Fonts_Manage' ) ){
     
     /**
      * Google Fonts Manager Object
@@ -20,10 +20,10 @@ if( ! class_exists( 'Medilac_Fonts_Manage' ) ){
      * 
      * Have to include before Use.
      * 
-     * @package Medilac
+     * @package Astha
      * @since   1.0.0.37 (It's was planned from beginning of using this class)
      */
-    class Medilac_Fonts_Manage{
+    class Astha_Fonts_Manage{
         
         public static $choices;
         public static $fonts;
@@ -60,7 +60,7 @@ if( ! class_exists( 'Medilac_Fonts_Manage' ) ){
          * Array for Fonts List Choices. Actually we have arrange
          * a filter for Google font
          * 
-         * @package Medilac
+         * @package Astha
          * @return  Array A array of All Google Fonts
          */
         public static function fonts_choices() {
