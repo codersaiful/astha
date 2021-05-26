@@ -144,19 +144,19 @@ if ( ! function_exists( 'astha_setup' ) ) :
 		 * see: https://codex.wordpress.org/Post_Formats
                  * @since 1.0.0.54
 		 */
-		add_theme_support( 'post-formats', array(
-			'image',
-			'audio',
-			'video',
-			'gallery',
-			'quote',
-		) );
+//		add_theme_support( 'post-formats', array(
+//			'image',
+//			'audio',
+//			'video',
+//			'gallery',
+//			'quote',
+//		) );
                 
-                add_theme_support( 'wp-block-styles' );
-                add_theme_support( 'editor-styles' );
+//                add_theme_support( 'wp-block-styles' );
+//                add_theme_support( 'editor-styles' );
                 //add_editor_style( 'editor-style.css' ); //Code will be Change, now just sample code
 
-                add_theme_support( 'responsive-embeds' );
+                //add_theme_support( 'responsive-embeds' );
                 
                 
                 /**
