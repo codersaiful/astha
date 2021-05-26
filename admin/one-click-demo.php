@@ -49,7 +49,7 @@ if( ! function_exists( 'astha_oneclickdemo_import_files' ) ){
          * @since 1.0.0.61
          */
         
-        $parent_url = trailingslashit( get_template_directory_uri() ) . 'demo-content/demo-1/';
+        $parent_url = 'http://demo-content.medilac.codeastrology.com/';//trailingslashit( get_template_directory_uri() ) . 'demo-content/demo-1/';
         
         /**
          * Finally we decided to keep our file to
