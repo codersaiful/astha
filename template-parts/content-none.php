@@ -4,48 +4,35 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package astha
+ * @package Medilac
  */
 
 ?>
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'astha' ); ?></h1>
+		<h1 class="page-title">
+                <?php 
+                /**
+                 * To change Nothing Found Text from child theme or from Plugin
+                 */
+                $nothing_found = apply_filters( 'medilac_nothing_found_none_page', esc_html__( 'Nothing Found', 'medilac' ) );
+                echo wp_kses_data( $nothing_found );
+                ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
+            
 		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) :
-
-			printf(
-				'<p>' . wp_kses(
-					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'astha' ),
-					array(
-						'a' => array(
-							'href' => array(),
-						),
-					)
-				) . '</p>',
-				esc_url( admin_url( 'post-new.php' ) )
-			);
-
-		elseif ( is_search() ) :
-			?>
-
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'astha' ); ?></p>
-			<?php
-			get_search_form();
-
-		else :
-			?>
-
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'astha' ); ?></p>
-			<?php
-			get_search_form();
-
-		endif;
+                
+                /**
+                 * Adding content or to replace None page Content, User able to do it easily
+                 * 
+                 * Currently current content set by Action Hook
+                 * 
+                 * @Hooked: medilac_none_page_content - 20 at inc/template-functions.php
+                 */
+		do_action( 'medilac_none_page' );
 		?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

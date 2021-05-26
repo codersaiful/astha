@@ -1,0 +1,110 @@
+body.page-template-fullwidth-fluid #page .wc-block-grid.wp-block-handpicked-products {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 15px;
+}
+body.page-template-fullwidth-fluid #page .wp-block-woocommerce-product-top-rated,
+body.page-template-fullwidth-fluid #page .wp-block-woocommerce-product-on-sale,
+body.page-template-fullwidth-fluid #page .wp-block-woocommerce-product-best-sellers,
+body.page-template-fullwidth-fluid #page .wp-block-woocommerce-product-new{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+/****** Recent Post Start******/
+.wp-block-latest-posts>li>a {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    display: block;
+}
+
+ul.wp-block-latest-posts>li {
+    background: #f3f3f380;
+    padding: 20px;
+    border: 1px solid #f6f6f9;
+}
+
+.wp-block-latest-posts .wp-block-latest-posts__post-excerpt {
+    text-align: justify;
+}
+
+.wp-block-latest-posts .wp-block-latest-posts__featured-image img {
+}
+
+.wp-block-latest-posts .wp-block-latest-posts__featured-image img.wp-post-image {
+    width: 100%;
+    height: auto;
+}
+
+.wp-block-latest-posts__featured-image a {
+    display: block;
+}
+/****** Recent Post End******/
+
+/****** WOOCOMMERCE START *******/
+ul.wc-block-grid__products li.wc-block-grid__product a.wp-block-button__link {
+    padding: 10px 15px;
+}
+ul.wc-block-grid__products li.wc-block-grid__product .wc-block-grid__product-title {
+    color: #0A1823;
+}
+ul.wc-block-grid__products li.wc-block-grid__product:hover .wc-block-grid__product-title {
+    color: var(--medilac-primary);
+}
+
+.wc-block-grid__product-price.price {
+    font-size: 16px;
+    font-family: 'Work Sans';
+    font-family: var(--medilac-font-primary);
+    line-height: 26px;
+    color: black;
+}
+
+a.wc-block-grid__product-link {
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-family: var(--medilac-font-secondary);
+}
+
+.wc-block-grid__product-onsale {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    z-index: 2;
+    border: 0 none;
+    border-radius: 0;
+    background: #0fc392;
+    background: var(--medilac-primary);
+    color: #fff;
+    padding: 10px 20px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+ul.wc-block-grid__products li.wc-block-grid__product {}
+
+
+
+ul.wc-block-grid__products li.wc-block-grid__product {
+    /* background: #dddddddb; */
+    /* margin: 20px; */
+    /* padding: 15px; */
+    /* border: 0; */
+    box-shadow: 0 10px 30px 0 #00000014;
+    background: white;
+    padding: 15px 10px;
+    margin-bottom: 35px;
+}
+
+ul.wc-block-grid__products {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* column-gap: 15px; */
+    justify-content: flex-start;
+}
+/****** WOOCOMMERCE END *******/

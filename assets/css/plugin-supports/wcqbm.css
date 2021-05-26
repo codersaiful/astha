@@ -1,0 +1,63 @@
+/***********************
+* WC quantity Plus Minus Button Plugin
+************************/
+
+/*.quantity .qty {
+    width: 5em;
+    text-align: center;
+}
+
+.qib-button.qib-button-wrapper{
+    max-width: 95px;
+    height: 50px;
+    position: relative;
+    margin: 0 15px 0 0;
+    background: #f4f9fc;
+    background: var(--medilac-secondary);
+
+}
+
+.qib-button.qib-button-wrapper .quantity.wqpmb_quantity,
+.qib-button.qib-button-wrapper .quantity.wqpmb_quantity input{
+    width: 100%;
+}
+
+.qib-button.qib-button-wrapper .minus.qib-button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 25px;
+    background: #0fc392;
+    background: var(--medilac-primary);
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.qib-button.qib-button-wrapper .plus.qib-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    background: #00000082;
+    color: #ffffff;
+    font-size: 23px;
+}
+
+.qib-button.qib-button-wrapper  .quantity input.input-text.qty.text{
+    height: 52px;
+    width: 100%;
+    background-color: #f4f9fc;
+    background-color: var(--medilac-secondary);
+    padding: 20px 26px 15px 20px;
+    text-align: left;
+    border:none;
+    font-size:17px;
+    font-weight:500;
+}
+
+.qib-button.qib-button-wrapper button.qib-button{
+    padding: 2px;
+    min-height: 25px;
+    height: auto;
+    border: none;
+}*/
