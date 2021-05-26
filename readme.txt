@@ -86,4 +86,6 @@ Image for theme screenshot, Copyright Matt Moloney
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/architecture-building-MCPICC2GWY
 
-
+Image for theme screenshot, Copyright Leo Rivas
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://unsplash.com/photos/wtxcaDIdOCM

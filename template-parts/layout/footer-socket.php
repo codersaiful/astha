@@ -31,7 +31,7 @@ $socket_social = astha_option( 'astha_socket_social', 'on' );
             <span class="sep"> | </span>
                     <?php
                     /* translators: 1: Theme name, 2: Theme author. */
-                    printf( esc_html__( 'Theme: %1$s by %2$s.', 'astha' ), 'astha', '<a href="https://astha.codeastrology.com/">Saiful Islam</a>' );
+                    printf( esc_html__( 'Theme: %1$s by %2$s.', 'astha' ), 'astha', '<a href="' . esc_attr( 'https://astha.codeastrology.com/' ) . '">Saiful Islam</a>' );
                     ?>
             <?php } ?>
         </div>
