@@ -136,12 +136,12 @@ function astha_register_required_plugins() {
                  * @link https://github.com/envato/wp-envato-market Plugin Github Repo Link
                  * @link https://envato.github.io/wp-envato-market/dist/envato-market.zip Plugin's zip file
                  */
-                array(
-			'name'               => esc_html( 'Envato Market WordPress Plugin', 'astha' ), // The plugin name.
-			'slug'               => 'envato-market', // The plugin slug (typically the folder name).
-			'source'             => 'https://envato.github.io/wp-envato-market/dist/envato-market.zip', // The plugin source.
-			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-		),
+//                array(
+//			'name'               => esc_html( 'Envato Market WordPress Plugin', 'astha' ), // The plugin name.
+//			'slug'               => 'envato-market', // The plugin slug (typically the folder name).
+//			'source'             => 'https://envato.github.io/wp-envato-market/dist/envato-market.zip', // The plugin source.
+//			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+//		),
 
 		// Our Default Plugins
 		

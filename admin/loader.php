@@ -58,7 +58,7 @@ if( ! function_exists( 'astha_menu' ) ){
 //        }
         
         //Documentation Page Link
-        add_submenu_page('astha_welcome', '', esc_html__( 'Documentation', 'astha' ), $capability, 'https://docs.astha.codeastrology.com/' );
+        add_submenu_page('astha_welcome', '', esc_html__( 'Documentation', 'astha' ), $capability, 'https://docs.medilac.codeastrology.com/' );
         
     }
 }

@@ -47,10 +47,6 @@ Font Awesome, maintained by Dave Gandy: SIL OFL 1.1
 License: https://github.com/FortAwesome/Font-Awesome FontAwesome 4.7.0 Copyright 2012 Dave Gandy Font License: SIL OFL 1.1 Code License: MIT License 
 License Url: http://fontawesome.io/license/
 
-Bootstrap
-License: bootstrap is licensed under the MIT License
-Source: https://github.com/twbs/bootstrap/blob/master/LICENSE
-
 Navbar.js
 License: navbar.js is licensed under the MIT License
 Source: http://thednp.github.io/navbar.js/
@@ -63,9 +59,10 @@ animate.css
 License: animate.css is licensed under the MIT License
 Source: http://daneden.me/animate
 
-kirki
-License: kirki is licensed under the MIT License
-Source: https://github.com/ItinerisLtd/kirki
+TGM-Plugin-Activation
+License: TGM-Plugin-Activation is licensed under the MIT License
+Source: https://github.com/TGMPA/TGM-Plugin-Activation
+License URL: https://github.com/TGMPA/TGM-Plugin-Activation/blob/develop/LICENSE.md
 
 Code from Twenty Twenty
 Copyright (c) 2019-2021 WordPress.org
