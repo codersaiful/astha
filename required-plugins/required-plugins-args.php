@@ -33,7 +33,7 @@ add_action( 'tgmpa_register', 'astha_register_required_plugins' );
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
 function astha_register_required_plugins() {
-        $plugins_dir = get_template_directory() . '/required-plugins/plugins/astha-core-latest.zip';
+        $plugins_dir = 'https://github.com/codersaiful/astha-core/archive/master.zip';
     
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
