@@ -277,7 +277,7 @@ $asthatheme = wp_get_theme();
                                 }
                                 ?>
                             </div>
-                            <a onclick="return confirm('<?php _e( "Current color setting will be replace with Color Palette:{$palette_name}.\nUnable to redo.\nAre you sure?.", 'astha' ); ?>');"
+                            <a onclick="return confirm('<?php _e( "Current color setting will be replace with Color Palette.\nUnable to redo.\nAre you sure?.", 'astha' ); ?>');"
                                 class="astha-add-palette-button button button-primary" 
                                 href="<?php echo esc_attr( $update_url_final ); ?>">
                             <?php echo esc_html__( 'Apply ', 'astha' ) . esc_html( $palette_name ); ?>

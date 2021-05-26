@@ -409,7 +409,7 @@ if( !function_exists( 'astha_social_share' ) ) {
 
                     <?php if ( $share_pinterest_enabled ): ?>
                             <li class="share-button">
-                                    <a target="_blank" class="pinterest" href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode( $share_link_url ); ?>&amp;description=<?php echo esc_attr( $share_summary ); ?>&amp;media=<?php echo esc_attr( $share_image_url ); ?>" title="<?php esc_html_e( 'Pinterest', 'astha' ); ?>" onclick="window.open(this.href); return false;">
+                                    <a target="_blank" class="pinterest" href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode( $share_link_url ); ?>&amp;description=<?php echo esc_attr( $share_summary ); ?>&amp;media=<?php echo esc_attr( $share_image_url ); ?>" title="<?php esc_attr( 'Pinterest', 'astha' ); ?>" onclick="window.open(this.href); return false;">
                                             <?php echo $share_pinterest_icon ? $share_pinterest_icon : esc_html__( 'Pinterest', 'astha' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                     </a>
                             </li>
@@ -417,7 +417,7 @@ if( !function_exists( 'astha_social_share' ) ) {
 
                     <?php if ( $share_email_enabled ): ?>
                             <li class="share-button">
-                                    <a class="email" href="mailto:?subject=<?php echo esc_attr( apply_filters( 'yith_wcwl_email_share_subject', $share_link_title ) ); ?>&amp;body=<?php echo esc_attr( apply_filters( 'yith_wcwl_email_share_body', urlencode( $share_link_url ) ) ); ?>&amp;title=<?php echo esc_attr( $share_link_title ); ?>" title="<?php esc_html_e( 'Email', 'astha' ); ?>">
+                                    <a class="email" href="mailto:?subject=<?php echo esc_attr( apply_filters( 'yith_wcwl_email_share_subject', $share_link_title ) ); ?>&amp;body=<?php echo esc_attr( apply_filters( 'yith_wcwl_email_share_body', urlencode( $share_link_url ) ) ); ?>&amp;title=<?php echo esc_attr( $share_link_title ); ?>" title="<?php esc_attr_e( 'Email', 'astha' ); ?>">
                                             <?php echo $share_email_icon ? $share_email_icon : __( 'Email', 'astha' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                     </a>
                             </li>
@@ -426,7 +426,7 @@ if( !function_exists( 'astha_social_share' ) ) {
                     <?php if ( $share_whatsapp_enabled ):
                             ?>
                             <li class="share-button">
-                                    <a class="whatsapp" href="<?php echo esc_attr( $share_whatsapp_url ); ?>" data-action="share/whatsapp/share" target="_blank" title="<?php esc_html_e( 'WhatsApp', 'astha' ); ?>">
+                                    <a class="whatsapp" href="<?php echo esc_attr( $share_whatsapp_url ); ?>" data-action="share/whatsapp/share" target="_blank" title="<?php esc_attr_e( 'WhatsApp', 'astha' ); ?>">
                                             <?php echo $share_whatsapp_icon ? $share_whatsapp_icon : esc_html__( 'Whatsapp', 'astha' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                     </a>
                             </li>

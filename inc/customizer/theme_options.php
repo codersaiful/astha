@@ -1043,7 +1043,7 @@ if( ! function_exists( 'astha_theme_options_register' ) ){
         //Search Page Error Message Text
         $wp_customize->add_setting( 'astha_404_error_message', array(
             'default'           =>  __( 'Oops! There&rsquo;s not much left here for you', 'astha' ),
-            'sanitize_callback' => 'wp_kses_data'
+            'sanitize_callback' => 'sanitize_text_field'
         ) );
         
         // Add control
