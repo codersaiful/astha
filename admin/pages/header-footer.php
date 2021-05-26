@@ -54,7 +54,7 @@ do_action( 'astha_elementor_header_footer_save', $datas );
                                 <select 
                                     class="custom-header-choose custom-header-footer-choose" 
                                     name="custom-header-id">
-                                    <option value=""><?php echo esc_html__( 'No Header' ); ?></option>
+                                    <option value=""><?php echo esc_html__( 'No Header', 'astha' ); ?></option>
                                     <?php
                                     foreach( $query as $p ){
                                     ?>
@@ -84,7 +84,7 @@ do_action( 'astha_elementor_header_footer_save', $datas );
                                 <select 
                                     class="custom-header-choose custom-header-footer-choose" 
                                     name="custom-footer-id">
-                                    <option value=""><?php echo esc_html__( 'No Footer' ); ?></option>
+                                    <option value=""><?php echo esc_html__( 'No Footer', 'astha' ); ?></option>
                                     <?php
                                     foreach( $query as $p ){
                                     ?>
@@ -113,7 +113,7 @@ do_action( 'astha_elementor_header_footer_save', $datas );
                     class="button button-primary astha-header-footer-submit" 
                     name="submit_header_footer"
                     type="submit" 
-                    value="<?php echo esc_html__( 'Save Changes', 'astha' ); ?>">
+                    value="<?php echo esc_attr__( 'Save Changes', 'astha' ); ?>">
             </form>
         </div>
         

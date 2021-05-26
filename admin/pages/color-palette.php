@@ -270,14 +270,14 @@ $asthatheme = wp_get_theme();
                                 <span style="background-color:<?php echo esc_attr( $style_color ); ?>;" 
                                       title="<?php echo esc_attr( $c_key ); ?>"
                                       class="palette-color <?php echo esc_attr( $c_key ); ?>">
-                                    <i><?php echo esc_attr( $style_color ); ?></i>
+                                    <i><?php echo esc_html( $style_color ); ?></i>
                                 </span>    
                                 <?php
                                     }
                                 }
                                 ?>
                             </div>
-                            <a onclick="return confirm('<?php _e( 'Current color setting will be replace with Color Palette:[' . $palette_name . '].\nUnable to redo.\nAre you sure?.', 'astha' ); ?>');"
+                            <a onclick="return confirm('<?php _e( "Current color setting will be replace with Color Palette:{$palette_name}.\nUnable to redo.\nAre you sure?.", 'astha' ); ?>');"
                                 class="astha-add-palette-button button button-primary" 
                                 href="<?php echo esc_attr( $update_url_final ); ?>">
                             <?php echo esc_html__( 'Apply ', 'astha' ) . esc_html( $palette_name ); ?>

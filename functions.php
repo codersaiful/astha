@@ -31,50 +31,6 @@ if ( ! defined( 'ASTHA_CUSTOMIZER_URI' ) ) {
     define( 'ASTHA_CUSTOMIZER_URI', trailingslashit( esc_url( ASTHA_THEME_URI . 'inc/customizer/' ) ) );
 }
 
-/**
- * P R O Integration
- * 
- * @since 1.0.0.72
- */
-//if ( ! function_exists( 'astha_fs' ) ) {
-//    // Create a helper function for easy SDK access.
-//    function astha_fs() {
-//        global $astha_fs;
-//
-//        if ( ! isset( $astha_fs ) ) {
-//            // Include Freemius SDK.
-//            require_once dirname(__FILE__) . '/freemius/start.php';
-//
-//            $astha_fs = fs_dynamic_init( array(
-//                'id'                  => '8259',
-//                'slug'                => 'astha-multiperpose-wordpress-theme',
-//                'type'                => 'theme',
-//                'public_key'          => 'pk_3c3c7c2c7b081c7f6dfb8b48e6314',
-//                'is_premium'          => true,
-//                'is_premium_only'     => true,
-//                'has_addons'          => false,
-//                'has_paid_plans'      => true,
-//                'is_org_compliant'    => false,
-//                'menu'                => array(
-//                    'slug'           => 'astha_welcome',
-//                    'first-path'     => 'admin.php?page=astha_welcome',
-//                    'support'        => false,
-//                ),
-//                // Set the SDK to work in a sandbox mode (for development & testing).
-//                // IMPORTANT: MAKE SURE TO REMOVE SECRET KEY BEFORE DEPLOYMENT.
-//                'secret_key'          => 'sk_Pd!K.=y]_4$;*hW@J_kLP_Sxw-q00',
-//            ) );
-//        }
-//
-//        return $astha_fs;
-//    }
-//
-//    // Init Freemius.
-//    astha_fs();
-//    // Signal that SDK was initiated.
-//    do_action( 'astha_fs_loaded' );
-//}
-
 
 
 /**

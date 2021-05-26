@@ -140,10 +140,10 @@ if ( ! function_exists( 'astha_entry_footer' ) ) :
                 $tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'astha' ) );
                 if ( $tags_list ) {
                         /* translators: 1: list of tags. */
-                        printf( '<span class="tags-links" title="' . esc_attr__( 'Tags:' ) . '">' . esc_html__( '%1$s', 'astha' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                        printf( '<span class="tags-links" title="' . esc_attr__( 'Tags:', 'astha' ) . '">' . esc_html__( '%1$s', 'astha' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                 }elseif ( $categories_list ) {
                         /* translators: 1: list of categories. */
-                        printf( '<span class="cat-links" title="' . esc_attr__( 'Catagories:' ) . '">' . esc_html__( 'In %1$s', 'astha' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                        printf( '<span class="cat-links" title="' . esc_attr__( 'Catagories:', 'astha' ) . '">' . esc_html__( 'In %1$s', 'astha' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                 }
             }
                 

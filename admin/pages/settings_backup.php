@@ -171,7 +171,7 @@ $asthatheme = wp_get_theme();
                 $del_links  = admin_url( 'admin.php?page=astha-settings-backup&delete_mod_id=' . $timestamp . '&delete=by_url' );
                 ?>
                 <li class="setting-li">
-                    <i><?php echo esc_html__( 'Settings at ' ) . esc_html( date( 'D d,M Y h:i:s', $timestamp ) ) ?></i>
+                    <i><?php echo esc_html__( 'Settings at ', 'astha' ) . esc_html( date( 'D d,M Y h:i:s', $timestamp ) ) ?></i>
                     <a href="<?php echo esc_url( $links ); ?>">
                         <span class="dashicons dashicons-database-import"></span>
                         <span class="setting-li-text"><?php echo esc_html__( 'Import This Setting', 'astha' ); ?></span>
@@ -200,7 +200,7 @@ $asthatheme = wp_get_theme();
         <textarea class="large-text code" cols="10" rows="10" name="astha_customizer_settings" class="settings astha-textarea"><?php echo esc_html( $export ); ?></textarea>
         
         <?php
-        $import_sett = esc_html__( 'Import Settings' );
+        $import_sett = esc_html__( 'Import Settings', 'astha' );
         submit_button( $import_sett );
         ?>
     </form>

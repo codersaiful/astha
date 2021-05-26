@@ -342,7 +342,7 @@ if( !function_exists( 'astha_placeholder_comment_form_field' ) ){
     function astha_placeholder_comment_form_field( $fields ) {
        $replace_comment = __('Your Comment', 'astha');
 
-       $fields['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
+       $fields['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'astha' ) .
        '</label><textarea id="comment" name="comment" cols="45" rows="8" placeholder="'.$replace_comment.'" aria-required="true"></textarea></p>';
 
        return $fields;
@@ -401,7 +401,7 @@ if( !function_exists( 'astha_social_share' ) ) {
 
                     <?php if ( $share_twitter_enabled ): ?>
                             <li class="share-button">
-                                    <a target="_blank" class="twitter" href="https://twitter.com/share?url=<?php echo urlencode( $share_link_url ); ?>&amp;text=<?php echo esc_attr( $share_twitter_summary ); ?>" title="<?php esc_html_e( 'Twitter', 'astha' ); ?>">
+                                    <a target="_blank" class="twitter" href="https://twitter.com/share?url=<?php echo urlencode( $share_link_url ); ?>&amp;text=<?php echo esc_attr( $share_twitter_summary ); ?>" title="<?php esc_attr_e( 'Twitter', 'astha' ); ?>">
                                             <?php echo $share_twitter_icon ? $share_twitter_icon : esc_html__( 'Twitter', 'astha' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                     </a>
                             </li>
@@ -588,7 +588,7 @@ if( !function_exists( 'astha_topbar_right_area' ) ) {
         </div>    
         <?php    
         }elseif( $r_area == 'c2a' ){
-        $label = isset( $options['c2a_label'] ) ? $options['c2a_label'] : esc_html__( 'Free Consultant' );
+        $label = isset( $options['c2a_label'] ) ? $options['c2a_label'] : esc_html__( 'Free Consultant', 'astha' );
         $url = isset( $options['c2a_url'] ) ? $options['c2a_url'] : '#';
         ?>
         <div class="consult_btn">
