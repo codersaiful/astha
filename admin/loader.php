@@ -47,7 +47,7 @@ if( ! function_exists( 'astha_menu' ) ){
             add_submenu_page('astha_welcome', '', esc_html__( 'Demo Import', 'astha' ), $capability, 'themes.php?page=astha-demo-import' );
             add_submenu_page('astha_welcome', '', esc_html__( 'Manual Import', 'astha' ), $capability, 'themes.php?page=astha-demo-import&import-mode=manual' );
         }
-        add_submenu_page('astha_welcome', '', esc_html__( 'Setting Backup & Update', 'astha' ), $capability, 'astha-settings-backup', 'astha_settings_backup' );
+        //add_submenu_page('astha_welcome', '', esc_html__( 'Setting Backup & Update', 'astha' ), $capability, 'astha-settings-backup', 'astha_settings_backup' );
         add_submenu_page('astha_welcome', '', esc_html__( 'Color Palette', 'astha' ), $capability, 'astha-color-palette', 'astha_color_palette' );
         
 //        //ENVATO_MARKET_SLUG
@@ -111,18 +111,18 @@ function astha_admin_scripts() {
 }
 add_action( 'admin_enqueue_scripts', 'astha_admin_scripts' );
 
-if( ! function_exists( 'astha_settings_backup' ) ){
-    
-    /**
-     * Setting Page And Backup
-     * 
-     * @package Astha
-     * @link https://developer.wordpress.org/reference/functions/add_submenu_page/
-     */
-    function astha_settings_backup() {
-        include __DIR__ . '/pages/settings_backup.php';
-    }
-}
+//if( ! function_exists( 'astha_settings_backup' ) ){
+//    
+//    /**
+//     * Setting Page And Backup
+//     * 
+//     * @package Astha
+//     * @link https://developer.wordpress.org/reference/functions/add_submenu_page/
+//     */
+//    function astha_settings_backup() {
+//        include __DIR__ . '/pages/settings_backup.php';
+//    }
+//}
 
 if( ! function_exists( 'astha_color_palette' ) ){
     
