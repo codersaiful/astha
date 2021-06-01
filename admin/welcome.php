@@ -56,10 +56,10 @@ if ( is_multisite() ) {
             <?php printf( __( 'Before you get started, please be sure to always check out documentation Which Included In the theme folder or from <a href="%s" target="_blank">Website</a>. We outline all kinds of good information and provide you with all the details you need to use astha.', 'astha'), 'https://docs.astha.codeastrology.com/'); ?>
         </p>
         <p class="about-description">
-            <?php printf( __( 'If you are unable to find your answer in our documentation, please contact us via  <a href="https://codeastrology.com/support/" target="_blank">submit a ticket</a> with your purchase code, site CPanel, and admin login info.', 'astha'), 'mailto:hello@codeastrology.com'); ?>
+            <?php printf( __( 'If you are unable to find your answer in our documentation, please contact us via  <a href="https://wordpress.org/support/theme/astha/" target="_blank">submit a ticket</a> with your.', 'astha'), 'mailto:codersaiful@gmail.com'); ?>
         </p>
         <p class="about-description">
-            <?php printf( __( 'We are very happy to help you and you will get the reply from us  faster than you expected.', 'astha'), 'https://docs.astha.codeastrology.com/'); ?>
+            <?php printf( __( 'We are very happy to help you and you will get the reply from us  faster than you expected.', 'astha'), 'https://docs.astha.site/'); ?>
         </p>
         
         <p class="about-description">

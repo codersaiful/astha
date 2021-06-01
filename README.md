@@ -4,9 +4,12 @@ A WordPress Multiperpose and Shop Theme. Build a Medical Website easily.
 
 A short guide and general information to help you get to know your new theme.
 Above all, we would like to thank you for purchasing this theme, your contribution is very much appreciated.
-This document covers the installation and use of this theme and reveals answers to common problems and issues. We encourage you to read this document thoroughly if you are experiencing any difficulties. If you have any questions that are beyond the scope of this document, feel free to post them in the dedicated support forum at http://codeastrology.com/support/forum/
+This document covers the installation and use of this theme and reveals answers to common problems and issues. We encourage you to read this document thoroughly if you are experiencing any difficulties. If you have any questions that are beyond the scope of this document, feel free to post them in the dedicated support forum at https://wordpress.org/support/theme/astha/
 
-https://codeastrology.gitbook.io/astha/
+https://docs.astha.site
+OR
+https://astha-theme.gitbook.io/
+
 
 What's change after first review:
 Dear sir, what I did in this review as a list.
