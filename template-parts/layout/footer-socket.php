@@ -61,6 +61,13 @@ $socket_social = astha_option( 'astha_socket_social', 'on' );
             </div>
             <?php
         }
+        
+        /**
+         * Do something on Footer Socket
+         * 
+         * @since 1.0.2.0
+         */
+        do_action( 'astha_socket_area' );
         ?>
 
     </div>
