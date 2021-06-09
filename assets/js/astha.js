@@ -132,16 +132,20 @@
         /**
          * Scroll Top and On Scroll body class Added
          */
+        var no_scrolled = "no-scrolled";
+        var scrolled = "header-scrolled";
+        //$("body").addClass(no_scrolled);
         $(window).scroll(function() {    
             var scroll = $(window).scrollTop();
             //var finalScrolHeight = headerHeight + 20;
             if (scroll >= headerHeight) {
-                $("body").addClass("header-scrolled");
+                $("body").addClass(scrolled);
+		$("body").removeClass(no_scrolled);
             } else {
-                $("body").removeClass("header-scrolled");
+                $("body").removeClass(scrolled);
+		$("body").addClass(no_scrolled);
             }
         });
-        
 
         $(window).on('scroll', function() {
           var finalScrolHeight = headerHeight + 300;
