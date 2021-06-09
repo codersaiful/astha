@@ -133,7 +133,15 @@ function astha_body_classes( $classes ) {
         }else{
             $classes[] = 'current-' . $header_layout;
         }
-
+        
+        /**
+         * Hanndle Scrolled or no Scrolled,
+         * we will add by default no-scrolled in body
+         * 
+         * @since 1.0.3.0
+         */
+        $classes[] = 'no-scrolled';
+        
         /**
          * In by Default: Topbar will hidden from Mobile Device
          * 
