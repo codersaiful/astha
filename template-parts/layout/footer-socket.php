@@ -41,7 +41,7 @@ $socket_social = astha_option( 'astha_socket_social', 'on' );
          * If you want to hide Social Link from Footer,
          * Use astha_socket_social_arr filter hook 
          * 
-         * link add_filter( 'astha_socket_social_arr, 'return__false' );
+         * link add_filter( 'astha_socket_social_arr', '__return_false' );
          * 
          * @since 1.0.0.37
          */
