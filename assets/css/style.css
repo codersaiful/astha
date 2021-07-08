@@ -2045,6 +2045,10 @@ body.header-sticky-only_topbar.admin-bar .header-top{
 }
 body.header-sticky-on{padding-top: 130px}
 
+body.header_footer-template-default.header-sticky-on {
+    padding-top: 0;
+}
+
 body.header-sticky-only_topbar .header-top {
     position: fixed;
     width: 100%;
