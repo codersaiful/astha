@@ -2922,3 +2922,14 @@ ul.products li.product .astha-after-loop-wrapper a.add_to_wishlist:before,
         line-height: 20px;
     }
 }
+
+/*Overrise style for woocommerce*/
+a.disabled, a.disabled:hover {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    border: 2px solid #0000;
+    border-radius: 0;
+    background: #0fc392 !important;
+    background: var(--astha-primary) !important;
+    color: white !important;
+}
