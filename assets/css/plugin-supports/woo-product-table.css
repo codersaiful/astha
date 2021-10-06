@@ -381,3 +381,7 @@ div.wpt_product_table_wrapper.woocommerce{clear: both;}
         /*background-color: var(--astha-secondary-light);*/
     }
 }
+.wpt_product_table_wrapper table.wpt_product_table>tbody tr.wpt_row td a.button.wpt_variation_product.disabled{
+    opacity: 0.4 !important;
+    background: red !important;
+}
